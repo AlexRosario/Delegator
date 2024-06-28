@@ -1,0 +1,974 @@
+{
+  "users": [
+    {
+      "id": "7137",
+      "username": "arf",
+      "email": "rosarioalexander3@gmail.com",
+      "password": "ff",
+      "address": {
+        "street": "67 cooper st. apt. 1",
+        "city": "BROOKLYN",
+        "state": "NY",
+        "zipcode": "11207"
+      },
+      "vote_log": {
+        "[object Object]": {
+          "PartyVotes": "H.RES.1313"
+        },
+        "H.R.8206": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.6843": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8829": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8819": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8826": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.6586": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8818": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.RES.1317": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.4132": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8824": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8832": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.RES.1324": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8840": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8842": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.RES.1316": {
+          "PartyVotes": {
+            "HouseVotes": {
+              "Democratic": {
+                "yes": 0,
+                "no": 201,
+                "present": 0,
+                "not_voting": 12,
+                "majority_position": "No"
+              },
+              "Republican": {
+                "yes": 207,
+                "no": 0,
+                "present": 0,
+                "not_voting": 12,
+                "majority_position": "Yes"
+              },
+              "Independent": {
+                "yes": 0,
+                "no": 0,
+                "present": 0,
+                "not_voting": 0
+              }
+            },
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8849": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8850": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8843": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.RES.1320": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.8835": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.7920": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        },
+        "H.R.4818": {
+          "PartyVotes": {
+            "HouseVotes": "House : No Votes recorded yet.",
+            "SenateVotes": "Senate : No Votes recorded yet."
+          }
+        }
+      }
+    }
+  ],
+  "Bills": [
+    {},
+    {
+      "id": "0538",
+      "bill_id": "hr8840-118",
+      "bill_slug": "hr8840",
+      "bill_type": "hr",
+      "number": "H.R.8840",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr8840.json",
+      "title": "To amend the Congressional Budget Act of 1974 to modify the rules with respect to the consideration in the House of Representatives of any resolution providing for an adjournment period of more than three calendar days until the House of Representatives has approved annual appropriation bills, and for other purposes.",
+      "short_title": "To amend the Congressional Budget Act of 1974 to modify the rules with respect to the consideration in the House of Representatives of any resolution providing for an adjournment period of more than three calendar days until the House of Representatives h",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "E000246",
+      "sponsor_name": "Chuck Edwards",
+      "sponsor_state": "NC",
+      "sponsor_party": "R",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/E000246.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/8840",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr8840",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 0,
+      "cosponsors_by_party": {},
+      "committees": "",
+      "committee_codes": [
+        "HSRU"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the Committee on Rules, and in addition to the Committee on the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "voted": true
+    },
+    {
+      "id": "038f",
+      "bill_id": "hres1324-118",
+      "bill_slug": "hres1324",
+      "bill_type": "hres",
+      "number": "H.RES.1324",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hres1324.json",
+      "title": "Condemning Uganda's undemocratic human rights regression.",
+      "short_title": "Condemning Uganda's undemocratic human rights regression.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "T000472",
+      "sponsor_name": "Mark Takano",
+      "sponsor_state": "CA",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/T000472.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-resolution/1324",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hres1324",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 22,
+      "cosponsors_by_party": {
+        "D": 22
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSFA"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the House Committee on Foreign Affairs.",
+      "voted": true
+    },
+    {
+      "id": "0609",
+      "bill_id": "hres1324-118",
+      "bill_slug": "hres1324",
+      "bill_type": "hres",
+      "number": "H.RES.1324",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hres1324.json",
+      "title": "Condemning Uganda's undemocratic human rights regression.",
+      "short_title": "Condemning Uganda's undemocratic human rights regression.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "T000472",
+      "sponsor_name": "Mark Takano",
+      "sponsor_state": "CA",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/T000472.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-resolution/1324",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hres1324",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 22,
+      "cosponsors_by_party": {
+        "D": 22
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSFA"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the House Committee on Foreign Affairs.",
+      "voted": true
+    },
+    {
+      "id": "6362",
+      "bill_id": "hres1324-118",
+      "bill_slug": "hres1324",
+      "bill_type": "hres",
+      "number": "H.RES.1324",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hres1324.json",
+      "title": "Condemning Uganda's undemocratic human rights regression.",
+      "short_title": "Condemning Uganda's undemocratic human rights regression.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "T000472",
+      "sponsor_name": "Mark Takano",
+      "sponsor_state": "CA",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/T000472.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-resolution/1324",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hres1324",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 22,
+      "cosponsors_by_party": {
+        "D": 22
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSFA"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the House Committee on Foreign Affairs.",
+      "voted": true
+    },
+    {
+      "id": "de64",
+      "bill_id": "hres1324-118",
+      "bill_slug": "hres1324",
+      "bill_type": "hres",
+      "number": "H.RES.1324",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hres1324.json",
+      "title": "Condemning Uganda's undemocratic human rights regression.",
+      "short_title": "Condemning Uganda's undemocratic human rights regression.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "T000472",
+      "sponsor_name": "Mark Takano",
+      "sponsor_state": "CA",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/T000472.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-resolution/1324",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hres1324",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 22,
+      "cosponsors_by_party": {
+        "D": 22
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSFA"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the House Committee on Foreign Affairs.",
+      "voted": true
+    },
+    {
+      "id": "ae94",
+      "bill_id": "hr8840-118",
+      "bill_slug": "hr8840",
+      "bill_type": "hr",
+      "number": "H.R.8840",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr8840.json",
+      "title": "To amend the Congressional Budget Act of 1974 to modify the rules with respect to the consideration in the House of Representatives of any resolution providing for an adjournment period of more than three calendar days until the House of Representatives has approved annual appropriation bills, and for other purposes.",
+      "short_title": "To amend the Congressional Budget Act of 1974 to modify the rules with respect to the consideration in the House of Representatives of any resolution providing for an adjournment period of more than three calendar days until the House of Representatives h",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "E000246",
+      "sponsor_name": "Chuck Edwards",
+      "sponsor_state": "NC",
+      "sponsor_party": "R",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/E000246.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/8840",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr8840",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 0,
+      "cosponsors_by_party": {},
+      "committees": "",
+      "committee_codes": [
+        "HSRU"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the Committee on Rules, and in addition to the Committee on the Budget, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned.",
+      "voted": true
+    },
+    {
+      "id": "493b",
+      "bill_id": "hres1324-118",
+      "bill_slug": "hres1324",
+      "bill_type": "hres",
+      "number": "H.RES.1324",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hres1324.json",
+      "title": "Condemning Uganda's undemocratic human rights regression.",
+      "short_title": "Condemning Uganda's undemocratic human rights regression.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "T000472",
+      "sponsor_name": "Mark Takano",
+      "sponsor_state": "CA",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/T000472.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-resolution/1324",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hres1324",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 22,
+      "cosponsors_by_party": {
+        "D": 22
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSFA"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the House Committee on Foreign Affairs.",
+      "voted": true
+    },
+    {
+      "id": "fb01",
+      "bill_id": "hres1324-118",
+      "bill_slug": "hres1324",
+      "bill_type": "hres",
+      "number": "H.RES.1324",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hres1324.json",
+      "title": "Condemning Uganda's undemocratic human rights regression.",
+      "short_title": "Condemning Uganda's undemocratic human rights regression.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "T000472",
+      "sponsor_name": "Mark Takano",
+      "sponsor_state": "CA",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/T000472.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-resolution/1324",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hres1324",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 22,
+      "cosponsors_by_party": {
+        "D": 22
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSFA"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the House Committee on Foreign Affairs.",
+      "voted": true
+    },
+    {
+      "id": "17b5",
+      "bill_id": "hres1324-118",
+      "bill_slug": "hres1324",
+      "bill_type": "hres",
+      "number": "H.RES.1324",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hres1324.json",
+      "title": "Condemning Uganda's undemocratic human rights regression.",
+      "short_title": "Condemning Uganda's undemocratic human rights regression.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "T000472",
+      "sponsor_name": "Mark Takano",
+      "sponsor_state": "CA",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/T000472.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-resolution/1324",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hres1324",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 22,
+      "cosponsors_by_party": {
+        "D": 22
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSFA"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the House Committee on Foreign Affairs.",
+      "voted": true
+    },
+    {
+      "id": "6616",
+      "bill_id": "hres1324-118",
+      "bill_slug": "hres1324",
+      "bill_type": "hres",
+      "number": "H.RES.1324",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hres1324.json",
+      "title": "Condemning Uganda's undemocratic human rights regression.",
+      "short_title": "Condemning Uganda's undemocratic human rights regression.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "T000472",
+      "sponsor_name": "Mark Takano",
+      "sponsor_state": "CA",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/T000472.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-resolution/1324",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hres1324",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 22,
+      "cosponsors_by_party": {
+        "D": 22
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSFA"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the House Committee on Foreign Affairs.",
+      "voted": true
+    },
+    {
+      "id": "2f70",
+      "bill_id": "hres1324-118",
+      "bill_slug": "hres1324",
+      "bill_type": "hres",
+      "number": "H.RES.1324",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hres1324.json",
+      "title": "Condemning Uganda's undemocratic human rights regression.",
+      "short_title": "Condemning Uganda's undemocratic human rights regression.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "T000472",
+      "sponsor_name": "Mark Takano",
+      "sponsor_state": "CA",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/T000472.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-resolution/1324",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hres1324",
+      "introduced_date": "2024-06-26",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 22,
+      "cosponsors_by_party": {
+        "D": 22
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSFA"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-26",
+      "latest_major_action": "Referred to the House Committee on Foreign Affairs.",
+      "voted": true
+    },
+    {
+      "id": "deb2",
+      "bill_id": "hr4818-118",
+      "bill_slug": "hr4818",
+      "bill_type": "hr",
+      "number": "H.R.4818",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr4818.json",
+      "title": "To amend title XVIII of the Social Security Act to provide for the coordination of programs to prevent and treat obesity, and for other purposes.",
+      "short_title": "Treat and Reduce Obesity Act of 2023",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "W000815",
+      "sponsor_name": "Brad Wenstrup",
+      "sponsor_state": "OH",
+      "sponsor_party": "R",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/W000815.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/4818",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr4818",
+      "introduced_date": "2023-07-20",
+      "active": true,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 110,
+      "cosponsors_by_party": {
+        "D": 82,
+        "R": 28
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSWM",
+        "HSIF"
+      ],
+      "subcommittee_codes": [
+        "HSIF14"
+      ],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-27",
+      "latest_major_action": "Ordered to be Reported in the Nature of a Substitute (Amended) by the Yeas and Nays: 36 - 4.",
+      "voted": true
+    },
+    {
+      "id": "2240",
+      "bill_id": "hr7920-118",
+      "bill_slug": "hr7920",
+      "bill_type": "hr",
+      "number": "H.R.7920",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr7920.json",
+      "title": "To amend the Agricultural Research, Extension, and Education Reform Act of 1998 to direct the Secretary of Agriculture to establish a program under which the Secretary will award competitive grants to eligible entities for the purpose of establishing and enhancing farming and ranching opportunities for veterans.",
+      "short_title": "Agriculture Grants for Veterans Education and Training Services Act",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "V000135",
+      "sponsor_name": "Derrick Van Orden",
+      "sponsor_state": "WI",
+      "sponsor_party": "R",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/V000135.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/7920",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr7920",
+      "introduced_date": "2024-04-10",
+      "active": true,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 3,
+      "cosponsors_by_party": {
+        "D": 1,
+        "R": 2
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSAG"
+      ],
+      "subcommittee_codes": [
+        "HSVR10",
+        "HSVR09"
+      ],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-27",
+      "latest_major_action": "Forwarded by Subcommittee to Full Committee by Voice Vote.",
+      "voted": true
+    },
+    {
+      "id": "e618",
+      "bill_id": "hr8661-118",
+      "bill_slug": "hr8661",
+      "bill_type": "hr",
+      "number": "H.R.8661",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr8661.json",
+      "title": "To amend title 38, United States Code, to make certain improvements to the laws administered by the Secretary of Veterans Affairs relating to educational assistance, and for other purposes.",
+      "short_title": "To amend title 38, United States Code, to make certain improvements to the laws administered by the Secretary of Veterans Affairs relating to educational assistance, and for other purposes.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "J000307",
+      "sponsor_name": "John James",
+      "sponsor_state": "MI",
+      "sponsor_party": "R",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/J000307.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/8661",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr8661",
+      "introduced_date": "2024-06-07",
+      "active": true,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 0,
+      "cosponsors_by_party": {},
+      "committees": "",
+      "committee_codes": [
+        "HSVR"
+      ],
+      "subcommittee_codes": [
+        "HSVR10"
+      ],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-27",
+      "latest_major_action": "Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote.",
+      "voted": true
+    },
+    {
+      "id": "0b63",
+      "bill_id": "hr4818-118",
+      "bill_slug": "hr4818",
+      "bill_type": "hr",
+      "number": "H.R.4818",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr4818.json",
+      "title": "To amend title XVIII of the Social Security Act to provide for the coordination of programs to prevent and treat obesity, and for other purposes.",
+      "short_title": "Treat and Reduce Obesity Act of 2023",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "W000815",
+      "sponsor_name": "Brad Wenstrup",
+      "sponsor_state": "OH",
+      "sponsor_party": "R",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/W000815.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/4818",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr4818",
+      "introduced_date": "2023-07-20",
+      "active": true,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 110,
+      "cosponsors_by_party": {
+        "D": 82,
+        "R": 28
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSWM",
+        "HSIF"
+      ],
+      "subcommittee_codes": [
+        "HSIF14"
+      ],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-27",
+      "latest_major_action": "Ordered to be Reported in the Nature of a Substitute (Amended) by the Yeas and Nays: 36 - 4.",
+      "voted": true
+    },
+    {
+      "id": "ae39",
+      "bill_id": "hr4818-118",
+      "bill_slug": "hr4818",
+      "bill_type": "hr",
+      "number": "H.R.4818",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr4818.json",
+      "title": "To amend title XVIII of the Social Security Act to provide for the coordination of programs to prevent and treat obesity, and for other purposes.",
+      "short_title": "Treat and Reduce Obesity Act of 2023",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "W000815",
+      "sponsor_name": "Brad Wenstrup",
+      "sponsor_state": "OH",
+      "sponsor_party": "R",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/W000815.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/4818",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr4818",
+      "introduced_date": "2023-07-20",
+      "active": true,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 110,
+      "cosponsors_by_party": {
+        "D": 82,
+        "R": 28
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSWM",
+        "HSIF"
+      ],
+      "subcommittee_codes": [
+        "HSIF14"
+      ],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-27",
+      "latest_major_action": "Ordered to be Reported in the Nature of a Substitute (Amended) by the Yeas and Nays: 36 - 4.",
+      "voted": true
+    },
+    {
+      "id": "c0b9",
+      "bill_id": "hr8647-118",
+      "bill_slug": "hr8647",
+      "bill_type": "hr",
+      "number": "H.R.8647",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr8647.json",
+      "title": "To amend title 38, United States Code, to authorize the Secretary of Veterans Affairs to take certain actions to prevent or resolve a default of a housing loan guaranteed by the Secretary, and for other purposes.",
+      "short_title": "To amend title 38, United States Code, to authorize the Secretary of Veterans Affairs to take certain actions to prevent or resolve a default of a housing loan guaranteed by the Secretary, and for other purposes.",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "V000135",
+      "sponsor_name": "Derrick Van Orden",
+      "sponsor_state": "WI",
+      "sponsor_party": "R",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/V000135.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/8647",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr8647",
+      "introduced_date": "2024-06-05",
+      "active": true,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 3,
+      "cosponsors_by_party": {
+        "R": 3
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSVR"
+      ],
+      "subcommittee_codes": [
+        "HSVR10"
+      ],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-27",
+      "latest_major_action": "Forwarded by Subcommittee to Full Committee (Amended) by Voice Vote.",
+      "voted": true
+    },
+    {
+      "id": "e747",
+      "bill_id": "hr8867-118",
+      "bill_slug": "hr8867",
+      "bill_type": "hr",
+      "number": "H.R.8867",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr8867.json",
+      "title": "To amend the REAL ID Act of 2005 to allow States to determine whether to require licenses and other identification to list a gender or sex, and for other purposes.",
+      "short_title": "To amend the REAL ID Act of 2005 to allow States to determine whether to require licenses and other identification to list a gender or sex, and for other purposes.",
+      "sponsor_title": "Del.",
+      "sponsor_id": "N000147",
+      "sponsor_name": "Eleanor Holmes Norton",
+      "sponsor_state": "DC",
+      "sponsor_party": "D",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/N000147.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/8867",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr8867",
+      "introduced_date": "2024-06-27",
+      "active": false,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 1,
+      "cosponsors_by_party": {
+        "D": 1
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSGO"
+      ],
+      "subcommittee_codes": [],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-27",
+      "latest_major_action": "Referred to the House Committee on Oversight and Accountability.",
+      "voted": true
+    },
+    {
+      "id": "a884",
+      "bill_id": "hr4818-118",
+      "bill_slug": "hr4818",
+      "bill_type": "hr",
+      "number": "H.R.4818",
+      "bill_uri": "https://api.propublica.org/congress/v1/118/bills/hr4818.json",
+      "title": "To amend title XVIII of the Social Security Act to provide for the coordination of programs to prevent and treat obesity, and for other purposes.",
+      "short_title": "Treat and Reduce Obesity Act of 2023",
+      "sponsor_title": "Rep.",
+      "sponsor_id": "W000815",
+      "sponsor_name": "Brad Wenstrup",
+      "sponsor_state": "OH",
+      "sponsor_party": "R",
+      "sponsor_uri": "https://api.propublica.org/congress/v1/members/W000815.json",
+      "gpo_pdf_uri": null,
+      "congressdotgov_url": "https://www.congress.gov/bill/118th-congress/house-bill/4818",
+      "govtrack_url": "https://www.govtrack.us/congress/bills/118/hr4818",
+      "introduced_date": "2023-07-20",
+      "active": true,
+      "last_vote": null,
+      "house_passage": null,
+      "senate_passage": null,
+      "enacted": null,
+      "vetoed": null,
+      "cosponsors": 110,
+      "cosponsors_by_party": {
+        "D": 82,
+        "R": 28
+      },
+      "committees": "",
+      "committee_codes": [
+        "HSWM",
+        "HSIF"
+      ],
+      "subcommittee_codes": [
+        "HSIF14"
+      ],
+      "primary_subject": "",
+      "summary": "",
+      "summary_short": "",
+      "latest_major_action_date": "2024-06-27",
+      "latest_major_action": "Ordered to be Reported in the Nature of a Substitute (Amended) by the Yeas and Nays: 36 - 4.",
+      "voted": true
+    }
+  ]
+}
