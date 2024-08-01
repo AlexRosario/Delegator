@@ -1,18 +1,15 @@
-import { BillSearch } from './BillSearch.tsx';
-import { BillCarousel } from './BillCarousel.tsx';
-import { useDisplayBills } from '../Providers/BillProvider.tsx';
+import { BillSearch } from './BillSearch';
+import { BillCarousel } from './BillCarousel';
+import { useDisplayBills } from '../Providers/BillProvider';
+import React from 'react';
 
 export const BillSection = () => {
-    const { activeBillTab, setActiveBillTab } = useDisplayBills(); 
-	return (
-		<section className='bill-section'>
-            <button className={`bill-list-button ${ activeBillTab === 'all'?'selected':''}`} onClick={()=>{setActiveBillTab('all'); }}>All Bills</button>
-            <button className={`bill-list-button ${ activeBillTab === 'new'?'selected':''}`} onClick={()=>{setActiveBillTab('new')}}>New Bills</button>
-            <button className={`bill-list-button ${ activeBillTab === 'voted'?'selected':''}`} onClick={()=>{setActiveBillTab('voted')}}>Voted Bills</button>
-			<div className='bill-container'>
-				<BillSearch />
-				<BillCarousel />
-			</div>
-		</section>
-	);
+  return (
+    <section className="bill-section">
+      <div className="bill-container">
+        <BillSearch />
+        <BillCarousel />
+      </div>
+    </section>
+  );
 };

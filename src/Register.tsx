@@ -50,6 +50,7 @@ export const Register = () => {
 	const handleRegister = async (e: React.FormEvent) => {
 		e.preventDefault();
 		setIsFormSubmitted(true);
+		console.log('user', username);
 		const userExists = await doesUserExist(username);
 
 		setUserNameExists(userExists);
@@ -67,18 +68,18 @@ export const Register = () => {
 	Requests.register(username, email, password, address)
 		.then(() => {
 			setUser({
-               
-                
-                username:'',
-                email:'',
-                password: '',
-                address: {
-                    street:'',
-                    city: '',
-                    state: '',
-                    zipcode: '',
-                },
-                vote_log: {}});
+				id: '',
+				username: '',
+				email: '',
+				password: '',
+				address: {
+					street: '',
+					city: '',
+					state: '',
+					zipcode: '',
+				},
+				vote_log: {},
+			});
 
 				setIsFormSubmitted(false);
 				setTakenName('');

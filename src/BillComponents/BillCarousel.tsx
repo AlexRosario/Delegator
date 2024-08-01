@@ -1,35 +1,97 @@
-import  { useEffect, useState } from 'react';
-import { useDisplayBills } from '../Providers/BillProvider.tsx';
-import { BillCard } from './BillCard.tsx';
+import React, { useEffect, useState, useRef } from 'react';
+import { useDisplayBills } from '../Providers/BillProvider';
+import { BillCard } from './BillCard';
 
 export const BillCarousel = () => {
-const { billsToDisplay,activeBillTab } = useDisplayBills();
-const [activeIndex, setActiveIndex] = useState(0);
-const activeBill= billsToDisplay[activeIndex];
+  const {
+    billsToDisplay,
+    activeBillTab,
+    setCurrentIndex,
+    currentIndex,
+    setActiveBillTab
+  } = useDisplayBills();
+  const {} = useDisplayBills();
 
-const nextSlide = () => {
-    setActiveIndex((prevIndex) => 
-       prevIndex=== billsToDisplay.length - 1 ? 0 : prevIndex + 1
-    );
-};
+  const [activeIndex, setActiveIndex] = useState([0, 1, 2]);
 
-const prevSlide = () => {
-    setActiveIndex((prevIndex) => 
-        prevIndex === 0 ? billsToDisplay.length - 1 : prevIndex - 1  
-    );
-};
+  const next = currentIndex < billsToDisplay.length - 1 ? currentIndex + 1 : 0;
+  const prev = currentIndex > 0 ? currentIndex - 1 : billsToDisplay.length - 1;
 
-useEffect(() => {setActiveIndex(0);}, [activeBillTab]);
+  useEffect(() => {
+    updateSlides();
+  }, [currentIndex]);
 
-return(
-    <div className='carousel'>
-        <button onClick={prevSlide}>Prev</button>
-        <BillCard bill= {activeBill}/>
-            <button onClick={nextSlide}>Next</button>
-    </div>
+  const updateSlides = () => {
+    document.querySelectorAll('.bill-card').forEach((slide, index) => {
+      slide.classList.remove('active', 'prev', 'next');
+      if (index === currentIndex) slide.classList.add('active');
+      if (index === prev) slide.classList.add('prev');
+      if (index === next) slide.classList.add('next');
+    });
+  };
 
+  const goToNum = (number: number) => {
+    setCurrentIndex(number);
+  };
 
-);
+  const goToNext = () => {
+    currentIndex < billsToDisplay.length - 1
+      ? goToNum(currentIndex + 1)
+      : goToNum(0);
+  };
 
+  const goToPrev = () => {
+    currentIndex > 0
+      ? goToNum(currentIndex - 1)
+      : goToNum(billsToDisplay.length - 1);
+  };
 
+  useEffect(() => {
+    setActiveIndex([0, 1, 2]);
+  }, [activeBillTab]);
+
+  return (
+    <>
+      <div className="bill-status">
+        <button
+          className={`bill-list-button ${activeBillTab === 'all' ? 'selected' : ''}`}
+          onClick={() => {
+            setActiveBillTab('all');
+          }}
+        >
+          All Bills
+        </button>
+        <button
+          className={`bill-list-button ${activeBillTab === 'new' ? 'selected' : ''}`}
+          onClick={() => {
+            setActiveBillTab('new');
+          }}
+        >
+          New Bills
+        </button>
+        <button
+          className={`bill-list-button ${activeBillTab === 'voted' ? 'selected' : ''}`}
+          onClick={() => {
+            setActiveBillTab('voted');
+          }}
+        >
+          Voted Bills
+        </button>
+      </div>
+      <div className="carousel">
+        {billsToDisplay.map((bill, index) => (
+          <BillCard
+            bill={bill}
+            key={index}
+            className={`bill-card ${index === currentIndex ? 'active' : ''} ${index === prev ? 'prev' : ''} ${index === next ? 'next' : ''}`}
+            onClick={
+              index === prev ? goToPrev : index === next ? goToNext : undefined
+            }
+          ></BillCard>
+        ))}
+      </div>
+      <button onClick={goToPrev}>Previous</button>
+      <button onClick={goToNext}>Next</button>
+    </>
+  );
 };

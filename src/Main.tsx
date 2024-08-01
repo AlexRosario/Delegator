@@ -36,9 +36,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
 		<Toaster />
 		<AuthProvider>
-						<BillProvider>
 							<RouterProvider router={router} />
-						</BillProvider>
 	
 		</AuthProvider>
 	</React.StrictMode>

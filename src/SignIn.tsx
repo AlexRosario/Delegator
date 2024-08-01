@@ -8,6 +8,7 @@ import { useAuthInfo } from './Providers/AuthProvider';
 export const SignIn = () => {
 	const [name, setName] = React.useState('');
 	const [pWord, setPWord] = React.useState('');
+	const { setUser } = useAuthInfo();
 
 	const navigate = useNavigate();
 
@@ -19,11 +20,12 @@ export const SignIn = () => {
 					return (
 						user.username?.toLowerCase() === name.toLowerCase() &&
 						user.password === pWord
-					); //pass user as prop
+					); // check if user exists
 				})
 			)
 			.then((user) => {
 				localStorage.setItem('user', JSON.stringify(user));
+				setUser(user);
 				navigate('/App');
 			})
 			.catch((err) => {

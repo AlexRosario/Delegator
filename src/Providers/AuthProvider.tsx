@@ -4,17 +4,30 @@ import { User } from '../types.tsx';
 
 export type AuthContextType = {
 	user: User;
+	setUser: (user: User) => void;
 };
 
 const AuthContext = createContext<AuthContextType>({} as AuthContextType);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-    const userString = localStorage.getItem('user');
-    const user = userString ? JSON.parse(userString) : {};
+	const [user, setUser] = useState<User>({
+		id: '',
+		username: '',
+		email: '',
+		password: '',
+		address: {
+			street: '',
+			city: '',
+			state: '',
+			zipcode: '',
+		},
+		vote_log: {},
+	});
+
 
 
 	return (
-		<AuthContext.Provider value={ user}>
+		<AuthContext.Provider value={{ user,setUser}}>
 			{children}
 		</AuthContext.Provider>
 	);
