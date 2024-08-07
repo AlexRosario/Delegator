@@ -11,37 +11,12 @@ export const BillCard = ({
 }: {
   bill: Bill;
   className: string;
-  onClick?: () => void;
+  onClick?: () => void | number;
 }) => {
   const { congress } = useDisplayBills();
   const [billLinks, setBillLinks] = useState<{ [key: string]: string }>({});
   const [okToRender, setOkToRender] = useState(false);
   const [summary, setSummary] = useState('');
-
-  function getBillStatusMessage(bill: Bill) {
-    if (bill.vetoed !== null) return bill.vetoed;
-
-    const passedHouse = bill.house_passage !== null;
-    const passedSenate = bill.senate_passage !== null;
-    const lastVote = bill.last_vote !== null;
-
-    if (passedHouse && passedSenate) {
-      return lastVote
-        ? 'Passed House and Senate'
-        : 'Passed both chambers with floor vote. No roll call.';
-    } else if (passedHouse) {
-      return lastVote
-        ? 'Passed House, waiting on Senate'
-        : 'Passed House with floor vote. No roll call.';
-    } else if (passedSenate) {
-      return lastVote
-        ? 'Passed Senate, waiting on House'
-        : 'Passed Senate with floor vote. No roll call.';
-    }
-
-    // Default case if none of the above conditions are met
-    return `Waiting on vote from House and Senate`;
-  }
 
   const getMoreInfo = async (
     congress: string,
@@ -49,7 +24,7 @@ export const BillCard = ({
     billNumber: string
   ) => {
     try {
-      const data = await Requests.getBillSummary(
+      const data = await Requests.getBillDetail(
         congress,
         billType.toLowerCase(),
         billNumber,
@@ -110,7 +85,7 @@ export const BillCard = ({
         <b>{bill.latestAction.actionDate}</b>
         <div>{bill.latestAction.text}</div>
       </div>
-      <div className="bill-status">{getBillStatusMessage(bill)}</div>
+
       <VoteButton bill={bill} />
     </div>
   );

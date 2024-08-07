@@ -154,6 +154,7 @@
   flex-direction: column;
   justify-content: space-around;
   height: 10vh;
+
   background-color: rgb(249, 247, 246);
   color: var(--darkerblue);
   margin: 0 0 20px 0;
@@ -163,6 +164,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px;
   height: 10vh;
   width: 100%;
   background-color: rgb(249, 247, 246);
@@ -301,18 +305,23 @@
   margin: 20px auto;
 }
 
+.carousel-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  padding: 10px 0;
+  height: 50vh;
+  max-width: 100%;
+}
 .carousel {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  justify-items: center;
+  justify-items: space-around;
   padding: 20px 0;
   height: 50vh;
-  max-width: 100%;
-  background-size: cover;
-
-  position: relative;
   overflow: hidden;
 }
 
@@ -386,4 +395,42 @@
 .carousel .slider-wrapper.axis-horizontal .slider .slide {
   display: flex;
   justify-content: space-around;
+}
+.bill-collection-container {
+  width: 100%;
+
+  justify-content: space-around;
+}
+
+.bill-collection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.policy-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: 30px 0;
+  width: 100%;
+  overflow-x: scroll;
+  white-space: none;
+}
+.bill-collection-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--red);
+  text-align: center;
+  padding: 5%;
+  min-width: 220px;
+  max-width: 20%;
+  max-height: 250px;
+
+  overflow: scroll;
+  box-shadow: 0 22px 34px rgba(22, 28, 45, 0.18);
+  border-radius: 10px;
+  margin: 10px;
 }

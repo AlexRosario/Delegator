@@ -8,14 +8,14 @@ export const BillCarousel = () => {
     activeBillTab,
     setCurrentIndex,
     currentIndex,
-    setActiveBillTab
+    setActiveBillTab,
+    filterPassedBills
   } = useDisplayBills();
   const {} = useDisplayBills();
 
-  const [activeIndex, setActiveIndex] = useState([0, 1, 2]);
-
   const next = currentIndex < billsToDisplay.length - 1 ? currentIndex + 1 : 0;
   const prev = currentIndex > 0 ? currentIndex - 1 : billsToDisplay.length - 1;
+  const isLoading = billsToDisplay.length === 0 ? true : false;
 
   useEffect(() => {
     updateSlides();
@@ -46,52 +46,38 @@ export const BillCarousel = () => {
       : goToNum(billsToDisplay.length - 1);
   };
 
-  useEffect(() => {
-    setActiveIndex([0, 1, 2]);
-  }, [activeBillTab]);
-
   return (
     <>
-      <div className="bill-status">
-        <button
-          className={`bill-list-button ${activeBillTab === 'all' ? 'selected' : ''}`}
-          onClick={() => {
-            setActiveBillTab('all');
-          }}
-        >
-          All Bills
-        </button>
-        <button
-          className={`bill-list-button ${activeBillTab === 'new' ? 'selected' : ''}`}
-          onClick={() => {
-            setActiveBillTab('new');
-          }}
-        >
-          New Bills
-        </button>
-        <button
-          className={`bill-list-button ${activeBillTab === 'voted' ? 'selected' : ''}`}
-          onClick={() => {
-            setActiveBillTab('voted');
-          }}
-        >
-          Voted Bills
-        </button>
+      <div className="carousel-container">
+        <button onClick={goToPrev}>Previous</button>
+        <div className="carousel">
+          {!isLoading ? (
+            billsToDisplay
+              .filter((bill) => {
+                return filterPassedBills
+                  ? bill.latestAction.text.includes('Became Public Law No:')
+                  : !bill.latestAction.text.includes('Became Public Law No:');
+              })
+              .map((bill, index) => (
+                <BillCard
+                  bill={bill}
+                  key={index}
+                  className={`bill-card ${index === currentIndex ? 'active' : ''} ${index === prev ? 'prev' : ''} ${index === next ? 'next' : ''}`}
+                  onClick={
+                    index === prev
+                      ? goToPrev
+                      : index === next
+                        ? goToNext
+                        : undefined
+                  }
+                ></BillCard>
+              ))
+          ) : (
+            <div>Loading bills</div>
+          )}
+        </div>
+        <button onClick={goToNext}>Next</button>
       </div>
-      <div className="carousel">
-        {billsToDisplay.map((bill, index) => (
-          <BillCard
-            bill={bill}
-            key={index}
-            className={`bill-card ${index === currentIndex ? 'active' : ''} ${index === prev ? 'prev' : ''} ${index === next ? 'next' : ''}`}
-            onClick={
-              index === prev ? goToPrev : index === next ? goToNext : undefined
-            }
-          ></BillCard>
-        ))}
-      </div>
-      <button onClick={goToPrev}>Previous</button>
-      <button onClick={goToNext}>Next</button>
     </>
   );
 };

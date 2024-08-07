@@ -1,5 +1,5 @@
 import toast from 'react-hot-toast';
-import { Bill, User } from './types';
+import { Bill, User, Vote } from './types';
 
 export const myHeaders = {
   'Content-Type': 'application/json'
@@ -12,6 +12,7 @@ congressGovHeader.append(
 );
 
 export const Requests = {
+  //Local
   register: (
     username: string,
     email: string,
@@ -62,20 +63,17 @@ export const Requests = {
     return response.json();
   },
 
-  addVote: async (
-    user: { id: string; vote_log: object },
-    billId: string,
-    vote: string
-  ) => {
+  addVote: async (userId: string, billId: string, vote: string, date: Date) => {
     const response = await fetch(`http://localhost:3000/votes`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        userId: user.id,
+        userId: userId,
         billId: billId,
-        vote: vote
+        vote: vote,
+        date: date
       })
     });
   },
@@ -110,6 +108,34 @@ export const Requests = {
       throw error; // Rethrow after logging to handle it further up the chain
     }
   },
+  getBillRecord: async (userVotes: Vote[]) => {
+    try {
+      const response = await fetch(`http://localhost:3000/bills`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      if (response.ok) {
+        const userBills = await response.json();
+        const filteredData = await userBills.filter((bill: Bill) => {
+          userVotes.some(
+            (vote) => vote.billId === bill.originChamberCode + bill.number
+          );
+          return filteredData;
+        });
+      } else {
+        console.error('Failed to fetch personal bill record');
+        throw new Error(
+          `HTTP error ${response.status}- ${response.statusText}`
+        );
+      }
+    } catch (error) {
+      console.error('Error fetching personal bills:', error);
+      throw error;
+    }
+  },
+  //External
   getBills: async (congress: string, billType: string, offset: number) => {
     const url = `/congressGov/v3/bill${congress ? `/${congress}` : ''}${billType ? `/${billType}` : ''}${offset !== 0 ? `?offset=${offset}` : ''}`;
     try {
@@ -157,7 +183,7 @@ export const Requests = {
       throw error;
     }
   },
-  getBillSummary: async (
+  getBillDetail: async (
     congress: string,
     billType: string,
     billNumber: string,
@@ -245,6 +271,7 @@ export const Requests = {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
+
         return response.json();
       })
       .catch((error) => console.error('Fetch error:', error));

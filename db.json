@@ -379,7 +379,4162 @@
       "userId": "7137",
       "billId": "SRES793",
       "vote": "Yes"
+    },
+    {
+      "id": "7148",
+      "userId": "7137",
+      "billId": "S4910",
+      "vote": "Yes"
+    },
+    {
+      "id": "e6fb",
+      "userId": "7137",
+      "billId": "S4909",
+      "vote": "Yes"
+    },
+    {
+      "id": "a5e4",
+      "userId": "7137",
+      "billId": "SRES791",
+      "vote": "Yes"
+    },
+    {
+      "id": "80d2",
+      "userId": "7137",
+      "billId": "S4917",
+      "vote": "No"
+    },
+    {
+      "id": "e295",
+      "userId": "7137",
+      "billId": "S4914",
+      "vote": "Yes",
+      "date": "2024-08-01T19:14:45.550Z"
+    },
+    {
+      "id": "14dd",
+      "userId": "7137",
+      "billId": "S4913",
+      "vote": "Yes",
+      "date": "2024-08-01T19:14:49.778Z"
+    },
+    {
+      "id": "9781",
+      "userId": "7137",
+      "billId": "SRES790",
+      "vote": "Yes",
+      "date": "2024-08-01T19:18:24.558Z"
+    },
+    {
+      "id": "875f",
+      "userId": "7137",
+      "billId": "SRES789",
+      "vote": "Yes",
+      "date": "2024-08-01T19:18:28.745Z"
+    },
+    {
+      "id": "98b2",
+      "userId": "7137",
+      "billId": "S4915",
+      "vote": "Yes",
+      "date": "2024-08-01T19:30:20.268Z"
+    },
+    {
+      "id": "f4d8",
+      "userId": "7137",
+      "billId": "S4916",
+      "vote": "Yes",
+      "date": "2024-08-01T19:30:25.533Z"
+    },
+    {
+      "id": "c812",
+      "userId": "7137",
+      "billId": "S4911",
+      "vote": "Yes",
+      "date": "2024-08-01T19:41:11.256Z"
+    },
+    {
+      "id": "2743",
+      "userId": "7137",
+      "billId": "SRES750",
+      "vote": "Yes",
+      "date": "2024-08-01T19:41:22.447Z"
+    },
+    {
+      "id": "99c2",
+      "userId": "7137",
+      "billId": "S4912",
+      "vote": "Yes",
+      "date": "2024-08-01T19:42:15.075Z"
+    },
+    {
+      "id": "45c3",
+      "userId": "7137",
+      "billId": "S3943",
+      "vote": "Yes",
+      "date": "2024-08-01T19:44:25.961Z"
+    },
+    {
+      "id": "a8de",
+      "userId": "7137",
+      "billId": "S3475",
+      "vote": "Yes",
+      "date": "2024-08-01T19:44:35.154Z"
+    },
+    {
+      "id": "edfe",
+      "userId": "7137",
+      "billId": "S3277",
+      "vote": "Yes",
+      "date": "2024-08-01T19:55:48.886Z"
+    },
+    {
+      "id": "4331",
+      "userId": "7137",
+      "billId": "S4579",
+      "vote": "Yes",
+      "date": "2024-08-01T20:08:50.126Z"
+    },
+    {
+      "id": "c2a2",
+      "userId": "7137",
+      "billId": "S4596",
+      "vote": "Yes",
+      "date": "2024-08-01T20:09:04.789Z"
+    },
+    {
+      "id": "e524",
+      "userId": "7137",
+      "billId": "S1570",
+      "vote": "Yes",
+      "date": "2024-08-01T20:09:26.624Z"
+    },
+    {
+      "id": "2f5a",
+      "userId": "7137",
+      "billId": "S1008",
+      "vote": "Yes",
+      "date": "2024-08-01T20:09:53.968Z"
+    },
+    {
+      "id": "2e9c",
+      "userId": "7137",
+      "billId": "S4907",
+      "vote": "Yes",
+      "date": "2024-08-01T20:33:16.473Z"
+    },
+    {
+      "id": "1aae",
+      "userId": "7137",
+      "billId": "S4905",
+      "vote": "Yes",
+      "date": "2024-08-01T20:34:42.149Z"
+    },
+    {
+      "id": "f740",
+      "userId": "7137",
+      "billId": "S4906",
+      "vote": "Yes",
+      "date": "2024-08-01T20:35:01.842Z"
+    },
+    {
+      "id": "f6e2",
+      "userId": "7137",
+      "billId": "SRES788",
+      "vote": "Yes",
+      "date": "2024-08-01T20:37:46.105Z"
+    },
+    {
+      "id": "7aa0",
+      "userId": "7137",
+      "billId": "SRES787",
+      "vote": "Yes",
+      "date": "2024-08-01T21:39:06.523Z"
+    },
+    {
+      "id": "09ac",
+      "userId": "7137",
+      "billId": "SRES786",
+      "vote": "Yes",
+      "date": "2024-08-01T21:41:29.100Z"
+    },
+    {
+      "id": "e722",
+      "userId": "7137",
+      "billId": "SRES785",
+      "vote": "Yes",
+      "date": "2024-08-01T21:45:05.627Z"
+    },
+    {
+      "id": "12ff",
+      "userId": "7137",
+      "billId": "S4908",
+      "vote": "Yes",
+      "date": "2024-08-01T22:10:58.388Z"
+    },
+    {
+      "id": "5f65",
+      "userId": "7137",
+      "billId": "S4904",
+      "vote": "Yes",
+      "date": "2024-08-01T22:11:11.426Z"
+    },
+    {
+      "id": "ddf7",
+      "userId": "7137",
+      "billId": "S4902",
+      "vote": "Yes",
+      "date": "2024-08-01T22:19:46.185Z"
+    },
+    {
+      "id": "32fb",
+      "userId": "7137",
+      "billId": "S4903",
+      "vote": "Yes",
+      "date": "2024-08-01T22:19:48.391Z"
+    },
+    {
+      "id": "9d14",
+      "userId": "7137",
+      "billId": "S4899",
+      "vote": "Yes",
+      "date": "2024-08-01T22:20:36.204Z"
+    },
+    {
+      "id": "5a61",
+      "userId": "7137",
+      "billId": "S4487",
+      "vote": "Yes",
+      "date": "2024-08-01T22:29:57.861Z"
+    },
+    {
+      "id": "d145",
+      "userId": "7137",
+      "billId": "SCONRES39",
+      "vote": "Yes",
+      "date": "2024-08-01T22:30:21.639Z"
+    },
+    {
+      "id": "268b",
+      "userId": "7137",
+      "billId": "S4343",
+      "vote": "Yes",
+      "date": "2024-08-01T22:30:33.292Z"
+    },
+    {
+      "id": "830a",
+      "userId": "7137",
+      "billId": "S3849",
+      "vote": "Yes",
+      "date": "2024-08-02T14:37:52.395Z"
+    },
+    {
+      "id": "6765",
+      "userId": "7137",
+      "billId": "S4991",
+      "vote": "Yes",
+      "date": "2024-08-02T17:58:43.107Z"
+    },
+    {
+      "id": "2552",
+      "userId": "7137",
+      "billId": "S4394",
+      "vote": "Yes",
+      "date": "2024-08-02T17:58:44.545Z"
+    },
+    {
+      "id": "afbe",
+      "userId": "7137",
+      "billId": "S4107",
+      "vote": "Yes",
+      "date": "2024-08-02T18:21:58.378Z"
+    },
+    {
+      "id": "c1de",
+      "userId": "7137",
+      "billId": "S3959",
+      "vote": "Yes",
+      "date": "2024-08-02T18:24:30.549Z"
+    },
+    {
+      "id": "3262",
+      "userId": "7137",
+      "billId": "S2498",
+      "vote": "Yes",
+      "date": "2024-08-02T18:50:23.245Z"
+    },
+    {
+      "id": "6e22",
+      "userId": "7137",
+      "billId": "S3788",
+      "vote": "Yes",
+      "date": "2024-08-02T19:07:48.588Z"
+    },
+    {
+      "id": "18bf",
+      "userId": "7137",
+      "billId": "S4988",
+      "vote": "Yes",
+      "date": "2024-08-02T19:15:28.468Z"
+    },
+    {
+      "id": "efca",
+      "userId": "7137",
+      "billId": "S2233",
+      "vote": "Yes",
+      "date": "2024-08-02T19:15:53.503Z"
+    },
+    {
+      "id": "6c67",
+      "userId": "7137",
+      "billId": "SRES805",
+      "vote": "Yes",
+      "date": "2024-08-02T19:15:58.045Z"
+    },
+    {
+      "id": "2b7b",
+      "userId": "7137",
+      "billId": "SRES804",
+      "vote": "Yes",
+      "date": "2024-08-02T19:16:00.934Z"
+    },
+    {
+      "id": "732f",
+      "userId": "7137",
+      "billId": "S4990",
+      "vote": "Yes",
+      "date": "2024-08-02T19:16:04.985Z"
+    },
+    {
+      "id": "fde3",
+      "userId": "7137",
+      "billId": "S4989",
+      "vote": "Yes",
+      "date": "2024-08-02T19:16:09.301Z"
+    },
+    {
+      "id": "17b7",
+      "userId": "7137",
+      "billId": "S2086",
+      "vote": "Yes",
+      "date": "2024-08-02T19:16:11.024Z"
+    },
+    {
+      "id": "34c2",
+      "userId": "7137",
+      "billId": "S1956",
+      "vote": "Yes",
+      "date": "2024-08-02T19:16:13.845Z"
+    },
+    {
+      "id": "7504",
+      "userId": "7137",
+      "billId": "SRES802",
+      "vote": "Yes",
+      "date": "2024-08-02T19:16:21.374Z"
+    },
+    {
+      "id": "560a",
+      "userId": "7137",
+      "billId": "S4984",
+      "vote": "Yes",
+      "date": "2024-08-02T19:38:13.244Z"
+    },
+    {
+      "id": "d4f6",
+      "userId": "7137",
+      "billId": "SRES801",
+      "vote": "Yes",
+      "date": "2024-08-02T20:52:06.545Z"
+    },
+    {
+      "id": "d69c",
+      "userId": "7137",
+      "billId": "SRES800",
+      "vote": "Yes",
+      "date": "2024-08-02T20:53:17.481Z"
+    },
+    {
+      "id": "05cc",
+      "userId": "7137",
+      "billId": "SRES799",
+      "vote": "Yes",
+      "date": "2024-08-02T20:53:27.732Z"
+    },
+    {
+      "id": "37c0",
+      "userId": "7137",
+      "billId": "SRES798",
+      "vote": "Yes",
+      "date": "2024-08-02T20:57:10.639Z"
+    },
+    {
+      "id": "19a4",
+      "userId": "7137",
+      "billId": "SRES797",
+      "vote": "Yes",
+      "date": "2024-08-02T21:05:02.757Z"
+    },
+    {
+      "id": "ce4d",
+      "userId": "7137",
+      "billId": "S4367",
+      "vote": "Yes",
+      "date": "2024-08-06T19:29:54.502Z"
+    },
+    {
+      "id": "ebcd",
+      "userId": "7137",
+      "billId": "S4235",
+      "vote": "Yes",
+      "date": "2024-08-06T19:30:02.400Z"
+    },
+    {
+      "id": "8ecc",
+      "userId": "7137",
+      "billId": "S4199",
+      "vote": "Yes",
+      "date": "2024-08-06T19:30:03.907Z"
+    },
+    {
+      "id": "32cb",
+      "userId": "7137",
+      "billId": "S3938",
+      "vote": "Yes",
+      "date": "2024-08-06T19:30:05.904Z"
+    },
+    {
+      "id": "a6be",
+      "userId": "7137",
+      "billId": "S211",
+      "vote": "Yes",
+      "date": "2024-08-06T19:30:32.772Z"
+    },
+    {
+      "id": "1338",
+      "userId": "7137",
+      "billId": "S134",
+      "vote": "Yes",
+      "date": "2024-08-06T19:30:33.412Z"
+    },
+    {
+      "id": "29a5",
+      "userId": "7137",
+      "billId": "S133",
+      "vote": "Yes",
+      "date": "2024-08-06T19:30:34.041Z"
+    },
+    {
+      "id": "72ff",
+      "userId": "7137",
+      "billId": "HR9274",
+      "vote": "Yes",
+      "date": "2024-08-06T19:30:34.612Z"
+    },
+    {
+      "id": "8069",
+      "userId": "7137",
+      "billId": "HR9282",
+      "vote": "Yes",
+      "date": "2024-08-06T19:30:35.102Z"
+    },
+    {
+      "id": "3ff6",
+      "userId": "7137",
+      "billId": "HR9273",
+      "vote": "No",
+      "date": "2024-08-06T19:30:36.376Z"
+    },
+    {
+      "id": "ddbc",
+      "userId": "7137",
+      "billId": "HR9240",
+      "vote": "No",
+      "date": "2024-08-06T19:30:38.029Z"
+    },
+    {
+      "id": "f014",
+      "userId": "7137",
+      "billId": "HR9253",
+      "vote": "No",
+      "date": "2024-08-06T19:30:39.220Z"
+    },
+    {
+      "id": "ca9f",
+      "userId": "7137",
+      "billId": "HRES1402",
+      "vote": "No",
+      "date": "2024-08-06T19:30:40.926Z"
+    },
+    {
+      "id": "018e",
+      "userId": "7137",
+      "billId": "HR9296",
+      "vote": "No",
+      "date": "2024-08-06T19:30:41.682Z"
+    },
+    {
+      "id": "0b44",
+      "userId": "7137",
+      "billId": "HR9245",
+      "vote": "No",
+      "date": "2024-08-06T19:31:04.294Z"
+    },
+    {
+      "id": "8af3",
+      "userId": "7137",
+      "billId": "HR9237",
+      "vote": "No",
+      "date": "2024-08-06T19:31:26.055Z"
+    },
+    {
+      "id": "0463",
+      "userId": "7137",
+      "billId": "HR9290",
+      "vote": "No",
+      "date": "2024-08-06T19:31:31.657Z"
+    },
+    {
+      "id": "6362",
+      "userId": "7137",
+      "billId": "HR9243",
+      "vote": "No",
+      "date": "2024-08-06T19:31:34.264Z"
+    },
+    {
+      "id": "b793",
+      "userId": "7137",
+      "billId": "HR9281",
+      "vote": "No",
+      "date": "2024-08-06T19:31:36.793Z"
+    },
+    {
+      "id": "79b4",
+      "userId": "7137",
+      "billId": "HR9275",
+      "vote": "No",
+      "date": "2024-08-06T19:31:39.991Z"
+    },
+    {
+      "id": "fd47",
+      "userId": "7137",
+      "billId": "HR9294",
+      "vote": "No",
+      "date": "2024-08-06T19:31:58.922Z"
+    },
+    {
+      "id": "2161",
+      "userId": "7137",
+      "billId": "HR9285",
+      "vote": "No",
+      "date": "2024-08-06T19:31:59.599Z"
+    },
+    {
+      "id": "4a22",
+      "userId": "7137",
+      "billId": "HR9293",
+      "vote": "No",
+      "date": "2024-08-06T19:32:00.106Z"
+    },
+    {
+      "id": "2892",
+      "userId": "7137",
+      "billId": "HR9248",
+      "vote": "No",
+      "date": "2024-08-06T19:32:00.645Z"
+    },
+    {
+      "id": "e795",
+      "userId": "7137",
+      "billId": "HJRES199",
+      "vote": "No",
+      "date": "2024-08-06T19:32:02.135Z"
+    },
+    {
+      "id": "bb9f",
+      "userId": "7137",
+      "billId": "HR9263",
+      "vote": "No",
+      "date": "2024-08-06T19:32:02.871Z"
+    },
+    {
+      "id": "0adb",
+      "userId": "7137",
+      "billId": "HRES1406",
+      "vote": "No",
+      "date": "2024-08-06T19:32:03.617Z"
+    },
+    {
+      "id": "e7eb",
+      "userId": "7137",
+      "billId": "HR9292",
+      "vote": "No",
+      "date": "2024-08-06T19:32:04.704Z"
+    },
+    {
+      "id": "f4e1",
+      "userId": "7137",
+      "billId": "HR9291",
+      "vote": "No",
+      "date": "2024-08-06T19:32:06.145Z"
+    },
+    {
+      "id": "b4f6",
+      "userId": "7137",
+      "billId": "HR9257",
+      "vote": "No",
+      "date": "2024-08-06T19:32:06.927Z"
+    },
+    {
+      "id": "f4d2",
+      "userId": "7137",
+      "billId": "HR9254",
+      "vote": "No",
+      "date": "2024-08-06T19:32:10.706Z"
+    },
+    {
+      "id": "c49a",
+      "userId": "7137",
+      "billId": "HR9258",
+      "vote": "No",
+      "date": "2024-08-06T19:32:13.378Z"
+    },
+    {
+      "id": "7038",
+      "userId": "7137",
+      "billId": "HR9268",
+      "vote": "Yes",
+      "date": "2024-08-06T19:33:10.955Z"
+    },
+    {
+      "id": "c5d6",
+      "userId": "7137",
+      "billId": "HR9297",
+      "vote": "No",
+      "date": "2024-08-06T19:33:12.619Z"
+    },
+    {
+      "id": "f3dd",
+      "userId": "7137",
+      "billId": "HRES1404",
+      "vote": "No",
+      "date": "2024-08-06T19:33:13.821Z"
+    },
+    {
+      "id": "51bc",
+      "userId": "7137",
+      "billId": "HR9284",
+      "vote": "No",
+      "date": "2024-08-06T19:33:14.431Z"
+    },
+    {
+      "id": "9b89",
+      "userId": "7137",
+      "billId": "HJRES197",
+      "vote": "No",
+      "date": "2024-08-06T19:33:14.963Z"
     }
   ],
-  "Bills": []
+  "Bills": [
+    {
+      "id": "4d88",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-31",
+        "text": "Committee on Commerce, Science, and Transportation. Ordered to be reported with an amendment in the nature of a substitute favorably."
+      },
+      "number": "4487",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Small Business Artificial Intelligence Training and Toolkit Act of 2024",
+      "type": "S",
+      "updateDate": "2024-08-01T11:03:18Z",
+      "updateDateIncludingText": "2024-08-01T11:03:18Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4487?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4487/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4487/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4487/cosponsors?format=json"
+      },
+      "introducedDate": "2024-06-11",
+      "sponsors": [
+        {
+          "bioguideId": "C000127",
+          "firstName": "Maria",
+          "fullName": "Sen. Cantwell, Maria [D-WA]",
+          "isByRequest": "N",
+          "lastName": "Cantwell",
+          "party": "D",
+          "state": "WA",
+          "url": "https://api.congress.gov/v3/member/C000127?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4487/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4487/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "578b",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-31",
+        "text": "Referred to the Committee on the Judiciary. (text: CR S5690-5691)"
+      },
+      "number": "39",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A concurrent resolution expressing the sense of Congress that individuals who have been wrongfully or unjustly deported from the United States who established significant ties to the United States through years of life in the United States deserve a chance to come home to reunite with loved ones through a fair and centralized process within the Department of Homeland Security.",
+      "type": "SCONRES",
+      "updateDate": "2024-08-01T17:58:27Z",
+      "updateDateIncludingText": "2024-08-01T17:58:27Z",
+      "url": "https://api.congress.gov/v3/bill/118/sconres/39?format=json",
+      "actions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sconres/39/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/sconres/39/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 4,
+        "countIncludingWithdrawnCosponsors": 4,
+        "url": "https://api.congress.gov/v3/bill/118/sconres/39/cosponsors?format=json"
+      },
+      "introducedDate": "2024-07-31",
+      "sponsors": [
+        {
+          "bioguideId": "B001288",
+          "firstName": "Cory",
+          "fullName": "Sen. Booker, Cory A. [D-NJ]",
+          "isByRequest": "N",
+          "lastName": "Booker",
+          "party": "D",
+          "state": "NJ",
+          "url": "https://api.congress.gov/v3/member/B001288?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sconres/39/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      },
+      "voted": true
+    },
+    {
+      "id": "17a7",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-07-31",
+        "text": "Committee on Commerce, Science, and Transportation. Ordered to be reported with an amendment in the nature of a substitute favorably."
+      },
+      "number": "4343",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Fire Ready Nation Act of 2024",
+      "type": "S",
+      "updateDate": "2024-08-01T11:03:18Z",
+      "updateDateIncludingText": "2024-08-01T11:03:18Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4343?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4343/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4343/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 7,
+        "countIncludingWithdrawnCosponsors": 7,
+        "url": "https://api.congress.gov/v3/bill/118/s/4343/cosponsors?format=json"
+      },
+      "introducedDate": "2024-05-15",
+      "policyArea": {
+        "name": "Science, Technology, Communications"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "C000127",
+          "firstName": "Maria",
+          "fullName": "Sen. Cantwell, Maria [D-WA]",
+          "isByRequest": "N",
+          "lastName": "Cantwell",
+          "party": "D",
+          "state": "WA",
+          "url": "https://api.congress.gov/v3/member/C000127?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [],
+        "policyArea": {
+          "name": "Science, Technology, Communications"
+        }
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4343/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4343/titles?format=json"
+      },
+      "summary": "No Summary Available"
+    },
+    {
+      "id": "6abf",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 482."
+      },
+      "number": "3849",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Promoting United States Leadership in Standards Act of 2024",
+      "type": "S",
+      "updateDate": "2024-08-02T11:03:16Z",
+      "updateDateIncludingText": "2024-08-02T11:03:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/3849?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/3849/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3849/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 3,
+        "countIncludingWithdrawnCosponsors": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/3849/cosponsors?format=json"
+      },
+      "introducedDate": "2024-02-29",
+      "policyArea": {
+        "name": "Science, Technology, Communications"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "W000805",
+          "firstName": "Mark",
+          "fullName": "Sen. Warner, Mark R. [D-VA]",
+          "isByRequest": "N",
+          "lastName": "Warner",
+          "middleName": "R.",
+          "party": "D",
+          "state": "VA",
+          "url": "https://api.congress.gov/v3/member/W000805?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [],
+        "policyArea": {
+          "name": "Science, Technology, Communications"
+        }
+      },
+      "summaries": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3849/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3849/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/3849/titles?format=json"
+      },
+      "summary": "<p><strong>Promoting United States Leadership in Standards Act of 2024</strong></p><p>This bill requires the National Institute of Standards and Technology (NIST) to support U.S. involvement in the development of standards for artificial intelligence (AI) through briefings, pilot programs, and other activities.</p><p>Specifically, NIST must (1) brief Congress on opportunities for the federal government to participate in the process for developing technical standards for AI, (2) establish a web portal to inform U.S. industries and federal agencies of international efforts and opportunities to develop such standards, and (3) establish a pilot program and award associated grants to support stakeholder meetings in the&nbsp;U.S. on developing such standards.&nbsp;</p>"
+    },
+    {
+      "id": "e2c3",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "4991",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A bill to hold law enforcement accountable for misconduct in court, improve transparency through data collection, and reform police training and policies.",
+      "type": "S",
+      "updateDate": "2024-08-02T10:56:35Z",
+      "updateDateIncludingText": "2024-08-02T10:56:35Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4991?format=json",
+      "actions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4991/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4991/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 7,
+        "countIncludingWithdrawnCosponsors": 7,
+        "url": "https://api.congress.gov/v3/bill/118/s/4991/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "B001288",
+          "firstName": "Cory",
+          "fullName": "Sen. Booker, Cory A. [D-NJ]",
+          "isByRequest": "N",
+          "lastName": "Booker",
+          "party": "D",
+          "state": "NJ",
+          "url": "https://api.congress.gov/v3/member/B001288?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4991/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "1515",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 486."
+      },
+      "number": "4394",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "NSF AI Education Act of 2024",
+      "type": "S",
+      "updateDate": "2024-08-02T11:03:17Z",
+      "updateDateIncludingText": "2024-08-02T11:03:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4394?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/4394/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4394/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4394/cosponsors?format=json"
+      },
+      "introducedDate": "2024-05-22",
+      "sponsors": [
+        {
+          "bioguideId": "C000127",
+          "firstName": "Maria",
+          "fullName": "Sen. Cantwell, Maria [D-WA]",
+          "isByRequest": "N",
+          "lastName": "Cantwell",
+          "party": "D",
+          "state": "WA",
+          "url": "https://api.congress.gov/v3/member/C000127?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4394/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4394/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "e3d2",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 485."
+      },
+      "number": "4107",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Think Differently Transportation Act",
+      "type": "S",
+      "updateDate": "2024-08-02T11:03:17Z",
+      "updateDateIncludingText": "2024-08-02T11:03:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4107?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/4107/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4107/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4107/cosponsors?format=json"
+      },
+      "introducedDate": "2024-04-11",
+      "policyArea": {
+        "name": "Transportation and Public Works"
+      },
+      "relatedBills": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4107/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "D000622",
+          "firstName": "Tammy",
+          "fullName": "Sen. Duckworth, Tammy [D-IL]",
+          "isByRequest": "N",
+          "lastName": "Duckworth",
+          "party": "D",
+          "state": "IL",
+          "url": "https://api.congress.gov/v3/member/D000622?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Congressional oversight"
+          },
+          {
+            "name": "Disability and health-based discrimination"
+          },
+          {
+            "name": "Government corporations and government-sponsored enterprises"
+          },
+          {
+            "name": "National Railroad Passenger Corporation (Amtrak)"
+          },
+          {
+            "name": "Railroads"
+          }
+        ],
+        "policyArea": {
+          "name": "Transportation and Public Works"
+        }
+      },
+      "summaries": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4107/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4107/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4107/titles?format=json"
+      },
+      "summary": "<p><strong>Think Differently Transportation Act</strong></p><p>This bill requires the National Railroad Passenger Corporation (Amtrak) to include information on compliance with the Americans with Disabilities Act of 1990 (ADA) in a required annual report to Congress.</p><p>Specifically, Amtrak must incorporate into the annual report an action plan for bringing Amtrak rail cars and stations into compliance with the ADA as required by a 2020 settlement agreement entered into between Amtrak and the Department of Justice. (Under the agreement, Amtrak committed to complying with the ADA and making intercity rail stations accessible.)</p><p>Amtrak must also include a status report on ADA compliance at Amtrak-served stations (based on a station assessment by Amtrak or the party responsible for ADA compliance). &nbsp;A station assessment means a review of all components of a station, including the building, platform, path to train, and parking areas, as required by the U.S. Access Board. For those Amtrak-served stations where Amtrak is not responsible for ADA compliance, Amtrak must include in the report information on the responsible party.</p>"
+    },
+    {
+      "id": "9098",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 484."
+      },
+      "number": "3959",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Transportation Security Screening Modernization Act",
+      "type": "S",
+      "updateDate": "2024-08-02T11:03:16Z",
+      "updateDateIncludingText": "2024-08-02T11:03:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/3959?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/3959/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3959/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 5,
+        "countIncludingWithdrawnCosponsors": 5,
+        "url": "https://api.congress.gov/v3/bill/118/s/3959/cosponsors?format=json"
+      },
+      "introducedDate": "2024-03-14",
+      "policyArea": {
+        "name": "Transportation and Public Works"
+      },
+      "relatedBills": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3959/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "W000437",
+          "firstName": "Roger",
+          "fullName": "Sen. Wicker, Roger F. [R-MS]",
+          "isByRequest": "N",
+          "lastName": "Wicker",
+          "middleName": "F.",
+          "party": "R",
+          "state": "MS",
+          "url": "https://api.congress.gov/v3/member/W000437?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [],
+        "policyArea": {
+          "name": "Transportation and Public Works"
+        }
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3959/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/3959/titles?format=json"
+      },
+      "summary": "No Summary Available"
+    },
+    {
+      "id": "feae",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 478."
+      },
+      "number": "2498",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Hotel Fees Transparency Act of 2023",
+      "type": "S",
+      "updateDate": "2024-08-02T11:03:15Z",
+      "updateDateIncludingText": "2024-08-02T11:03:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/2498?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/2498/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2498/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 4,
+        "countIncludingWithdrawnCosponsors": 4,
+        "url": "https://api.congress.gov/v3/bill/118/s/2498/cosponsors?format=json"
+      },
+      "introducedDate": "2023-07-26",
+      "policyArea": {
+        "name": "Commerce"
+      },
+      "relatedBills": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2498/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "K000367",
+          "firstName": "Amy",
+          "fullName": "Sen. Klobuchar, Amy [D-MN]",
+          "isByRequest": "N",
+          "lastName": "Klobuchar",
+          "party": "D",
+          "state": "MN",
+          "url": "https://api.congress.gov/v3/member/K000367?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [],
+        "policyArea": {
+          "name": "Commerce"
+        }
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2498/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/2498/titles?format=json"
+      },
+      "summary": "No Summary Available"
+    },
+    {
+      "id": "7c18",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 481."
+      },
+      "number": "3788",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "National Landslide Preparedness Act Reauthorization Act of 2024",
+      "type": "S",
+      "updateDate": "2024-08-02T11:03:16Z",
+      "updateDateIncludingText": "2024-08-02T11:03:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/3788?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/3788/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3788/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3788/cosponsors?format=json"
+      },
+      "introducedDate": "2024-02-08",
+      "policyArea": {
+        "name": "Emergency Management"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "M001153",
+          "firstName": "Lisa",
+          "fullName": "Sen. Murkowski, Lisa [R-AK]",
+          "isByRequest": "N",
+          "lastName": "Murkowski",
+          "party": "R",
+          "state": "AK",
+          "url": "https://api.congress.gov/v3/member/M001153?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [],
+        "policyArea": {
+          "name": "Emergency Management"
+        }
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3788/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/3788/titles?format=json"
+      },
+      "summary": "No Summary Available"
+    },
+    {
+      "id": "b1df",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Read twice and referred to the Committee on Banking, Housing, and Urban Affairs."
+      },
+      "number": "4988",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A bill to award a Congressional Gold Medal, collectively, to the individuals who fought for or with the United States against the armed forces of Imperial Japan in the Pacific theater and the impacted Saskinax people on Attu, whose lives, culture, and community were irrevocably changed from December 8, 1941, to August 15, 1945.",
+      "type": "S",
+      "updateDate": "2024-08-02T10:56:36Z",
+      "updateDateIncludingText": "2024-08-02T10:56:36Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4988?format=json",
+      "actions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4988/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4988/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 8,
+        "countIncludingWithdrawnCosponsors": 8,
+        "url": "https://api.congress.gov/v3/bill/118/s/4988/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "H001046",
+          "firstName": "Martin",
+          "fullName": "Sen. Heinrich, Martin [D-NM]",
+          "isByRequest": "N",
+          "lastName": "Heinrich",
+          "middleName": "T.",
+          "party": "D",
+          "state": "NM",
+          "url": "https://api.congress.gov/v3/member/H001046?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4988/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "6160",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 477."
+      },
+      "number": "2233",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Youth Poisoning Protection Act",
+      "type": "S",
+      "updateDate": "2024-08-02T11:03:15Z",
+      "updateDateIncludingText": "2024-08-02T11:03:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/2233?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/2233/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2233/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2233/cosponsors?format=json"
+      },
+      "introducedDate": "2023-07-11",
+      "policyArea": {
+        "name": "Commerce"
+      },
+      "relatedBills": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2233/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "D000622",
+          "firstName": "Tammy",
+          "fullName": "Sen. Duckworth, Tammy [D-IL]",
+          "isByRequest": "N",
+          "lastName": "Duckworth",
+          "party": "D",
+          "state": "IL",
+          "url": "https://api.congress.gov/v3/member/D000622?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Child safety and welfare"
+          },
+          {
+            "name": "Consumer affairs"
+          },
+          {
+            "name": "Hazardous wastes and toxic substances"
+          },
+          {
+            "name": "Product safety and quality"
+          },
+          {
+            "name": "Retail and wholesale trades"
+          }
+        ],
+        "policyArea": {
+          "name": "Commerce"
+        }
+      },
+      "summaries": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2233/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2233/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/2233/titles?format=json"
+      },
+      "summary": "<p><strong>Youth Poisoning Protection Act</strong></p><p>This bill makes a consumer product with a concentration of sodium nitrite of 10% or greater a banned hazardous product.</p>"
+    },
+    {
+      "id": "2448",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Referred to the Committee on Foreign Relations. (text: CR S5791)"
+      },
+      "number": "805",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution commemorating the tenth anniversary of the murder of James Wright Foley and calling for the moral courage to prioritize the return of Americans held captive abroad and take all necessary efforts to deter international hostage taking and arbitrary detention.",
+      "type": "SRES",
+      "updateDate": "2024-08-02T14:51:46Z",
+      "updateDateIncludingText": "2024-08-02T14:51:46Z",
+      "url": "https://api.congress.gov/v3/bill/118/sres/805?format=json",
+      "actions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/805/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/sres/805/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/sres/805/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "S001181",
+          "firstName": "Jeanne",
+          "fullName": "Sen. Shaheen, Jeanne [D-NH]",
+          "isByRequest": "N",
+          "lastName": "Shaheen",
+          "party": "D",
+          "state": "NH",
+          "url": "https://api.congress.gov/v3/member/S001181?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/805/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "e0c3",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Referred to the Committee on Foreign Relations. (text: CR S5790-5791)"
+      },
+      "number": "804",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution recognizing Edmundo Gonzalez Urrutia as the President-elect of Venezuela.",
+      "type": "SRES",
+      "updateDate": "2024-08-02T17:13:31Z",
+      "updateDateIncludingText": "2024-08-02T17:13:31Z",
+      "url": "https://api.congress.gov/v3/bill/118/sres/804?format=json",
+      "actions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/804/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/sres/804/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 5,
+        "countIncludingWithdrawnCosponsors": 5,
+        "url": "https://api.congress.gov/v3/bill/118/sres/804/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "R000595",
+          "firstName": "Marco",
+          "fullName": "Sen. Rubio, Marco [R-FL]",
+          "isByRequest": "N",
+          "lastName": "Rubio",
+          "party": "R",
+          "state": "FL",
+          "url": "https://api.congress.gov/v3/member/R000595?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/804/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "26e8",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Read twice and referred to the Committee on the Judiciary. (text: CR S5782-5786)"
+      },
+      "number": "4990",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A bill to comprehensively combat child marriage in the United States.",
+      "type": "S",
+      "updateDate": "2024-08-02T15:21:22Z",
+      "updateDateIncludingText": "2024-08-02T15:21:22Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4990?format=json",
+      "actions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4990/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4990/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4990/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "D000563",
+          "firstName": "Richard",
+          "fullName": "Sen. Durbin, Richard J. [D-IL]",
+          "isByRequest": "N",
+          "lastName": "Durbin",
+          "middleName": "J.",
+          "party": "D",
+          "state": "IL",
+          "url": "https://api.congress.gov/v3/member/D000563?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4990/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "67f2",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Read twice and referred to the Committee on Environment and Public Works."
+      },
+      "number": "4989",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A bill to amend title 23, United States Code, to permit the use of certain electric vehicle charging stations at rest areas, and for other purposes.",
+      "type": "S",
+      "updateDate": "2024-08-02T10:56:35Z",
+      "updateDateIncludingText": "2024-08-02T10:56:35Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4989?format=json",
+      "actions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4989/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4989/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4989/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "M001176",
+          "firstName": "Jeff",
+          "fullName": "Sen. Merkley, Jeff [D-OR]",
+          "isByRequest": "N",
+          "lastName": "Merkley",
+          "party": "D",
+          "state": "OR",
+          "url": "https://api.congress.gov/v3/member/M001176?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4989/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "ac8b",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 476."
+      },
+      "number": "2086",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Sea Turtle Rescue Assistance Act of 2023",
+      "type": "S",
+      "updateDate": "2024-08-02T11:03:15Z",
+      "updateDateIncludingText": "2024-08-02T11:03:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/2086?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/2086/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2086/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 6,
+        "countIncludingWithdrawnCosponsors": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/2086/cosponsors?format=json"
+      },
+      "introducedDate": "2023-06-21",
+      "policyArea": {
+        "name": "Animals"
+      },
+      "relatedBills": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2086/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "M000133",
+          "firstName": "Edward",
+          "fullName": "Sen. Markey, Edward J. [D-MA]",
+          "isByRequest": "N",
+          "lastName": "Markey",
+          "middleName": "J.",
+          "party": "D",
+          "state": "MA",
+          "url": "https://api.congress.gov/v3/member/M000133?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Animal protection and human-animal relationships"
+          },
+          {
+            "name": "Endangered and threatened species"
+          },
+          {
+            "name": "Reptiles"
+          },
+          {
+            "name": "Seashores and lakeshores"
+          }
+        ],
+        "policyArea": {
+          "name": "Animals"
+        }
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/2086/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/2086/titles?format=json"
+      },
+      "summary": "No Summary Available"
+    },
+    {
+      "id": "7a62",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Placed on Senate Legislative Calendar under General Orders. Calendar No. 475."
+      },
+      "number": "1956",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Invent Here, Make Here Act of 2023",
+      "type": "S",
+      "updateDate": "2024-08-02T11:03:15Z",
+      "updateDateIncludingText": "2024-08-02T11:03:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/1956?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/s/1956/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/1956/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/1956/cosponsors?format=json"
+      },
+      "introducedDate": "2023-06-13",
+      "policyArea": {
+        "name": "Commerce"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "B001230",
+          "firstName": "Tammy",
+          "fullName": "Sen. Baldwin, Tammy [D-WI]",
+          "isByRequest": "N",
+          "lastName": "Baldwin",
+          "party": "D",
+          "state": "WI",
+          "url": "https://api.congress.gov/v3/member/B001230?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Advanced technology and technological innovations"
+          },
+          {
+            "name": "Business investment and capital"
+          },
+          {
+            "name": "Buy American requirements"
+          },
+          {
+            "name": "Economic development"
+          },
+          {
+            "name": "Manufacturing"
+          },
+          {
+            "name": "Public-private cooperation"
+          },
+          {
+            "name": "Research and development"
+          }
+        ],
+        "policyArea": {
+          "name": "Commerce"
+        }
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/1956/text?format=json"
+      },
+      "titles": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/1956/titles?format=json"
+      },
+      "summary": "No Summary Available"
+    },
+    {
+      "id": "d595",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S5836; text: CR S5790)"
+      },
+      "number": "802",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution designating August 2024 as \"National Catfish Month\".",
+      "type": "SRES",
+      "updateDate": "2024-08-02T14:46:55Z",
+      "updateDateIncludingText": "2024-08-02T14:46:55Z",
+      "url": "https://api.congress.gov/v3/bill/118/sres/802?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/sres/802/actions?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "W000437",
+          "firstName": "Roger",
+          "fullName": "Sen. Wicker, Roger F. [R-MS]",
+          "isByRequest": "N",
+          "lastName": "Wicker",
+          "middleName": "F.",
+          "party": "R",
+          "state": "MS",
+          "url": "https://api.congress.gov/v3/member/W000437?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/802/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "c49b",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Read twice and referred to the Committee on the Judiciary."
+      },
+      "number": "4984",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A bill to amend the Controlled Substances Act to require regulated persons to identify tableting machines and encapsulating machines by serial number.",
+      "type": "S",
+      "updateDate": "2024-08-02T10:56:39Z",
+      "updateDateIncludingText": "2024-08-02T10:56:39Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4984?format=json",
+      "actions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4984/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4984/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 4,
+        "countIncludingWithdrawnCosponsors": 4,
+        "url": "https://api.congress.gov/v3/bill/118/s/4984/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "C001056",
+          "firstName": "John",
+          "fullName": "Sen. Cornyn, John [R-TX]",
+          "isByRequest": "N",
+          "lastName": "Cornyn",
+          "party": "R",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/C001056?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/4984/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "e829",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S5836; text: CR S5789-5790)"
+      },
+      "number": "801",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution honoring the life and enduring legacy of William \"Willie\" Howard Mays, Jr.",
+      "type": "SRES",
+      "updateDate": "2024-08-02T14:46:15Z",
+      "updateDateIncludingText": "2024-08-02T14:46:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/sres/801?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/sres/801/actions?format=json"
+      },
+      "cosponsors": {
+        "count": 3,
+        "countIncludingWithdrawnCosponsors": 3,
+        "url": "https://api.congress.gov/v3/bill/118/sres/801/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "B001319",
+          "firstName": "Katie",
+          "fullName": "Sen. Britt, Katie Boyd [R-AL]",
+          "isByRequest": "N",
+          "lastName": "Britt",
+          "party": "R",
+          "state": "AL",
+          "url": "https://api.congress.gov/v3/member/B001319?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/801/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "216c",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S5836; text: CR S5789)"
+      },
+      "number": "800",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution condemning the attempted assassination of former President Donald J. Trump during a political rally in Butler, Pennsylvania, honoring the victims who were killed and injured at the rally, and calling for unity and civility in the United States.",
+      "type": "SRES",
+      "updateDate": "2024-08-02T14:44:47Z",
+      "updateDateIncludingText": "2024-08-02T14:44:47Z",
+      "url": "https://api.congress.gov/v3/bill/118/sres/800?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/sres/800/actions?format=json"
+      },
+      "cosponsors": {
+        "count": 90,
+        "countIncludingWithdrawnCosponsors": 90,
+        "url": "https://api.congress.gov/v3/bill/118/sres/800/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "B001261",
+          "firstName": "John",
+          "fullName": "Sen. Barrasso, John [R-WY]",
+          "isByRequest": "N",
+          "lastName": "Barrasso",
+          "party": "R",
+          "state": "WY",
+          "url": "https://api.congress.gov/v3/member/B001261?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/800/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "5747",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S5836; text: CR S5789)"
+      },
+      "number": "799",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution supporting the goals and ideals of Fentanyl Prevention and Awareness Day on August 21, 2024.",
+      "type": "SRES",
+      "updateDate": "2024-08-02T14:44:31Z",
+      "updateDateIncludingText": "2024-08-02T14:44:31Z",
+      "url": "https://api.congress.gov/v3/bill/118/sres/799?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/sres/799/actions?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/sres/799/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "G000386",
+          "firstName": "Chuck",
+          "fullName": "Sen. Grassley, Chuck [R-IA]",
+          "isByRequest": "N",
+          "lastName": "Grassley",
+          "party": "R",
+          "state": "IA",
+          "url": "https://api.congress.gov/v3/member/G000386?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/799/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "a9f2",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S5836; text: CR S5788-5789)"
+      },
+      "number": "798",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution commemorating the 75th Anniversary of the Mann Gulch fire by designating August 5, 2024, as \"Mann Gulch Memorial Tribute Day\".",
+      "type": "SRES",
+      "updateDate": "2024-08-02T14:39:40Z",
+      "updateDateIncludingText": "2024-08-02T14:39:40Z",
+      "url": "https://api.congress.gov/v3/bill/118/sres/798?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/sres/798/actions?format=json"
+      },
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/798/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "T000464",
+          "firstName": "Jon",
+          "fullName": "Sen. Tester, Jon [D-MT]",
+          "isByRequest": "N",
+          "lastName": "Tester",
+          "party": "D",
+          "state": "MT",
+          "url": "https://api.congress.gov/v3/member/T000464?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/798/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "2288",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-01",
+        "text": "Submitted in the Senate, considered, and agreed to without amendment and with a preamble by Unanimous Consent. (consideration: CR S5836; text: CR S5788)"
+      },
+      "number": "797",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A resolution designating August 16, 2024, as \"National Airborne Day\".",
+      "type": "SRES",
+      "updateDate": "2024-08-02T14:37:29Z",
+      "updateDateIncludingText": "2024-08-02T14:37:29Z",
+      "url": "https://api.congress.gov/v3/bill/118/sres/797?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/sres/797/actions?format=json"
+      },
+      "cosponsors": {
+        "count": 21,
+        "countIncludingWithdrawnCosponsors": 21,
+        "url": "https://api.congress.gov/v3/bill/118/sres/797/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-01",
+      "sponsors": [
+        {
+          "bioguideId": "M001153",
+          "firstName": "Lisa",
+          "fullName": "Sen. Murkowski, Lisa [R-AK]",
+          "isByRequest": "N",
+          "lastName": "Murkowski",
+          "party": "R",
+          "state": "AK",
+          "url": "https://api.congress.gov/v3/member/M001153?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/sres/797/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "5592",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Message on Senate action sent to the House."
+      },
+      "number": "4367",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Thomas R. Carper Water Resources Development Act of 2024",
+      "type": "S",
+      "updateDate": "2024-08-04T11:03:15Z",
+      "updateDateIncludingText": "2024-08-04T11:03:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4367?format=json",
+      "actions": {
+        "count": 11,
+        "url": "https://api.congress.gov/v3/bill/118/s/4367/actions?format=json"
+      },
+      "amendments": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4367/amendments?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As reported by the Senate Committee on Environment and Public Works on May 22, 2024\n",
+          "pubDate": "2024-07-17T17:28:00Z",
+          "title": "Estimated Budgetary Effects of S. 4367, the Water Resources Development Act of 2024",
+          "url": "https://www.cbo.gov/publication/60538"
+        }
+      ],
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4367/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 3,
+        "countIncludingWithdrawnCosponsors": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4367/cosponsors?format=json"
+      },
+      "introducedDate": "2024-05-20",
+      "policyArea": {
+        "name": "Water Resources Development"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "C000174",
+          "firstName": "Thomas",
+          "fullName": "Sen. Carper, Thomas R. [D-DE]",
+          "isByRequest": "N",
+          "lastName": "Carper",
+          "middleName": "R.",
+          "party": "D",
+          "state": "DE",
+          "url": "https://api.congress.gov/v3/member/C000174?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [],
+        "policyArea": {
+          "name": "Water Resources Development"
+        }
+      },
+      "textVersions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4367/text?format=json"
+      },
+      "titles": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/s/4367/titles?format=json"
+      },
+      "summary": "No Summary Available"
+    },
+    {
+      "id": "1b85",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Message on Senate action sent to the House."
+      },
+      "number": "4235",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Reauthorizing Support and Treatment for Officers in Crisis Act of 2024",
+      "type": "S",
+      "updateDate": "2024-08-04T11:03:15Z",
+      "updateDateIncludingText": "2024-08-04T11:03:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4235?format=json",
+      "actions": {
+        "count": 9,
+        "url": "https://api.congress.gov/v3/bill/118/s/4235/actions?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As reported by the Senate Committee on the Judiciary on June 5, 2024\n",
+          "pubDate": "2024-07-03T16:31:00Z",
+          "title": "S. 4235, Reauthorizing Support and Treatment for Officers in Crisis Act of 2024",
+          "url": "https://www.cbo.gov/publication/60493"
+        }
+      ],
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4235/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 21,
+        "countIncludingWithdrawnCosponsors": 21,
+        "url": "https://api.congress.gov/v3/bill/118/s/4235/cosponsors?format=json"
+      },
+      "introducedDate": "2024-05-01",
+      "policyArea": {
+        "name": "Crime and Law Enforcement"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "H001089",
+          "firstName": "Josh",
+          "fullName": "Sen. Hawley, Josh [R-MO]",
+          "isByRequest": "N",
+          "lastName": "Hawley",
+          "party": "R",
+          "state": "MO",
+          "url": "https://api.congress.gov/v3/member/H001089?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Family services"
+          },
+          {
+            "name": "Law enforcement administration and funding"
+          },
+          {
+            "name": "Law enforcement officers"
+          },
+          {
+            "name": "Mental health"
+          }
+        ],
+        "policyArea": {
+          "name": "Crime and Law Enforcement"
+        }
+      },
+      "textVersions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4235/text?format=json"
+      },
+      "titles": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/s/4235/titles?format=json"
+      },
+      "summary": "No Summary Available"
+    },
+    {
+      "id": "6cbb",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Message on Senate action sent to the House."
+      },
+      "number": "4199",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "JUDGES Act of 2024",
+      "type": "S",
+      "updateDate": "2024-08-04T11:03:15Z",
+      "updateDateIncludingText": "2024-08-04T11:03:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/4199?format=json",
+      "actions": {
+        "count": 9,
+        "url": "https://api.congress.gov/v3/bill/118/s/4199/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/4199/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 17,
+        "countIncludingWithdrawnCosponsors": 17,
+        "url": "https://api.congress.gov/v3/bill/118/s/4199/cosponsors?format=json"
+      },
+      "introducedDate": "2024-04-19",
+      "sponsors": [
+        {
+          "bioguideId": "Y000064",
+          "firstName": "Todd",
+          "fullName": "Sen. Young, Todd [R-IN]",
+          "isByRequest": "N",
+          "lastName": "Young",
+          "party": "R",
+          "state": "IN",
+          "url": "https://api.congress.gov/v3/member/Y000064?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/4199/text?format=json"
+      },
+      "titles": {
+        "count": 8,
+        "url": "https://api.congress.gov/v3/bill/118/s/4199/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "18ce",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Message on Senate action sent to the House."
+      },
+      "number": "3938",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "A bill to designate the community-based outpatient clinic of the Department of Veterans Affairs in Lynchburg, Virginia, as the \"Private First Class Desmond T. Doss VA Clinic\".",
+      "type": "S",
+      "updateDate": "2024-08-03T10:56:42Z",
+      "updateDateIncludingText": "2024-08-03T10:56:42Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/3938?format=json",
+      "actions": {
+        "count": 7,
+        "url": "https://api.congress.gov/v3/bill/118/s/3938/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3938/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/3938/cosponsors?format=json"
+      },
+      "introducedDate": "2024-03-14",
+      "policyArea": {
+        "name": "Armed Forces and National Security"
+      },
+      "relatedBills": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/3938/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "W000805",
+          "firstName": "Mark",
+          "fullName": "Sen. Warner, Mark R. [D-VA]",
+          "isByRequest": "N",
+          "lastName": "Warner",
+          "middleName": "R.",
+          "party": "D",
+          "state": "VA",
+          "url": "https://api.congress.gov/v3/member/W000805?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [],
+        "policyArea": {
+          "name": "Armed Forces and National Security"
+        }
+      },
+      "textVersions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/3938/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/3938/titles?format=json"
+      },
+      "summary": "No Summary Available"
+    },
+    {
+      "id": "ad46",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Message on Senate action sent to the House."
+      },
+      "number": "211",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "SMART Leasing Act",
+      "type": "S",
+      "updateDate": "2024-08-04T11:03:14Z",
+      "updateDateIncludingText": "2024-08-04T11:03:14Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/211?format=json",
+      "actions": {
+        "count": 9,
+        "url": "https://api.congress.gov/v3/bill/118/s/211/actions?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As ordered reported by the Senate Committee on Homeland Security and Governmental Affairs on March 29, 2023\n",
+          "pubDate": "2023-05-23T17:05:00Z",
+          "title": "S. 211, SMART Leasing Act",
+          "url": "https://www.cbo.gov/publication/59196"
+        }
+      ],
+      "committeeReports": [
+        {
+          "citation": "S. Rept. 118-35",
+          "url": "https://api.congress.gov/v3/committee-report/118/SRPT/35?format=json"
+        }
+      ],
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/211/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 3,
+        "countIncludingWithdrawnCosponsors": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/211/cosponsors?format=json"
+      },
+      "introducedDate": "2023-02-01",
+      "policyArea": {
+        "name": "Government Operations and Politics"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "P000595",
+          "firstName": "Gary",
+          "fullName": "Sen. Peters, Gary C. [D-MI]",
+          "isByRequest": "N",
+          "lastName": "Peters",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/P000595?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Congressional oversight"
+          },
+          {
+            "name": "Government buildings, facilities, and property"
+          },
+          {
+            "name": "State and local government operations"
+          }
+        ],
+        "policyArea": {
+          "name": "Government Operations and Politics"
+        }
+      },
+      "summaries": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/211/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/211/text?format=json"
+      },
+      "titles": {
+        "count": 8,
+        "url": "https://api.congress.gov/v3/bill/118/s/211/titles?format=json"
+      },
+      "summary": " <p><strong>Saving Money and Accelerating Repairs Through Leasing Act or the SMART Leasing Act </strong></p> <p>This bill authorizes the General Services Administration (GSA) to establish a pilot program that allows federal agencies to lease underutilized properties with GSA approval and to use the rent payments to reduce the deficit and help fund capital projects and facilities maintenance.</p> <p>The GSA may not enter into a lease unless it certifies that the lease will not have a negative impact on its mission or that of the applicable federal agency.</p> <p>The bill provides for a maximum of six leases under the program during each fiscal year, with a term of up to 15 years. </p> <p>Of collected funds that are not used to cover costs in connection with the lease, 50% shall be deposited in a working capital account and remain available until expended for maintenance, capital revitalization, and improvements, and 50% deposited in the Treasury's general fund for deficit reduction.</p> <p>The GSA may not enter into a lease under the pilot program with any individual or entity that</p> <ul> <li>intends to carry out, under the lease, activities that are illegal to conduct in federal facilities or under federal law or activities for which federal funding is prohibited;</li> <li>is a political organization;</li> <li>is owned, operated, or controlled by a foreign government; or</li> <li>received any federal grant, contract, or award from the applicable federal agency engaged in the lease that is still in the performance period.</li> </ul> <p>No lease entered into under the pilot program may be used to carry out lobbying activities.</p>"
+    },
+    {
+      "id": "8e6e",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "actionTime": "11:25:16",
+        "text": "Held at the desk."
+      },
+      "number": "134",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "Alzheimer’s Accountability and Investment Act",
+      "type": "S",
+      "updateDate": "2024-08-03T08:05:52Z",
+      "updateDateIncludingText": "2024-08-03T08:05:52Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/134?format=json",
+      "actions": {
+        "count": 11,
+        "url": "https://api.congress.gov/v3/bill/118/s/134/actions?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As reported by the Senate Committee on Health, Education, Labor, and Pensions on July 27, 2023\n",
+          "pubDate": "2024-01-12T20:25:00Z",
+          "title": "S. 134, Alzheimer’s Accountability and Investment Act",
+          "url": "https://www.cbo.gov/publication/59875"
+        }
+      ],
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/134/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 41,
+        "countIncludingWithdrawnCosponsors": 41,
+        "url": "https://api.congress.gov/v3/bill/118/s/134/cosponsors?format=json"
+      },
+      "introducedDate": "2023-01-30",
+      "policyArea": {
+        "name": "Health"
+      },
+      "relatedBills": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/134/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "C001035",
+          "firstName": "Susan",
+          "fullName": "Sen. Collins, Susan M. [R-ME]",
+          "isByRequest": "N",
+          "lastName": "Collins",
+          "middleName": "M.",
+          "party": "R",
+          "state": "ME",
+          "url": "https://api.congress.gov/v3/member/C001035?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Budget process"
+          },
+          {
+            "name": "Government information and archives"
+          },
+          {
+            "name": "Neurological disorders"
+          }
+        ],
+        "policyArea": {
+          "name": "Health"
+        }
+      },
+      "summaries": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/134/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/134/text?format=json"
+      },
+      "titles": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/s/134/titles?format=json"
+      },
+      "summary": " <p><strong>Alzheimer's Accountability and Investment Act</strong></p> <p>This bill requires the National Institutes of Health to annually submit, beginning in FY2024, an estimate of its budget and personnel needs for carrying out initiatives pursuant to the National Alzheimer's Project directly to the President for review and transmittal to Congress. The Department of Health and Human Services and the Advisory Council on Alzheimer's Research, Care, and Services may comment on the budget estimate but may not change it.</p> <p>The National Alzheimer's Project supports coordination of federal planning, research, and other efforts to address Alzheimer's disease and related dementias.</p>"
+    },
+    {
+      "id": "fe4e",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "actionTime": "11:25:08",
+        "text": "Held at the desk."
+      },
+      "number": "133",
+      "originChamber": "Senate",
+      "originChamberCode": "S",
+      "title": "NAPA Reauthorization Act",
+      "type": "S",
+      "updateDate": "2024-08-03T08:06:15Z",
+      "updateDateIncludingText": "2024-08-03T08:06:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/s/133?format=json",
+      "actions": {
+        "count": 13,
+        "url": "https://api.congress.gov/v3/bill/118/s/133/actions?format=json"
+      },
+      "amendments": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/133/amendments?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As reported by the Senate Committee on Health, Education, Labor, and Pensions on July 27, 2023\n",
+          "pubDate": "2024-01-12T20:22:00Z",
+          "title": "S. 133, NAPA Reauthorization Act",
+          "url": "https://www.cbo.gov/publication/59874"
+        }
+      ],
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/s/133/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 44,
+        "countIncludingWithdrawnCosponsors": 44,
+        "url": "https://api.congress.gov/v3/bill/118/s/133/cosponsors?format=json"
+      },
+      "introducedDate": "2023-01-30",
+      "policyArea": {
+        "name": "Health"
+      },
+      "relatedBills": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/133/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "C001035",
+          "firstName": "Susan",
+          "fullName": "Sen. Collins, Susan M. [R-ME]",
+          "isByRequest": "N",
+          "lastName": "Collins",
+          "middleName": "M.",
+          "party": "R",
+          "state": "ME",
+          "url": "https://api.congress.gov/v3/member/C001035?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Advisory bodies"
+          },
+          {
+            "name": "Aging"
+          },
+          {
+            "name": "Health promotion and preventive care"
+          },
+          {
+            "name": "Neurological disorders"
+          }
+        ],
+        "policyArea": {
+          "name": "Health"
+        }
+      },
+      "summaries": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/s/133/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/s/133/text?format=json"
+      },
+      "titles": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/s/133/titles?format=json"
+      },
+      "summary": " <p><strong>NAPA Reauthorization Act</strong></p> <p>This bill extends through 2035 and makes other changes to the National Alzheimer's Project. This project supports coordination of federal planning, programs, and other efforts to address Alzheimer's disease and related dementias.</p> <p>In particular, the bill incorporates a focus on promoting healthy aging and reducing risk factors associated with cognitive decline.</p> <p>The bill also expands the Advisory Council on Alzheimer's Research, Care, and Services to include additional members, such as (1) a researcher with experience recruiting and retaining diverse clinical trial participants, (2) an individual diagnosed with Alzheimer's disease, and (3) representatives from additional federal agencies (e.g., the Department of Justice).</p>"
+    },
+    {
+      "id": "58fe",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the Committee on House Administration, and in addition to the Committee on Natural Resources, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9274",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To permit the Smithsonian National Museum of the American Latino and the Smithsonian American Women's History Museum to be located within the Reserve of the National Mall, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:47Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9274?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9274/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9274/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. MALLIOTAKIS:\nH.R. 9274.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8\nThe single subject of this legislation is:\nTo permit the Smithsonian National Museum of the American\nLatino and the Smithsonian American Women's History Museum to\nbe located within the Reserve of the National Mall, and for\nother purposes.\n[Page H4973]\n</pre>",
+      "cosponsors": {
+        "count": 3,
+        "countIncludingWithdrawnCosponsors": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9274/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "M000317",
+          "district": 11,
+          "firstName": "Nicole",
+          "fullName": "Rep. Malliotakis, Nicole [R-NY-11]",
+          "isByRequest": "N",
+          "lastName": "Malliotakis",
+          "party": "R",
+          "state": "NY",
+          "url": "https://api.congress.gov/v3/member/M000317?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9274/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "99c9",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "9282",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To require the Secretary of Homeland Security to provide candidates with a justification for candidate protection determinations, to require Senate confirmation of the Director of the United States Secret Service, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:48Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9282?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9282/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9282/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. PFLUGER:\nH.R. 9282.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1 Section 8\nThe single subject of this legislation is:\nTo require the Secretary of Homeland Security to provide\ncandidates with justifications for candidate protection\ndeterminations, and requires Senate confirmation of the\nDirector of the United States Secret Service, and for other\npurposes.\n[Page H4974]\n</pre>",
+      "cosponsors": {
+        "count": 5,
+        "countIncludingWithdrawnCosponsors": 5,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9282/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "P000048",
+          "district": 11,
+          "firstName": "August",
+          "fullName": "Rep. Pfluger, August [R-TX-11]",
+          "isByRequest": "N",
+          "lastName": "Pfluger",
+          "party": "R",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/P000048?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9282/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "573c",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "9273",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To prohibit oil and gas leasing on the outer Continental Shelf off the coast of New England.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:14Z",
+      "updateDateIncludingText": "2024-08-03T08:28:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9273?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9273/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9273/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. MAGAZINER:\nH.R. 9273.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8\nThe single subject of this legislation is:\nTo prohibit oil and gas leasing on the outer Continental\nShelf off the coast of New England\n[Page H4973]\n</pre>",
+      "cosponsors": {
+        "count": 14,
+        "countIncludingWithdrawnCosponsors": 14,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9273/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "M001223",
+          "district": 2,
+          "firstName": "Seth",
+          "fullName": "Rep. Magaziner, Seth [D-RI-2]",
+          "isByRequest": "N",
+          "lastName": "Magaziner",
+          "party": "D",
+          "state": "RI",
+          "url": "https://api.congress.gov/v3/member/M001223?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9273/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "4e71",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Agriculture."
+      },
+      "number": "9240",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Specialty Crops Competitiveness Act of 2004 to require the Secretary of Agriculture to establish a pilot program to provide recovery payments to producers of seasonal and perishable crops that experience low prices caused by imports, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:25Z",
+      "updateDateIncludingText": "2024-08-03T08:28:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9240?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9240/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9240/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. BISHOP of Georgia:\nH.R. 9240.\nCongress has the power to enact this legislation pursuant\nto the following:\nU.S. Const. art. 1, Sec. 8, cls. 1, 3, 18\nThe single subject of this legislation is:\nspecialty crops (seasonal and perishable crops)\n[Page H4972]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "B000490",
+          "district": 2,
+          "firstName": "Sanford",
+          "fullName": "Rep. Bishop, Sanford D. [D-GA-2]",
+          "isByRequest": "N",
+          "lastName": "Bishop",
+          "middleName": "D.",
+          "party": "D",
+          "state": "GA",
+          "url": "https://api.congress.gov/v3/member/B000490?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9240/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "1e95",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the Committee on the Judiciary, and in addition to the Committees on Science, Space, and Technology, and Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9253",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To provide for a coordinated national research program to examine the nature, causes, consequences, and prevention of violence and unintended injury and death relating to gun ownership, use, and trafficking, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:27Z",
+      "updateDateIncludingText": "2024-08-03T08:28:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9253?format=json",
+      "actions": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9253/actions?format=json"
+      },
+      "committees": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9253/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mrs. FOUSHEE:\nH.R. 9253.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1\nThe single subject of this legislation is:\nGun Violence Research\n[Page H4973]\n</pre>",
+      "cosponsors": {
+        "count": 20,
+        "countIncludingWithdrawnCosponsors": 20,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9253/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "F000477",
+          "district": 4,
+          "firstName": "Valerie",
+          "fullName": "Rep. Foushee, Valerie P. [D-NC-4]",
+          "isByRequest": "N",
+          "lastName": "Foushee",
+          "middleName": "P.",
+          "party": "D",
+          "state": "NC",
+          "url": "https://api.congress.gov/v3/member/F000477?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9253/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "a9af",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "1402",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Commending the Minnesota State University, Mankato women's and men's basketball teams for winning the 2024 NCAA Division II Basketball National Championships.",
+      "type": "HRES",
+      "updateDate": "2024-08-03T08:18:14Z",
+      "updateDateIncludingText": "2024-08-03T08:18:14Z",
+      "url": "https://api.congress.gov/v3/bill/118/hres/1402?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1402/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1402/committees?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "F000475",
+          "district": 1,
+          "firstName": "Brad",
+          "fullName": "Rep. Finstad, Brad [R-MN-1]",
+          "isByRequest": "N",
+          "lastName": "Finstad",
+          "party": "R",
+          "state": "MN",
+          "url": "https://api.congress.gov/v3/member/F000475?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1402/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1402/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "042b",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "9296",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Secretary of Defense to submit a report to Congress on recruitment and retention efforts under the John S. McCain Strategic Defense Fellows Program, the Presidential Management Fellowship, and the Boren Fellowship, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:00Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9296?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9296/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9296/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. SLOTKIN:\nH.R. 9296.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18: To make all Laws which\nshall be necessary and proper for carrying into Execution the\nforegoing Powers, and all other Powers vested by this\nConstitution in the Government of the United States, or in\nany Department or Officer thereof.\nThe single subject of this legislation is:\nTo direct the Secretary of Defense to submit a report to\nCongress on recruitment and retention efforts under the John\nS. McCain Strategic Defense Fellows Program, the Presidential\nManagement Fellowship, and the Boren Fellowship, and for\nother purposes.\n[Page H4975]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "S001208",
+          "district": 7,
+          "firstName": "Elissa",
+          "fullName": "Rep. Slotkin, Elissa [D-MI-7]",
+          "isByRequest": "N",
+          "lastName": "Slotkin",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/S001208?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9296/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "3e81",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the Committee on Financial Services, and in addition to the Committees on the Judiciary, Veterans' Affairs, and Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9245",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To make housing more affordable, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:30Z",
+      "updateDateIncludingText": "2024-08-03T08:28:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9245?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9245/actions?format=json"
+      },
+      "committees": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9245/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. CLEAVER:\nH.R. 9245.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1 Section 8\nThe single subject of this legislation is:\nTo make housing more affordable, and for other purposes.\n[Page H4972]\n</pre>",
+      "cosponsors": {
+        "count": 20,
+        "countIncludingWithdrawnCosponsors": 20,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9245/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "C001061",
+          "district": 5,
+          "firstName": "Emanuel",
+          "fullName": "Rep. Cleaver, Emanuel [D-MO-5]",
+          "isByRequest": "N",
+          "lastName": "Cleaver",
+          "party": "D",
+          "state": "MO",
+          "url": "https://api.congress.gov/v3/member/C001061?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9245/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "6ab4",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9237",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To improve end-of-life care.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:56Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9237?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9237/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9237/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. BARRAGAN:\nH.R. 9237.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1 Section 8 of the United States Constitution\nThe single subject of this legislation is:\nTo improve end-of-life care.\n[Page H4972]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "B001300",
+          "district": 44,
+          "firstName": "Nanette",
+          "fullName": "Rep. Barragán, Nanette Diaz [D-CA-44]",
+          "isByRequest": "N",
+          "lastName": "Barragán",
+          "middleName": "Diaz",
+          "party": "D",
+          "state": "CA",
+          "url": "https://api.congress.gov/v3/member/B001300?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9237/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "ab3f",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "9290",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Chief Information Officer of the Department of Defense and the Director of the Defense Information Systems Agency to jointly provide to the Committees on Armed Services of the Senate and House of Representatives a briefing on the plan of the Department of Defense to transition away from the Joint Regional Security Stacks, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:46Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9290?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9290/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9290/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. SLOTKIN:\nH.R. 9290.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18: To make all Laws which\nshall be necessary and proper for carrying into Execution the\nforegoing Powers, and all other Powers vested by this\nConstitution in the Government of the United States, or in\nany Department or Officer thereof.\nThe single subject of this legislation is:\nTo direct the Chief Information Officer of the Department\nof Defense and the Director of the Defense Information\nSystems Agency to jointly provide to the Committees on Armed\nServices of the Senate and House of Representatives a\nbriefing on the plan of the Department of Defense to\ntransition away from the Joint Regional Security Stacks, and\nfor other purposes\n[Page H4974]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "S001208",
+          "district": 7,
+          "firstName": "Elissa",
+          "fullName": "Rep. Slotkin, Elissa [D-MI-7]",
+          "isByRequest": "N",
+          "lastName": "Slotkin",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/S001208?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9290/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "13cb",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Transportation and Infrastructure."
+      },
+      "number": "9243",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To require the Administrator of the Federal Aviation Administration to publish the list of medications that the Administrator has compiled for purposes of the medical certification of airmen, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:12Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9243?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9243/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9243/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. CASTEN:\nH.R. 9243.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8, Clause 1\nThe single subject of this legislation is:\nTo require the Administrator of the Federal Aviation\nAdministration to publish the list of medications that the\nAdministrator has compiled for purposes of the medical\ncertification of airmen.\n[Page H4972]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9243/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "C001117",
+          "district": 6,
+          "firstName": "Sean",
+          "fullName": "Rep. Casten, Sean [D-IL-6]",
+          "isByRequest": "N",
+          "lastName": "Casten",
+          "party": "D",
+          "state": "IL",
+          "url": "https://api.congress.gov/v3/member/C001117?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9243/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "f5c2",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the Committee on Ways and Means, and in addition to the Committee on Education and the Workforce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9281",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Employee Retirement Income Security Act of 1974 and the Internal Revenue Code of 1986 with respect to minimum participation standards for pension plans and qualified trusts.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:25Z",
+      "updateDateIncludingText": "2024-08-03T08:28:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9281?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9281/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9281/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. PETTERSEN:\nH.R. 9281.\nCongress has the power to enact this legislation pursuant\nto the following:--\nArticle I, Section 8\nThe single subject of this legislation is:\nThis bill lowers the age for participation in tax-exempt\npension plans from 21 to 18.\n[Page H4974]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9281/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "P000620",
+          "district": 7,
+          "firstName": "Brittany",
+          "fullName": "Rep. Pettersen, Brittany [D-CO-7]",
+          "isByRequest": "N",
+          "lastName": "Pettersen",
+          "party": "D",
+          "state": "CO",
+          "url": "https://api.congress.gov/v3/member/P000620?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9281/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "06b7",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the Committee on Ways and Means, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9275",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Internal Revenue Code of 1986 to provide a refundable tax credit for non-directed living kidney donations.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:06Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9275?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9275/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9275/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\n[Pages H4973-H4974]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. MALLIOTAKIS:\nH.R. 9275.\n[[Page H4974]]\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, clause 1\nThe single subject of this legislation is:\nThe bill will provide a refundable tax credit for non-\ndirected living kidney donations.\n</pre>",
+      "cosponsors": {
+        "count": 3,
+        "countIncludingWithdrawnCosponsors": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9275/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "M000317",
+          "district": 11,
+          "firstName": "Nicole",
+          "fullName": "Rep. Malliotakis, Nicole [R-NY-11]",
+          "isByRequest": "N",
+          "lastName": "Malliotakis",
+          "party": "R",
+          "state": "NY",
+          "url": "https://api.congress.gov/v3/member/M000317?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9275/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "3046",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "9294",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To encourage the Secretary of the Army to support the implementation of hybrid-electric engine technology within the High Mobility Multipurpose Wheeled Vehicle fleet, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:35Z",
+      "updateDateIncludingText": "2024-08-03T08:28:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9294?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9294/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9294/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. SLOTKIN:\nH.R. 9294.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18: To make all Laws which\nshall be necessary and proper for carrying into Execution the\nforegoing Powers, and all other Powers vested by this\nConstitution in the Government of the United States, or in\nany Department or Officer thereof.\nThe single subject of this legislation is:\nTo encourage the Secretary of the Army to support the\nimplementation of hybrid-electric engine technology within\nthe High Mobility Multipurpose Wheeled Vehicle fleet, and for\nother purposes\n[Page H4975]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "S001208",
+          "district": 7,
+          "firstName": "Elissa",
+          "fullName": "Rep. Slotkin, Elissa [D-MI-7]",
+          "isByRequest": "N",
+          "lastName": "Slotkin",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/S001208?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9294/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "624c",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "9285",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To designate the facility of the United States Postal Service located at 3913 Leland Avenue Northwest in Comstock Park, Michigan, as the \"Captain Miguel Justin Nava Post Office\".",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:07Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9285?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9285/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9285/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. SCHOLTEN:\nH.R. 9285.\nCongress has the power to enact this legislation pursuant\nto the following:\nUnder Article I, Section 8 of the Constitution, Congress\nhas the power ``to make all Laws which shall be necessary and\nproper for carrying into Execution the foregoing Powers, and\nall other Powers vested by this Constitution in the\nGovernment of the United States, or any Department or Officer\nthereof''\nThe single subject of this legislation is:\nPost Office Renaming\n[Page H4974]\n</pre>",
+      "cosponsors": {
+        "count": 12,
+        "countIncludingWithdrawnCosponsors": 12,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9285/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "S001221",
+          "district": 3,
+          "firstName": "Hillary",
+          "fullName": "Rep. Scholten, Hillary J. [D-MI-3]",
+          "isByRequest": "N",
+          "lastName": "Scholten",
+          "middleName": "J.",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/S001221?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9285/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "14c4",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "9293",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Under Secretary of Defense for Intelligence and Security to provide to the congressional defense committees a briefing on challenges relating to information operations, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:20Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9293?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9293/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9293/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\n[Pages H4974-H4975]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. SLOTKIN:\nH.R. 9293.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18: To make all Laws which\nshall be necessary and proper for carrying into Execution the\nforegoing Powers, and all other Powers vested by this\nConstitution in the Government of the United States, or in\nany Department or Officer thereof.\nThe single subject of this legislation is:\nTo direct the Under Secretary of Defense for Intelligence\nand Security to provide to the congressional defense\ncommittees a briefing on challenges relating to information\noperations, and for other purposes.\n[[Page H4975]]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "S001208",
+          "district": 7,
+          "firstName": "Elissa",
+          "fullName": "Rep. Slotkin, Elissa [D-MI-7]",
+          "isByRequest": "N",
+          "lastName": "Slotkin",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/S001208?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9293/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "e154",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Transportation and Infrastructure."
+      },
+      "number": "9248",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend title 49, United States Code, to provide States the authority to limit blocking highway-rail grade crossings, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:16Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9248?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9248/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9248/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. DAVIDSON:\nH.R. 9248.\nCongress has the power to enact this legislation pursuant\nto the following:\n``Article I, Section 8, Clause 18: The Congress shall have\nPower . . . To make all Laws which shall be necessary and\nproper for carrying into Execution the foregoing Powers, and\nall other Powers vested by this Constitution in the\nGovernment of the United States, or in any Department or\nOfficer thereof.''\nThe single subject of this legislation is:\n``To amend title 49, United States Code, to provide states\nthe authority to limit blocking highway-rail grade crossings,\nand for other purposes.\n[Page H4972]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "D000626",
+          "district": 8,
+          "firstName": "Warren",
+          "fullName": "Rep. Davidson, Warren [R-OH-8]",
+          "isByRequest": "N",
+          "lastName": "Davidson",
+          "party": "R",
+          "state": "OH",
+          "url": "https://api.congress.gov/v3/member/D000626?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9248/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "27e3",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "199",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the National Highway Traffic Safety Administration relating to \"Corporate Average Fuel Economy Standards for Passenger Cars and Light Trucks for Model Years 2027 and Beyond and Fuel Efficiency Standards for Heavy-Duty Pickup Trucks and Vans for Model Years 2030 and Beyond\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-06T09:18:20Z",
+      "updateDateIncludingText": "2024-08-06T09:18:20Z",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/199?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/199/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/199/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. WALBERG:\nH.J. Res. 199.\nCongress has the power to enact this legislation pursuant\nto the following:\nArtile 1, Section 8 of the U.S. Consitution.\nThe single subject of this legislation is:\nProviding for congressional disapproval under chapter 8 of\ntitle 5, United States Code, of the rule submitted by the\nNational Highway Traffic Safety Administration relating to\n``Corporate Average Fuel Economy Standards for Passenger Cars\nand Light Trucks for Model Years 2027 and Beyond and Fuel\nEfficiency Standards for Heavy-Duty Pickup Trucks and Vans\nfor Model Years 2030 and Beyond''\n[Page H4975]\n</pre>",
+      "cosponsors": {
+        "count": 64,
+        "countIncludingWithdrawnCosponsors": 64,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/199/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "W000798",
+          "district": 5,
+          "firstName": "Tim",
+          "fullName": "Rep. Walberg, Tim [R-MI-5]",
+          "isByRequest": "N",
+          "lastName": "Walberg",
+          "party": "R",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/W000798?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/199/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/199/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "aa1a",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Ways and Means."
+      },
+      "number": "9263",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Internal Revenue Code of 1986 to establish a credit for investments in innovative agricultural technology.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:24Z",
+      "updateDateIncludingText": "2024-08-03T08:28:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9263?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9263/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9263/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. KELLY of Pennsylvania:\nH.R. 9263.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8, Clause 1\nThe single subject of this legislation is:\nTo amend the Internal Revenue Code of 1986 to establish a\ncredit for investments in innovative agricultural technology.\n[Page H4973]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9263/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "K000376",
+          "district": 16,
+          "firstName": "Mike",
+          "fullName": "Rep. Kelly, Mike [R-PA-16]",
+          "isByRequest": "N",
+          "lastName": "Kelly",
+          "party": "R",
+          "state": "PA",
+          "url": "https://api.congress.gov/v3/member/K000376?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9263/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "de76",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "1406",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Commemorating 175 years of diplomatic relations between the United States and the Republic of Guatemala.",
+      "type": "HRES",
+      "updateDate": "2024-08-03T08:18:16Z",
+      "updateDateIncludingText": "2024-08-03T08:18:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hres/1406?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1406/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1406/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 7,
+        "countIncludingWithdrawnCosponsors": 7,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1406/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "R000617",
+          "district": 3,
+          "firstName": "Delia",
+          "fullName": "Rep. Ramirez, Delia C. [D-IL-3]",
+          "isByRequest": "N",
+          "lastName": "Ramirez",
+          "middleName": "C.",
+          "party": "D",
+          "state": "IL",
+          "url": "https://api.congress.gov/v3/member/R000617?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1406/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1406/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "5bca",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "9292",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Secretary of the Army to provide a briefing to Congress on the future role and structure of Multi-Domain Task Forces, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:25Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9292?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9292/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9292/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. SLOTKIN:\nH.R. 9292.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18: To make all Laws which\nshall be necessary and proper for carrying into Execution the\nforegoing Powers, and all other Powers vested by this\nConstitution in the Government of the United States, or in\nany Department or Officer thereof.\nThe single subject of this legislation is:\nTo direct the Secretary of the Army to provide a briefing\nto Congress on the future role and structure of Multi-Domain\nTask Forces, and for other purposes.\n[Page H4974]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "S001208",
+          "district": 7,
+          "firstName": "Elissa",
+          "fullName": "Rep. Slotkin, Elissa [D-MI-7]",
+          "isByRequest": "N",
+          "lastName": "Slotkin",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/S001208?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9292/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "4e20",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "9291",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Secretary of the Army to provide a briefing to Congress on the efforts of the Army to field passive multi-static radar detection technology for mobile counter-UAS systems, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:09Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9291?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9291/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9291/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. SLOTKIN:\nH.R. 9291.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18: To make all Laws which\nshall be necessary and proper for carrying into Execution the\nforegoing Powers, and all other Powers vested by this\nConstitution in the Government of the United States, or in\nany Department or Officer thereof.\nThe single subject of this legislation is:\nTo direct the Secretary of the Army to provide a briefing\nto Congress on the efforts of the Army to field passive\nmulti-static radar detection technology for mobile counter-\nUAS systems, and for other purposes.\n[Page H4974]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "S001208",
+          "district": 7,
+          "firstName": "Elissa",
+          "fullName": "Rep. Slotkin, Elissa [D-MI-7]",
+          "isByRequest": "N",
+          "lastName": "Slotkin",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/S001208?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9291/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "e97c",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "9257",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To establish the Great Bend of the Gila National Monument in the State of Arizona, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:16Z",
+      "updateDateIncludingText": "2024-08-03T08:28:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9257?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9257/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9257/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. GRIJALVA:\nH.R. 9257.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle IV, Sec. 3\nThe single subject of this legislation is:\nDesignating the Great Bend of the Gila National Monument in\nthe State of Arizona.\n[Page H4973]\n</pre>",
+      "cosponsors": {
+        "count": 6,
+        "countIncludingWithdrawnCosponsors": 6,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9257/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "G000551",
+          "district": 7,
+          "firstName": "Raúl",
+          "fullName": "Rep. Grijalva, Raúl M. [D-AZ-7]",
+          "isByRequest": "N",
+          "lastName": "Grijalva",
+          "middleName": "M.",
+          "party": "D",
+          "state": "AZ",
+          "url": "https://api.congress.gov/v3/member/G000551?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9257/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "7298",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Ways and Means."
+      },
+      "number": "9254",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Internal Revenue Code of 1986 to exclude from gross income any judgments, awards, and settlements with respect to sexual assault or sexual harassment claims, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:06Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9254?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9254/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9254/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. LOIS FRANKEL of Florida:\nH.R. 9254.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8\nThe single subject of this legislation is:\ntaxes\n[Page H4973]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9254/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "F000462",
+          "district": 22,
+          "firstName": "Lois",
+          "fullName": "Rep. Frankel, Lois [D-FL-22]",
+          "isByRequest": "N",
+          "lastName": "Frankel",
+          "party": "D",
+          "state": "FL",
+          "url": "https://api.congress.gov/v3/member/F000462?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9254/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "b3a3",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9258",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Federal Food, Drug, and Cosmetic Act to require pill press molds to bear a unique serial number, to amend the Controlled Substances Act to prohibit the knowing possession of a pill press mold with intent to manufacture certain counterfeit substances, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:25Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9258?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9258/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9258/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. HARDER of California:\nH.R. 9258.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8 of the Constitution.\nThe single subject of this legislation is:\nTo stop the production of counterfeit fentanyl pills and\nallow law enforcement increased mechanisms to prevent illicit\ndrug manufacturing and distribution.\n[Page H4973]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9258/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "H001090",
+          "district": 9,
+          "firstName": "Josh",
+          "fullName": "Rep. Harder, Josh [D-CA-9]",
+          "isByRequest": "N",
+          "lastName": "Harder",
+          "party": "D",
+          "state": "CA",
+          "url": "https://api.congress.gov/v3/member/H001090?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9258/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "6de7",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Homeland Security."
+      },
+      "number": "9268",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Administrator of the Transportation Security Administration to update security screening requirements for certain covered air carrier operations.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:01Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9268?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9268/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9268/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. LANGWORTHY:\nH.R. 9268.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1 Section 8\nThe single subject of this legislation is:\nDirects the TSA to ensure carriers operating under a Part\n135 and/or Part 380 designation in the manner of a scheduled\ncommercial air carriers are held to the same security\nstandards under the TSA as any other scheduled commercial air\ncarrier.\n[Page H4973]\n</pre>",
+      "cosponsors": {
+        "count": 12,
+        "countIncludingWithdrawnCosponsors": 12,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9268/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "L000600",
+          "district": 23,
+          "firstName": "Nicholas",
+          "fullName": "Rep. Langworthy, Nicholas A. [R-NY-23]",
+          "isByRequest": "N",
+          "lastName": "Langworthy",
+          "middleName": "A.",
+          "party": "R",
+          "state": "NY",
+          "url": "https://api.congress.gov/v3/member/L000600?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9268/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "4f86",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "9297",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To prohibit the Department of Defense from acquiring certain information technology products manufactured by certain foreign companies, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:06:10Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9297?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9297/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9297/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. STANTON:\nH.R. 9297.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8\nThe single subject of this legislation is:\nProhibits the Department of Defense from buying commercial\ninformation technology products from the PRC.\n[Page H4975]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9297/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "S001211",
+          "district": 4,
+          "firstName": "Greg",
+          "fullName": "Rep. Stanton, Greg [D-AZ-4]",
+          "isByRequest": "N",
+          "lastName": "Stanton",
+          "party": "D",
+          "state": "AZ",
+          "url": "https://api.congress.gov/v3/member/S001211?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9297/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "1bf5",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the Committee on Education and the Workforce, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "1404",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for keeping guns out of classrooms.",
+      "type": "HRES",
+      "updateDate": "2024-08-03T08:18:15Z",
+      "updateDateIncludingText": "2024-08-03T08:18:15Z",
+      "url": "https://api.congress.gov/v3/bill/118/hres/1404?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1404/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1404/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 19,
+        "countIncludingWithdrawnCosponsors": 19,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1404/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "H001081",
+          "district": 5,
+          "firstName": "Jahana",
+          "fullName": "Rep. Hayes, Jahana [D-CT-5]",
+          "isByRequest": "N",
+          "lastName": "Hayes",
+          "party": "D",
+          "state": "CT",
+          "url": "https://api.congress.gov/v3/member/H001081?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1404/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1404/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "755e",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Veterans' Affairs."
+      },
+      "number": "9284",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Servicemembers Civil Relief Act to limit the interest rate on student loans incurred by a servicemember before military service and consolidated or refinanced during military service, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-08-03T08:05:58Z",
+      "updateDateIncludingText": "2024-08-03T08:28:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9284?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9284/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9284/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mrs. RAMIREZ:\nH.R. 9284.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8 of the Constitution of the United\nStates.\nThe single subject of this legislation is:\nThis legislation would amend the Servicemembers Civil\nRelief Act (SCRA) to allow service members to consolidate or\nrefinance federal or private student loan debt they or they\nand their spouse jointly incurred before they entered the\nmilitary and continue to benefit from the six percent student\nloan interest rate cap to which they are entitled through the\nSCRA.\n[Page H4974]\n</pre>",
+      "cosponsors": {
+        "count": 8,
+        "countIncludingWithdrawnCosponsors": 8,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9284/cosponsors?format=json"
+      },
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "R000617",
+          "district": 3,
+          "firstName": "Delia",
+          "fullName": "Rep. Ramirez, Delia C. [D-IL-3]",
+          "isByRequest": "N",
+          "lastName": "Ramirez",
+          "middleName": "C.",
+          "party": "D",
+          "state": "IL",
+          "url": "https://api.congress.gov/v3/member/R000617?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9284/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "0ba1",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-02",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "197",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the Nuclear Regulatory Commission relating to \"Fee Schedules; Fee Recovery for Fiscal Year 2024\".",
+      "type": "HJRES",
+      "updateDate": "2024-08-03T08:18:12Z",
+      "updateDateIncludingText": "2024-08-03T08:28:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hjres/197?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/197/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/197/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 127 (Friday, August 2, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. PALMER:\nH.J. Res. 197.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8\nThe single subject of this legislation is:\nTo disapprove of the rule submitted by the Nuclear\nRegulatory Commission relating to ``Fee Schedules; Fee\nRecovery for Fiscal Year 2024''.\n[Page H4975]\n</pre>",
+      "introducedDate": "2024-08-02",
+      "sponsors": [
+        {
+          "bioguideId": "P000609",
+          "district": 6,
+          "firstName": "Gary",
+          "fullName": "Rep. Palmer, Gary J. [R-AL-6]",
+          "isByRequest": "N",
+          "lastName": "Palmer",
+          "middleName": "J.",
+          "party": "R",
+          "state": "AL",
+          "url": "https://api.congress.gov/v3/member/P000609?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/197/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/197/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    }
+  ]
 }

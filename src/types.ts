@@ -37,6 +37,7 @@ interface Titles {
 }
 
 export interface Bill {
+  subjects: any;
   actions: Actions;
   committees: Committees;
   congress: number;
@@ -54,6 +55,9 @@ export interface Bill {
   updateDate: string;
   updateDateIncludingText: string;
   url: string;
+  policyArea: {
+    name: string;
+  };
 }
 export type User = {
   id: string;
@@ -68,3 +72,10 @@ export type User = {
   };
   vote_log: object;
 };
+
+export interface Vote {
+  userId: string;
+  billId: string;
+  vote: 'Yes' | 'No';
+  date: Date;
+}
