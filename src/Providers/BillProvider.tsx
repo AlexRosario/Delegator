@@ -24,8 +24,6 @@ type TBillProvider = {
   chamber: string;
   setChamber: (chamber: string) => void;
   congress: string;
-  prevChamberRef: React.MutableRefObject<string>;
-  prevSubjectRef: React.MutableRefObject<string>;
   filterPassedBills: boolean;
   setFilterPassedBills: (filterPassed: boolean) => void;
   setActiveBillTab: (tab: string) => void;
@@ -52,8 +50,6 @@ export const BillContext = createContext<TBillProvider>({
   chamber: 'house',
   setChamber: () => {},
   congress: '118',
-  prevChamberRef: { current: 'house' } as React.MutableRefObject<string>,
-  prevSubjectRef: { current: '' } as React.MutableRefObject<string>,
   filterPassedBills: false,
   setFilterPassedBills: () => {},
   setActiveBillTab: () => {},
@@ -77,13 +73,11 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [allBills, setAllBills] = useState<Bill[]>([]);
   const [newBills, setNewBills] = useState<Bill[]>([]);
   const [votedBills, setVotedBills] = useState<Bill[]>([]);
-  const [activeBillTab, setActiveBillTab] = useState<string>('all');
+  const [activeBillTab, setActiveBillTab] = useState<string>('discover-bills');
   const [billSubject, setBillSubject] = useState<string>('');
   const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [offset, setOffset] = useState(0);
   const [chamber, setChamber] = useState<string>('house');
-  const prevSubjectRef = useRef(billSubject);
-  const prevChamberRef = useRef(chamber);
   const [filterPassedBills, setFilterPassedBills] = useState(false);
   const [congress, setCongress] = useState('118');
   const [billType, setBillType] = useState('');
@@ -91,12 +85,13 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [billDetail, setBillDetail] = useState('');
   const args = [congress, billType, billNumber, billDetail] as const;
   const [currentIndex, setCurrentIndex] = useState(0);
+  const prevIndexRef = useRef(currentIndex);
   const billsToDisplay =
     activeBillTab === 'all'
       ? allBills
-      : activeBillTab === 'new'
+      : activeBillTab === 'discover-bills'
         ? newBills
-        : activeBillTab === 'voted'
+        : activeBillTab === 'voted-bills'
           ? votedBills
           : [];
 
@@ -177,29 +172,33 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
       console.error('Failed to fetch bills:', error);
     } finally {
       setOffset(offset + 20);
-      prevSubjectRef.current = billSubject;
-      prevChamberRef.current = chamber;
     }
   };
 
   // Fetch new bills if the current index is the last index and when there are no bills
 
   useEffect(() => {
-    if (currentIndex === allBills.length - 9 || allBills.length === 0) {
+    if (
+      (currentIndex === billsToDisplay.length - 9 &&
+        prevIndexRef.current !== currentIndex) ||
+      allBills.length === 0
+    ) {
       fetchBills()
         .then((bills) => {
           setAllBills((prevBills: Bill[]) => [
             ...prevBills,
             ...(bills as Bill[])
           ]);
+          console.log('n:', newBills);
         })
+
         .catch((error) => console.error('Failed to fetch bills dawg:', error));
     }
   }, [user, currentIndex]);
 
   useEffect(() => {
-    if (votedOnThisBill || billsToDisplay.length === 0) {
-      fetchVoteLog().then((VoteLog) => {
+    fetchVoteLog()
+      .then((VoteLog) => {
         setNewBills(
           allBills.filter(
             (bill: Bill) =>
@@ -213,8 +212,8 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
           setVotedBills(bills);
         });
         setVoteLog(VoteLog);
-      });
-    }
+      })
+      .finally(() => (prevIndexRef.current = currentIndex));
   }, [activeBillTab, allBills, votedOnThisBill]);
 
   return (
@@ -230,8 +229,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         chamber,
         setChamber,
         congress,
-        prevChamberRef,
-        prevSubjectRef,
         filterPassedBills,
         setFilterPassedBills,
         setActiveBillTab,

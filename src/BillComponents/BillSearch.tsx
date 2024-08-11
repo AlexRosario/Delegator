@@ -9,41 +9,38 @@ export const BillSearch = () => {
     billsToDisplay,
     billSubject,
     setBillSubject,
-    isButtonClicked,
-    setIsButtonClicked,
     offset,
-    setOffset,
     filterPassedBills,
     setFilterPassedBills,
-    currentIndex
+    currentIndex,
+    activeBillTab
   } = useDisplayBills();
   const [searchType, setSearchType] = useState('');
 
   return (
     <>
       <div className="subject-banner">
-        <button
-          disabled={isButtonClicked}
-          onClick={() => setFilterPassedBills(!filterPassedBills)}
-        >
-          {filterPassedBills ? 'Show All Bills' : 'Filter Passed Bills'}
-        </button>
-        {isButtonClicked ? (
+        {billsToDisplay.length === 0 ? (
           <div>Loading...</div>
         ) : billsToDisplay.length === 0 && billSubject !== '' ? (
           <div>Couldn't fulfill request at this time</div>
-        ) : billSubject === '' ? (
+        ) : activeBillTab === 'discover-bills' ? (
           <h2>{`Most Recent Bills ${currentIndex + 1} of ${billsToDisplay.length}`}</h2>
         ) : (
           <h2>
-            House Bills: {billSubject}
-            {offset}
+            {billSubject} Bills:
+            {billsToDisplay.length}
           </h2>
         )}
       </div>
 
       <div className="congressional-efficacy">
-        {/* upload bills for entire session */}
+        <button
+          disabled={billsToDisplay.length < 20}
+          onClick={() => setFilterPassedBills(!filterPassedBills)}
+        >
+          {filterPassedBills ? 'Show All Bills' : 'Filter Passed Bills'}
+        </button>
         <em>
           <b>
             Congressional Bills made into law this session:

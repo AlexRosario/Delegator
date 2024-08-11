@@ -18,37 +18,6 @@ export const BillCollection = () => {
     <div className="bill-collection-container">
       <div className="search-subject">
         <div className="selectors">
-          {/* This should display the favorited count */}
-          <div
-            className={`selector ${searchType === 'policy' ? 'active' : ''}`}
-            onClick={() => {
-              setSearchType('policy');
-            }}
-          >
-            Search by Policy
-          </div>
-
-          {/* This should display the unfavorited count */}
-          <div
-            className={`selector ${
-              searchType === 'legislative-term' ? 'active' : ''
-            }`}
-            onClick={() => {
-              setSearchType('legislative-term');
-            }}
-          >
-            Search by Legislative Term
-          </div>
-          <div
-            className={`selector ${
-              searchType === 'bill-number' ? 'active' : ''
-            }`}
-            onClick={() => {
-              setSearchType('bill-number');
-            }}
-          >
-            Search by Bill Number
-          </div>
           <div
             className={`selector ${searchType === 'all' ? 'active' : ''}`}
             onClick={() => {
@@ -57,6 +26,24 @@ export const BillCollection = () => {
             }}
           >
             All
+          </div>
+          <div
+            className={`selector ${searchType === 'policy' ? 'active' : ''}`}
+            onClick={() => {
+              setSearchType('policy');
+            }}
+          >
+            Filter by Policy
+          </div>
+          <div
+            className={`selector ${
+              searchType === 'legislative-term' ? 'active' : ''
+            }`}
+            onClick={() => {
+              setSearchType('legislative-term');
+            }}
+          >
+            Filter by Legislative Term
           </div>
         </div>
 

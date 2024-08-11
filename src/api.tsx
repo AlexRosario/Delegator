@@ -161,7 +161,8 @@ export const Requests = {
   getFullBill: async (
     congress: string,
     billType: string,
-    billNumber: string
+    billNumber: string,
+    signal?: AbortSignal
   ) => {
     const url = `/congressGov/v3/bill/${congress}/${billType}/${billNumber}`;
     try {
@@ -170,7 +171,8 @@ export const Requests = {
         headers: {
           'Content-Type': 'application/json',
           'X-Api-Key': 'wbWdJxHyM4R2Vo9dCkI5jqdApMidOokgNWmHb8e3'
-        }
+        },
+        signal
       });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -187,7 +189,8 @@ export const Requests = {
     congress: string,
     billType: string,
     billNumber: string,
-    billDetail: string
+    billDetail: string,
+    signal?: AbortSignal
   ) => {
     const url = `/congressGov/v3/bill/${congress}/${billType}/${billNumber}/${billDetail}`;
     try {
@@ -196,7 +199,8 @@ export const Requests = {
         headers: {
           'Content-Type': 'application/json',
           'X-Api-Key': 'wbWdJxHyM4R2Vo9dCkI5jqdApMidOokgNWmHb8e3' // Ensure correct API key is sent
-        }
+        },
+        signal
       });
 
       if (!response.ok) {
