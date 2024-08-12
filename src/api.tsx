@@ -91,7 +91,7 @@ export const Requests = {
         // Assuming userData returns directly the user object which has vote_log
 
         const filteredData = userData.filter(
-          (voteRecord) => voteRecord.userId === user
+          (voteRecord: Vote) => voteRecord.userId === user.id
         );
         console.log('f:', filteredData);
         return filteredData; // Return the parsed vote log

@@ -17,8 +17,6 @@ type TBillProvider = {
   billsToDisplay: Bill[];
   billSubject: string;
   setBillSubject: (subject: string) => void;
-  isButtonClicked: boolean;
-  setIsButtonClicked: (isClicked: boolean) => void;
   offset: number;
   setOffset: (offset: number | ((prevOffset: number) => number)) => void;
   chamber: string;
@@ -43,8 +41,6 @@ export const BillContext = createContext<TBillProvider>({
   billsToDisplay: [],
   billSubject: '',
   setBillSubject: () => {},
-  isButtonClicked: false,
-  setIsButtonClicked: () => {},
   offset: 0,
   setOffset: () => {},
   chamber: 'house',
@@ -75,15 +71,11 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [votedBills, setVotedBills] = useState<Bill[]>([]);
   const [activeBillTab, setActiveBillTab] = useState<string>('discover-bills');
   const [billSubject, setBillSubject] = useState<string>('');
-  const [isButtonClicked, setIsButtonClicked] = useState(false);
   const [offset, setOffset] = useState(0);
   const [chamber, setChamber] = useState<string>('house');
   const [filterPassedBills, setFilterPassedBills] = useState(false);
   const [congress, setCongress] = useState('118');
   const [billType, setBillType] = useState('');
-  const [billNumber, setBillNumber] = useState('');
-  const [billDetail, setBillDetail] = useState('');
-  const args = [congress, billType, billNumber, billDetail] as const;
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
   const billsToDisplay =
@@ -101,7 +93,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchVoteLog = async () => {
     try {
-      const data = await Requests.getVoteLog(user.id);
+      const data = await Requests.getVoteLog(user);
       setVoteLog(data);
       return data;
     } catch (error) {
@@ -175,8 +167,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  // Fetch new bills if the current index is the last index and when there are no bills
-
   useEffect(() => {
     if (
       (currentIndex === billsToDisplay.length - 9 &&
@@ -222,8 +212,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         billsToDisplay,
         billSubject,
         setBillSubject,
-        isButtonClicked,
-        setIsButtonClicked,
         offset,
         setOffset,
         chamber,

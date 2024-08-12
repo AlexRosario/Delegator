@@ -16,7 +16,6 @@ export const BillCard = ({
   const { congress } = useDisplayBills();
   const [billLinks, setBillLinks] = useState<{ [key: string]: string }>({});
   const [okToRender, setOkToRender] = useState(false);
-  const [summary, setSummary] = useState('');
 
   const getMoreInfo = async (
     congress: string,

@@ -1,6 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useDisplayBills } from '../Providers/BillProvider';
 import { BillCard } from './BillCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faAngleRight,
+  faAngleLeft,
+  faHourglass2
+} from '@fortawesome/free-solid-svg-icons';
+import { Bill } from '../types';
 
 export const BillCarousel = () => {
   const {
@@ -49,7 +56,11 @@ export const BillCarousel = () => {
   return (
     <>
       <div className="carousel-container">
-        <button onClick={goToPrev}>Previous</button>
+        <FontAwesomeIcon
+          icon={faAngleLeft}
+          onClick={goToPrev}
+          className="arrows-carousel"
+        />
         <div className="carousel">
           {!isLoading ? (
             billsToDisplay
@@ -73,10 +84,14 @@ export const BillCarousel = () => {
                 ></BillCard>
               ))
           ) : (
-            <div>Loading bills</div>
+            <FontAwesomeIcon icon={faHourglass2} size="3x" />
           )}
         </div>
-        <button onClick={goToNext}>Next</button>
+        <FontAwesomeIcon
+          icon={faAngleRight}
+          onClick={goToNext}
+          className="arrows-carousel"
+        />
       </div>
     </>
   );

@@ -8,14 +8,11 @@ export const BillSearch = () => {
   const {
     billsToDisplay,
     billSubject,
-    setBillSubject,
-    offset,
     filterPassedBills,
     setFilterPassedBills,
     currentIndex,
     activeBillTab
   } = useDisplayBills();
-  const [searchType, setSearchType] = useState('');
 
   return (
     <>
@@ -28,7 +25,7 @@ export const BillSearch = () => {
           <h2>{`Most Recent Bills ${currentIndex + 1} of ${billsToDisplay.length}`}</h2>
         ) : (
           <h2>
-            {billSubject} Bills:
+            {`${billSubject ? billSubject : 'All'} Bills:`}
             {billsToDisplay.length}
           </h2>
         )}
@@ -43,7 +40,7 @@ export const BillSearch = () => {
         </button>
         <em>
           <b>
-            Congressional Bills made into law this session:
+            Congressional Bills made into law in this collection:
             {
               billsToDisplay.filter((bill) =>
                 bill.latestAction.text.includes('Became Public Law No:')

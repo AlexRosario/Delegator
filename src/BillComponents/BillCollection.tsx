@@ -4,15 +4,8 @@ import BillCard from './BillCard';
 import { allPolicies } from '../Utils/policy-terms';
 
 export const BillCollection = () => {
-  const {
-    billsToDisplay,
-    billSubject,
-    setBillSubject,
-    isButtonClicked,
-    setIsButtonClicked
-  } = useDisplayBills();
+  const { billsToDisplay, billSubject, setBillSubject } = useDisplayBills();
   const [searchType, setSearchType] = useState('all');
-  const [activeCard, setActiveCard] = useState(0);
 
   return (
     <div className="bill-collection-container">
@@ -53,7 +46,6 @@ export const BillCollection = () => {
               value={billSubject || 'default'} // Set the selected value here
               onChange={(e) => {
                 setBillSubject(e.target.value);
-                setIsButtonClicked(true);
               }}
             >
               <option value="default">
@@ -122,8 +114,8 @@ export const BillCollection = () => {
               )
             );
           })}
-        <b>{`${billSubject !== '' ? `${billSubject}:` : 'All bills:'}`}</b>
-        <div className="policy-grid">
+        <b>{`${billSubject ? billSubject : 'All other'} Bills:`}</b>
+        <div className="policy-row">
           {billSubject !== ''
             ? billsToDisplay
                 .filter(

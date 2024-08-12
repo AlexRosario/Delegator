@@ -4,13 +4,10 @@ import BillCard from './BillCard';
 import { Requests } from '../api';
 import DOMPurify from 'dompurify';
 import { Bill } from '../types';
-import { faHourglass2 } from '@fortawesome/free-solid-svg-icons';
 
 export const BillDiscover = () => {
   const [searchType, setSearchType] = useState('hopper');
-  const [searchedBill, setSearchedBill] = useState<Bill | null | undefined>(
-    undefined
-  );
+  const [searchedBill, setSearchedBill] = useState<Bill | null>(null);
   const [billNumber, setBillNumber] = useState('');
   const [billType, setBillType] = useState('hr');
   const billTypeArray = [
@@ -138,7 +135,7 @@ export const BillDiscover = () => {
       </div>
       {searchType === 'hopper' ? (
         <BillCarousel />
-      ) : searchedBill ? (
+      ) : searchedBill && billNumber !== '' ? (
         <BillCard bill={searchedBill} className="searched-bill" />
       ) : !isNumeric(billNumber) && billNumber !== '' ? (
         <h2>{billNumber} is not a valid number</h2>
