@@ -76,6 +76,9 @@ export const BillDiscover = () => {
       if (isNumeric(billNumber)) {
         const bill = await searchForBill(controller.signal);
         setSearchedBill(bill);
+        if (!bill) {
+          setSearchedBill(null);
+        }
       }
     };
 
@@ -114,7 +117,7 @@ export const BillDiscover = () => {
               <select
                 name=""
                 id=""
-                onChange={(e) => setBillType(e.target.value)} // Use onChange on the select element
+                onChange={(e) => setBillType(e.target.value)}
               >
                 {billTypeArray.map((billType) => (
                   <option key={billType} value={billType}>
@@ -126,6 +129,9 @@ export const BillDiscover = () => {
                 type="text"
                 placeholder="Search for bills by number"
                 onChange={(e) => {
+                  if (e.target.value === '') {
+                    setSearchedBill(null);
+                  }
                   return setBillNumber(e.target.value);
                 }}
               />
@@ -139,8 +145,10 @@ export const BillDiscover = () => {
         <BillCard bill={searchedBill} className="searched-bill" />
       ) : !isNumeric(billNumber) && billNumber !== '' ? (
         <h2>{billNumber} is not a valid number</h2>
-      ) : (
+      ) : billNumber !== '' && searchedBill === null ? (
         <h2>No Bill found</h2>
+      ) : (
+        <h2>Search for Bill by number</h2>
       )}
     </>
   );

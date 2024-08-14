@@ -55,14 +55,21 @@ export const Requests = {
         error.message = 'Not a valid zipcode';
       });
   },
-  checkExistingReps: async () => {
-    const response = await fetch('http://localhost:3000/representatives');
-    if (!response.ok) {
-      throw new Error('Failed to fetch existing representatives');
-    }
-    return response.json();
-  },
+  getAllUsers: () => {
+    const url = 'http://localhost:3000/users';
+    return fetch(url, {
+      method: 'GET',
+      headers: myHeaders
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
 
+        return response.json();
+      })
+      .catch((error) => console.error('Fetch error:', error));
+  },
   addVote: async (userId: string, billId: string, vote: string, date: Date) => {
     const response = await fetch(`http://localhost:3000/votes`, {
       method: 'POST',
@@ -88,12 +95,10 @@ export const Requests = {
 
       if (response.ok) {
         const userData = await response.json();
-        // Assuming userData returns directly the user object which has vote_log
 
         const filteredData = userData.filter(
           (voteRecord: Vote) => voteRecord.userId === user.id
         );
-        console.log('f:', filteredData);
         return filteredData; // Return the parsed vote log
       } else {
         console.error(
@@ -105,37 +110,62 @@ export const Requests = {
       }
     } catch (error) {
       console.error('Error fetching vote log:', error);
-      throw error; // Rethrow after logging to handle it further up the chain
-    }
-  },
-  getBillRecord: async (userVotes: Vote[]) => {
-    try {
-      const response = await fetch(`http://localhost:3000/bills`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      if (response.ok) {
-        const userBills = await response.json();
-        const filteredData = await userBills.filter((bill: Bill) => {
-          userVotes.some(
-            (vote) => vote.billId === bill.originChamberCode + bill.number
-          );
-          return filteredData;
-        });
-      } else {
-        console.error('Failed to fetch personal bill record');
-        throw new Error(
-          `HTTP error ${response.status}- ${response.statusText}`
-        );
-      }
-    } catch (error) {
-      console.error('Error fetching personal bills:', error);
       throw error;
     }
   },
-  //External
+  addVotedBill: async (bill: Bill) => {
+    const url = 'http://localhost:3000/Bills';
+    try {
+      const existingBillsResponse = await fetch(url, {
+        method: 'GET',
+        headers: myHeaders
+      });
+
+      if (!existingBillsResponse.ok) {
+        throw new Error(`HTTP error! status: ${existingBillsResponse.status}`);
+      }
+
+      const existingBills = await existingBillsResponse.json();
+
+      const billExists = existingBills.some(
+        (existingBill: Bill) => existingBill.number === bill.number
+      );
+
+      if (billExists) {
+        return;
+      }
+
+      const addBillResponse = await fetch(url, {
+        method: 'POST',
+        headers: myHeaders,
+        body: JSON.stringify(bill)
+      });
+
+      if (!addBillResponse.ok) {
+        throw new Error(`HTTP error! status: ${addBillResponse.status}`);
+      }
+
+      return await addBillResponse.json();
+    } catch (error) {
+      console.error('Fetch error:', error);
+    }
+  },
+  getBillsRecord: () => {
+    const url = 'http://localhost:3000/Bills';
+    return fetch(url, {
+      method: 'GET',
+      headers: myHeaders
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        return response.json();
+      })
+      .catch((error) => console.error('Fetch error:', error));
+  },
+  //External api calls
   getBills: async (congress: string, billType: string, offset: number) => {
     const url = `/congressGov/v3/bill${congress ? `/${congress}` : ''}${billType ? `/${billType}` : ''}${offset !== 0 ? `?offset=${offset}` : ''}`;
     try {
@@ -213,97 +243,5 @@ export const Requests = {
       console.error('Fetch error:', error);
       throw error;
     }
-  },
-
-  getAllUsers: () => {
-    const url = 'http://localhost:3000/users';
-    return fetch(url, {
-      method: 'GET',
-      headers: myHeaders
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        return response.json();
-      })
-      .catch((error) => console.error('Fetch error:', error));
-  },
-
-  addVotedBill: (bill: Bill) => {
-    const url = 'http://localhost:3000/Bills';
-    return fetch(url, {
-      method: 'POST',
-      headers: myHeaders,
-      body: JSON.stringify(bill)
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .catch((error) => console.error('Fetch error:', error));
-  },
-  postAllBills: (bills: Bill[], subject: string) => {
-    const url = 'http://localhost:3000/Bills';
-    const payload = {
-      [subject]: [...[subject], ...bills]
-    };
-
-    return fetch(url, {
-      method: 'POST',
-      headers: myHeaders,
-      body: JSON.stringify(payload)
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .catch((error) => console.error('Fetch error:', error));
-  },
-  getBillsRecord: () => {
-    const url = 'http://localhost:3000/Bills';
-    return fetch(url, {
-      method: 'GET',
-      headers: myHeaders
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        return response.json();
-      })
-      .catch((error) => console.error('Fetch error:', error));
   }
 };
-/*updateVoteLog: (vote) => {
-		const url = 'http://localhost:3000/voteLogs';
-		return fetch(url, {
-			method: 'PATCH',
-			headers: myHeaders,
-			body: JSON.stringify({ voteLog: vote }),
-		})
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error(`HTTP error! status: ${response.status}`);
-				}
-				return response.json();
-			})
-			.catch((error) => console.error('Fetch error:', error));
-	},*/
-
-/*	getCongressMembers: (zipcode: string) => {
-		const url = `/api/getall_mems.php?zip=${zipcode}&output=json`;
-
-		return fetch(url, {
-			method: 'GET',
-			headers: myHeaders,
-		}).then((response) => {
-			return response.json();
-		});
-	},*/

@@ -9,12 +9,12 @@ import React from 'react';
 
 function App() {
   return (
-    <>
+    <div className="main">
       <Header />
       <BillProvider>
         <BillSection />
       </BillProvider>
-    </>
+    </div>
   );
 }
 

@@ -2,48 +2,88 @@ import React, { useState } from 'react';
 import { useDisplayBills } from '../Providers/BillProvider';
 import BillCard from './BillCard';
 import { allPolicies } from '../Utils/policy-terms';
+import { Bill } from '../types';
 
 export const BillCollection = () => {
   const { billsToDisplay, billSubject, setBillSubject } = useDisplayBills();
   const [searchType, setSearchType] = useState('all');
 
+  const policyBills = allPolicies.reduce<Record<string, Bill[]>>(
+    (acc, policy) => {
+      acc[policy] = billsToDisplay.filter(
+        (bill) => bill.policyArea?.name === policy
+      );
+      return acc;
+    },
+    {}
+  );
+  const createSelector = (category: string, label: string) => {
+    return (
+      <div
+        className={`selector ${searchType === category ? 'active' : ''}`}
+        onClick={() => {
+          setSearchType(category);
+          setBillSubject('');
+        }}
+      >
+        {label}
+      </div>
+    );
+  };
+  const formPolicyRow = (policy: string) => {
+    return (
+      policyBills[policy].length > 0 && (
+        <div key={policy}>
+          <b>{policy}:</b>
+          <div className="policy-row">
+            {policyBills[policy].map((bill, index) => (
+              <BillCard
+                bill={bill}
+                key={index}
+                className="bill-collection-card"
+              />
+            ))}
+          </div>
+        </div>
+      )
+    );
+  };
+
+  const formOtherRow = () => {
+    return (
+      <div className="policy-row">
+        {billsToDisplay
+          .filter(
+            (bill) =>
+              !allPolicies.some(
+                (policy) =>
+                  policy.toLowerCase() === bill.policyArea?.name.toLowerCase()
+              )
+          )
+          .map((bill, index) => (
+            <BillCard
+              bill={bill}
+              key={index}
+              className="bill-collection-card"
+            />
+          ))}
+      </div>
+    );
+  };
+
   return (
     <div className="bill-collection-container">
       <div className="search-subject">
         <div className="selectors">
-          <div
-            className={`selector ${searchType === 'all' ? 'active' : ''}`}
-            onClick={() => {
-              setSearchType('all');
-              setBillSubject('');
-            }}
-          >
-            All
-          </div>
-          <div
-            className={`selector ${searchType === 'policy' ? 'active' : ''}`}
-            onClick={() => {
-              setSearchType('policy');
-            }}
-          >
-            Filter by Policy
-          </div>
-          <div
-            className={`selector ${
-              searchType === 'legislative-term' ? 'active' : ''
-            }`}
-            onClick={() => {
-              setSearchType('legislative-term');
-            }}
-          >
-            Filter by Legislative Term
-          </div>
+          {createSelector('all', 'All')}
+          {createSelector('policy', ' Filter by Policy')}
+          {createSelector('legislative-term', 'Filter by Legislative Term')}
         </div>
 
         <div className="subject-fields">
           {searchType === 'policy' && (
             <select
-              value={billSubject || 'default'} // Set the selected value here
+              value={billSubject || 'default'}
               onChange={(e) => {
                 setBillSubject(e.target.value);
               }}
@@ -67,8 +107,7 @@ export const BillCollection = () => {
                   onChange={(e) => {
                     setBillSubject(e.target.value);
                   }}
-                ></input>
-
+                />
                 <a href="https://www.congress.gov/advanced-search/legislative-subject-terms?congresses%5B%5D=118">
                   List of Acceptable Terms
                 </a>
@@ -84,7 +123,7 @@ export const BillCollection = () => {
                   onChange={(e) => {
                     setBillSubject(e.target.value);
                   }}
-                ></input>
+                />
               </div>
             </div>
           )}
@@ -92,56 +131,41 @@ export const BillCollection = () => {
       </div>
 
       <div className="bill-collection">
-        {billSubject === '' &&
-          allPolicies.map((policy) => {
-            const policyBills = billsToDisplay.filter(
-              (bill) => bill.policyArea?.name === policy
-            );
-            return (
-              policyBills.length > 0 && (
-                <div key={policy}>
-                  <b>{policy}:</b>
-                  <div className="policy-row">
-                    {policyBills.map((bill, index) => (
-                      <BillCard
-                        bill={bill}
-                        key={index}
-                        className="bill-collection-card"
-                      />
-                    ))}
-                  </div>
-                </div>
+        {searchType === 'all' ? (
+          <>
+            {allPolicies.map((policy) => {
+              return formPolicyRow(policy);
+            })}
+
+            <b>Other Bills:</b>
+            {formOtherRow()}
+          </>
+        ) : (searchType === 'policy' || searchType === 'legislative-term') &&
+          billsToDisplay.length > 0 ? (
+          <div className="policy-row">
+            {billsToDisplay
+              .filter(
+                (bill) =>
+                  bill.policyArea?.name.toLowerCase() ===
+                    billSubject.toLowerCase() ||
+                  bill.subjects.legislativeSubjects?.some(
+                    (legislativeSubject: { name: string; date: Date }) =>
+                      legislativeSubject.name
+                        .toLowerCase()
+                        .startsWith(billSubject.toLowerCase())
+                  )
               )
-            );
-          })}
-        <b>{`${billSubject ? billSubject : 'All other'} Bills:`}</b>
-        <div className="policy-row">
-          {billSubject !== ''
-            ? billsToDisplay
-                .filter(
-                  (bill) =>
-                    bill.subjects.policyArea?.name
-                      .toLowerCase()
-                      .includes(billSubject.toLowerCase()) ||
-                    bill.subjects.policyArea?.name
-                      .toLowerCase()
-                      .includes(billSubject.toLowerCase())
-                )
-                .map((bill, index) => (
-                  <BillCard
-                    bill={bill}
-                    key={index}
-                    className="bill-collection-card"
-                  />
-                ))
-            : billsToDisplay.map((bill, index) => (
+              .map((bill, index) => (
                 <BillCard
                   bill={bill}
                   key={index}
                   className="bill-collection-card"
                 />
               ))}
-        </div>
+          </div>
+        ) : (
+          <h1>No Bills</h1>
+        )}
       </div>
     </div>
   );

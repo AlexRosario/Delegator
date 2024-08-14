@@ -19,8 +19,6 @@ type TBillProvider = {
   setBillSubject: (subject: string) => void;
   offset: number;
   setOffset: (offset: number | ((prevOffset: number) => number)) => void;
-  chamber: string;
-  setChamber: (chamber: string) => void;
   congress: string;
   filterPassedBills: boolean;
   setFilterPassedBills: (filterPassed: boolean) => void;
@@ -43,8 +41,6 @@ export const BillContext = createContext<TBillProvider>({
   setBillSubject: () => {},
   offset: 0,
   setOffset: () => {},
-  chamber: 'house',
-  setChamber: () => {},
   congress: '118',
   filterPassedBills: false,
   setFilterPassedBills: () => {},
@@ -72,7 +68,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [activeBillTab, setActiveBillTab] = useState<string>('discover-bills');
   const [billSubject, setBillSubject] = useState<string>('');
   const [offset, setOffset] = useState(0);
-  const [chamber, setChamber] = useState<string>('house');
   const [filterPassedBills, setFilterPassedBills] = useState(false);
   const [congress, setCongress] = useState('118');
   const [billType, setBillType] = useState('');
@@ -106,7 +101,9 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
       const Bills = await Requests.getBillsRecord();
       const userBills = Bills.filter((bill: Bill) =>
         VoteLog.some((vote) => {
-          return vote.billId === bill.type + bill.number;
+          return (
+            vote.billId === bill.type + bill.number && vote.userId === user.id
+          );
         })
       );
       return userBills;
@@ -117,7 +114,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchBills = async () => {
     let fetchedBills: Bill[] = [];
-    // Reset bills and offset only if billSubject has changed
 
     try {
       const data = await Requests.getBills(congress, billType, offset);
@@ -126,18 +122,18 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
 
       const billPromises = await fetchedBills.map(async (bill) => {
         const fullBillData = await Requests.getFullBill(
-          '118',
+          congress,
           bill.type.toLowerCase(),
           bill.number
         );
         const summariesData = await Requests.getBillDetail(
-          '118',
+          congress,
           bill.type.toLowerCase(),
           bill.number,
           'summaries'
         );
         const subjectsData = await Requests.getBillDetail(
-          '118',
+          congress,
           bill.type.toLowerCase(),
           bill.number,
           'subjects'
@@ -179,7 +175,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
             ...prevBills,
             ...(bills as Bill[])
           ]);
-          console.log('n:', newBills);
         })
 
         .catch((error) => console.error('Failed to fetch bills dawg:', error));
@@ -214,8 +209,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         setBillSubject,
         offset,
         setOffset,
-        chamber,
-        setChamber,
         congress,
         filterPassedBills,
         setFilterPassedBills,

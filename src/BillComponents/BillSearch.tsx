@@ -18,7 +18,7 @@ export const BillSearch = () => {
     <>
       <div className="subject-banner">
         {billsToDisplay.length === 0 ? (
-          <div>Loading...</div>
+          <div className="animate-text">...Loading</div>
         ) : billsToDisplay.length === 0 && billSubject !== '' ? (
           <div>Couldn't fulfill request at this time</div>
         ) : activeBillTab === 'discover-bills' ? (

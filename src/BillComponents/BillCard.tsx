@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDisplayBills } from '../Providers/BillProvider';
 import { Bill } from '../types';
 import VoteButton from './VoteButton';
-import { Requests } from '../api'; // Import the Request object
+import { Requests } from '../api';
 
 export const BillCard = ({
   bill,
@@ -29,14 +29,13 @@ export const BillCard = ({
         billNumber,
         'text'
       );
-      console.log('Data:', data);
+
       if (data.textVersions.length > 0) {
         const url = data.textVersions[0].formats[0].url;
         setBillLinks((prevLinks) => ({
           ...prevLinks,
           [billType + billNumber]: url
         }));
-        console.log('Bill Links:', billLinks);
       } else {
         console.error('No text versions available');
       }
@@ -60,7 +59,9 @@ export const BillCard = ({
       <div className="bill-header">
         <b>{`${bill.originChamberCode}${bill.number}`}</b>
       </div>
+
       {bill.summary === 'No Summary Available' ? <b>{bill.title}</b> : ''}
+
       <div dangerouslySetInnerHTML={{ __html: bill.summary }} />
       {!billLinks[bill.type + bill.number] ? (
         <b
