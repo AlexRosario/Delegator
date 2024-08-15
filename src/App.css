@@ -117,7 +117,7 @@
   flex-direction: column;
   align-items: center;
   margin: 20% auto;
-  height: 50vh;
+  height: fit-content;
   width: 60%;
   border-radius: 8px;
   background-color: var(--red);
@@ -125,16 +125,16 @@
 
 .register-field .input-wrap {
   width: 80%;
-  height: 8%;
+  height: 60px;
   margin-bottom: 2%;
   border-radius: 5px;
   border: transparent;
   font-size: 1.1em;
 }
 
-.register-field .input-wrap input {
+.register-field .input-wrap .input {
   width: 100%;
-  height: 75%;
+  height: fit-content;
   border-radius: 5px;
   border: transparent;
 }
@@ -150,7 +150,7 @@
   font-weight: 500;
 }
 
-.register-field .error-mesaage {
+.register .register-field .error-message {
   margin-top: 2%;
   color: red;
 }

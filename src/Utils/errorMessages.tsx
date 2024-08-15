@@ -1,9 +1,11 @@
+import React from 'react';
+
 export const ErrorMessage = ({
-	message,
-	show,
+  message,
+  show
 }: {
-	message: string;
-	show: boolean;
+  message: string;
+  show: boolean;
 }) => {
-	return show ? <div className='error-message'>{message}</div> : <div></div>;
+  return <div className="error-message">{show ? message : ''}</div>;
 };

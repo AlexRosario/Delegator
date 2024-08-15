@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState, FormEvent } from 'react';
 import { Requests } from './api';
 import toast from 'react-hot-toast';
 import { User } from './types';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuthInfo } from './Providers/AuthProvider';
 
 export const SignIn = () => {
-  const [name, setName] = React.useState('');
-  const [pWord, setPWord] = React.useState('');
+  const [name, setName] = useState('');
+  const [pWord, setPWord] = useState('');
   const { setUser } = useAuthInfo();
-
+  const location = useLocation();
   const navigate = useNavigate();
 
-  const handleSignIn = (e: React.FormEvent) => {
-    e.preventDefault();
+  useEffect(() => {
+    if (location.state) {
+      setName(location.state.username || '');
+      setPWord(location.state.password || '');
+      if (name && pWord) {
+        handleSignIn();
+      }
+    }
+  }, [location.state, pWord]);
+
+  const handleSignIn = () => {
     Requests.getAllUsers()
       .then((users) =>
         users.find((user: User) => {
@@ -38,7 +47,8 @@ export const SignIn = () => {
       <form
         className="sign-in-field"
         onSubmit={(e) => {
-          handleSignIn(e);
+          e.preventDefault();
+          handleSignIn();
         }}
       >
         <input

@@ -4,9 +4,13 @@ import { Requests } from './api';
 import toast from 'react-hot-toast';
 import { useAuthInfo } from './Providers/AuthProvider';
 import { ErrorMessage } from './Utils/errorMessages';
-import { isEmailValid, isZipcodeValid, isNameValid } from './Utils/validations';
+import { isEmailValid, isZipcodeValid } from './Utils/validations';
 import { User } from './types';
 import { useNavigate } from 'react-router-dom';
+import * as _ from 'lodash-es';
+import { faker } from '@faker-js/faker';
+
+const capitalize = _.capitalize;
 
 export function RegisterInput({
   labelText,
@@ -38,10 +42,9 @@ export const Register = () => {
       users.some((user: User) => user.username === uname)
     );
 
-  const nameErrorMessage = 'Name is Invalid';
   const existsErrorMessage = `Username ${takenName} already exists`;
   const emailErrorMessage = 'Email is Invalid';
-  const zipcodeErrorMessage = 'Zip code is Invalid';
+  const zipcodeErrorMessage = 'Zip code is Invalid.';
   const navigate = useNavigate();
 
   const handleRegister = async (e: React.FormEvent) => {
@@ -52,12 +55,7 @@ export const Register = () => {
 
     setUserNameExists(userExists);
 
-    if (
-      !isNameValid(username) ||
-      !isEmailValid(email) ||
-      !isZipcodeValid(zipcode) ||
-      userNameExists
-    ) {
+    if (!isEmailValid(email) || !isZipcodeValid(zipcode) || userNameExists) {
       setTakenName(username);
       return;
     }
@@ -81,12 +79,28 @@ export const Register = () => {
         setIsFormSubmitted(false);
         setTakenName('');
         toast.success('Registration successful');
-        navigate('../');
+        navigate('../', { state: { username, password } });
       })
       .catch((error) => {
         console.log('Response received:', error);
         console.error('Fetch error:', error.message);
       });
+  };
+  const generateUser = () => {
+    const capitalize = _.capitalize;
+    return {
+      id: '',
+      username: capitalize(faker.internet.userName()),
+      email: faker.internet.email(),
+      password: faker.internet.password(),
+      address: {
+        street: faker.location.streetAddress(),
+        city: capitalize(faker.location.city()),
+        state: faker.location.state(),
+        zipcode: faker.location.zipCode()
+      },
+      vote_log: {}
+    };
   };
 
   return (
@@ -94,7 +108,19 @@ export const Register = () => {
       <Link to="/">
         <button type="submit">Home</button>
       </Link>
+
       <form className="register-field" onSubmit={handleRegister}>
+        <button
+          className="btn"
+          onClick={(e) => {
+            e.preventDefault();
+            const generatedUser = generateUser();
+            setUser(generatedUser);
+            setConfirm(generatedUser.password);
+          }}
+        >
+          Generate User
+        </button>
         <RegisterInput
           labelText="Username"
           inputProps={{
@@ -104,9 +130,7 @@ export const Register = () => {
           }}
         />
         {isFormSubmitted &&
-          (!isNameValid(username) ? (
-            <ErrorMessage message={nameErrorMessage} show={true} />
-          ) : isNameValid(username) && takenName === username ? (
+          (takenName === username ? (
             <ErrorMessage message={existsErrorMessage} show={userNameExists} />
           ) : null)}
         <RegisterInput

@@ -1,24 +1,28 @@
-import { useState } from 'react';
+import { useAuthInfo } from '../Providers/AuthProvider';
 import { useDisplayBills } from '../Providers/BillProvider';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { allPolicies } from '../Utils/policy-terms';
 import React from 'react';
-export const BillSearch = () => {
+export const BillStatus = () => {
   const {
     billsToDisplay,
+    voteLog,
     billSubject,
     filterPassedBills,
     setFilterPassedBills,
     currentIndex,
     activeBillTab
   } = useDisplayBills();
+  const { user } = useAuthInfo();
 
   return (
     <>
       <div className="subject-banner">
         {billsToDisplay.length === 0 ? (
-          <div className="animate-text">...Loading</div>
+          activeBillTab === 'voted-bills' &&
+          voteLog.some((vote) => vote.userId === user.id) ? (
+            <div className="animate-text">...Loading </div>
+          ) : (
+            <div> No Bills in Collection </div>
+          )
         ) : billsToDisplay.length === 0 && billSubject !== '' ? (
           <div>Couldn't fulfill request at this time</div>
         ) : activeBillTab === 'discover-bills' ? (

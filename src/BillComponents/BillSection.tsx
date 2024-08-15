@@ -1,4 +1,4 @@
-import { BillSearch } from './BillSearch';
+import { BillStatus } from './BillStatus';
 import { BillCarousel } from './BillCarousel';
 import { useDisplayBills } from '../Providers/BillProvider';
 import React from 'react';
@@ -30,7 +30,7 @@ export const BillSection = () => {
       </div>
 
       <div className="bill-container">
-        <BillSearch />
+        <BillStatus />
         {activeBillTab === 'all' || activeBillTab === 'discover-bills' ? (
           <BillDiscover />
         ) : (

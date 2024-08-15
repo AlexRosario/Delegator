@@ -35,6 +35,42 @@
         "state": "NY",
         "zipcode": "11207"
       }
+    },
+    {
+      "id": "9ee7",
+      "username": "Stephania_runolfsson",
+      "email": "Rickie.Zboncak@gmail.com",
+      "password": "TapHiNkBdYm6VZL",
+      "address": {
+        "street": "441 Sierra Square",
+        "city": "North mitchell",
+        "state": "Wyoming",
+        "zipcode": "29130"
+      }
+    },
+    {
+      "id": "690c4486-fdb1-4ffd-9e50-2921df114809",
+      "username": "Lilly_hauck-dibbert67",
+      "email": "Noel.Vandervort-Streich@gmail.com",
+      "password": "Cb929lIHk42xi3q",
+      "address": {
+        "street": "9062 Imelda Corners",
+        "city": "Middletown",
+        "state": "Iowa",
+        "zipcode": "43478-2572"
+      }
+    },
+    {
+      "id": "fb03",
+      "username": "Ludwig.grimes",
+      "email": "Cesar.Heidenreich68@hotmail.com",
+      "password": "_V8z_7aCyXvcqHX",
+      "address": {
+        "street": "26220 N Church Street",
+        "city": "New daisha",
+        "state": "Connecticut",
+        "zipcode": "98340-2075"
+      }
     }
   ],
   "votes": [

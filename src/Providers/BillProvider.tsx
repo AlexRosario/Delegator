@@ -22,8 +22,8 @@ type TBillProvider = {
   congress: string;
   filterPassedBills: boolean;
   setFilterPassedBills: (filterPassed: boolean) => void;
-  setActiveBillTab: (tab: string) => void;
-  activeBillTab: string;
+  setActiveBillTab: (tab: 'discover-bills' | 'voted-bills' | 'all') => void;
+  activeBillTab: 'discover-bills' | 'voted-bills' | 'all';
   allBills: Bill[];
   setAllBills: (allBills: Bill[]) => void;
   newBills: Bill[];
@@ -45,7 +45,7 @@ export const BillContext = createContext<TBillProvider>({
   filterPassedBills: false,
   setFilterPassedBills: () => {},
   setActiveBillTab: () => {},
-  activeBillTab: '',
+  activeBillTab: 'discover-bills',
   allBills: [],
   setAllBills: () => {},
   newBills: [],
@@ -65,7 +65,9 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [allBills, setAllBills] = useState<Bill[]>([]);
   const [newBills, setNewBills] = useState<Bill[]>([]);
   const [votedBills, setVotedBills] = useState<Bill[]>([]);
-  const [activeBillTab, setActiveBillTab] = useState<string>('discover-bills');
+  const [activeBillTab, setActiveBillTab] = useState<
+    'discover-bills' | 'voted-bills' | 'all'
+  >('discover-bills');
   const [billSubject, setBillSubject] = useState<string>('');
   const [offset, setOffset] = useState(0);
   const [filterPassedBills, setFilterPassedBills] = useState(false);
@@ -171,10 +173,11 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     ) {
       fetchBills()
         .then((bills) => {
-          setAllBills((prevBills: Bill[]) => [
-            ...prevBills,
-            ...(bills as Bill[])
-          ]);
+          if (bills)
+            setAllBills((prevBills: Bill[]) => [
+              ...prevBills,
+              ...(bills as Bill[])
+            ]);
         })
 
         .catch((error) => console.error('Failed to fetch bills dawg:', error));
@@ -194,7 +197,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         );
 
         fetchUserBills(VoteLog).then((bills) => {
-          setVotedBills(bills);
+          if (bills) setVotedBills(bills);
         });
         setVoteLog(VoteLog);
       })

@@ -98,10 +98,10 @@ export const BillCarousel = () => {
                   x2="100%"
                   y2="50%"
                 >
-                  <stop offset="0%" stopColor="#231557" />
-                  <stop offset="33%" stopColor="#44107a" />
-                  <stop offset="67%" stopColor="#ff1361" />
-                  <stop offset="100%" stopColor="#fff800" />
+                  <stop offset="0%" stopColor="#ffe08a" />
+                  <stop offset="33%" stopColor=" #bdf0b3" />
+                  <stop offset="67%" stopColor="#3c6838" />
+                  <stop offset="100%" stopColor="#735c0c" />
 
                   <animateTransform
                     attributeName="gradientTransform"
