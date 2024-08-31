@@ -24,21 +24,24 @@ export const SignIn = () => {
 
   const handleSignIn = () => {
     Requests.getAllUsers()
-      .then((users) =>
-        users.find((user: User) => {
+      .then((users) => {
+        const foundUser = users.find((user: User) => {
           return (
             user.username?.toLowerCase() === name.toLowerCase() &&
             user.password === pWord
           );
-        })
-      )
-      .then((user) => {
-        localStorage.setItem('user', JSON.stringify(user));
-        setUser(user);
+        });
+
+        if (!foundUser) {
+          throw new Error('User not found or incorrect password');
+        }
+
+        localStorage.setItem('user', JSON.stringify(foundUser));
+        setUser(foundUser);
         navigate('/App');
       })
       .catch((err) => {
-        toast.error('Sign in failed');
+        toast.error('No matching credentials found');
         return console.error('Fetch error:', err.message);
       });
   };

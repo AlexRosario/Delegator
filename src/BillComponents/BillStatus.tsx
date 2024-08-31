@@ -15,11 +15,10 @@ export const BillStatus = () => {
 
   return (
     <>
-      <div className="subject-banner">
+      <div className="bills-status">
         {billsToDisplay.length === 0 ? (
-          activeBillTab === 'voted-bills' &&
-          voteLog.some((vote) => vote.userId === user.id) ? (
-            <div className="animate-text">...Loading </div>
+          activeBillTab === 'discover-bills' ? (
+            <div className="animate-text">Loading... </div>
           ) : (
             <div> No Bills in Collection </div>
           )

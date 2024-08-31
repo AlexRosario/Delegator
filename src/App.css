@@ -4,6 +4,7 @@
   text-align: center;
 }
 .home {
+  margin-top: 10%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -12,6 +13,7 @@
 
   padding: 0 20px;
   height: 55vh;
+  min-height: 400px;
   background-color: rgb(241, 241, 241);
 }
 .home-left {
@@ -30,8 +32,11 @@
   border-radius: 8px;
   box-shadow: 0 0 5px 1px rgba(223, 168, 168, 0.75);
   background-color: whitesmoke;
+  padding: 5% 2%;
 }
-
+.home h1 {
+  font-size: 3vw;
+}
 .home h1 span:nth-child(1) {
   color: red;
 }
@@ -42,10 +47,14 @@
 
 .home-right button {
   width: 80%;
-  height: 20%;
+  min-width: fit-content;
+  height: fit-content;
+  overflow: none;
+  color: blue;
 }
 
-.sign-in-field {
+.sign-in-field,
+.home-register {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -55,59 +64,39 @@
   width: 100%;
 }
 
-.sign-in-field .name {
+.sign-in-field input {
   width: 80%;
   height: 20%;
-  border-radius: 3px;
-  border: transparent;
-  font-size: 1.2em;
-}
-.sign-in-field .password {
-  width: 80%;
-  height: 20%;
+  min-height: fit-content;
+  margin-bottom: 2%;
   border-radius: 3px;
   border: transparent;
   font-size: 1.2em;
 }
 
-.home-register {
-  width: 100%;
-  height: 50%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: baseline;
-  justify-content: space-around;
-}
 .home-right .home-register a {
   width: 100%;
-  height: 50vh;
-  text-align: center;
-}
-.home-right .home-register a button {
-  width: 80%;
-  height: 50%;
   text-align: center;
 }
 
 .home-register hr {
   width: 80%;
-  margin-bottom: 10%;
+  margin-top: 5%;
 }
-
-.home-register span {
-  font-size: 10px;
+.join-link {
+  font-size: small;
 }
 
 .contact {
   background-color: blue;
   height: 50vh;
 }
+
 .register {
   color: white;
   background-color: white;
   height: 100vh;
+  font-size: 1rem;
 }
 .register button {
   background-color: #231557;
@@ -115,38 +104,53 @@
 .register-field {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 20% auto;
-  height: fit-content;
+  align-items: start;
+  align-content: center;
+  justify-content: space-around;
+  margin: 10% auto;
+  padding: 2% 2%;
+  height: 60%;
   width: 60%;
   border-radius: 8px;
   background-color: var(--red);
 }
 
 .register-field .input-wrap {
-  width: 80%;
-  height: 60px;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding: 0 5%;
   margin-bottom: 2%;
-  border-radius: 5px;
   border: transparent;
-  font-size: 1.1em;
 }
 
-.register-field .input-wrap .input {
-  width: 100%;
+.register-field .input-wrap label {
+  width: 30%;
+  text-align: left;
+}
+
+.register-field .input-wrap input {
+  width: 65%;
   height: fit-content;
+  padding-left: 5px;
   border-radius: 5px;
   border: transparent;
 }
+
+.address-prompt {
+  color: black;
+  margin: 0 auto;
+  transform: translatex(-50%, -50%);
+}
+
 .register-field button {
-  width: 80%;
-  height: 10%;
+  width: fit-content;
+  height: fit-content;
   border-radius: 8px;
 
   border: transparent;
   box-shadow: 0 0 5px 1px rgba(78, 76, 76, 0.75);
   padding: 0.6em 1.2em;
-  font-size: 1em;
   font-weight: 500;
 }
 
@@ -227,16 +231,17 @@
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-  padding: 5%;
+  padding: 20px 0;
   border-top: 1px;
-  background-color: whitesmoke;
 }
 
 .bill-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 20px;
   width: 100%;
+  background-color: whitesmoke;
 }
 
 .bill-list-button.selected {
@@ -256,7 +261,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-width: 35%;
+  width: fit-content;
   padding: 0;
 }
 
@@ -280,7 +285,6 @@
 
 .subject-fields {
   display: flex;
-
   justify-content: space-around;
   align-items: center;
   margin: 20px auto;
@@ -312,7 +316,7 @@
   font-size: 6px;
 }
 
-.subject-banner {
+.bills-status {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -466,5 +470,100 @@
   }
   100% {
     background-position: 200% center;
+  }
+}
+@media (max-width: 1000px) {
+  .home h1 {
+    font-size: 5vw;
+  }
+  .register {
+    font-size: 0.85rem;
+  }
+  .register-field {
+    overflow: none;
+  }
+
+  .register-field .input-wrap label {
+    overflow: none;
+  }
+  .register-field .input-wrap input {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    flex-direction: column;
+    padding: none;
+  }
+  .home-right button {
+    width: 80%;
+    height: fit-content;
+    overflow: none;
+    font-size: 0.6em;
+    color: blue;
+  }
+
+  .home h1 {
+    font-size: 7.5vw;
+    margin: 25% 0;
+  }
+
+  .sign-in-field input {
+    font-size: 0.6em;
+  }
+
+  .join-link {
+    font-size: 0.6em;
+  }
+  .register {
+    font-size: 0.6rem;
+  }
+  .register-field {
+    font-size: 0.6em;
+  }
+
+  .register-field .input-wrap input {
+    font-size: 0.6rem;
+  }
+
+  .bill-section {
+    font-size: 0.6rem;
+  }
+
+  .bills-status {
+    margin: 10px 0;
+  }
+
+  .congressional-efficacy {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-subject {
+    flex-direction: column;
+  }
+  .bill-number {
+    margin: 20px 0;
+  }
+  .bill-number select,
+  input {
+    font-size: 0.6rem;
+  }
+  .bill-card .next,
+  .prev {
+    display: none;
+  }
+  .bill-card .prev,
+  .next {
+    display: none;
+  }
+  .bill-card .vote-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .bill-collection-container select,
+  input {
+    font-size: 0.6rem;
   }
 }

@@ -10,8 +10,6 @@ import { useNavigate } from 'react-router-dom';
 import * as _ from 'lodash-es';
 import { faker } from '@faker-js/faker';
 
-const capitalize = _.capitalize;
-
 export function RegisterInput({
   labelText,
   inputProps
@@ -171,9 +169,9 @@ export const Register = () => {
             show={!!password && password !== confirm}
           />
         )}
-        <h4>
+        <div className="address-prompt">
           Give us your address and we'll find your representatives for you.
-        </h4>
+        </div>
         <RegisterInput
           labelText={`Street Address`}
           inputProps={{

@@ -19,10 +19,12 @@ export const Home = () => {
           <div className="home-register">
             <hr></hr>
             <Link to="/Register">
-              <button type="submit">Register</button>
+              <button type="submit">Create account</button>
             </Link>
 
-            <Link to="/Register">Not a member yet?</Link>
+            <Link to="/Register" className="join-link">
+              Not a member yet?
+            </Link>
           </div>
         </div>
         <div className="contact"></div>

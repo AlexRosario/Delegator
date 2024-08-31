@@ -71,6 +71,54 @@
         "state": "Connecticut",
         "zipcode": "98340-2075"
       }
+    },
+    {
+      "id": "d6d1",
+      "username": "Grady_cronin67",
+      "email": "Neal.Kunde@gmail.com",
+      "password": "woJdTTxCeaeqyzF",
+      "address": {
+        "street": "3428 Lorenza Place",
+        "city": "Oceanemouth",
+        "state": "Georgia",
+        "zipcode": "35101-8770"
+      }
+    },
+    {
+      "id": "2281",
+      "username": "Coy.wunsch-champlin6",
+      "email": "Jensen.Leuschke@hotmail.com",
+      "password": "x8pKusdE05DQ97u",
+      "address": {
+        "street": "797 Wilmer Heights",
+        "city": "Bartonport",
+        "state": "Idaho",
+        "zipcode": "76186-0434"
+      }
+    },
+    {
+      "id": "3f4e",
+      "username": "Destin.wyman",
+      "email": "Colby25@hotmail.com",
+      "password": "20uSI5o7cIjEiSP",
+      "address": {
+        "street": "592 Hollie Stream",
+        "city": "Fort estellfurt",
+        "state": "Massachusetts",
+        "zipcode": "04822-9740"
+      }
+    },
+    {
+      "id": "42d0",
+      "username": "Marianna.gorczany83",
+      "email": "Jevon_Klein@yahoo.com",
+      "password": "vJw5CmWYRHOomXb",
+      "address": {
+        "street": "1035 Josie Lodge",
+        "city": "New savion",
+        "state": "Louisiana",
+        "zipcode": "61955-6459"
+      }
     }
   ],
   "votes": [
@@ -780,6 +828,12 @@
       "billId": "HRES1413",
       "vote": "Yes",
       "date": "2024-08-13T23:27:26.750Z"
+    },
+    {
+      "id": "d4b4",
+      "billId": "HR7798",
+      "vote": "No",
+      "date": "2024-08-31T17:52:50.415Z"
     }
   ],
   "Bills": [
@@ -4414,6 +4468,77 @@
       "subjects": {
         "legislativeSubjects": []
       }
+    },
+    {
+      "id": "2259",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-08-30",
+        "text": "Referred to the Subcommittee on Conservation, Research, and Biotechnology."
+      },
+      "number": "7798",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "SWAT Act of 2024",
+      "type": "HR",
+      "updateDate": "2024-08-31T08:05:50Z",
+      "updateDateIncludingText": "2024-08-31T08:05:50Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/7798?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7798/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7798/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 51 (Friday, March 22, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mrs. CHAVEZ-DeREMER:\nH.R. 7798.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section VIII\nThe single subject of this legislation is:\nTo amend the Plant Protection Act to establish a fund for\nspotted wing drosophila research and mitigation, and for\nother purposes.\n[Page H1498]\n</pre>",
+      "cosponsors": {
+        "count": 3,
+        "countIncludingWithdrawnCosponsors": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7798/cosponsors?format=json"
+      },
+      "introducedDate": "2024-03-22",
+      "policyArea": {
+        "name": "Agriculture and Food"
+      },
+      "relatedBills": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7798/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "C001135",
+          "district": 5,
+          "firstName": "Lori",
+          "fullName": "Rep. Chavez-DeRemer, Lori [R-OR-5]",
+          "isByRequest": "N",
+          "lastName": "Chavez-DeRemer",
+          "party": "R",
+          "state": "OR",
+          "url": "https://api.congress.gov/v3/member/C001135?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [],
+        "policyArea": {
+          "name": "Agriculture and Food",
+          "updateDate": "2024-04-12T13:15:56Z"
+        }
+      },
+      "summaries": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7798/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7798/text?format=json"
+      },
+      "titles": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7798/titles?format=json"
+      },
+      "summary": "<p><strong>Spotted Wing Abatement Trust Act of 2024 or the SWAT Act of 2024</strong></p><p>This bill directs the Animal and Plant Health Inspection Service to establish a fund for research relating to, and activities to mitigate the negative effects of, spotted wing drosophila. Spotted wing drosophila is an invasive species of insect from East Asia that has caused significant damage to many valuable fruit crops in the United States, including raspberries, blackberries, blueberries, strawberries, peaches, plums, and cherries.</p>"
     }
   ]
 }

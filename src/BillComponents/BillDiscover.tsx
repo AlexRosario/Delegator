@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BillCarousel } from './BillCarousel';
 import BillCard from './BillCard';
 import { Requests } from '../api';

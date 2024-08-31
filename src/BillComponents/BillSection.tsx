@@ -1,16 +1,17 @@
 import { BillStatus } from './BillStatus';
-import { BillCarousel } from './BillCarousel';
 import { useDisplayBills } from '../Providers/BillProvider';
 import React from 'react';
 import { BillCollection } from './BillCollection';
 import BillDiscover from './BillDiscover';
+import { useAuthInfo } from '../Providers/AuthProvider';
 
 export const BillSection = () => {
   const { activeBillTab, setActiveBillTab } = useDisplayBills();
+  const { user } = useAuthInfo();
 
   return (
     <section className="bill-section">
-      <div className="bill-status">
+      <div className="bill-list">
         <button
           className={`bill-list-button ${activeBillTab === 'discover-bills' ? 'selected' : ''}`}
           onClick={() => {
@@ -19,22 +20,24 @@ export const BillSection = () => {
         >
           Discover Bills
         </button>
-        <button
-          className={`bill-list-button ${activeBillTab === 'voted-bills' ? 'selected' : ''}`}
-          onClick={() => {
-            setActiveBillTab('voted-bills');
-          }}
-        >
-          My Bills
-        </button>
+        {user.username && (
+          <button
+            className={`bill-list-button ${activeBillTab === 'voted-bills' ? 'selected' : ''}`}
+            onClick={() => {
+              setActiveBillTab('voted-bills');
+            }}
+          >
+            My Bills
+          </button>
+        )}
       </div>
 
       <div className="bill-container">
         <BillStatus />
-        {activeBillTab === 'all' || activeBillTab === 'discover-bills' ? (
+        {activeBillTab === 'discover-bills' ? (
           <BillDiscover />
         ) : (
-          <BillCollection />
+          user && <BillCollection />
         )}
       </div>
     </section>

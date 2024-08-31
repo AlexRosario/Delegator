@@ -1,6 +1,7 @@
 import { faAngleLeft, faHamburger } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const userString = localStorage.getItem('user');
@@ -20,35 +21,39 @@ export const Header = () => {
       />
 
       <div>
-        {!menuOpen ? (
-          <FontAwesomeIcon
-            icon={faHamburger}
-            className="menu-burger"
-            onClick={() => {
-              setMenuOpen(!menuOpen);
-            }}
-          ></FontAwesomeIcon>
-        ) : (
-          <div className="top-nav-user">
-            <div className="settings-header">
-              <FontAwesomeIcon
-                icon={faAngleLeft}
-                onClick={() => {
-                  setMenuOpen(!menuOpen);
-                }}
-              ></FontAwesomeIcon>
-              <b>Settings</b>
-            </div>
+        {user ? (
+          !menuOpen ? (
+            <FontAwesomeIcon
+              icon={faHamburger}
+              className="menu-burger"
+              onClick={() => {
+                setMenuOpen(!menuOpen);
+              }}
+            />
+          ) : (
+            <div className="top-nav-user">
+              <div className="settings-header">
+                <FontAwesomeIcon
+                  icon={faAngleLeft}
+                  onClick={() => {
+                    setMenuOpen(!menuOpen);
+                  }}
+                />
+                <b>Settings</b>
+              </div>
 
-            <br />
-            <div className="profile">
-              <h4>{user.username}</h4>
-              <h5>Zipcode: {user.address.zipcode}</h5>
-              <h6 onClick={logOut} className="log-out">
-                Log Out
-              </h6>
+              <br />
+              <div className="profile">
+                <h4>{user.username}</h4>
+                <h5>Zipcode: {user.address.zipcode}</h5>
+                <h6 onClick={logOut} className="log-out">
+                  Log Out
+                </h6>
+              </div>
             </div>
-          </div>
+          )
+        ) : (
+          <Link to="/Home">Sign in</Link>
         )}
       </div>
     </div>

@@ -4,14 +4,11 @@ import React, {
   createContext,
   useState,
   useEffect,
-  useRef,
-  MutableRefObject
+  useRef
 } from 'react';
 import { Requests } from '../api';
 import { Bill, Vote } from '../types';
-import { useAuthInfo } from './AuthProvider';
 import DOMPurify from 'dompurify';
-import { s } from 'vite/dist/node/types.d-aGj9QkWt';
 
 type TBillProvider = {
   billsToDisplay: Bill[];
@@ -22,8 +19,8 @@ type TBillProvider = {
   congress: string;
   filterPassedBills: boolean;
   setFilterPassedBills: (filterPassed: boolean) => void;
-  setActiveBillTab: (tab: 'discover-bills' | 'voted-bills' | 'all') => void;
-  activeBillTab: 'discover-bills' | 'voted-bills' | 'all';
+  setActiveBillTab: (tab: 'discover-bills' | 'voted-bills') => void;
+  activeBillTab: 'discover-bills' | 'voted-bills';
   allBills: Bill[];
   setAllBills: (allBills: Bill[]) => void;
   newBills: Bill[];
@@ -66,7 +63,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [newBills, setNewBills] = useState<Bill[]>([]);
   const [votedBills, setVotedBills] = useState<Bill[]>([]);
   const [activeBillTab, setActiveBillTab] = useState<
-    'discover-bills' | 'voted-bills' | 'all'
+    'discover-bills' | 'voted-bills'
   >('discover-bills');
   const [billSubject, setBillSubject] = useState<string>('');
   const [offset, setOffset] = useState(0);
@@ -75,14 +72,13 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [billType, setBillType] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
+
   const billsToDisplay =
-    activeBillTab === 'all'
-      ? allBills
-      : activeBillTab === 'discover-bills'
-        ? newBills
-        : activeBillTab === 'voted-bills'
-          ? votedBills
-          : [];
+    activeBillTab === 'discover-bills'
+      ? newBills
+      : activeBillTab === 'voted-bills'
+        ? votedBills
+        : [];
 
   let uniqueBillsMap = new Map<string, Bill>(
     allBills.map((bill) => [bill.number, bill])
@@ -182,7 +178,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
 
         .catch((error) => console.error('Failed to fetch bills dawg:', error));
     }
-  }, [user, currentIndex]);
+  }, [currentIndex]);
 
   useEffect(() => {
     fetchVoteLog()
