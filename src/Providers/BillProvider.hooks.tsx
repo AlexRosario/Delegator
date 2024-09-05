@@ -51,10 +51,8 @@ export const useBillFetching = (
 
       fetchedBills = await Promise.all(billPromises);
 
-      // Update the shared state for all bills
       setAllBills((prevBills) => [...prevBills, ...fetchedBills]);
 
-      // Update the offset after fetching
       setOffset((prevOffset) => prevOffset + 20);
       return fetchedBills;
     } catch (error) {
@@ -80,7 +78,6 @@ export const useBillData = (
     'discover-bills' | 'voted-bills'
   >('discover-bills');
 
-  // Memoize the calculated bills to display
   const billsToDisplay = useMemo<Bill[]>(
     () => (activeBillTab === 'discover-bills' ? newBills : votedBills),
     [activeBillTab, newBills, votedBills]

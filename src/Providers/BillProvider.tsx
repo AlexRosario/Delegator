@@ -75,12 +75,10 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
 
-  // Memoize the calculated bills to display
   const billsToDisplay = useMemo(() => {
     return activeBillTab === 'discover-bills' ? newBills : votedBills;
   }, [activeBillTab, newBills, votedBills]);
 
-  // UseCallback to memoize functions
   const fetchVoteLog = useCallback(async () => {
     try {
       const data = await Requests.getVoteLog(user);
