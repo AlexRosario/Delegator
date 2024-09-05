@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import React, { ComponentProps, useState } from 'react';
-import { Requests } from './api';
+import { Requests } from '../api';
 import toast from 'react-hot-toast';
-import { useAuthInfo } from './Providers/AuthProvider';
-import { ErrorMessage } from './Utils/errorMessages';
-import { isEmailValid, isZipcodeValid } from './Utils/validations';
-import { User } from './types';
+import { useAuthInfo } from '../providers/AuthProvider';
+import { ErrorMessage } from '../components/errorMessages';
+import { isEmailValid, isZipcodeValid } from '../utils/validations';
+import { User } from '../types';
 import { useNavigate } from 'react-router-dom';
 import * as _ from 'lodash-es';
 import { faker } from '@faker-js/faker';
@@ -58,25 +58,12 @@ export const Register = () => {
       return;
     }
 
-    Requests.register(username, email, password, address)
+    return Requests.register(username, email, password, address)
       .then(() => {
-        setUser({
-          id: '',
-          username: '',
-          email: '',
-          password: '',
-          address: {
-            street: '',
-            city: '',
-            state: '',
-            zipcode: ''
-          },
-          vote_log: {}
-        });
-
         setIsFormSubmitted(false);
         setTakenName('');
         toast.success('Registration successful');
+        localStorage.setItem('user', JSON.stringify(user));
         navigate('../', { state: { username, password } });
       })
       .catch((error) => {

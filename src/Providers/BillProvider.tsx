@@ -4,11 +4,14 @@ import React, {
   createContext,
   useState,
   useEffect,
-  useRef
+  useRef,
+  useMemo,
+  useCallback
 } from 'react';
 import { Requests } from '../api';
 import { Bill, Vote } from '../types';
 import DOMPurify from 'dompurify';
+import { useAuthInfo } from './AuthProvider';
 
 type TBillProvider = {
   billsToDisplay: Bill[];
@@ -55,8 +58,7 @@ export const BillContext = createContext<TBillProvider>({
 });
 
 export const BillProvider = ({ children }: { children: ReactNode }) => {
-  const userString = localStorage.getItem('user');
-  const user = userString ? JSON.parse(userString) : '';
+  const { user } = useAuthInfo();
   const [voteLog, setVoteLog] = useState<Vote[]>([]);
   const [votedOnThisBill, setVotedOnThisBill] = useState(false);
   const [allBills, setAllBills] = useState<Bill[]>([]);
@@ -73,18 +75,13 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
 
-  const billsToDisplay =
-    activeBillTab === 'discover-bills'
-      ? newBills
-      : activeBillTab === 'voted-bills'
-        ? votedBills
-        : [];
+  // Memoize the calculated bills to display
+  const billsToDisplay = useMemo(() => {
+    return activeBillTab === 'discover-bills' ? newBills : votedBills;
+  }, [activeBillTab, newBills, votedBills]);
 
-  let uniqueBillsMap = new Map<string, Bill>(
-    allBills.map((bill) => [bill.number, bill])
-  );
-
-  const fetchVoteLog = async () => {
+  // UseCallback to memoize functions
+  const fetchVoteLog = useCallback(async () => {
     try {
       const data = await Requests.getVoteLog(user);
       setVoteLog(data);
@@ -92,33 +89,33 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     } catch (error) {
       console.error('Error fetching vote log:', error);
     }
-  };
+  }, [user]);
 
-  const fetchUserBills = async (VoteLog: Vote[]) => {
-    try {
-      const Bills = await Requests.getBillsRecord();
-      const userBills = Bills.filter((bill: Bill) =>
-        VoteLog.some((vote) => {
-          return (
-            vote.billId === bill.type + bill.number && vote.userId === user.id
-          );
-        })
-      );
-      return userBills;
-    } catch (error) {
-      console.error('Error fetching bill record:', error);
-    }
-  };
+  const fetchUserBills = useCallback(
+    async (VoteLog: Vote[]) => {
+      try {
+        const Bills = await Requests.getBillsRecord();
+        const userBills = Bills.filter((bill: Bill) =>
+          VoteLog.some(
+            (vote) =>
+              vote.billId === bill.type + bill.number && vote.userId === user.id
+          )
+        );
+        return userBills;
+      } catch (error) {
+        console.error('Error fetching bill record:', error);
+      }
+    },
+    [user]
+  );
 
-  const fetchBills = async () => {
+  const fetchBills = useCallback(async () => {
     let fetchedBills: Bill[] = [];
-
     try {
       const data = await Requests.getBills(congress, billType, offset);
-
       fetchedBills = [...fetchedBills, ...(data ? data.bills : [])];
 
-      const billPromises = await fetchedBills.map(async (bill) => {
+      const billPromises = fetchedBills.map(async (bill) => {
         const fullBillData = await Requests.getFullBill(
           congress,
           bill.type.toLowerCase(),
@@ -152,16 +149,16 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
       });
 
       fetchedBills = await Promise.all(billPromises);
-
       return fetchedBills;
     } catch (error) {
       console.error('Failed to fetch bills:', error);
     } finally {
-      setOffset(offset + 20);
+      setOffset((prevOffset) => prevOffset + 20);
     }
-  };
+  }, [congress, billType, offset]);
 
   useEffect(() => {
+    console.log(user);
     if (
       (currentIndex === billsToDisplay.length - 9 &&
         prevIndexRef.current !== currentIndex) ||
@@ -169,16 +166,13 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     ) {
       fetchBills()
         .then((bills) => {
-          if (bills)
-            setAllBills((prevBills: Bill[]) => [
-              ...prevBills,
-              ...(bills as Bill[])
-            ]);
+          if (bills) {
+            setAllBills((prevBills: Bill[]) => [...prevBills, ...bills]);
+          }
         })
-
-        .catch((error) => console.error('Failed to fetch bills dawg:', error));
+        .catch((error) => console.error('Failed to fetch bills:', error));
     }
-  }, [currentIndex]);
+  }, [currentIndex, fetchBills]);
 
   useEffect(() => {
     fetchVoteLog()
@@ -197,8 +191,10 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         });
         setVoteLog(VoteLog);
       })
-      .finally(() => (prevIndexRef.current = currentIndex));
-  }, [activeBillTab, allBills, votedOnThisBill]);
+      .finally(() => {
+        prevIndexRef.current = currentIndex;
+      });
+  }, [activeBillTab, allBills, fetchUserBills, fetchVoteLog, votedOnThisBill]);
 
   return (
     <BillContext.Provider

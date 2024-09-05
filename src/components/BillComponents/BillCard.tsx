@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useDisplayBills } from '../Providers/BillProvider';
-import { Bill } from '../types';
+import { useDisplayBills } from '../../providers/BillProvider';
+import { Bill } from '../../types';
 import VoteButton from './VoteButton';
-import { Requests } from '../api';
+import { Requests } from '../../api';
+import { useAuthInfo } from '../../providers/AuthProvider';
+import { Link } from 'react-router-dom';
 
 export const BillCard = ({
   bill,
@@ -16,7 +18,8 @@ export const BillCard = ({
   const { congress } = useDisplayBills();
   const [billLinks, setBillLinks] = useState<{ [key: string]: string }>({});
   const [okToRender, setOkToRender] = useState(false);
-
+  const userString = localStorage.getItem('user');
+  const user = userString ? JSON.parse(userString) : null;
   const getMoreInfo = async (
     congress: string,
     billType: string,
@@ -85,8 +88,13 @@ export const BillCard = ({
         <b>{bill.latestAction.actionDate}</b>
         <div>{bill.latestAction.text}</div>
       </div>
-
-      <VoteButton bill={bill} />
+      {user ? (
+        <VoteButton bill={bill} />
+      ) : (
+        <Link to="/Home" className="sign-in-link">
+          Sign in to Vote
+        </Link>
+      )}
     </div>
   );
 };

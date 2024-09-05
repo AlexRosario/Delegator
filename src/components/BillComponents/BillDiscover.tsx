@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { BillCarousel } from './BillCarousel';
 import BillCard from './BillCard';
-import { Requests } from '../api';
+import { Requests } from '../../api';
 import DOMPurify from 'dompurify';
-import { Bill } from '../types';
+import { Bill } from '../../types';
 
 export const BillDiscover = () => {
   const [searchType, setSearchType] = useState('hopper');
@@ -20,7 +20,6 @@ export const BillDiscover = () => {
     'hres',
     'sres'
   ];
-
   const isNumeric = (billNumber: string) => {
     return /^\d+$/.test(billNumber) && billNumber.length > 0;
   };
@@ -69,6 +68,29 @@ export const BillDiscover = () => {
       return null;
     }
   };
+
+  const renderDiscoverBills = () => {
+    const billNumberNotBlank = billNumber !== '';
+
+    if (searchType === 'hopper') {
+      return <BillCarousel />;
+    }
+
+    if (searchedBill && billNumberNotBlank) {
+      return <BillCard bill={searchedBill} className="searched-bill" />;
+    }
+
+    if (!isNumeric(billNumber) && billNumberNotBlank) {
+      return <h2>{billNumber} is not a valid number</h2>;
+    }
+
+    if (billNumberNotBlank && searchedBill === null) {
+      return <h2>No Bill found</h2>;
+    }
+
+    return <h2>Search for Bill by number</h2>;
+  };
+
   useEffect(() => {
     const controller = new AbortController();
 
@@ -139,17 +161,7 @@ export const BillDiscover = () => {
           </div>
         )}
       </div>
-      {searchType === 'hopper' ? (
-        <BillCarousel />
-      ) : searchedBill && billNumber !== '' ? (
-        <BillCard bill={searchedBill} className="searched-bill" />
-      ) : !isNumeric(billNumber) && billNumber !== '' ? (
-        <h2>{billNumber} is not a valid number</h2>
-      ) : billNumber !== '' && searchedBill === null ? (
-        <h2>No Bill found</h2>
-      ) : (
-        <h2>Search for Bill by number</h2>
-      )}
+      {renderDiscoverBills()}
     </>
   );
 };

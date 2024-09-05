@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import { AuthProvider } from './Providers/AuthProvider';
-import { Home } from './Home';
-import { Register } from './Register';
+import { AuthProvider } from './providers/AuthProvider';
+import { Home } from './components/Home';
+import { Register } from './auth-components/Register';
 import App from './App';
 import { Toaster } from 'react-hot-toast';
 

@@ -6,10 +6,7 @@ export const myHeaders = {
 };
 
 export const congressGovHeader = new Headers();
-congressGovHeader.append(
-  'X-API-Key',
-  'wbWdJxHyM4R2Vo9dCkI5jqdApMidOokgNWmHb8e3'
-);
+congressGovHeader.append('X-API-Key', import.meta.env.VITE_API_KEY!);
 
 export const Requests = {
   //Local

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useDisplayBills } from '../Providers/BillProvider';
+import { useDisplayBills } from '../../providers/BillProvider';
 import { BillCard } from './BillCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -7,7 +7,7 @@ import {
   faAngleLeft,
   faHourglass2
 } from '@fortawesome/free-solid-svg-icons';
-import { Bill } from '../types';
+import { Bill } from '../../types';
 
 export const BillCarousel = () => {
   const {

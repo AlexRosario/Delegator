@@ -20,10 +20,13 @@ export default defineConfig({
         configure: (proxy) => {
           proxy.on('proxyReq', (proxyReq, req, res) => {
             console.log(`Proxying request to: ${proxyReq.path}`);
-            proxyReq.setHeader(
-              'X-Api-Key',
-              'wbWdJxHyM4R2Vo9dCkI5jqdApMidOokgNWmHb8e3'
-            );
+            // Use environment variable instead of hardcoded key
+            const apiKey = process.env.VITE_API_KEY;
+            if (apiKey) {
+              proxyReq.setHeader('X-Api-Key', apiKey);
+            } else {
+              console.warn('API Key is not set in the environment variables.');
+            }
           });
         }
       }

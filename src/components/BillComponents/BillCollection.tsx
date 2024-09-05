@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useDisplayBills } from '../Providers/BillProvider';
+import { useDisplayBills } from '../../providers/BillProvider';
 import BillCard from './BillCard';
-import { allPolicies } from '../Utils/policy-terms';
-import { Bill } from '../types';
+import { allPolicies } from '../../constants/policy-terms';
+import { Bill } from '../../types';
 
 export const BillCollection = () => {
   const { billsToDisplay, billSubject, setBillSubject } = useDisplayBills();
@@ -108,7 +108,11 @@ export const BillCollection = () => {
                     setBillSubject(e.target.value);
                   }}
                 />
-                <a href="https://www.congress.gov/advanced-search/legislative-subject-terms?congresses%5B%5D=118">
+                <a
+                  href="https://www.congress.gov/advanced-search/legislative-subject-terms?congresses%5B%5D=118"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   List of Acceptable Terms
                 </a>
               </div>

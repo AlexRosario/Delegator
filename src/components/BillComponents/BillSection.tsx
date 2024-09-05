@@ -1,13 +1,14 @@
 import { BillStatus } from './BillStatus';
-import { useDisplayBills } from '../Providers/BillProvider';
+import { useDisplayBills } from '../../providers/BillProvider';
 import React from 'react';
 import { BillCollection } from './BillCollection';
 import BillDiscover from './BillDiscover';
-import { useAuthInfo } from '../Providers/AuthProvider';
+import { useAuthInfo } from '../../providers/AuthProvider';
 
 export const BillSection = () => {
   const { activeBillTab, setActiveBillTab } = useDisplayBills();
-  const { user } = useAuthInfo();
+  const userString = localStorage.getItem('user');
+  const user = userString ? JSON.parse(userString) : null;
 
   return (
     <section className="bill-section">
@@ -20,7 +21,7 @@ export const BillSection = () => {
         >
           Discover Bills
         </button>
-        {user.username && (
+        {user && (
           <button
             className={`bill-list-button ${activeBillTab === 'voted-bills' ? 'selected' : ''}`}
             onClick={() => {

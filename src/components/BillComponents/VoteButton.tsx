@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Requests } from '../api';
-import { Bill, Vote } from '../types';
+import { Requests } from '../../api';
+import { Bill, Vote } from '../../types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
-import { useDisplayBills } from '../Providers/BillProvider';
+import { useDisplayBills } from '../../providers/BillProvider';
+import { useAuthInfo } from '../../providers/AuthProvider';
 
 interface VoteRecord {
   userId: string;
@@ -13,8 +14,7 @@ interface VoteRecord {
 }
 
 export const VoteButton = ({ bill }: { bill: Bill }) => {
-  const userString = localStorage.getItem('user');
-  const user = userString ? JSON.parse(userString) : {};
+  const { user } = useAuthInfo();
   const userId = user.id;
   const { voteLog, setVoteLog, setVotedOnThisBill } = useDisplayBills();
   const billNumber = bill.type + bill.number;
@@ -81,7 +81,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
         </button>
       </div>
       <div>
-        {userHasBillVote
+        {recordedVoteOnBill
           ? newActionsSinceVoted
             ? `Voted ${recordedVoteOnBill?.vote}. New actions since your last vote. Would you like to change vote?`
             : `Voted ${recordedVoteOnBill?.vote}`
