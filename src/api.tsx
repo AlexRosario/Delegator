@@ -5,8 +5,10 @@ export const myHeaders = {
   'Content-Type': 'application/json'
 };
 
-export const congressGovHeader = new Headers();
-congressGovHeader.append('X-API-Key', import.meta.env.VITE_API_KEY!);
+export const congressGovHeader = new Headers({
+  ...myHeaders,
+  'X-API-Key': import.meta.env.VITE_API_KEY
+});
 
 export const Requests = {
   //Local
@@ -168,12 +170,8 @@ export const Requests = {
     try {
       const response = await fetch(url, {
         method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Api-Key': 'wbWdJxHyM4R2Vo9dCkI5jqdApMidOokgNWmHb8e3' // Ensure correct API key is sent
-        }
+        headers: congressGovHeader
       });
-
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -195,10 +193,7 @@ export const Requests = {
     try {
       const response = await fetch(url, {
         method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Api-Key': 'wbWdJxHyM4R2Vo9dCkI5jqdApMidOokgNWmHb8e3'
-        },
+        headers: congressGovHeader,
         signal
       });
       if (!response.ok) {
@@ -223,10 +218,7 @@ export const Requests = {
     try {
       const response = await fetch(url, {
         method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-Api-Key': 'wbWdJxHyM4R2Vo9dCkI5jqdApMidOokgNWmHb8e3' // Ensure correct API key is sent
-        },
+        headers: congressGovHeader,
         signal
       });
 

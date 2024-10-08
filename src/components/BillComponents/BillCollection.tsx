@@ -5,14 +5,16 @@ import { allPolicies } from '../../constants/policy-terms';
 import { Bill } from '../../types';
 
 export const BillCollection = () => {
-  const { billsToDisplay, billSubject, setBillSubject } = useDisplayBills();
+  const { billsToDisplay, billSubject, setBillSubject, votedBills } =
+    useDisplayBills();
   const [searchType, setSearchType] = useState('all');
 
   const policyBills = allPolicies.reduce<Record<string, Bill[]>>(
     (acc, policy) => {
-      acc[policy] = billsToDisplay.filter(
-        (bill) => bill.policyArea?.name === policy
-      );
+      acc[policy] = billsToDisplay.filter((bill) => {
+        return bill.policyArea?.name === policy;
+      });
+
       return acc;
     },
     {}
@@ -148,8 +150,8 @@ export const BillCollection = () => {
           billsToDisplay.length > 0 ? (
           <div className="policy-row">
             {billsToDisplay
-              .filter(
-                (bill) =>
+              .filter((bill) => {
+                return (
                   bill.policyArea?.name.toLowerCase() ===
                     billSubject.toLowerCase() ||
                   bill.subjects.legislativeSubjects?.some(
@@ -158,7 +160,8 @@ export const BillCollection = () => {
                         .toLowerCase()
                         .startsWith(billSubject.toLowerCase())
                   )
-              )
+                );
+              })
               .map((bill, index) => (
                 <BillCard
                   bill={bill}

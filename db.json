@@ -1081,6 +1081,398 @@
       "billId": "HR8024",
       "vote": "Yes",
       "date": "2024-09-03T16:01:45.826Z"
+    },
+    {
+      "id": "9b3b",
+      "userId": "",
+      "billId": "HR9462",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:01.509Z"
+    },
+    {
+      "id": "81f5",
+      "userId": "",
+      "billId": "HR9935",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:02.699Z"
+    },
+    {
+      "id": "fd3f",
+      "userId": "",
+      "billId": "HR9928",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:03.296Z"
+    },
+    {
+      "id": "a460",
+      "userId": "",
+      "billId": "HR9937",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:17.463Z"
+    },
+    {
+      "id": "926c",
+      "userId": "",
+      "billId": "HR9915",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:17.938Z"
+    },
+    {
+      "id": "17b3",
+      "userId": "",
+      "billId": "HR9939",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:19.613Z"
+    },
+    {
+      "id": "303e",
+      "userId": "",
+      "billId": "HR9936",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:20.538Z"
+    },
+    {
+      "id": "ed8f",
+      "userId": "",
+      "billId": "HR9913",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:21.264Z"
+    },
+    {
+      "id": "66fa",
+      "userId": "",
+      "billId": "HRES1534",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:22.552Z"
+    },
+    {
+      "id": "033e",
+      "userId": "",
+      "billId": "HR9924",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:23.405Z"
+    },
+    {
+      "id": "f681",
+      "userId": "",
+      "billId": "HR9931",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:24.106Z"
+    },
+    {
+      "id": "bbb7",
+      "userId": "",
+      "billId": "HRES1535",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:24.638Z"
+    },
+    {
+      "id": "507c",
+      "userId": "",
+      "billId": "HR9927",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:27.126Z"
+    },
+    {
+      "id": "d99c",
+      "userId": "",
+      "billId": "HR9912",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:29.317Z"
+    },
+    {
+      "id": "d027",
+      "userId": "",
+      "billId": "HR9921",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:32.353Z"
+    },
+    {
+      "id": "ce61",
+      "userId": "",
+      "billId": "HRES1532",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:35.228Z"
+    },
+    {
+      "id": "f051",
+      "userId": "",
+      "billId": "HRES1533",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:37.080Z"
+    },
+    {
+      "id": "f6c6",
+      "userId": "",
+      "billId": "HR9920",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:41.599Z"
+    },
+    {
+      "id": "375c",
+      "userId": "",
+      "billId": "HR9938",
+      "vote": "Yes",
+      "date": "2024-10-06T20:38:44.434Z"
+    },
+    {
+      "id": "fe43",
+      "userId": "bf80",
+      "billId": "HR9462",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:12.063Z"
+    },
+    {
+      "id": "478e",
+      "userId": "bf80",
+      "billId": "HR9935",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:18.475Z"
+    },
+    {
+      "id": "3af8",
+      "userId": "bf80",
+      "billId": "HR9928",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:19.773Z"
+    },
+    {
+      "id": "84a2",
+      "userId": "bf80",
+      "billId": "HR9937",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:20.035Z"
+    },
+    {
+      "id": "14de",
+      "userId": "bf80",
+      "billId": "HR9915",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:20.196Z"
+    },
+    {
+      "id": "50d0",
+      "userId": "bf80",
+      "billId": "HR9939",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:21.995Z"
+    },
+    {
+      "id": "69d8",
+      "userId": "bf80",
+      "billId": "HR9936",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:22.203Z"
+    },
+    {
+      "id": "119b",
+      "userId": "bf80",
+      "billId": "HR9913",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:22.395Z"
+    },
+    {
+      "id": "0c6d",
+      "userId": "bf80",
+      "billId": "HRES1534",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:23.443Z"
+    },
+    {
+      "id": "b45d",
+      "userId": "bf80",
+      "billId": "HR9924",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:24.773Z"
+    },
+    {
+      "id": "8d0a",
+      "userId": "bf80",
+      "billId": "HR9931",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:25.713Z"
+    },
+    {
+      "id": "942c",
+      "userId": "bf80",
+      "billId": "HRES1535",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:26.479Z"
+    },
+    {
+      "id": "0802",
+      "userId": "bf80",
+      "billId": "HR9927",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:28.508Z"
+    },
+    {
+      "id": "3ac1",
+      "userId": "bf80",
+      "billId": "HR9912",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:30.474Z"
+    },
+    {
+      "id": "5887",
+      "userId": "bf80",
+      "billId": "HR9921",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:31.255Z"
+    },
+    {
+      "id": "a71f",
+      "userId": "bf80",
+      "billId": "HRES1532",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:31.938Z"
+    },
+    {
+      "id": "ad2e",
+      "userId": "bf80",
+      "billId": "HRES1533",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:32.924Z"
+    },
+    {
+      "id": "0b81",
+      "userId": "bf80",
+      "billId": "HR9920",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:33.687Z"
+    },
+    {
+      "id": "89b9",
+      "userId": "bf80",
+      "billId": "HR9938",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:34.214Z"
+    },
+    {
+      "id": "7862",
+      "userId": "bf80",
+      "billId": "HR9929",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:34.969Z"
+    },
+    {
+      "id": "7ffb",
+      "userId": "bf80",
+      "billId": "HRES1531",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:35.724Z"
+    },
+    {
+      "id": "41c8",
+      "userId": "bf80",
+      "billId": "HR9922",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:36.329Z"
+    },
+    {
+      "id": "c5ba",
+      "userId": "bf80",
+      "billId": "HR9933",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:36.796Z"
+    },
+    {
+      "id": "73ca",
+      "userId": "bf80",
+      "billId": "HR9919",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:37.947Z"
+    },
+    {
+      "id": "8975",
+      "userId": "bf80",
+      "billId": "HR9925",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:38.615Z"
+    },
+    {
+      "id": "0503",
+      "userId": "bf80",
+      "billId": "HR9932",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:39.333Z"
+    },
+    {
+      "id": "97c4",
+      "userId": "bf80",
+      "billId": "HR9934",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:40.654Z"
+    },
+    {
+      "id": "bec6",
+      "userId": "bf80",
+      "billId": "HR9914",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:42.094Z"
+    },
+    {
+      "id": "15ec",
+      "userId": "bf80",
+      "billId": "HR9930",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:42.578Z"
+    },
+    {
+      "id": "5b73",
+      "userId": "bf80",
+      "billId": "HR9916",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:45.124Z"
+    },
+    {
+      "id": "1c58",
+      "userId": "bf80",
+      "billId": "HRES1536",
+      "vote": "Yes",
+      "date": "2024-10-08T13:30:51.759Z"
+    },
+    {
+      "id": "6f30",
+      "userId": "bf80",
+      "billId": "HR9926",
+      "vote": "No",
+      "date": "2024-10-08T13:31:06.356Z"
+    },
+    {
+      "id": "61ea",
+      "userId": "bf80",
+      "billId": "HR9923",
+      "vote": "Yes",
+      "date": "2024-10-08T13:31:09.666Z"
+    },
+    {
+      "id": "8230",
+      "userId": "",
+      "billId": "HR7777",
+      "vote": "Yes",
+      "date": "2024-10-08T16:42:10.105Z"
+    },
+    {
+      "id": "a412",
+      "userId": "",
+      "billId": "HR9929",
+      "vote": "Yes",
+      "date": "2024-10-08T18:01:06.509Z"
+    },
+    {
+      "id": "3e32",
+      "userId": "",
+      "billId": "HRES1531",
+      "vote": "Yes",
+      "date": "2024-10-08T18:01:43.370Z"
+    },
+    {
+      "id": "b672",
+      "userId": "",
+      "billId": "HR9922",
+      "vote": "Yes",
+      "date": "2024-10-08T18:01:47.453Z"
     }
   ],
   "Bills": [
@@ -4853,6 +5245,1807 @@
         "url": "https://api.congress.gov/v3/bill/118/hr/8024/titles?format=json"
       },
       "summary": "No Summary Available"
+    },
+    {
+      "id": "1f38",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Placed on the Union Calendar, Calendar No. 600."
+      },
+      "number": "9462",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Educational Choice for Children Act of 2024",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:48Z",
+      "updateDateIncludingText": "2024-10-05T08:05:48Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9462?format=json",
+      "actions": {
+        "count": 11,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9462/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9462/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 138 (Friday, September 6, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. SMITH of Nebraska:\nH.R. 9462.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8, Clause 1\nThe single subject of this legislation is:\nTax credit\n[Page H5032]\n</pre>",
+      "cosponsors": {
+        "count": 23,
+        "countIncludingWithdrawnCosponsors": 23,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9462/cosponsors?format=json"
+      },
+      "introducedDate": "2024-09-06",
+      "sponsors": [
+        {
+          "bioguideId": "S001172",
+          "district": 3,
+          "firstName": "Adrian",
+          "fullName": "Rep. Smith, Adrian [R-NE-3]",
+          "isByRequest": "N",
+          "lastName": "Smith",
+          "party": "R",
+          "state": "NE",
+          "url": "https://api.congress.gov/v3/member/S001172?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9462/text?format=json"
+      },
+      "titles": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9462/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "5dd4",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Ways and Means."
+      },
+      "number": "9935",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Internal Revenue Code of 1986 to establish a refundable tax credit for the addition of skirting to certain manufactured homes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:45Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9935?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9935/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9935/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. PEREZ:\nH.R. 9935.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I of the U.S. Constitution\nThe single subject of this legislation is:\nTaxes\n[Page H5854]\n</pre>",
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "G000600",
+          "district": 3,
+          "firstName": "Marie",
+          "fullName": "Rep. Perez, Marie Gluesenkamp [D-WA-3]",
+          "isByRequest": "N",
+          "lastName": "Perez",
+          "middleName": "Gluesenkamp",
+          "party": "D",
+          "state": "WA",
+          "url": "https://api.congress.gov/v3/member/G000600?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9935/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "ceb9",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "9928",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To reduce the number of, and shorten the time between, pay grade steps for officers and members of the United States Park Police, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:46Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9928?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9928/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9928/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. MALLIOTAKIS:\nH.R. 9928.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18\nThe single subject of this legislation is:\nTo reduce the number of, and shorten the time between, pay\ngrade steps for officers and members of the United States\nPark Police, and for other purposes.\n[Page H5854]\n</pre>",
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "M000317",
+          "district": 11,
+          "firstName": "Nicole",
+          "fullName": "Rep. Malliotakis, Nicole [R-NY-11]",
+          "isByRequest": "N",
+          "lastName": "Malliotakis",
+          "party": "R",
+          "state": "NY",
+          "url": "https://api.congress.gov/v3/member/M000317?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9928/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "f0f5",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Ways and Means."
+      },
+      "number": "9937",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Internal Revenue Code of 1986 to deny interest and depreciation deductions for taxpayers owning 50 or more single family properties.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:26Z",
+      "updateDateIncludingText": "2024-10-05T10:58:18Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9937?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9937/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9937/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mrs. SYKES:\nH.R. 9937.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8, Clause 18.\nThe single subject of this legislation is:\nThis bill addresses owning 50 or more single family\nproperties.\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9937/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "S001223",
+          "district": 13,
+          "firstName": "Emilia",
+          "fullName": "Rep. Sykes, Emilia Strong [D-OH-13]",
+          "isByRequest": "N",
+          "lastName": "Sykes",
+          "middleName": "Strong",
+          "party": "D",
+          "state": "OH",
+          "url": "https://api.congress.gov/v3/member/S001223?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9937/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "8546",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "9915",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To permanently extend the first right of refusal for the purchase of Tribal assets, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:47Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9915?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9915/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9915/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. CURTIS:\nH.R. 9915.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8\nThe single subject of this legislation is:\nA bill to permanently extend the first right of refusal for\nthe purchases of Tribal assets.\n[Page H5853]\n</pre>",
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "C001114",
+          "district": 3,
+          "firstName": "John",
+          "fullName": "Rep. Curtis, John R. [R-UT-3]",
+          "isByRequest": "N",
+          "lastName": "Curtis",
+          "middleName": "R.",
+          "party": "R",
+          "state": "UT",
+          "url": "https://api.congress.gov/v3/member/C001114?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9915/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "e847",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "9939",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Secretary of Health and Human Services, acting through the Assistant Secretary for Planning and Evaluation, to conduct a study on existing efforts of hospitals with respect to electronic automated referrals for purposes of organ donation, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:30Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9939?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9939/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9939/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. WITTMAN:\nH.R. 9939.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1 Section 8\nThe single subject of this legislation is:\nTo direct the Assistant Secretary of Health and Human\nServices for Planning and Evaluation to conduct a study on\nelectronic automated deceased donor referrals. The study and\naccompanying report shall include recomendations on how to\nremove barriers to implementing such referrals, identify\ncosts of installing the system, savings in staff time, the\nimpact on organ donation volumes, best practices, and organ\ndonor referral criteria that can be standardized across\ntechnologies to promote its broader adoption.\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 3,
+        "countIncludingWithdrawnCosponsors": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9939/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "W000804",
+          "district": 1,
+          "firstName": "Robert",
+          "fullName": "Rep. Wittman, Robert J. [R-VA-1]",
+          "isByRequest": "N",
+          "lastName": "Wittman",
+          "middleName": "J.",
+          "party": "R",
+          "state": "VA",
+          "url": "https://api.congress.gov/v3/member/W000804?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9939/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "63e5",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Agriculture."
+      },
+      "number": "9936",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the National Agricultural Research, Extension, and Teaching Policy Act of 1977 with respect to workforce development, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:50Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9936?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9936/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9936/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. SPANBERGER:\nH.R. 9936.\nCongress has the power to enact this legislation pursuant\nto the following:\nU.S. Constitution, Article 1, Section 8\nThe single subject of this legislation is:\nA bill to grant the USDA Natural Resource Conservation\nService direct hiring authority\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9936/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "S001209",
+          "district": 7,
+          "firstName": "Abigail",
+          "fullName": "Rep. Spanberger, Abigail Davis [D-VA-7]",
+          "isByRequest": "N",
+          "lastName": "Spanberger",
+          "middleName": "Davis",
+          "party": "D",
+          "state": "VA",
+          "url": "https://api.congress.gov/v3/member/S001209?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9936/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "eafa",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "9913",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To prohibit the Federal Communications Commission from promulgating or enforcing rules regarding disclosure of artificial intelligence-generated content in political advertisements.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:21Z",
+      "updateDateIncludingText": "2024-10-05T10:58:18Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9913?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9913/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9913/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. CLYDE:\nH.R. 9913.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18: [The Congress shall have\nPower . . .] To make all Laws which shall be necessary and\nproper for carrying into Execution the foregoing Powers, and\nall other Powers vested by this Constitution in the\nGovernment of the United States, or in any Department or\nOfficer thereof.\nThe single subject of this legislation is:\nTo prohibit the Federal Communications Commission from\npromulgating or enforcing rules regarding disclosure of\nartificial intelligence-generated content in political\nadvertisements.\n[Page H5853]\n</pre>",
+      "cosponsors": {
+        "count": 4,
+        "countIncludingWithdrawnCosponsors": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9913/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "C001116",
+          "district": 9,
+          "firstName": "Andrew",
+          "fullName": "Rep. Clyde, Andrew S. [R-GA-9]",
+          "isByRequest": "N",
+          "lastName": "Clyde",
+          "middleName": "S.",
+          "party": "R",
+          "state": "GA",
+          "url": "https://api.congress.gov/v3/member/C001116?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9913/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "19dc",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Natural Resources."
+      },
+      "number": "1534",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Recognizing the 15th anniversary of Outdoor Afro.",
+      "type": "HRES",
+      "updateDate": "2024-10-05T08:18:23Z",
+      "updateDateIncludingText": "2024-10-05T08:18:23Z",
+      "url": "https://api.congress.gov/v3/bill/118/hres/1534?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1534/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1534/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 9,
+        "countIncludingWithdrawnCosponsors": 9,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1534/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "T000460",
+          "district": 4,
+          "firstName": "Mike",
+          "fullName": "Rep. Thompson, Mike [D-CA-4]",
+          "isByRequest": "N",
+          "lastName": "Thompson",
+          "party": "D",
+          "state": "CA",
+          "url": "https://api.congress.gov/v3/member/T000460?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1534/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1534/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "b14c",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Veterans' Affairs."
+      },
+      "number": "9924",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend title 38, United States Code, to establish standard practices for a grant or pilot program administered by the Secretary of Veterans Affairs through the Veterans Health Administration, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:49Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9924?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9924/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9924/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. LANDSMAN:\nH.R. 9924.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I Section VIIII\nThe single subject of this legislation is:\nTo establish standard practices for a grant or pilot\nprogram administered by the Secretary of Veterans Affairs\nthrough the Veterans Health Administration, and for other\npurposes.\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 6,
+        "countIncludingWithdrawnCosponsors": 6,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9924/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "L000601",
+          "district": 1,
+          "firstName": "Greg",
+          "fullName": "Rep. Landsman, Greg [D-OH-1]",
+          "isByRequest": "N",
+          "lastName": "Landsman",
+          "party": "D",
+          "state": "OH",
+          "url": "https://api.congress.gov/v3/member/L000601?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9924/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "8b1e",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "9931",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To provide bankruptcy relief for student borrowers.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:45Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9931?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9931/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9931/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. NADLER:\nH.R. 9931.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8\nThe single subject of this legislation is:\nJudiciary\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 18,
+        "countIncludingWithdrawnCosponsors": 18,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9931/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "N000002",
+          "district": 12,
+          "firstName": "Jerrold",
+          "fullName": "Rep. Nadler, Jerrold [D-NY-12]",
+          "isByRequest": "N",
+          "lastName": "Nadler",
+          "party": "D",
+          "state": "NY",
+          "url": "https://api.congress.gov/v3/member/N000002?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9931/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "5058",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "1535",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for the month of September as \"Founding Fathers' Month\".",
+      "type": "HRES",
+      "updateDate": "2024-10-05T08:18:23Z",
+      "updateDateIncludingText": "2024-10-05T08:18:23Z",
+      "url": "https://api.congress.gov/v3/bill/118/hres/1535?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1535/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1535/committees?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "V000133",
+          "district": 2,
+          "firstName": "Jefferson",
+          "fullName": "Rep. Van Drew, Jefferson [R-NJ-2]",
+          "isByRequest": "N",
+          "lastName": "Van Drew",
+          "party": "R",
+          "state": "NJ",
+          "url": "https://api.congress.gov/v3/member/V000133?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1535/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1535/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "f62b",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the Committee on Financial Services, and in addition to the Committee on Transportation and Infrastructure, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9927",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To terminate the Shelter and Services Program of the Federal Emergency Management Agency, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:29Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9927?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9927/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9927/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. MACE:\nH.R. 9927.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8 of the Constitution.\nThe single subject of this legislation is:\nTo terminate the Shelter and Services Program of the\nFederal Emergency Management Agency and transfer unobligated\nbalances to be made available for necessary expenses to carry\nout the Robert T. Stafford Disaster Relief and Emergency\nAssistance Act\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 9,
+        "countIncludingWithdrawnCosponsors": 9,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9927/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "M000194",
+          "district": 1,
+          "firstName": "Nancy",
+          "fullName": "Rep. Mace, Nancy [R-SC-1]",
+          "isByRequest": "N",
+          "lastName": "Mace",
+          "party": "R",
+          "state": "SC",
+          "url": "https://api.congress.gov/v3/member/M000194?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9927/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "af65",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the Committee on Natural Resources, and in addition to the Committees on Science, Space, and Technology, House Administration, and Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9912",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To require the Subcommittee on Ocean Science and Technology of the National Science and Technology Council to establish the Interagency Working Group on Coastal Blue Carbon, require the Interagency Working Group to produce a national map and inventory of coastal blue carbon ecosystems, require the Administrator of the National Oceanic and Atmospheric Administration to carry out pilot programs to protect intact and restore degraded coastal blue carbon ecosystems, require the Secretary of the Smithsonian Institution to establish the Coastal Carbon Data Clearinghouse, require the Administrator to seek to enter into an agreement with the National Academies of Science, Engineering, and Medicine to conduct an assessment regarding geologic stores of carbon dioxide, require the Administrator to establish the Coastal Blue Carbon Inventory Program, and require the Administrator to conduct a national assessment to quantify the carbon sequestration potential of coastal blue carbon ecosystems.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:32Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9912?format=json",
+      "actions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9912/actions?format=json"
+      },
+      "committees": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9912/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. BONAMICI:\nH.R. 9912.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8 of the U.S. Constitution.\nThe single subject of this legislation is:\nCoastal blue carbon ecosystem research, protection, and\nrestoration.\n[Page H5853]\n</pre>",
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9912/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "B001278",
+          "district": 1,
+          "firstName": "Suzanne",
+          "fullName": "Rep. Bonamici, Suzanne [D-OR-1]",
+          "isByRequest": "N",
+          "lastName": "Bonamici",
+          "party": "D",
+          "state": "OR",
+          "url": "https://api.congress.gov/v3/member/B001278?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9912/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "72a4",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the Committee on Transportation and Infrastructure, and in addition to the Committee on Financial Services, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9921",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Delta Development Act to include the parish of Terrebonne as a Delta Regional Authority area.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:28Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9921?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9921/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9921/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. GRAVES of Louisiana:\nH.R. 9921.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8\nThe single subject of this legislation is:\nDelta Regional Authority Areas\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9921/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "G000577",
+          "district": 6,
+          "firstName": "Garret",
+          "fullName": "Rep. Graves, Garret [R-LA-6]",
+          "isByRequest": "N",
+          "lastName": "Graves",
+          "party": "R",
+          "state": "LA",
+          "url": "https://api.congress.gov/v3/member/G000577?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9921/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "6e86",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the Committee on Science, Space, and Technology, and in addition to the Committee on Education and the Workforce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "1532",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for designation of the week of October 4, 2024, through October 10, 2024, as \"World Space Week\".",
+      "type": "HRES",
+      "updateDate": "2024-10-05T08:18:21Z",
+      "updateDateIncludingText": "2024-10-05T08:18:21Z",
+      "url": "https://api.congress.gov/v3/bill/118/hres/1532?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1532/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1532/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1532/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "D000624",
+          "district": 6,
+          "firstName": "Debbie",
+          "fullName": "Rep. Dingell, Debbie [D-MI-6]",
+          "isByRequest": "N",
+          "lastName": "Dingell",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/D000624?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1532/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1532/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "754a",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "number": "1533",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Reaffirming United States support of the State of Israel one year after the October 7, 2023, attacks.",
+      "type": "HRES",
+      "updateDate": "2024-10-05T08:18:22Z",
+      "updateDateIncludingText": "2024-10-05T08:18:22Z",
+      "url": "https://api.congress.gov/v3/bill/118/hres/1533?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1533/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1533/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 14,
+        "countIncludingWithdrawnCosponsors": 14,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1533/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "F000478",
+          "district": 7,
+          "firstName": "Russell",
+          "fullName": "Rep. Fry, Russell [R-SC-7]",
+          "isByRequest": "N",
+          "lastName": "Fry",
+          "party": "R",
+          "state": "SC",
+          "url": "https://api.congress.gov/v3/member/F000478?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1533/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1533/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "3d78",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "9920",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To include sexual assault and aggravated sexual violence in the definition of aggravated felonies under the Immigration and Nationality Act in order to expedite the removal of aliens convicted of such crimes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:53Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9920?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9920/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9920/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\n[Pages H5853-H5854]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. TONY GONZALES of Texas:\nH.R. 9920.\n[[Page H5854]]\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8\nThe single subject of this legislation is:\nTo include sexual assault and aggravated sexual violence in\nthe definition of aggravated felonies under the Immigration\nand Nationality Act in order to expedite the removal of\naliens convicted of such crimes.\n</pre>",
+      "cosponsors": {
+        "count": 11,
+        "countIncludingWithdrawnCosponsors": 11,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9920/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "G000594",
+          "district": 23,
+          "firstName": "Tony",
+          "fullName": "Rep. Gonzales, Tony [R-TX-23]",
+          "isByRequest": "N",
+          "lastName": "Gonzales",
+          "party": "R",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/G000594?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9920/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "76b3",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Energy and Commerce."
+      },
+      "number": "9938",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Federal Food, Drug, and Cosmetic Act to establish a time-limited conditional approval pathway, subject to specific obligations, for certain drugs and biological products, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:24Z",
+      "updateDateIncludingText": "2024-10-05T10:58:18Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9938?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9938/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9938/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. WESTERMAN:\nH.R. 9938.\nCongress has the power to enact this legislation pursuant\nto the following:\nThe Interstate Commerce Clause: Clause 3 of Section 8 of\nArticle I.\nThe single subject of this legislation is:\nPharmaceutical approval and safety\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9938/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "W000821",
+          "district": 4,
+          "firstName": "Bruce",
+          "fullName": "Rep. Westerman, Bruce [R-AR-4]",
+          "isByRequest": "N",
+          "lastName": "Westerman",
+          "party": "R",
+          "state": "AR",
+          "url": "https://api.congress.gov/v3/member/W000821?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9938/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "6e20",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "9929",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To provide funding to the Bureau of Prisons, States, and localities to carry out mental health screenings and provide referrals to mental healthcare providers for certain corrections officers.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:35Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9929?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9929/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9929/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mrs. MILLER-MEEKS:\nH.R. 9929.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8 of the United States Constitution\nThe single subject of this legislation is:\nThis bill provides grant funding for mental health services\nfor Bureau of Prison employees\n[Page H5854]\n</pre>",
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "M001215",
+          "district": 1,
+          "firstName": "Mariannette",
+          "fullName": "Rep. Miller-Meeks, Mariannette [R-IA-1]",
+          "isByRequest": "N",
+          "lastName": "Miller-Meeks",
+          "party": "R",
+          "state": "IA",
+          "url": "https://api.congress.gov/v3/member/M001215?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9929/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "fdac",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "1531",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Expressing support for designation of the week of October 6, 2024, through October 12, 2024, as \"Latex Allergy Awareness Week\".",
+      "type": "HRES",
+      "updateDate": "2024-10-05T08:18:20Z",
+      "updateDateIncludingText": "2024-10-05T08:18:20Z",
+      "url": "https://api.congress.gov/v3/bill/118/hres/1531?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1531/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1531/committees?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "D000624",
+          "district": 6,
+          "firstName": "Debbie",
+          "fullName": "Rep. Dingell, Debbie [D-MI-6]",
+          "isByRequest": "N",
+          "lastName": "Dingell",
+          "party": "D",
+          "state": "MI",
+          "url": "https://api.congress.gov/v3/member/D000624?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1531/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1531/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "c924",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "9922",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend title 28, United States Code, to provide for transparency and oversight of third-party beneficiaries in civil actions.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:42Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9922?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9922/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9922/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. ISSA:\nH.R. 9922.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, clause 18 allows Congress to make all\nlaws ``which shall be necessary and proper for carrying into\nexecution'' any ``other'' powers vested by the Constitution\nin the Government of the United States.\nAccording to the Supreme Court, the Necessary and Proper\nClause gives Congress the ``power to make laws for carrying\ninto execution all the judgments which the judicial\ndepartment has power to pronounce'' (Wayman v. Southard, 10\nWheat. 1, 22 (1825)), and, thereby, Congress has ``undoubted\npower to regulate the practice and procedure of federal\ncourts.'' See Sibbach v. Wilson & Co., 312 U.S. 1, 9 (1941).\nThe single subject of this legislation is:\nTo amend title 28, United States Code, to provide for\ntransparency and oversight of third-party beneficiaries in\ncivil actions.\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9922/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "I000056",
+          "district": 48,
+          "firstName": "Darrell",
+          "fullName": "Rep. Issa, Darrell [R-CA-48]",
+          "isByRequest": "N",
+          "lastName": "Issa",
+          "party": "R",
+          "state": "CA",
+          "url": "https://api.congress.gov/v3/member/I000056?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9922/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "e7b7",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "9933",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Secretary of Defense to design and implement a foreign military officer subject matter expert exchange program.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:51Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9933?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9933/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9933/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. PANETTA:\nH.R. 9933.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18\nThe single subject of this legislation is:\nCreates a subject matter expert exchange program among\nsenior military leaders in the United States and Middle East\npartners.\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9933/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "P000613",
+          "district": 19,
+          "firstName": "Jimmy",
+          "fullName": "Rep. Panetta, Jimmy [D-CA-19]",
+          "isByRequest": "N",
+          "lastName": "Panetta",
+          "party": "D",
+          "state": "CA",
+          "url": "https://api.congress.gov/v3/member/P000613?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9933/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "4eee",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "9919",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend title 39 of the United States Code to require the Postmaster General to be appointed by the President, subject to Senate confirmation, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:38Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9919?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9919/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9919/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. GOLDEN of Maine:\nH.R. 9919.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8, clause 18\nThe single subject of this legislation is:\nTo amend title 39 of the United States Code to require the\nPostmaster General to be appointed by the President, subject\nto Senate confirmation, and for other purposes.\n[Page H5853]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9919/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "G000592",
+          "district": 2,
+          "firstName": "Jared",
+          "fullName": "Rep. Golden, Jared F. [D-ME-2]",
+          "isByRequest": "N",
+          "lastName": "Golden",
+          "middleName": "F.",
+          "party": "D",
+          "state": "ME",
+          "url": "https://api.congress.gov/v3/member/G000592?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9919/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "f625",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Armed Services."
+      },
+      "number": "9925",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To establish a process to furnish to State educational agencies certain demographic data regarding members of the Armed Forces.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:54Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9925?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9925/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9925/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. LEE of Nevada:\nH.R. 9925.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8, Clause 1 provides Congress with the\npower to ``lay and collect Taxes, Duties, Imposts and\nExcises'' in order to ``provide for the . . . general Welfare\nof the United States.''\nThe single subject of this legislation is:\nMilitary Data\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9925/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "L000590",
+          "district": 3,
+          "firstName": "Susie",
+          "fullName": "Rep. Lee, Susie [D-NV-3]",
+          "isByRequest": "N",
+          "lastName": "Lee",
+          "party": "D",
+          "state": "NV",
+          "url": "https://api.congress.gov/v3/member/L000590?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9925/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "f11d",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "9932",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To prohibit the United States Postal Service from using funds to close small post offices or perform mail processing facility reviews in election years, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:40Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9932?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9932/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9932/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. NEWHOUSE:\nH.R. 9932.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 7\nThe single subject of this legislation is:\nTo prohibit the United States Postal Service from using\nfunds to close small post offices or perform mail processing\nfacility reviews in election years, and for other purposes.\n[Page H5854]\n</pre>",
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "N000189",
+          "district": 4,
+          "firstName": "Dan",
+          "fullName": "Rep. Newhouse, Dan [R-WA-4]",
+          "isByRequest": "N",
+          "lastName": "Newhouse",
+          "party": "R",
+          "state": "WA",
+          "url": "https://api.congress.gov/v3/member/N000189?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9932/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "c5dc",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Veterans' Affairs."
+      },
+      "number": "9934",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend title 38, United States Code, to make permanent the authority of the Secretary of Veterans Affairs to provide transportation to and from Department of Veterans Affairs facilities in connection with vocational rehabilitation or counseling.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:31Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9934?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9934/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9934/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. PANETTA:\nH.R. 9934.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 18\nThe single subject of this legislation is:\nReauthorizes a Department of Veterans Affairs program\nproviding transportation services to or from VA facilities or\nother locations.\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9934/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "P000613",
+          "district": 19,
+          "firstName": "Jimmy",
+          "fullName": "Rep. Panetta, Jimmy [D-CA-19]",
+          "isByRequest": "N",
+          "lastName": "Panetta",
+          "party": "D",
+          "state": "CA",
+          "url": "https://api.congress.gov/v3/member/P000613?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9934/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "775a",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Ways and Means."
+      },
+      "number": "9914",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Internal Revenue Code of 1986 to provide tax incentives for the establishment of grocery stores in certain underserved areas.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:49Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9914?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9914/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9914/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. COHEN:\nH.R. 9914.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1 Section 8\nThe single subject of this legislation is:\nTaxation\n[Page H5853]\n</pre>",
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "C001068",
+          "district": 9,
+          "firstName": "Steve",
+          "fullName": "Rep. Cohen, Steve [D-TN-9]",
+          "isByRequest": "N",
+          "lastName": "Cohen",
+          "party": "D",
+          "state": "TN",
+          "url": "https://api.congress.gov/v3/member/C001068?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9914/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "d098",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Small Business."
+      },
+      "number": "9930",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Small Business Act to include surviving children in the definition of small business concern owned and controlled by service-disabled veterans, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:53Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9930?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9930/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9930/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. MOORE of Alabama:\nH.R. 9930.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8\nThe single subject of this legislation is:\nAmends the Small Business Act to allow for children of a\nservice disabled veteran owned small business (SDVOSB) to run\nsuch business for a transition period of not more than 3\nyears after the veteran's death.\n[Page H5854]\n</pre>",
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9930/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "M001212",
+          "district": 2,
+          "firstName": "Barry",
+          "fullName": "Rep. Moore, Barry [R-AL-2]",
+          "isByRequest": "N",
+          "lastName": "Moore",
+          "party": "R",
+          "state": "AL",
+          "url": "https://api.congress.gov/v3/member/M001212?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9930/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "d94d",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the Committee on Ways and Means, and in addition to the Committee on Energy and Commerce, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9916",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Comptroller General of the United States to conduct a study relating to 1-800-MEDICARE.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:36Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9916?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9916/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9916/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. De La CRUZ:\nH.R. 9916.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8 of the United States Constitution\nThe single subject of this legislation is:\nTo direct the Comptroller General of the United States to\nconduct a study relating to 1-800-MEDICARE.\n[Page H5853]\n</pre>",
+      "cosponsors": {
+        "count": 3,
+        "countIncludingWithdrawnCosponsors": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9916/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "D000594",
+          "district": 15,
+          "firstName": "Monica",
+          "fullName": "Rep. De La Cruz, Monica [R-TX-15]",
+          "isByRequest": "N",
+          "lastName": "De La Cruz",
+          "party": "R",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/D000594?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9916/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "cc21",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "1536",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Supporting the goals and ideals of \"National Nonviolence Week\" to raise awareness of youth violence in the United States.",
+      "type": "HRES",
+      "updateDate": "2024-10-05T08:18:22Z",
+      "updateDateIncludingText": "2024-10-05T08:18:22Z",
+      "url": "https://api.congress.gov/v3/bill/118/hres/1536?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1536/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1536/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1536/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "W000788",
+          "district": 5,
+          "firstName": "Nikema",
+          "fullName": "Rep. Williams, Nikema [D-GA-5]",
+          "isByRequest": "N",
+          "lastName": "Williams",
+          "party": "D",
+          "state": "GA",
+          "url": "https://api.congress.gov/v3/member/W000788?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1536/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hres/1536/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "0b2d",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the Committee on Education and the Workforce, and in addition to the Committee on Ways and Means, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "9926",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To direct the Secretary of the Treasury to carry out a program under which all Federal funds for elementary and secondary education are provided directly to parents of eligible children or approved by parents for distribution to schools, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:44Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9926?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9926/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9926/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. MACE:\nH.R. 9926.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8 of the Constitution\nThe single subject of this legislation is:\nTo direct the Secretary of the Treasury to carry out a\nprogram under which all Federal funds for elementary and\nsecondary education are provided directly to parents of\neligible children or approved by parents for distribution to\nschools.\n[Page H5854]\n</pre>",
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "M000194",
+          "district": 1,
+          "firstName": "Nancy",
+          "fullName": "Rep. Mace, Nancy [R-SC-1]",
+          "isByRequest": "N",
+          "lastName": "Mace",
+          "party": "R",
+          "state": "SC",
+          "url": "https://api.congress.gov/v3/member/M000194?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9926/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "4452",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-04",
+        "text": "Referred to the House Committee on Oversight and Accountability."
+      },
+      "number": "9923",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To designate the facility of the United States Postal Service located at 505 East 9th Avenue in Amarillo, Texas, as the \"Mayor Jerry H. Hodge Post Office Building\".",
+      "type": "HR",
+      "updateDate": "2024-10-05T08:05:41Z",
+      "updateDateIncludingText": "2024-10-05T10:58:17Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9923?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9923/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9923/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 153 (Friday, October 4, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. JACKSON of Texas:\nH.R. 9923.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1 Section 8 of the United States Constitution.\nThe single subject of this legislation is:\nDesignating the facility of the United States Postal\nService located at 505 East 9th Avenue in Amarillo, Texas, as\nthe ``Mayor Jerry H. Hodge Post Office Building''.\n[Page H5854]\n</pre>",
+      "introducedDate": "2024-10-04",
+      "sponsors": [
+        {
+          "bioguideId": "J000304",
+          "district": 13,
+          "firstName": "Ronny",
+          "fullName": "Rep. Jackson, Ronny [R-TX-13]",
+          "isByRequest": "N",
+          "lastName": "Jackson",
+          "party": "R",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/J000304?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9923/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "0993",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-09-26",
+        "text": "Message on Senate action sent to the House."
+      },
+      "number": "7777",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Veterans’ Compensation Cost-of-Living Adjustment Act of 2024",
+      "type": "HR",
+      "updateDate": "2024-10-04T20:07:16Z",
+      "updateDateIncludingText": "2024-10-04T20:07:16Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/7777?format=json",
+      "actions": {
+        "count": 22,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7777/actions?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As ordered reported by the House Committee on Veterans’ Affairs on May 1, 2024\n",
+          "pubDate": "2024-05-13T19:03:00Z",
+          "title": "H.R. 7777, Veterans’ Compensation Cost-of-Living Adjustment Act of 2024",
+          "url": "https://www.cbo.gov/publication/60287"
+        }
+      ],
+      "committeeReports": [
+        {
+          "citation": "H. Rept. 118-591",
+          "url": "https://api.congress.gov/v3/committee-report/118/HRPT/591?format=json"
+        }
+      ],
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7777/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 50 (Thursday, March 21, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. LUTTRELL:\nH.R. 7777.\nCongress has the power to enact this legislation pursuant\nto the following:\nUnder Article 1, Section 8 of the Constitution, Congress\nhas the power ``To make all Laws which shall be necessary and\nproper for carrying into Execution the foregoing Powers, and\nall other Powers vested by this Constitution in the\nGovernment of the United States, or in any Department or\nOfficer thereof.''\nThe single subject of this legislation is:\nVeteran Affairs\n[Page H1354]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7777/cosponsors?format=json"
+      },
+      "introducedDate": "2024-03-21",
+      "policyArea": {
+        "name": "Armed Forces and National Security"
+      },
+      "relatedBills": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7777/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "L000603",
+          "district": 8,
+          "firstName": "Morgan",
+          "fullName": "Rep. Luttrell, Morgan [R-TX-8]",
+          "isByRequest": "N",
+          "lastName": "Luttrell",
+          "party": "R",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/L000603?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Administrative law and regulatory procedures",
+            "updateDate": "2024-08-16T17:46:21Z"
+          },
+          {
+            "name": "Department of Veterans Affairs",
+            "updateDate": "2024-08-16T17:46:21Z"
+          },
+          {
+            "name": "Disability assistance",
+            "updateDate": "2024-08-16T17:46:21Z"
+          },
+          {
+            "name": "Inflation and prices",
+            "updateDate": "2024-08-16T17:46:21Z"
+          },
+          {
+            "name": "Veterans' pensions and compensation",
+            "updateDate": "2024-08-16T17:46:21Z"
+          }
+        ],
+        "policyArea": {
+          "name": "Armed Forces and National Security",
+          "updateDate": "2024-04-17T14:51:48Z"
+        }
+      },
+      "summaries": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7777/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7777/text?format=json"
+      },
+      "titles": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/hr/7777/titles?format=json"
+      },
+      "summary": "<p><strong>Veterans' Compensation Cost-of-Living Adjustment Act of 2024</strong><strong></strong></p><p>This act requires the Department of Veterans Affairs (VA) to increase the amounts payable for wartime disability compensation, additional compensation for dependents, the clothing allowance for certain disabled veterans, and dependency and indemnity compensation for surviving spouses and children. Specifically, the VA must increase the amounts by the same percentage as the cost-of-living increase in benefits for Social Security recipients that is effective on December 1, 2024. The bill requires the VA to publish the amounts payable, as increased, in the Federal Register.</p><p>The VA is authorized to make a similar adjustment to the rates of disability compensation payable to persons who have not received compensation for service-connected disability or death.</p>"
     }
   ]
 }

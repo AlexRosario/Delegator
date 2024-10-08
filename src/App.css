@@ -165,14 +165,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  height: 10vh;
   max-width: 100%;
   background-color: rgb(249, 247, 246);
 }
 
 .top-nav img.gator-logo {
-  width: 220px;
-  height: 220px;
+  height: 150px;
 }
 
 .menu-burger {
@@ -182,33 +180,39 @@
 
 .top-nav-user {
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  flex-direction: row;
+  align-items: center;
   color: black;
-}
-
-.top-nav-user > * {
-  padding: 0;
-  margin: 0;
+  width: 8%;
+  gap: 30px;
 }
 
 .settings-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+  height: 100%;
 }
-.profile > * {
-  padding: 0;
-  margin: 0;
+.profile {
   display: flex;
   flex-direction: column;
-  align-items: start;
+
+  gap: 10px;
   color: green;
 }
-.profile .log-out {
+.profile b {
+  color: black;
+}
+.profile * {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  text-wrap: wrap;
+}
+.log-out {
   color: red;
+  min-width: max-content;
 }
 
 .profile .log-out:hover {
@@ -243,7 +247,10 @@
   width: 100%;
   background-color: whitesmoke;
 }
-
+.bill-list {
+  display: flex;
+  gap: 30px;
+}
 .bill-list-button.selected {
   background-color: var(--red);
 }

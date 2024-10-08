@@ -20,7 +20,7 @@ export const Header = () => {
         className="gator-logo"
       />
 
-      <div>
+      <section className="top-nav-user">
         {user && !menuOpen && (
           <FontAwesomeIcon
             icon={faHamburger}
@@ -31,19 +31,18 @@ export const Header = () => {
           />
         )}
         {user && menuOpen && (
-          <div className="top-nav-user">
-            <div className="settings-header">
+          <div className="settings-header">
+            <div>
               <FontAwesomeIcon
                 icon={faAngleLeft}
                 onClick={() => {
                   setMenuOpen(!menuOpen);
                 }}
               />
-              <b>Settings</b>
             </div>
 
-            <br />
             <div className="profile">
+              <b>Settings</b>
               <h4>{user?.username}</h4>
               <h5>Zipcode: {user?.address.zipcode}</h5>
               <h6 onClick={logOut} className="log-out">
@@ -53,7 +52,7 @@ export const Header = () => {
           </div>
         )}
         {!user && <Link to="/Home">Sign in</Link>}
-      </div>
+      </section>
     </div>
   );
 };

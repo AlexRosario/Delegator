@@ -6,7 +6,7 @@ import BillDiscover from './BillDiscover';
 import { useAuthInfo } from '../../providers/AuthProvider';
 
 export const BillSection = () => {
-  const { activeBillTab, setActiveBillTab } = useDisplayBills();
+  const { activeBillTab, setActiveBillTab, votedBills } = useDisplayBills();
   const userString = localStorage.getItem('user');
   const user = userString ? JSON.parse(userString) : null;
 

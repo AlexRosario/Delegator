@@ -48,7 +48,6 @@ export const Register = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsFormSubmitted(true);
-    console.log('user', username);
     const userExists = await doesUserExist(username);
 
     setUserNameExists(userExists);
@@ -67,7 +66,7 @@ export const Register = () => {
         navigate('../', { state: { username, password } });
       })
       .catch((error) => {
-        console.log('Response received:', error);
+      
         console.error('Fetch error:', error.message);
       });
   };

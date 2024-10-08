@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import dotenv from 'dotenv';
+import { resolve } from 'path';
+
+dotenv.config({ path: resolve(__dirname, '.env.local') });
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
@@ -12,16 +16,10 @@ export default defineConfig({
       '/congressGov': {
         target: 'https://api.congress.gov',
         changeOrigin: true,
-        rewrite: (path) => {
-          const newPath = path.replace(/^\/congressGov/, '');
-          console.log(`Rewriting path from ${path} to ${newPath}`);
-          return newPath;
-        },
+        rewrite: (path) => path.replace(/^\/congressGov/, ''),
         configure: (proxy) => {
           proxy.on('proxyReq', (proxyReq, req, res) => {
-            console.log(`Proxying request to: ${proxyReq.path}`);
-            // Use environment variable instead of hardcoded key
-            const apiKey = process.env.VITE_API_KEY;
+            const apiKey = process.env.VITE_API_KEY; // Check if process.env has access to the key
             if (apiKey) {
               proxyReq.setHeader('X-Api-Key', apiKey);
             } else {

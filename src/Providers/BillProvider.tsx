@@ -75,13 +75,13 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
 
-  const billsToDisplay = useMemo(() => {
-    return activeBillTab === 'discover-bills' ? newBills : votedBills;
-  }, [activeBillTab, newBills, votedBills]);
+  const billsToDisplay =
+    activeBillTab === 'discover-bills' ? newBills : votedBills;
 
   const fetchVoteLog = useCallback(async () => {
     try {
       const data = await Requests.getVoteLog(user);
+
       setVoteLog(data);
       return data;
     } catch (error) {
@@ -156,11 +156,10 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   }, [congress, billType, offset]);
 
   useEffect(() => {
-    console.log(user);
     if (
-      (currentIndex === billsToDisplay.length - 9 &&
-        prevIndexRef.current !== currentIndex) ||
-      allBills.length === 0
+      billsToDisplay.length - currentIndex < 9 &&
+      currentIndex >= prevIndexRef.current &&
+      currentIndex !== billsToDisplay.length - 1
     ) {
       fetchBills()
         .then((bills) => {
