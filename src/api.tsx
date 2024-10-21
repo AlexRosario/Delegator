@@ -70,18 +70,23 @@ export const Requests = {
       .catch((error) => console.error('Fetch error:', error));
   },
   addVote: async (userId: string, billId: string, vote: string, date: Date) => {
-    const response = await fetch(`http://localhost:3000/votes`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        userId: userId,
-        billId: billId,
-        vote: vote,
-        date: date
-      })
-    });
+    try {
+      await fetch(`http://localhost:3000/votes`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          userId: userId,
+          billId: billId,
+          vote: vote,
+          date: date
+        })
+      });
+      console.log('Vote posted successfully');
+    } catch (error) {
+      console.error('Error posting vote:', error);
+    }
   },
   getVoteLog: async (user: User) => {
     try {

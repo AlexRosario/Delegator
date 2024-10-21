@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Requests } from '../api';
 import toast from 'react-hot-toast';
 import { User } from '../types';

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDisplayBills } from '../../providers/BillProvider';
 import { Bill } from '../../types';
 import VoteButton from './VoteButton';
 import { Requests } from '../../api';
-import { useAuthInfo } from '../../providers/AuthProvider';
 import { Link } from 'react-router-dom';
 
 export const BillCard = ({
@@ -17,7 +16,6 @@ export const BillCard = ({
 }) => {
   const { congress } = useDisplayBills();
   const [billLinks, setBillLinks] = useState<{ [key: string]: string }>({});
-  const [okToRender, setOkToRender] = useState(false);
   const userString = localStorage.getItem('user');
   const user = userString ? JSON.parse(userString) : null;
   const getMoreInfo = async (
@@ -46,16 +44,6 @@ export const BillCard = ({
       console.error('Error fetching bill summary:', error);
     }
   };
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (Array.isArray(bill) && bill.length > 0 && 'summary' in bill[0]) {
-        setOkToRender(true);
-      }
-    }, 500);
-
-    return () => clearInterval(timer);
-  }, [bill]);
 
   return (
     <div className={className} onClick={onClick}>

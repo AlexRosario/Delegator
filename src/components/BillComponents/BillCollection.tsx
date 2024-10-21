@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDisplayBills } from '../../providers/BillProvider';
 import BillCard from './BillCard';
 import { allPolicies } from '../../constants/policy-terms';
 import { Bill } from '../../types';
 
 export const BillCollection = () => {
-  const { billsToDisplay, billSubject, setBillSubject, votedBills } =
-    useDisplayBills();
+  const { billsToDisplay, billSubject, setBillSubject } = useDisplayBills();
   const [searchType, setSearchType] = useState('all');
 
   const policyBills = allPolicies.reduce<Record<string, Bill[]>>(

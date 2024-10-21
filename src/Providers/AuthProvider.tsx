@@ -1,5 +1,4 @@
-import React, { useContext, ReactNode, createContext, useState } from 'react';
-
+import { useContext, ReactNode, createContext, useState } from 'react';
 import { User } from '../types';
 
 export type AuthContextType = {

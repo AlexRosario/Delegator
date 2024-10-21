@@ -1,12 +1,10 @@
 import { BillStatus } from './BillStatus';
 import { useDisplayBills } from '../../providers/BillProvider';
-import React from 'react';
 import { BillCollection } from './BillCollection';
 import BillDiscover from './BillDiscover';
-import { useAuthInfo } from '../../providers/AuthProvider';
 
 export const BillSection = () => {
-  const { activeBillTab, setActiveBillTab, votedBills } = useDisplayBills();
+  const { activeBillTab, setActiveBillTab } = useDisplayBills();
   const userString = localStorage.getItem('user');
   const user = userString ? JSON.parse(userString) : null;
 

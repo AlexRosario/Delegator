@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
-
 import { SignIn } from '../auth-components/SignIn';
-import React from 'react';
 
 export const Home = () => {
   return (

@@ -16,6 +16,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "vite.config.ts", "vite-env.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json", "composite": true }]
+  "include": ["src/**/*", "vite.config.ts", "vite-env.d.ts"],
+  "exclude": ["node_modules", "dist", "dist-node", "tsconfig.node.json"]
+  //"references": [{ "path": "./tsconfig.node.json", "composite": true }]
 }

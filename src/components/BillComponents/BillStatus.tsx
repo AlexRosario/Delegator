@@ -1,10 +1,8 @@
 import { useDisplayBills } from '../../providers/BillProvider';
-import React from 'react';
 
 export const BillStatus = () => {
   const {
     billsToDisplay,
-    voteLog,
     billSubject,
     filterPassedBills,
     setFilterPassedBills,

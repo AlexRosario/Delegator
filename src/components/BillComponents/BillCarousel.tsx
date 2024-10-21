@@ -1,23 +1,12 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect } from 'react';
 import { useDisplayBills } from '../../providers/BillProvider';
 import { BillCard } from './BillCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faAngleRight,
-  faAngleLeft,
-  faHourglass2
-} from '@fortawesome/free-solid-svg-icons';
-import { Bill } from '../../types';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
 export const BillCarousel = () => {
-  const {
-    billsToDisplay,
-    activeBillTab,
-    setCurrentIndex,
-    currentIndex,
-    setActiveBillTab,
-    filterPassedBills
-  } = useDisplayBills();
+  const { billsToDisplay, setCurrentIndex, currentIndex, filterPassedBills } =
+    useDisplayBills();
   const {} = useDisplayBills();
 
   const next = currentIndex < billsToDisplay.length - 1 ? currentIndex + 1 : 0;

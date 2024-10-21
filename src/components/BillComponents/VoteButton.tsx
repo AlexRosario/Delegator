@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Requests } from '../../api';
 import { Bill, Vote } from '../../types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import { useDisplayBills } from '../../providers/BillProvider';
 import { useAuthInfo } from '../../providers/AuthProvider';
-
-interface VoteRecord {
-  userId: string;
-  billId: string;
-  vote: string;
-  date: Date;
-}
 
 export const VoteButton = ({ bill }: { bill: Bill }) => {
   const { user } = useAuthInfo();
@@ -42,7 +35,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
     }
   }, [userVoteDate, latestActionDateOnBill]);
 
-  const recordMembersVotes = async (bill: Bill, vote: 'Yes' | 'No') => {
+  const recordMembersVotes = async (vote: 'Yes' | 'No') => {
     const date = new Date();
 
     try {
@@ -62,7 +55,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
 
   const handleVote = (vote: 'Yes' | 'No') => {
     if (!userHasBillVote) {
-      recordMembersVotes(bill, vote);
+      recordMembersVotes(vote);
 
       Requests.addVotedBill(bill);
 

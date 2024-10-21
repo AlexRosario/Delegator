@@ -1,11 +1,10 @@
-import React, {
+import {
   useContext,
   ReactNode,
   createContext,
   useState,
   useEffect,
   useRef,
-  useMemo,
   useCallback
 } from 'react';
 import { Requests } from '../api';
@@ -70,8 +69,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [billSubject, setBillSubject] = useState<string>('');
   const [offset, setOffset] = useState(0);
   const [filterPassedBills, setFilterPassedBills] = useState(false);
-  const [congress, setCongress] = useState('118');
-  const [billType, setBillType] = useState('');
+  const [congress] = useState('118');
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
 
@@ -107,10 +105,10 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     [user]
   );
 
-  const fetchBills = useCallback(async () => {
+  const fetchBills = async () => {
     let fetchedBills: Bill[] = [];
     try {
-      const data = await Requests.getBills(congress, billType, offset);
+      const data = await Requests.getBills(congress, '', offset);
       fetchedBills = [...fetchedBills, ...(data ? data.bills : [])];
 
       const billPromises = fetchedBills.map(async (bill) => {
@@ -147,13 +145,15 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
       });
 
       fetchedBills = await Promise.all(billPromises);
+
+      fetchedBills = [...new Set(fetchedBills)];
       return fetchedBills;
     } catch (error) {
       console.error('Failed to fetch bills:', error);
     } finally {
       setOffset((prevOffset) => prevOffset + 20);
     }
-  }, [congress, billType, offset]);
+  };
 
   useEffect(() => {
     if (
@@ -190,6 +190,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
       })
       .finally(() => {
         prevIndexRef.current = currentIndex;
+        console.log('billsToDisplay', billsToDisplay);
       });
   }, [activeBillTab, allBills, fetchUserBills, fetchVoteLog, votedOnThisBill]);
 
