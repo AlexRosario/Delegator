@@ -19,7 +19,7 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/congressGov/, ''),
         configure: (proxy) => {
           proxy.on('proxyReq', (proxyReq) => {
-            const apiKey = process.env.VITE_API_KEY; // Check if process.env has access to the key
+            const apiKey = process.env.API_KEY; // Check if process.env has access to the key
             if (apiKey) {
               proxyReq.setHeader('X-Api-Key', apiKey);
             } else {

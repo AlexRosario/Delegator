@@ -105,7 +105,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     [user]
   );
 
-  const fetchBills = async () => {
+  const fetchBills = useCallback(async () => {
     let fetchedBills: Bill[] = [];
     try {
       const data = await Requests.getBills(congress, '', offset);
@@ -153,7 +153,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     } finally {
       setOffset((prevOffset) => prevOffset + 20);
     }
-  };
+  }, [congress, offset]);
 
   useEffect(() => {
     if (

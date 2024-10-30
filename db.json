@@ -1473,6 +1473,20 @@
       "billId": "HR9922",
       "vote": "Yes",
       "date": "2024-10-08T18:01:47.453Z"
+    },
+    {
+      "id": "1027",
+      "userId": "7137",
+      "billId": "HR10079",
+      "vote": "Yes",
+      "date": "2024-10-30T15:29:07.468Z"
+    },
+    {
+      "id": "1f60",
+      "userId": "7137",
+      "billId": "HJRES3",
+      "vote": "Yes",
+      "date": "2024-10-30T15:30:06.457Z"
     }
   ],
   "Bills": [
@@ -7046,6 +7060,143 @@
         "url": "https://api.congress.gov/v3/bill/118/hr/7777/titles?format=json"
       },
       "summary": "<p><strong>Veterans' Compensation Cost-of-Living Adjustment Act of 2024</strong><strong></strong></p><p>This act requires the Department of Veterans Affairs (VA) to increase the amounts payable for wartime disability compensation, additional compensation for dependents, the clothing allowance for certain disabled veterans, and dependency and indemnity compensation for surviving spouses and children. Specifically, the VA must increase the amounts by the same percentage as the cost-of-living increase in benefits for Social Security recipients that is effective on December 1, 2024. The bill requires the VA to publish the amounts payable, as increased, in the Federal Register.</p><p>The VA is authorized to make a similar adjustment to the rates of disability compensation payable to persons who have not received compensation for service-connected disability or death.</p>"
+    },
+    {
+      "id": "5f59",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-10-29",
+        "text": "Referred to the House Committee on Small Business."
+      },
+      "number": "10079",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To amend the Small Business Act to require the Administrator of the Small Business Administration to publish or update a resource guide for small business concerns operating as child care providers, and for other purposes.",
+      "type": "HR",
+      "updateDate": "2024-10-30T08:05:21Z",
+      "updateDateIncludingText": "2024-10-30T08:05:22Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/10079?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10079/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10079/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 2,
+        "countIncludingWithdrawnCosponsors": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10079/cosponsors?format=json"
+      },
+      "introducedDate": "2024-10-29",
+      "sponsors": [
+        {
+          "bioguideId": "W000788",
+          "district": 5,
+          "firstName": "Nikema",
+          "fullName": "Rep. Williams, Nikema [D-GA-5]",
+          "isByRequest": "N",
+          "lastName": "Williams",
+          "party": "D",
+          "state": "GA",
+          "url": "https://api.congress.gov/v3/member/W000788?format=json"
+        }
+      ],
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10079/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "cfd4",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/3/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/3/committees?format=json"
+      },
+      "congress": 118,
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 169, Number 7 (Monday, January 9, 2023)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. FALLON:\nH.J. Res. 3.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8 of the United States Constitution\n[Page H114]\n</pre>",
+      "introducedDate": "2023-01-09",
+      "latestAction": {
+        "actionDate": "2023-01-09",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "number": "3",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "policyArea": {
+        "name": "Congress"
+      },
+      "relatedBills": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/3/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "F000246",
+          "district": 4,
+          "firstName": "Pat",
+          "fullName": "Rep. Fallon, Pat [R-TX-4]",
+          "isByRequest": "N",
+          "lastName": "Fallon",
+          "party": "R",
+          "state": "TX",
+          "url": "https://api.congress.gov/v3/member/F000246?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Congressional elections",
+            "updateDate": "2023-02-07T20:00:36Z"
+          },
+          {
+            "name": "Constitution and constitutional amendments",
+            "updateDate": "2023-02-07T20:00:36Z"
+          },
+          {
+            "name": "House of Representatives",
+            "updateDate": "2023-02-07T20:00:36Z"
+          },
+          {
+            "name": "Members of Congress",
+            "updateDate": "2023-02-07T20:00:36Z"
+          },
+          {
+            "name": "Senate",
+            "updateDate": "2023-02-07T20:00:36Z"
+          }
+        ],
+        "policyArea": {
+          "name": "Congress",
+          "updateDate": "2023-01-11T17:47:32Z"
+        }
+      },
+      "summaries": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/3/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/3/text?format=json"
+      },
+      "title": "Proposing an amendment to the Constitution of the United States to limit the number of terms that a Member of Congress may serve.",
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hjres/3/titles?format=json"
+      },
+      "type": "HJRES",
+      "updateDate": "2024-07-24T15:24:14Z",
+      "updateDateIncludingText": "2024-07-24T15:24:14Z",
+      "summary": " <p>This joint resolution proposes a constitutional amendment limiting Representatives to six terms and Senators to two terms. Terms beginning before the ratification of this amendment do not count towards these term limits.</p>"
     }
   ]
 }
