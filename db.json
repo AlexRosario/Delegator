@@ -1487,6 +1487,41 @@
       "billId": "HJRES3",
       "vote": "Yes",
       "date": "2024-10-30T15:30:06.457Z"
+    },
+    {
+      "id": "39f3",
+      "userId": "",
+      "billId": "HR82",
+      "vote": "No",
+      "date": "2025-02-10T22:33:02.972Z"
+    },
+    {
+      "id": "0f0b",
+      "userId": "",
+      "billId": "HR9600",
+      "vote": "Yes",
+      "date": "2025-02-10T22:33:14.124Z"
+    },
+    {
+      "id": "a640",
+      "userId": "",
+      "billId": "HR8841",
+      "vote": "Yes",
+      "date": "2025-02-10T23:45:51.174Z"
+    },
+    {
+      "id": "54b6",
+      "userId": "",
+      "billId": "HR10564",
+      "vote": "Yes",
+      "date": "2025-02-10T23:58:43.381Z"
+    },
+    {
+      "id": "7848",
+      "userId": "",
+      "billId": "HR10562",
+      "vote": "Yes",
+      "date": "2025-02-10T23:58:45.854Z"
     }
   ],
   "Bills": [
@@ -7197,6 +7232,418 @@
       "updateDate": "2024-07-24T15:24:14Z",
       "updateDateIncludingText": "2024-07-24T15:24:14Z",
       "summary": " <p>This joint resolution proposes a constitutional amendment limiting Representatives to six terms and Senators to two terms. Terms beginning before the ratification of this amendment do not count towards these term limits.</p>"
+    },
+    {
+      "id": "4aa4",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2025-01-05",
+        "text": "Became Public Law No: 118-273."
+      },
+      "number": "82",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Social Security Fairness Act of 2023",
+      "type": "HR",
+      "updateDate": "2025-01-31T17:27:48Z",
+      "updateDateIncludingText": "2025-01-31T17:27:48Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/82?format=json",
+      "actions": {
+        "count": 40,
+        "url": "https://api.congress.gov/v3/bill/118/hr/82/actions?format=json"
+      },
+      "amendments": {
+        "count": 14,
+        "url": "https://api.congress.gov/v3/bill/118/hr/82/amendments?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As introduced in the House of Representatives on January 9, 2023\n",
+          "pubDate": "2024-09-09T20:03:00Z",
+          "title": "H.R. 82, Social Security Fairness Act of 2023",
+          "url": "https://www.cbo.gov/publication/60690"
+        }
+      ],
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/82/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 169, Number 7 (Monday, January 9, 2023)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. GRAVES of Louisiana:\nH.R. 82.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 9, Clause 7, giving Congress the\nauthority to control the expenditures of the federal\ngovernment.\n[Page H109]\n</pre>",
+      "cosponsors": {
+        "count": 330,
+        "countIncludingWithdrawnCosponsors": 330,
+        "url": "https://api.congress.gov/v3/bill/118/hr/82/cosponsors?format=json"
+      },
+      "introducedDate": "2023-01-09",
+      "laws": [
+        {
+          "number": "118-273",
+          "type": "Public Law"
+        }
+      ],
+      "policyArea": {
+        "name": "Social Welfare"
+      },
+      "relatedBills": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/82/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "G000577",
+          "district": 6,
+          "firstName": "Garret",
+          "fullName": "Rep. Graves, Garret [R-LA-6]",
+          "isByRequest": "N",
+          "lastName": "Graves",
+          "party": "R",
+          "state": "LA",
+          "url": "https://api.congress.gov/v3/member/G000577?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Government employee pay, benefits, personnel management",
+            "updateDate": "2023-02-08T21:00:52Z"
+          },
+          {
+            "name": "Social security and elderly assistance",
+            "updateDate": "2023-02-08T21:00:52Z"
+          }
+        ],
+        "policyArea": {
+          "name": "Social Welfare",
+          "updateDate": "2023-01-17T15:03:21Z"
+        }
+      },
+      "summaries": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/82/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/hr/82/text?format=json"
+      },
+      "titles": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/hr/82/titles?format=json"
+      },
+      "summary": "<p><strong>Social Security Fairness Act of 2023</strong></p><p>This act repeals provisions that reduce Social Security benefits for individuals who receive other benefits, such as a pension from a state or local government.</p><p>The act eliminates the government pension offset, which in various instances reduces Social Security benefits for spouses, widows, and widowers who also receive government pensions of their own.</p><p>The act also eliminates the windfall elimination provision, which in some instances reduces Social Security benefits for individuals who also receive a pension or disability benefit from an employer that did not withhold Social Security taxes.</p><p>These changes are effective for benefits payable after December 2023.&nbsp;</p>"
+    },
+    {
+      "id": "1622",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2025-01-04",
+        "text": "Became Public Law No: 118-268."
+      },
+      "number": "9600",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To designate the facility of the United States Postal Service located at 119 Main Street in Plains, Georgia, as the \"Jimmy and Rosalynn Carter Post Office\".",
+      "type": "HR",
+      "updateDate": "2025-02-04T16:54:13Z",
+      "updateDateIncludingText": "2025-02-04T17:03:48Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9600?format=json",
+      "actions": {
+        "count": 25,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9600/actions?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As ordered reported by the House Committee on Oversight and Accountability on September 18, 2024\n",
+          "pubDate": "2024-09-24T14:38:00Z",
+          "title": "H.R. 9600, a bill to designate the facility of the United States Postal Service located at 119 Main Street in Plains, Georgia, as the “Jimmy and Rosalynn Carter Post Office",
+          "url": "https://www.cbo.gov/publication/60761"
+        }
+      ],
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9600/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 143 (Monday, September 16, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. BISHOP of Georgia:\nH.R. 9600.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8, Clause 7\nArticle 1, Section 8, Clause 18\nThe single subject of this legislation is:\nTo designate the facility of the United States Postal\nService located at 119 Main Street in Plains, Georgia, as the\n``Jimmy and Rosalynn Carter Post Office''.\n[Page H5239]\n</pre>",
+      "cosponsors": {
+        "count": 13,
+        "countIncludingWithdrawnCosponsors": 13,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9600/cosponsors?format=json"
+      },
+      "introducedDate": "2024-09-16",
+      "laws": [
+        {
+          "number": "118-268",
+          "type": "Public Law"
+        }
+      ],
+      "policyArea": {
+        "name": "Government Operations and Politics"
+      },
+      "relatedBills": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9600/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "B000490",
+          "district": 2,
+          "firstName": "Sanford",
+          "fullName": "Rep. Bishop, Sanford D. [D-GA-2]",
+          "isByRequest": "N",
+          "lastName": "Bishop",
+          "middleName": "D.",
+          "party": "D",
+          "state": "GA",
+          "url": "https://api.congress.gov/v3/member/B000490?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Congressional tributes",
+            "updateDate": "2025-01-02T20:34:54Z"
+          },
+          {
+            "name": "Georgia",
+            "updateDate": "2025-01-02T20:35:00Z"
+          },
+          {
+            "name": "Government buildings, facilities, and property",
+            "updateDate": "2025-01-02T20:35:07Z"
+          },
+          {
+            "name": "Postal service",
+            "updateDate": "2025-01-02T20:35:13Z"
+          },
+          {
+            "name": "Presidents and presidential powers, Vice Presidents",
+            "updateDate": "2025-01-02T20:35:18Z"
+          }
+        ],
+        "policyArea": {
+          "name": "Government Operations and Politics",
+          "updateDate": "2025-01-02T16:39:26Z"
+        }
+      },
+      "summaries": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9600/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9600/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9600/titles?format=json"
+      },
+      "summary": "<p>This act designates the facility of the U.S. Postal Service located at 119 Main Street in Plains, Georgia, as the Jimmy and Rosalynn Carter Post Office.</p>"
+    },
+    {
+      "id": "8966",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2025-01-04",
+        "text": "Became Public Law No: 118-253."
+      },
+      "number": "8841",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To designate the facility of the United States Postal Service located at 114 Center Street East in Roseau, Minnesota, as the \"Floyd B. Olson Post Office\".",
+      "type": "HR",
+      "updateDate": "2025-02-04T16:54:13Z",
+      "updateDateIncludingText": "2025-02-04T17:03:49Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/8841?format=json",
+      "actions": {
+        "count": 23,
+        "url": "https://api.congress.gov/v3/bill/118/hr/8841/actions?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As ordered reported by the House Committee on Oversight and Accountability on September 18, 2024\n",
+          "pubDate": "2024-09-24T14:32:00Z",
+          "title": "H.R. 8841, a bill to designate the facility of the United States Postal Service located at 114 Center Street East in Roseau, Minnesota, as the “Floyd B. Olson Post Office",
+          "url": "https://www.cbo.gov/publication/60750"
+        }
+      ],
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/8841/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 107 (Wednesday, June 26, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mrs. FISCHBACH:\nH.R. 8841.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1 Section 8\nThe single subject of this legislation is:\nRenaming the Roseau Post Office.\n[Page H4321]\n</pre>",
+      "cosponsors": {
+        "count": 7,
+        "countIncludingWithdrawnCosponsors": 7,
+        "url": "https://api.congress.gov/v3/bill/118/hr/8841/cosponsors?format=json"
+      },
+      "introducedDate": "2024-06-26",
+      "laws": [
+        {
+          "number": "118-253",
+          "type": "Public Law"
+        }
+      ],
+      "policyArea": {
+        "name": "Government Operations and Politics"
+      },
+      "relatedBills": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/8841/relatedbills?format=json"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "F000470",
+          "district": 7,
+          "firstName": "Michelle",
+          "fullName": "Rep. Fischbach, Michelle [R-MN-7]",
+          "isByRequest": "N",
+          "lastName": "Fischbach",
+          "party": "R",
+          "state": "MN",
+          "url": "https://api.congress.gov/v3/member/F000470?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Congressional tributes",
+            "updateDate": "2024-12-02T17:11:07Z"
+          },
+          {
+            "name": "Government buildings, facilities, and property",
+            "updateDate": "2024-12-02T17:11:07Z"
+          },
+          {
+            "name": "Minnesota",
+            "updateDate": "2024-12-02T17:11:14Z"
+          },
+          {
+            "name": "Postal service",
+            "updateDate": "2024-12-02T17:11:07Z"
+          }
+        ],
+        "policyArea": {
+          "name": "Government Operations and Politics",
+          "updateDate": "2024-08-27T15:16:46Z"
+        }
+      },
+      "summaries": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/8841/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/hr/8841/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/8841/titles?format=json"
+      },
+      "summary": "<p>This act designates the facility of the U.S. Postal Service located at 114 Center Street East in Roseau, Minnesota, as the Floyd B. Olson Post Office.</p>"
+    },
+    {
+      "id": "73ad",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2025-01-03",
+        "text": "Referred to the House Committee on Education and the Workforce."
+      },
+      "number": "10564",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Mental Health Matters Act",
+      "type": "HR",
+      "updateDate": "2025-02-04T16:28:27Z",
+      "updateDateIncludingText": "2025-02-04T16:28:27Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/10564?format=json",
+      "actions": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10564/actions?format=json"
+      },
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10564/committees?format=json"
+      },
+      "introducedDate": "2025-01-03",
+      "sponsors": [
+        {
+          "bioguideId": "D000623",
+          "district": 10,
+          "firstName": "Mark",
+          "fullName": "Rep. DeSaulnier, Mark [D-CA-10]",
+          "isByRequest": "N",
+          "lastName": "DeSaulnier",
+          "party": "D",
+          "state": "CA",
+          "url": "https://api.congress.gov/v3/member/D000623?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10564/text?format=json"
+      },
+      "titles": {
+        "count": 10,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10564/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
+    },
+    {
+      "id": "4104",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2024-12-27",
+        "text": "Referred to the Committee on Oversight and Accountability, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "number": "10562",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "REPORTS Act",
+      "type": "HR",
+      "updateDate": "2025-02-04T16:54:13Z",
+      "updateDateIncludingText": "2025-02-04T16:54:13Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/10562?format=json",
+      "actions": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10562/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10562/committees?format=json"
+      },
+      "cosponsors": {
+        "count": 11,
+        "countIncludingWithdrawnCosponsors": 11,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10562/cosponsors?format=json"
+      },
+      "introducedDate": "2024-12-27",
+      "sponsors": [
+        {
+          "bioguideId": "W000788",
+          "district": 5,
+          "firstName": "Nikema",
+          "fullName": "Rep. Williams, Nikema [D-GA-5]",
+          "isByRequest": "N",
+          "lastName": "Williams",
+          "party": "D",
+          "state": "GA",
+          "url": "https://api.congress.gov/v3/member/W000788?format=json"
+        }
+      ],
+      "textVersions": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10562/text?format=json"
+      },
+      "titles": {
+        "count": 4,
+        "url": "https://api.congress.gov/v3/bill/118/hr/10562/titles?format=json"
+      },
+      "summary": "No Summary Available",
+      "subjects": {
+        "legislativeSubjects": []
+      }
     }
   ]
 }

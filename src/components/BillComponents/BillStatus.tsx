@@ -32,7 +32,13 @@ export const BillStatus = () => {
         {noVotedBillsToDisplay && <div>No Bills in Collection</div>}
         {billSubjectIsEmpty && <div>Couldn't fulfill request at this time</div>}
         {discoverBillsIsPopulated && (
-          <h2>{`Most Recent Bills ${currentIndex + 1} of ${billsToDisplay.length}`}</h2>
+          <h2>{`Most Recent Bills ${currentIndex + 1} of ${
+            billsToDisplay.filter((bill) =>
+              filterPassedBills
+                ? !bill.latestAction.text.includes('Became Public Law No:')
+                : bill
+            ).length
+          }`}</h2>
         )}
         {votedBillsIsPopulated && (
           <h2>{`${billSubject ? billSubject : 'All'} Bills`} </h2>

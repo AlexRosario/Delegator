@@ -345,11 +345,12 @@
 .carousel-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-items: center;
   padding: 10px 0;
-  height: 50vh;
-  max-width: 100%;
+  height: 60vh;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .carousel {
@@ -378,8 +379,8 @@
   background-color: var(--red);
   text-align: center;
   padding: 5%;
-  min-width: 30%;
-  height: 70%;
+  min-width: 18%;
+  height: 30%;
   max-width: 250px;
   overflow: scroll;
   box-shadow: 0 22px 34px rgba(22, 28, 45, 0.18);
@@ -398,14 +399,14 @@
 
 .bill-card.prev {
   position: absolute;
-  transform: translate(-80%, 0);
+  transform: translate(-60%, 0);
   opacity: 0.8;
 }
 
 .bill-card.next {
   position: absolute;
   opacity: 0.8;
-  transform: translate(80%, 0);
+  transform: translate(60%, 0);
 }
 
 .bill-card.prev:hover {
@@ -571,10 +572,7 @@
   .prev {
     display: none;
   }
-  .bill-card .prev,
-  .next {
-    display: none;
-  }
+
   .bill-card .vote-buttons {
     display: flex;
     flex-direction: row;
@@ -583,5 +581,13 @@
   .bill-collection-container select,
   input {
     font-size: 0.6rem;
+  }
+}
+@media (max-width: 2400px) {
+  .bill-card .next {
+    transform: translate(40%, 0);
+  }
+  .bill-card .prev {
+    transform: translate(-40%, 0);
   }
 }

@@ -7,15 +7,27 @@ import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 export const BillCarousel = () => {
   const { billsToDisplay, setCurrentIndex, currentIndex, filterPassedBills } =
     useDisplayBills();
-  const {} = useDisplayBills();
 
-  const next = currentIndex < billsToDisplay.length - 1 ? currentIndex + 1 : 0;
-  const prev = currentIndex > 0 ? currentIndex - 1 : billsToDisplay.length - 1;
+  const filteredBills = billsToDisplay.filter((bill) =>
+    filterPassedBills
+      ? !bill.latestAction.text.includes('Became Public Law No:')
+      : bill
+  );
+
+  const next =
+    billsToDisplay.length > 0
+      ? currentIndex < filteredBills.length - 1
+        ? currentIndex + 1
+        : 0
+      : 0;
+
+  const prev =
+    billsToDisplay.length > 0
+      ? currentIndex > 0
+        ? currentIndex - 1
+        : filteredBills.length - 1
+      : 0;
   const isLoading = billsToDisplay.length === 0 ? true : false;
-
-  useEffect(() => {
-    updateSlides();
-  }, [currentIndex]);
 
   const updateSlides = () => {
     document.querySelectorAll('.bill-card').forEach((slide, index) => {
@@ -26,12 +38,16 @@ export const BillCarousel = () => {
     });
   };
 
+  useEffect(() => {
+    updateSlides();
+  }, [currentIndex]);
+
   const goToNum = (number: number) => {
     setCurrentIndex(number);
   };
 
   const goToNext = () => {
-    currentIndex < billsToDisplay.length - 1
+    currentIndex < filteredBills.length - 1
       ? goToNum(currentIndex + 1)
       : goToNum(0);
   };
@@ -39,7 +55,7 @@ export const BillCarousel = () => {
   const goToPrev = () => {
     currentIndex > 0
       ? goToNum(currentIndex - 1)
-      : goToNum(billsToDisplay.length - 1);
+      : goToNum(filteredBills.length - 1);
   };
 
   return (
@@ -52,26 +68,17 @@ export const BillCarousel = () => {
         />
         <div className="carousel">
           {!isLoading ? (
-            billsToDisplay
-              .filter((bill) => {
-                return filterPassedBills
-                  ? bill.latestAction.text.includes('Became Public Law No:')
-                  : !bill.latestAction.text.includes('Became Public Law No:');
-              })
-              .map((bill, index) => (
-                <BillCard
-                  bill={bill}
-                  key={index}
-                  className={`bill-card ${index === currentIndex ? 'active' : ''} ${index === prev ? 'prev' : ''} ${index === next ? 'next' : ''}`}
-                  onClick={
-                    index === prev
-                      ? goToPrev
-                      : index === next
-                        ? goToNext
-                        : undefined
-                  }
-                ></BillCard>
-              ))
+            filteredBills.map((bill, index) => (
+              <BillCard
+                bill={bill}
+                key={index}
+                className={`bill-card ${index === currentIndex ? 'active' : ''} ${index === prev ? 'prev' : ''} ${index === next ? 'next' : ''}`}
+                onClick={() => {
+                  if (index === prev) goToPrev();
+                  if (index === next) goToNext();
+                }}
+              ></BillCard>
+            ))
           ) : (
             <svg
               width="100"

@@ -109,7 +109,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     let fetchedBills: Bill[] = [];
     try {
       const data = await Requests.getBills(congress, '', offset);
-      fetchedBills = [...fetchedBills, ...(data ? data.bills : [])];
+      fetchedBills = [...fetchedBills, ...(data?.bills ?? [])];
 
       const billPromises = fetchedBills.map(async (bill) => {
         const fullBillData = await Requests.getFullBill(
@@ -146,7 +146,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
 
       fetchedBills = await Promise.all(billPromises);
 
-      fetchedBills = [...new Set(fetchedBills)];
       return fetchedBills;
     } catch (error) {
       console.error('Failed to fetch bills:', error);
