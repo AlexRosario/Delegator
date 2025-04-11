@@ -491,6 +491,26 @@
     background-position: 200% center;
   }
 }
+.reps {
+  margin-top: 30px;
+}
+.rep-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border: solid #231557 5px;
+}
+.rep-card-left {
+}
+.rep-card-right {
+  overflow: hidden;
+}
+.rep-card-right .rep-photo {
+  height: 100%;
+  max-height: 200px;
+}
 @media (max-width: 1000px) {
   .home h1 {
     font-size: 5vw;

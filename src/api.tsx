@@ -1,9 +1,12 @@
 import toast from 'react-hot-toast';
-import { Bill, User, Vote } from './types';
+import { Bill, User, Vote, CongressMember } from './types';
 
 export const myHeaders = {
   'Content-Type': 'application/json'
 };
+export const googleCivicHeader = new Headers();
+googleCivicHeader.append('Content-Type', 'application/json');
+googleCivicHeader.append('key', import.meta.env.VITE_GOOGLE_API_KEY);
 
 export const congressGovHeader = new Headers({
   ...myHeaders,
@@ -237,5 +240,83 @@ export const Requests = {
       console.error('Fetch error:', error);
       throw error;
     }
+  },
+  checkExistingReps: async (userId: String) => {
+    const response = await fetch(
+      `http://localhost:3000/users/${userId}/representatives`
+    );
+    if (!response.ok) {
+      return [];
+    }
+    return response.json();
+  },
+  postNewReps: async (rep: CongressMember, userId: string) => {
+    const response = await fetch(
+      `http://localhost:3000/users/${userId}/representatives`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(rep)
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error('Failed to post new representative');
+    }
+
+    return response.json();
+  },
+
+  getCongressMembers: async (address: string) => {
+    const apiKey = 'AIzaSyCGKhpbY2SwNMXylL4IkV4TKDr8AwBJKuo'; // Ensure this is securely included, not hardcoded
+    const url = `https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&address=${encodeURIComponent(
+      address
+    )}`;
+    console.log('getCongressMembers');
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch: ${response.statusText}`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.error(error);
+      // Handle the error appropriately
+    }
+  },
+  getCongressMembersBioIds: async (offset: number) => {
+    const apiKey = 'wbWdJxHyM4R2Vo9dCkI5jqdApMidOokgNWmHb8e3';
+    const url = `https://api.congress.gov/v3/member?offset=${offset}&api_key=${apiKey}
+		`;
+
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch: ${response.statusText}`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.error(error);
+      // Handle the error appropriately
+    }
+  },
+
+  getCongressMembersDB: (reps: string[]) => {
+    const url = `http://localhost:3000/representatives`; // Assuming user has an 'id' property
+    return fetch(url, {
+      method: 'GET',
+      headers: myHeaders
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((members) => {
+        return members.filter((memberName: string) =>
+          reps.includes(memberName)
+        );
+      })
+      .catch((error) => console.error('Fetch error:', error));
   }
 };

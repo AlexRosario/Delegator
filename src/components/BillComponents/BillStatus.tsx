@@ -6,6 +6,7 @@ export const BillStatus = () => {
     billSubject,
     filterPassedBills,
     setFilterPassedBills,
+    setCurrentIndex,
     currentIndex,
     activeBillTab
   } = useDisplayBills();
@@ -22,7 +23,11 @@ export const BillStatus = () => {
     activeBillTab === 'discover-bills' && billsToDisplay.length !== 0;
   const votedBillsIsPopulated =
     activeBillTab === 'voted-bills' && billsToDisplay.length !== 0;
-
+  const filteredBills = billsToDisplay.filter((bill) =>
+    filterPassedBills
+      ? !bill.latestAction.text.includes('Became Public Law No:')
+      : bill
+  );
   return (
     <>
       <div className="bills-status">
@@ -32,12 +37,8 @@ export const BillStatus = () => {
         {noVotedBillsToDisplay && <div>No Bills in Collection</div>}
         {billSubjectIsEmpty && <div>Couldn't fulfill request at this time</div>}
         {discoverBillsIsPopulated && (
-          <h2>{`Most Recent Bills ${currentIndex + 1} of ${
-            billsToDisplay.filter((bill) =>
-              filterPassedBills
-                ? !bill.latestAction.text.includes('Became Public Law No:')
-                : bill
-            ).length
+          <h2>{`Most Recent Bills ${filteredBills.length == 0 ? 0 : currentIndex + 1} of ${
+            filteredBills.length
           }`}</h2>
         )}
         {votedBillsIsPopulated && (
@@ -49,7 +50,10 @@ export const BillStatus = () => {
         <div className="congressional-efficacy">
           <button
             disabled={billsToDisplay.length < 20}
-            onClick={() => setFilterPassedBills(!filterPassedBills)}
+            onClick={() => {
+              setCurrentIndex(0);
+              setFilterPassedBills(!filterPassedBills);
+            }}
           >
             {filterPassedBills ? 'Show All Bills' : 'Filter Passed Bills'}
           </button>

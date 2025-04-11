@@ -72,6 +72,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [congress] = useState('118');
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
+  const hasFetchedRef = useRef(false); // Tracks if fetchBills has been called
 
   const billsToDisplay =
     activeBillTab === 'discover-bills' ? newBills : votedBills;
@@ -155,21 +156,28 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   }, [congress, offset]);
 
   useEffect(() => {
-    if (
-      billsToDisplay.length - currentIndex < 9 &&
-      currentIndex >= prevIndexRef.current &&
-      currentIndex !== billsToDisplay.length - 1
-    ) {
-      fetchBills()
-        .then((bills) => {
-          if (bills) {
-            setAllBills((prevBills: Bill[]) => [...prevBills, ...bills]);
-          }
-        })
-        .catch((error) => console.error('Failed to fetch bills:', error));
-    }
-  }, [currentIndex, fetchBills]);
+    const isScrollingForward = currentIndex >= prevIndexRef.current;
+    const isNearEnd = billsToDisplay.length - currentIndex <= 20;
 
+    if (isScrollingForward && isNearEnd && !hasFetchedRef.current) {
+      hasFetchedRef.current = true;
+      setTimeout(() => {
+        fetchBills()
+          .then((bills) => {
+            if (bills && bills.length > 0) {
+              setAllBills((prevBills) => [...prevBills, ...bills]);
+            }
+            hasFetchedRef.current = false;
+          })
+          .catch((error) => {
+            console.error('Failed to fetch bills:', error);
+            hasFetchedRef.current = false;
+          });
+      }, 500);
+    }
+
+    prevIndexRef.current = currentIndex;
+  }, [currentIndex]);
   useEffect(() => {
     fetchVoteLog()
       .then((VoteLog) => {

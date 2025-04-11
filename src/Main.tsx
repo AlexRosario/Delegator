@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './providers/AuthProvider';
+import { ScreenProvider } from './providers/ScreenProvider';
 import { Home } from './components/Home';
 import { Register } from './auth-components/Register';
 import App from './App';
@@ -31,7 +32,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Toaster />
     <AuthProvider>
-      <RouterProvider router={router} />
+      <ScreenProvider>
+        <RouterProvider router={router} />
+      </ScreenProvider>
     </AuthProvider>
   </React.StrictMode>
 );
