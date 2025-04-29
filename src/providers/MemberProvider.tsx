@@ -3,13 +3,12 @@ import {
   createContext,
   useContext,
   useEffect,
-  useMemo,
   useRef,
   useState
 } from 'react';
 import { CongressMember } from '../types';
 import { Requests } from '../api';
-import { useDisplayBills } from './BillProvider';
+import { useLocation } from 'react-router-dom';
 
 type MemberContextType = {
   senators: CongressMember[];
@@ -36,9 +35,15 @@ export const MemberProvider = ({ children }: { children: ReactNode }) => {
   const [senators, setSenators] = useState<CongressMember[]>([]);
   const [houseReps, setHouseReps] = useState<CongressMember[]>([]);
   const [chamber, setChamber] = useState('house');
+  const location = useLocation();
 
-  const getRepInfoFromMultipleAPIs = async () => {
-    const { street, city, state, zipcode } = user.address;
+  const getRepInfoFromMultipleAPIs = async (address: {
+    street: string;
+    city: string;
+    state: string;
+    zipcode: string;
+  }) => {
+    const { street, city, state, zipcode } = address;
 
     try {
       const congressDataGoogle: GoogleDataType =
@@ -123,40 +128,43 @@ export const MemberProvider = ({ children }: { children: ReactNode }) => {
   };*/
 
   useEffect(() => {
-    getRepInfoFromMultipleAPIs()
-      .then((data) => {
-        console.log('Data received:', data);
+    const address = location.state?.address;
 
-        const filteredRepresentatives: CongressMember[] = [];
+    if (address)
+      getRepInfoFromMultipleAPIs(address)
+        .then((data) => {
+          console.log('Data received:', data);
 
-        data?.congressDataGoogle.officials.forEach((member, i) => {
-          const office_title = data.congressDataGoogle.offices?.find((office) =>
-            office.officialIndices.includes(i)
-          )?.name;
+          const filteredRepresentatives: CongressMember[] = [];
 
-          const mergedMember = {
-            ...congressGovMemberDetails(member, data.congressDataCongressGov),
-            ...{ office_title: office_title }
-          };
+          data?.congressDataGoogle.officials.forEach((member, i) => {
+            const office_title = data.congressDataGoogle.offices?.find(
+              (office) => office.officialIndices.includes(i)
+            )?.name;
 
-          filteredRepresentatives.push({
-            ...(mergedMember as CongressMember)
+            const mergedMember = {
+              ...congressGovMemberDetails(member, data.congressDataCongressGov),
+              ...{ office_title: office_title }
+            };
+
+            filteredRepresentatives.push({
+              ...(mergedMember as CongressMember)
+            });
           });
+
+          representatives.current = filteredRepresentatives;
+
+          setStateVariables(filteredRepresentatives);
+
+          //  addNewRepresentativesToUserDB(filteredRepresentatives);
+        })
+        .catch((error) => {
+          console.error('Fetch error:', error.message);
+          if (error.response) {
+            console.error('Response text:', error.response.statusText);
+          }
         });
-
-        representatives.current = filteredRepresentatives;
-
-        setStateVariables(filteredRepresentatives);
-
-        //  addNewRepresentativesToUserDB(filteredRepresentatives);
-      })
-      .catch((error) => {
-        console.error('Fetch error:', error.message);
-        if (error.response) {
-          console.error('Response text:', error.response.statusText);
-        }
-      });
-  }, []);
+  }, [location.state]);
 
   return (
     <MemberContext.Provider

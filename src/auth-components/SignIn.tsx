@@ -4,6 +4,7 @@ import toast from 'react-hot-toast';
 import { User } from '../types';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuthInfo } from '../providers/AuthProvider';
+import { encryptPassword } from '../utils/auth-utils';
 
 export const SignIn = () => {
   const [name, setName] = useState('');
@@ -17,29 +18,34 @@ export const SignIn = () => {
       setName(location.state.username || '');
       setPWord(location.state.password || '');
       if (location.state.username && location.state.password) {
-        handleSignIn();
+        console.log(
+          'Location state',
+          location.state.username,
+          location.state.password
+        );
       }
     }
   }, [location.state]);
 
   const handleSignIn = () => {
-    Requests.getAllUsers()
-      .then((users) => {
-        const foundUser = users.find((user: User) => {
-          return (
-            user.username?.toLowerCase() === name.toLowerCase() &&
-            user.password === pWord
-          );
-        });
-
-        if (!foundUser) {
+    Requests.loginUser({ username: name, password: pWord })
+      .then((data) => {
+        if (!data) {
           throw new Error('User not found or incorrect password');
         }
+        console.log('signin', data);
+        localStorage.clear();
 
-        localStorage.setItem('user', JSON.stringify(foundUser));
-        setUser(foundUser);
+        localStorage.setItem('user', JSON.stringify(data.userInfo));
+        localStorage.setItem('token', data.token);
 
-        navigate('/App');
+        setUser(data.userInfo);
+
+        navigate('/App', {
+          state: {
+            ...data
+          }
+        });
       })
       .catch((err) => {
         toast.error('No matching credentials found');

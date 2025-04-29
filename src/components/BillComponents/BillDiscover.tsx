@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BillCarousel } from './BillCarousel';
 import BillCard from './BillCard';
-import { Requests } from '../../api';
-import DOMPurify from 'dompurify';
+import { searchForBill } from '../../api';
 import { Bill } from '../../types';
 
 export const BillDiscover = () => {
@@ -22,51 +21,6 @@ export const BillDiscover = () => {
   ];
   const isNumeric = (billNumber: string) => {
     return /^\d+$/.test(billNumber) && billNumber.length > 0;
-  };
-
-  const searchForBill = async (signal: AbortSignal) => {
-    try {
-      const fullBillDataPromise = Requests.getFullBill(
-        '118',
-        billType,
-        billNumber,
-        signal
-      );
-      const summariesDataPromise = Requests.getBillDetail(
-        '118',
-        billType,
-        billNumber,
-        'summaries',
-        signal
-      );
-      const subjectsDataPromise = Requests.getBillDetail(
-        '118',
-        billType,
-        billNumber,
-        'subjects',
-        signal
-      );
-
-      const [fullBillData, summariesData, subjectsData] = await Promise.all([
-        fullBillDataPromise,
-        summariesDataPromise,
-        subjectsDataPromise
-      ]);
-
-      return {
-        ...fullBillData.bill,
-        summary:
-          summariesData.summaries.length > 0
-            ? DOMPurify.sanitize(
-                summariesData.summaries[summariesData.summaries.length - 1].text
-              )
-            : 'No Summary Available',
-        subjects: subjectsData.subjects
-      };
-    } catch (error) {
-      console.error('Failed to fetch bills:', error);
-      return null;
-    }
   };
 
   const renderDiscoverBills = () => {
@@ -96,7 +50,11 @@ export const BillDiscover = () => {
 
     const fetchBill = async () => {
       if (isNumeric(billNumber)) {
-        const bill = await searchForBill(controller.signal);
+        const bill = await searchForBill(
+          billType,
+          billNumber,
+          controller.signal
+        );
         setSearchedBill(bill);
         if (!bill) {
           setSearchedBill(null);

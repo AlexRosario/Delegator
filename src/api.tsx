@@ -1,20 +1,26 @@
 import toast from 'react-hot-toast';
 import { Bill, User, Vote, CongressMember } from './types';
+import DOMPurify from 'dompurify';
 
-export const myHeaders = {
-  'Content-Type': 'application/json'
-};
 export const googleCivicHeader = new Headers();
 googleCivicHeader.append('Content-Type', 'application/json');
 googleCivicHeader.append('key', import.meta.env.VITE_GOOGLE_API_KEY);
+export const myHeaders = {
+  'Content-Type': 'application/json'
+};
 
 export const congressGovHeader = new Headers({
   ...myHeaders,
   'X-API-Key': import.meta.env.VITE_API_KEY
 });
 
+const fiveCallsHeader = new Headers({
+  ...myHeaders,
+  'X-5Calls-Token': import.meta.env.VITE_FIVECALLS_API_KEY
+});
+
+const jwt = localStorage.getItem('token');
 export const Requests = {
-  //Local
   register: (
     username: string,
     email: string,
@@ -26,7 +32,7 @@ export const Requests = {
       zipcode: string;
     }
   ) => {
-    const url = 'http://localhost:3000/users';
+    const url = 'http://localhost:3000/auth/register';
 
     return fetch(url, {
       method: 'POST',
@@ -57,6 +63,27 @@ export const Requests = {
         error.message = 'Not a valid zipcode';
       });
   },
+  async loginUser(credentials: { username: string; password: string }) {
+    console.log('api call', credentials);
+    try {
+      const response = await fetch('http://localhost:3000/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(credentials)
+      });
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Login failed');
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      throw new Error('dang');
+    }
+  },
   getAllUsers: () => {
     const url = 'http://localhost:3000/users';
     return fetch(url, {
@@ -72,18 +99,24 @@ export const Requests = {
       })
       .catch((error) => console.error('Fetch error:', error));
   },
-  addVote: async (userId: string, billId: string, vote: string, date: Date) => {
+  addVote: async (billId: string, vote: string, date: Date) => {
+    console.log('Sending vote:', {
+      billId,
+      vote,
+      date: date.toISOString()
+    });
+
     try {
       await fetch(`http://localhost:3000/votes`, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${jwt?.replace(/^"|"$/g, '')}`
         },
         body: JSON.stringify({
-          userId: userId,
           billId: billId,
           vote: vote,
-          date: date
+          date: date.toISOString()
         })
       });
       console.log('Vote posted successfully');
@@ -91,22 +124,18 @@ export const Requests = {
       console.error('Error posting vote:', error);
     }
   },
-  getVoteLog: async (user: User) => {
+  getVoteLog: async () => {
     try {
       const response = await fetch(`http://localhost:3000/votes`, {
         method: 'GET',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${jwt?.replace(/^"|"$/g, '')}`
         }
       });
 
       if (response.ok) {
-        const userData = await response.json();
-
-        const filteredData = userData.filter(
-          (voteRecord: Vote) => voteRecord.userId === user.id
-        );
-        return filteredData; // Return the parsed vote log
+        return await response.json();
       } else {
         console.error(
           `Failed to fetch vote log, status code: ${response.status}`
@@ -121,27 +150,9 @@ export const Requests = {
     }
   },
   addVotedBill: async (bill: Bill) => {
-    const url = 'http://localhost:3000/Bills';
+    const url = 'http://localhost:3000/bills';
+
     try {
-      const existingBillsResponse = await fetch(url, {
-        method: 'GET',
-        headers: myHeaders
-      });
-
-      if (!existingBillsResponse.ok) {
-        throw new Error(`HTTP error! status: ${existingBillsResponse.status}`);
-      }
-
-      const existingBills = await existingBillsResponse.json();
-
-      const billExists = existingBills.some(
-        (existingBill: Bill) => existingBill.number === bill.number
-      );
-
-      if (billExists) {
-        return;
-      }
-
       const addBillResponse = await fetch(url, {
         method: 'POST',
         headers: myHeaders,
@@ -158,7 +169,7 @@ export const Requests = {
     }
   },
   getBillsRecord: () => {
-    const url = 'http://localhost:3000/Bills';
+    const url = 'http://localhost:3000/bills';
     return fetch(url, {
       method: 'GET',
       headers: myHeaders
@@ -268,9 +279,19 @@ export const Requests = {
 
     return response.json();
   },
+  getCongressMembersFromFive: async (address: string) => {
+    console.log('address:', address);
+    const response = await fetch(
+      `/fiveCalls/representatives?location=${address}`,
+      {
+        method: 'GET'
+      }
+    );
 
+    return response.json();
+  },
   getCongressMembers: async (address: string) => {
-    const apiKey = 'AIzaSyCGKhpbY2SwNMXylL4IkV4TKDr8AwBJKuo'; // Ensure this is securely included, not hardcoded
+    const apiKey = 'AIzaSyCGKhpbY2SwNMXylL4IkV4TKDr8AwBJKuo';
     const url = `https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&address=${encodeURIComponent(
       address
     )}`;
@@ -318,5 +339,53 @@ export const Requests = {
         );
       })
       .catch((error) => console.error('Fetch error:', error));
+  }
+};
+export const searchForBill = async (
+  billType: string,
+  billNumber: string,
+  signal?: AbortSignal
+) => {
+  try {
+    const fullBillDataPromise = Requests.getFullBill(
+      '118',
+      billType,
+      billNumber,
+      signal
+    );
+    const summariesDataPromise = Requests.getBillDetail(
+      '118',
+      billType,
+      billNumber,
+      'summaries',
+      signal
+    );
+    const subjectsDataPromise = Requests.getBillDetail(
+      '118',
+      billType,
+      billNumber,
+      'subjects',
+      signal
+    );
+
+    const [fullBillData, summariesData, subjectsData] = await Promise.all([
+      fullBillDataPromise,
+      summariesDataPromise,
+      subjectsDataPromise
+    ]);
+
+    return {
+      ...fullBillData.bill,
+      summary:
+        summariesData.summaries.length > 0
+          ? DOMPurify.sanitize(
+              summariesData.summaries[summariesData.summaries.length - 1].text
+            )
+          : 'No Summary Available',
+      subjects: subjectsData.subjects
+    };
+  } catch (error) {
+    console.error('Failed to fetch bills:', error);
+    return null;
   }
 };

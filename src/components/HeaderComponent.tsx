@@ -7,9 +7,10 @@ import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const userString = localStorage.getItem('user');
-  const user = userString ? JSON.parse(userString) : null;
+  let user = userString ? JSON.parse(userString) : null;
+
   const logOut = () => {
-    localStorage.removeItem('user');
+    localStorage.clear();
     window.location.href = '/';
   };
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +32,8 @@ export const Header = () => {
               icon={faHamburger}
               className="menu-burger"
               onClick={() => {
+                console.log(userString);
+
                 setMenuOpen(!menuOpen);
               }}
             />
@@ -49,7 +52,7 @@ export const Header = () => {
               <div className="profile">
                 <b>Settings</b>
                 <h4>{user?.username}</h4>
-                <h5>Zipcode: {user?.address.zipcode}</h5>
+                <h5>Zipcode: {user?.zipcode}</h5>
                 <h6 onClick={logOut} className="log-out">
                   Log Out
                 </h6>

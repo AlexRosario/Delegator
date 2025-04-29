@@ -1,33 +1,44 @@
 {
   "name": "delegator",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "seed": "node reseed-db.js",
     "serve": "npx json-server ./db.json",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+    "dev:client": "vite --config vite.config.ts",
+    "dev:server": "ts-node-esm server.ts",
+    "build": "vite build && tsc",
+    "start": "tsx server.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@prisma/client": "^6.6.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.9",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
     "date-fns": "^3.6.0",
     "dompurify": "^3.1.6",
     "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-async-errors": "^3.1.1",
     "http-proxy-middleware": "^3.0.0",
     "json-server": "^1.0.0-beta.2",
+    "jsonwebtoken": "^9.0.2",
     "lodash-es": "^4.17.21",
+    "nodemon": "^3.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.23.1",
-    "uuid": "^10.0.0"
+    "sqlite3": "^5.1.7",
+    "uuid": "^10.0.0",
+    "zod": "^3.24.2",
+    "zod-express-middleware": "^1.4.0"
   },
   "devDependencies": {
     "@types/dompurify": "^3.0.5",
@@ -41,8 +52,10 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.6",
     "vite-tsconfig-paths": "^4.3.2"
   }
 }

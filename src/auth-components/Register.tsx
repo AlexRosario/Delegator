@@ -5,10 +5,10 @@ import toast from 'react-hot-toast';
 import { useAuthInfo } from '../providers/AuthProvider';
 import { ErrorMessage } from '../components/errorMessages';
 import { isEmailValid, isZipcodeValid } from '../utils/validations';
-import { User } from '../types';
 import { useNavigate } from 'react-router-dom';
 import * as _ from 'lodash-es';
-import { faker } from '@faker-js/faker';
+import { faker, id_ID } from '@faker-js/faker';
+import { User } from '../types';
 
 export function RegisterInput({
   labelText,
@@ -35,45 +35,46 @@ export const Register = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [takenName, setTakenName] = useState('');
 
-  const doesUserExist = async (uname: string) =>
-    await Requests.getAllUsers().then((users) =>
-      users.some((user: User) => user.username === uname)
-    );
-
   const existsErrorMessage = `Username ${takenName} already exists`;
   const emailErrorMessage = 'Email is Invalid';
   const zipcodeErrorMessage = 'Zip code is Invalid.';
   const navigate = useNavigate();
 
+  const findReps = async (addressString: string) => {
+    return await Requests.getCongressMembersFromFive(addressString).then(
+      (reps) => reps
+    );
+  };
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsFormSubmitted(true);
-    const userExists = await doesUserExist(username);
-
-    setUserNameExists(userExists);
-
-    if (!isEmailValid(email) || !isZipcodeValid(zipcode) || userNameExists) {
-      setTakenName(username);
-      return;
+    const reps = await findReps(String(Object.values(address)));
+    if (!reps) {
+      return 'not a valid address';
     }
-
     return Requests.register(username, email, password, address)
       .then(() => {
         setIsFormSubmitted(false);
         setTakenName('');
+        console.log(reps);
         toast.success('Registration successful');
-        localStorage.setItem('user', JSON.stringify(user));
-        navigate('../', { state: { username, password } });
+        Requests.loginUser({ username: username, password: password })
+          .then((data) => {
+            localStorage.clear();
+            localStorage.setItem('user', JSON.stringify(data.userInfo));
+            localStorage.setItem('token', JSON.stringify(data.token));
+          })
+          .catch((e) => console.error('login error:', e.message));
+
+        navigate('/App', { state: { address } });
       })
       .catch((error) => {
-      
         console.error('Fetch error:', error.message);
       });
   };
   const generateUser = () => {
     const capitalize = _.capitalize;
     return {
-      id: '',
       username: capitalize(faker.internet.userName()),
       email: faker.internet.email(),
       password: faker.internet.password(),
@@ -98,7 +99,7 @@ export const Register = () => {
           className="btn"
           onClick={(e) => {
             e.preventDefault();
-            const generatedUser = generateUser();
+            const generatedUser = generateUser() as User;
             setUser(generatedUser);
             setConfirm(generatedUser.password);
           }}

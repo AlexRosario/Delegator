@@ -11,6 +11,7 @@ import { Requests } from '../api';
 import { Bill, Vote } from '../types';
 import DOMPurify from 'dompurify';
 import { useAuthInfo } from './AuthProvider';
+import { searchForBill } from '../api';
 
 type TBillProvider = {
   billsToDisplay: Bill[];
@@ -21,6 +22,7 @@ type TBillProvider = {
   congress: string;
   filterPassedBills: boolean;
   setFilterPassedBills: (filterPassed: boolean) => void;
+  filteredBills: Bill[];
   setActiveBillTab: (tab: 'discover-bills' | 'voted-bills') => void;
   activeBillTab: 'discover-bills' | 'voted-bills';
   allBills: Bill[];
@@ -30,6 +32,8 @@ type TBillProvider = {
   voteLog: Vote[];
   setVoteLog: (voteLog: Vote[]) => void;
   setVotedOnThisBill: (votedOnThisBill: boolean) => void;
+  setNewBills: React.Dispatch<React.SetStateAction<Bill[]>>;
+  setVotedBills: React.Dispatch<React.SetStateAction<Bill[]>>;
   currentIndex: number;
   setCurrentIndex: (index: number) => void;
 };
@@ -43,6 +47,7 @@ export const BillContext = createContext<TBillProvider>({
   congress: '118',
   filterPassedBills: false,
   setFilterPassedBills: () => {},
+  filteredBills: [],
   setActiveBillTab: () => {},
   activeBillTab: 'discover-bills',
   allBills: [],
@@ -52,6 +57,8 @@ export const BillContext = createContext<TBillProvider>({
   voteLog: [],
   setVoteLog: () => {},
   setVotedOnThisBill: () => {},
+  setNewBills: () => {},
+  setVotedBills: () => {},
   currentIndex: 0,
   setCurrentIndex: () => {}
 });
@@ -72,39 +79,44 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [congress] = useState('118');
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
-  const hasFetchedRef = useRef(false); // Tracks if fetchBills has been called
-
+  const hasFetchedRef = useRef(false);
   const billsToDisplay =
-    activeBillTab === 'discover-bills' ? newBills : votedBills;
+    votedBills.length > 0
+      ? activeBillTab === 'discover-bills'
+        ? newBills
+        : votedBills
+      : allBills;
+  const filteredBills = billsToDisplay.filter((bill) =>
+    filterPassedBills
+      ? !bill.latestAction.text.includes('Became Public Law No:')
+      : bill
+  );
+  let firstRender: boolean = allBills.length == 0 ? true : false;
 
-  const fetchVoteLog = useCallback(async () => {
+  const fetchVoteLog = async () => {
     try {
-      const data = await Requests.getVoteLog(user);
-
-      setVoteLog(data);
+      const data = await Requests.getVoteLog();
       return data;
     } catch (error) {
       console.error('Error fetching vote log:', error);
     }
-  }, [user]);
+  };
 
-  const fetchUserBills = useCallback(
-    async (VoteLog: Vote[]) => {
-      try {
-        const Bills = await Requests.getBillsRecord();
-        const userBills = Bills.filter((bill: Bill) =>
-          VoteLog.some(
-            (vote) =>
-              vote.billId === bill.type + bill.number && vote.userId === user.id
-          )
-        );
-        return userBills;
-      } catch (error) {
-        console.error('Error fetching bill record:', error);
-      }
-    },
-    [user]
-  );
+  const fetchUserBills = async (voteLog: Vote[]) => {
+    try {
+      const billPromises = voteLog.map(async (vote) => {
+        const raw = vote.billId.toLowerCase();
+        const billType = raw.replace(/[^a-zA-Z]/g, '');
+        const billNumber = raw.replace(/\D/g, '');
+        return await searchForBill(billType, billNumber);
+      });
+
+      const bills = await Promise.all(billPromises);
+      return bills.filter((bill) => bill !== null); // filter out failed ones
+    } catch (error) {
+      console.error('Error fetching bill record:', error);
+    }
+  };
 
   const fetchBills = useCallback(async () => {
     let fetchedBills: Bill[] = [];
@@ -156,50 +168,61 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   }, [congress, offset]);
 
   useEffect(() => {
-    const isScrollingForward = currentIndex >= prevIndexRef.current;
-    const isNearEnd = billsToDisplay.length - currentIndex <= 20;
+    if (user.username)
+      fetchVoteLog().then((votes) => {
+        setVoteLog(votes);
+      });
+  }, [user]);
 
-    if (isScrollingForward && isNearEnd && !hasFetchedRef.current) {
-      hasFetchedRef.current = true;
-      setTimeout(() => {
-        fetchBills()
-          .then((bills) => {
-            if (bills && bills.length > 0) {
-              setAllBills((prevBills) => [...prevBills, ...bills]);
-            }
-            hasFetchedRef.current = false;
-          })
-          .catch((error) => {
-            console.error('Failed to fetch bills:', error);
-            hasFetchedRef.current = false;
-          });
-      }, 500);
+  useEffect(() => {
+    setNewBills(
+      allBills.filter(
+        (bill: Bill) =>
+          !voteLog?.some(
+            (vote: Vote) => vote.billId === bill.type + bill.number
+          )
+      )
+    );
+    if (voteLog) {
+      fetchUserBills(
+        firstRender ? voteLog : [voteLog[voteLog.length - 1]]
+      ).then(async (bills) => {
+        if (bills) {
+          const resolvedBills = await Promise.all(bills);
+          setVotedBills((prevbills) => [...prevbills, ...resolvedBills]);
+        }
+      });
     }
+    console.log('vbeels:', votedBills, 'nbeels', newBills);
 
     prevIndexRef.current = currentIndex;
-  }, [currentIndex]);
-  useEffect(() => {
-    fetchVoteLog()
-      .then((VoteLog) => {
-        setNewBills(
-          allBills.filter(
-            (bill: Bill) =>
-              !VoteLog.some(
-                (vote: Vote) => vote.billId === bill.type + bill.number
-              )
-          )
-        );
+  }, [allBills, votedOnThisBill]);
 
-        fetchUserBills(VoteLog).then((bills) => {
-          if (bills) setVotedBills(bills);
+  useEffect(() => {
+    const isScrollingForward = currentIndex > prevIndexRef.current;
+    const isNearEnd = filteredBills.length - currentIndex <= 20;
+
+    if (
+      ((isScrollingForward && isNearEnd) || firstRender) &&
+      !hasFetchedRef.current
+    ) {
+      hasFetchedRef.current = true;
+
+      fetchBills()
+        .then((bills) => {
+          if (bills && bills.length > 0) {
+            setAllBills((prevBills) => [...prevBills, ...bills]);
+          }
+        })
+        .finally(() => {
+          hasFetchedRef.current = false;
+        })
+        .catch((error) => {
+          console.error('Failed to fetch bills:', error);
         });
-        setVoteLog(VoteLog);
-      })
-      .finally(() => {
-        prevIndexRef.current = currentIndex;
-        console.log('billsToDisplay', billsToDisplay);
-      });
-  }, [activeBillTab, allBills, fetchUserBills, fetchVoteLog, votedOnThisBill]);
+    }
+    prevIndexRef.current = currentIndex;
+  }, [currentIndex, votedOnThisBill]);
 
   return (
     <BillContext.Provider
@@ -212,6 +235,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         congress,
         filterPassedBills,
         setFilterPassedBills,
+        filteredBills,
         setActiveBillTab,
         activeBillTab,
         allBills,
@@ -221,6 +245,8 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         voteLog,
         setVoteLog,
         setVotedOnThisBill,
+        setNewBills,
+        setVotedBills,
         setCurrentIndex,
         currentIndex
       }}

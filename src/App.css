@@ -422,6 +422,13 @@
   color: blue;
   font-size: 0.2em;
 }
+.vote-buttons > button {
+  background-color: var(--darkblue);
+}
+.vote-buttons button:focus {
+  outline: transparent;
+}
+
 .carousel-container .arrows-carousel {
   font-size: 40px;
 }
@@ -598,6 +605,7 @@
     flex-direction: row;
     justify-content: space-around;
   }
+
   .bill-collection-container select,
   input {
     font-size: 0.6rem;

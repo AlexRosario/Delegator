@@ -14,16 +14,7 @@ interface CongressMember {
   urls: string[];
 }
 
-type RepVotes = {
-  [key: string]: string;
-};
-
-type VoteLogEntry = {
-  RepVotes: RepVotes;
-};
-
 export const RepCard = ({ member }: { member: CongressMember }) => {
-  const user = JSON.parse(localStorage.getItem('user') ?? '');
   const title =
     typeof member.title === 'string'
       ? member.title
@@ -97,8 +88,9 @@ export const RepCard = ({ member }: { member: CongressMember }) => {
                       href={`${member.urls[index]}}`}
                       className="rep-links-link"
                     >
-                      {member.urls[index]}
+                      {url}
                     </a>
+                    <br />
                   </span>
                 );
               })}

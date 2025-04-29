@@ -6,9 +6,11 @@ import './fonts/BarlowCondensed-SemiBold.ttf';
 import { BillProvider } from './providers/BillProvider';
 import { MemberProvider } from './providers/MemberProvider';
 import { useScreenInfo } from './providers/ScreenProvider';
+import { useLocation } from 'react-router-dom';
 
 function App() {
   const { screenSelect } = useScreenInfo();
+  const location = useLocation();
   return (
     <div className="main">
       <Header />

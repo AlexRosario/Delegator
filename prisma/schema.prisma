@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int    @id @default(autoincrement())
+  username     String @unique
+  email        String @unique
+  passwordHash String @unique
+  street       String
+  city         String
+  state        String
+  zipcode      String
+}
+
+model Vote {
+  id     Int      @id @default(autoincrement())
+  userId Int
+  billId String
+  vote   String
+  date   DateTime
+}

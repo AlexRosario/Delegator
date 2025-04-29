@@ -19,11 +19,32 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/congressGov/, ''),
         configure: (proxy) => {
           proxy.on('proxyReq', (proxyReq) => {
-            const apiKey = process.env.API_KEY; // Check if process.env has access to the key
+            const apiKey = process.env.API_KEY;
             if (apiKey) {
               proxyReq.setHeader('X-Api-Key', apiKey);
             } else {
               console.warn('API Key is not set in the environment variables.');
+            }
+          });
+        }
+      },
+      '/api': {
+        target: 'http://localhost:3000',
+        changeOrigin: true
+      },
+      '/fiveCalls': {
+        target: 'https://api.5calls.org/v1',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/fiveCalls/, ''),
+        configure: (proxy) => {
+          proxy.on('proxyReq', (proxyReq) => {
+            const apiKey = process.env.FIVECALLS_API_KEY;
+            if (apiKey) {
+              proxyReq.setHeader('X-5Calls-Token', `${apiKey}`);
+            } else {
+              console.warn(
+                '5Calls API Key is not set in the environment variables.'
+              );
             }
           });
         }

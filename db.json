@@ -11,6 +11,18 @@
         "state": "NY",
         "zipcode": "11207"
       }
+    },
+    {
+      "id": "7562dd13-c6c8-4d15-8da6-7cd026ee709c",
+      "username": "Weldon_kuhic34",
+      "email": "Bruce.Kunde@hotmail.com",
+      "password": "N2kxVQO7adk8xyp",
+      "address": {
+        "street": "3326 Corwin Rapid",
+        "city": "Rohanstad",
+        "state": "Maryland",
+        "zipcode": "08550"
+      }
     }
   ],
   "votes": [
@@ -1195,6 +1207,69 @@
       "billId": "HR9544",
       "vote": "Yes",
       "date": "2025-02-13T21:24:23.264Z"
+    },
+    {
+      "id": "b54c",
+      "userId": "7137",
+      "billId": "S5319",
+      "vote": "Yes",
+      "date": "2025-04-14T17:06:55.136Z"
+    },
+    {
+      "id": "0a74",
+      "userId": "7137",
+      "billId": "HR4984",
+      "vote": "No",
+      "date": "2025-04-14T17:07:48.397Z"
+    },
+    {
+      "id": "8be0",
+      "userId": "7137",
+      "billId": "HR82",
+      "vote": "No",
+      "date": "2025-04-14T17:08:06.134Z"
+    },
+    {
+      "id": "246d",
+      "userId": "7137",
+      "billId": "HR9775",
+      "vote": "Yes",
+      "date": "2025-04-14T17:08:49.576Z"
+    },
+    {
+      "id": "4459",
+      "userId": "7137",
+      "billId": "HR9600",
+      "vote": "No",
+      "date": "2025-04-14T17:08:56.127Z"
+    },
+    {
+      "id": "63a3",
+      "userId": "7137",
+      "billId": "HR9592",
+      "vote": "Yes",
+      "date": "2025-04-14T17:09:09.498Z"
+    },
+    {
+      "id": "c7be",
+      "userId": "7137",
+      "billId": "HR9580",
+      "vote": "Yes",
+      "date": "2025-04-14T17:12:13.552Z"
+    },
+    {
+      "id": "b0e3",
+      "userId": "7137",
+      "billId": "HR9549",
+      "vote": "Yes",
+      "date": "2025-04-14T17:13:33.819Z"
+    },
+    {
+      "id": "e871",
+      "userId": "7137",
+      "billId": "HR9487",
+      "vote": "Yes",
+      "date": "2025-04-14T17:14:21.546Z"
     }
   ],
   "Bills": [
@@ -7567,6 +7642,395 @@
         "url": "https://api.congress.gov/v3/bill/118/hr/9544/titles?format=json"
       },
       "summary": "<p>This act designates the facility of the U. S. Postal Service located at 340 South Loudon Avenue in Baltimore, Maryland, as the United States Representative Elijah E. Cummings Post Office Building.</p>"
+    },
+    {
+      "id": "d3f8",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2025-01-04",
+        "text": "Became Public Law No: 118-269."
+      },
+      "number": "9775",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To designate the facility of the United States Postal Service located at 119 North Anderson Street in Elwood, Indiana, as the \"Officer Noah Jacob Shahnavaz Post Office Building\".",
+      "type": "HR",
+      "updateDate": "2025-04-07T12:56:45Z",
+      "updateDateIncludingText": "2025-04-07T12:56:45Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9775?format=json",
+      "actions": {
+        "count": 23,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9775/actions?format=json"
+      },
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9775/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 149 (Tuesday, September 24, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mrs. SPARTZ:\nH.R. 9775.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8, Clause 7\nArticle 1 , Section 8 , Clause 18\nThe single subject of this legislation is:\nTo designate the facility of the United States Postal\nService located at 119 North Anderson Street in Elwood,\nIndiana, as the ``Officer Noah Jacob Shahnavaz Post Office\nBuilding''.\n[Page H5747]\n</pre>",
+      "cosponsors": {
+        "count": 8,
+        "countIncludingWithdrawnCosponsors": 8,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9775/cosponsors?format=json"
+      },
+      "introducedDate": "2024-09-24",
+      "laws": [
+        {
+          "number": "118-269",
+          "type": "Public Law"
+        }
+      ],
+      "policyArea": {
+        "name": "Government Operations and Politics"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "S000929",
+          "district": 5,
+          "firstName": "Victoria",
+          "fullName": "Rep. Spartz, Victoria [R-IN-5]",
+          "isByRequest": "N",
+          "lastName": "Spartz",
+          "party": "R",
+          "state": "IN",
+          "url": "https://api.congress.gov/v3/member/S000929?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Congressional tributes",
+            "updateDate": "2024-12-05T14:26:17Z"
+          },
+          {
+            "name": "Government buildings, facilities, and property",
+            "updateDate": "2024-12-05T14:26:10Z"
+          },
+          {
+            "name": "Indiana",
+            "updateDate": "2024-12-05T14:26:37Z"
+          },
+          {
+            "name": "Postal service",
+            "updateDate": "2024-12-05T14:26:24Z"
+          }
+        ],
+        "policyArea": {
+          "name": "Government Operations and Politics",
+          "updateDate": "2024-10-28T15:04:23Z"
+        }
+      },
+      "summaries": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9775/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9775/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9775/titles?format=json"
+      },
+      "summary": "<p>This act designates the facility of the U.S. Postal Service located at 119 North Anderson Street in Elwood, Indiana, as the Officer Noah Jacob Shahnavaz&nbsp;Post Office Building.</p>"
+    },
+    {
+      "id": "799d",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2025-01-04",
+        "text": "Became Public Law No: 118-267."
+      },
+      "number": "9592",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "Federal Register Modernization Act of 2024",
+      "type": "HR",
+      "updateDate": "2025-04-07T13:01:10Z",
+      "updateDateIncludingText": "2025-04-07T13:01:10Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9592?format=json",
+      "actions": {
+        "count": 25,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9592/actions?format=json"
+      },
+      "committeeReports": [
+        {
+          "citation": "S. Rept. 118-308",
+          "url": "https://api.congress.gov/v3/committee-report/118/SRPT/308?format=json"
+        }
+      ],
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9592/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 143 (Monday, September 16, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. HIGGINS of Louisiana:\nH.R. 9592.\nCongress has the power to enact this legislation pursuant\nto the following:\nUnder Article 1, Section 8 of the Constitution, Congress\nhas the power ``to make all Laws which shall be necessary and\nproper for carrying into Execution the foregoing Powers, and\nall other Powers vested by this Constitution in the\nGovernment of the United States, or any Department or Officer\nthereof''\nThe single subject of this legislation is:\nThis legislation amends title 44, United States Code, to\nmodernize the Federal Register, and for other purposes.\n[Page H5239]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9592/cosponsors?format=json"
+      },
+      "introducedDate": "2024-09-16",
+      "laws": [
+        {
+          "number": "118-267",
+          "type": "Public Law"
+        }
+      ],
+      "policyArea": {
+        "name": "Government Operations and Politics"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "H001077",
+          "district": 3,
+          "firstName": "Clay",
+          "fullName": "Rep. Higgins, Clay [R-LA-3]",
+          "isByRequest": "N",
+          "lastName": "Higgins",
+          "party": "R",
+          "state": "LA",
+          "url": "https://api.congress.gov/v3/member/H001077?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Administrative law and regulatory procedures",
+            "updateDate": "2024-10-23T16:10:30Z"
+          },
+          {
+            "name": "Government information and archives",
+            "updateDate": "2024-10-23T16:10:30Z"
+          },
+          {
+            "name": "Internet and video services",
+            "updateDate": "2024-10-23T16:10:30Z"
+          },
+          {
+            "name": "Internet, web applications, social media",
+            "updateDate": "2024-10-23T16:10:30Z"
+          },
+          {
+            "name": "Telephone and wireless communication",
+            "updateDate": "2024-10-23T16:10:30Z"
+          }
+        ],
+        "policyArea": {
+          "name": "Government Operations and Politics",
+          "updateDate": "2024-09-18T13:03:31Z"
+        }
+      },
+      "summaries": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9592/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9592/text?format=json"
+      },
+      "titles": {
+        "count": 7,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9592/titles?format=json"
+      },
+      "summary": "<p><strong>Federal Register Modernization Act</strong></p><p>This bill revises provisions regarding the Federal Register and the Code of Federal Regulations, including to replace requirements that the documents be printed with requirements that the documents be published.</p><p>The bill also</p><ul><li><p>eliminates the requirement for federal agencies to provide duplicate originals or certified copies of agency documents submitted for publication in the Federal Register;</p></li><li><p>specifies that a designee of the President may fulfill certain functions, such as approving regulations related to the publication of the Federal Register prescribed by the Administrative Committee of the Federal Register; and</p></li><li><p>provides that in a continuity of operations event in which the Government Publishing Office (GPO) does not fulfill its publication requirements, the Office of the Federal Register may establish an  alternative method to publish the Federal Register until such time that GPO resumes publication.</p></li></ul>"
+    },
+    {
+      "id": "b173",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2025-01-04",
+        "text": "Became Public Law No: 118-266."
+      },
+      "number": "9580",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "To designate the facility of the United States Postal Service located at 2777 Brentwood Road in Raleigh, North Carolina, as the \"Millie Dunn Veasey Post Office\".",
+      "type": "HR",
+      "updateDate": "2025-04-07T12:56:45Z",
+      "updateDateIncludingText": "2025-04-07T12:56:45Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9580?format=json",
+      "actions": {
+        "count": 23,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9580/actions?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As ordered reported by the House Committee on Oversight and Accountability on September 18, 2024\n",
+          "pubDate": "2024-09-24T14:37:00Z",
+          "title": "H.R. 9580, a bill to designate the facility of the United States Postal Service located at 2777 Brentwood Road in Raleigh, North Carolina, as the “Millie Dunn Veasey Post Office",
+          "url": "https://www.cbo.gov/publication/60760"
+        }
+      ],
+      "committees": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9580/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 142 (Thursday, September 12, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Ms. ROSS:\nH.R. 9580.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8, Clause 7\nThe single subject of this legislation is:\nDesignates the facility of the United States Postal Service\nlocated at 2777 Brentwood Road in Raleigh, North Carolina, as\nthe ``Millie Dunn Veasey Post Office''\n[Page H5231]\n</pre>",
+      "cosponsors": {
+        "count": 13,
+        "countIncludingWithdrawnCosponsors": 13,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9580/cosponsors?format=json"
+      },
+      "introducedDate": "2024-09-12",
+      "laws": [
+        {
+          "number": "118-266",
+          "type": "Public Law"
+        }
+      ],
+      "policyArea": {
+        "name": "Government Operations and Politics"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "R000305",
+          "district": 2,
+          "firstName": "Deborah",
+          "fullName": "Rep. Ross, Deborah K. [D-NC-2]",
+          "isByRequest": "N",
+          "lastName": "Ross",
+          "middleName": "K.",
+          "party": "D",
+          "state": "NC",
+          "url": "https://api.congress.gov/v3/member/R000305?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Congressional tributes",
+            "updateDate": "2024-12-02T17:23:41Z"
+          },
+          {
+            "name": "Government buildings, facilities, and property",
+            "updateDate": "2024-12-02T17:23:41Z"
+          },
+          {
+            "name": "North Carolina",
+            "updateDate": "2024-12-02T17:23:50Z"
+          },
+          {
+            "name": "Postal service",
+            "updateDate": "2024-12-02T17:23:41Z"
+          }
+        ],
+        "policyArea": {
+          "name": "Government Operations and Politics",
+          "updateDate": "2024-10-28T18:24:46Z"
+        }
+      },
+      "summaries": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9580/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 5,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9580/text?format=json"
+      },
+      "titles": {
+        "count": 2,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9580/titles?format=json"
+      },
+      "summary": "<p>This act designates the facility of the U.S. Postal Service located at 2777 Brentwood Road in Raleigh, North Carolina, as the Millie Dunn Veasey Post Office.</p>"
+    },
+    {
+      "id": "5069",
+      "congress": 118,
+      "latestAction": {
+        "actionDate": "2025-01-04",
+        "text": "Became Public Law No: 118-263."
+      },
+      "number": "9487",
+      "originChamber": "House",
+      "originChamberCode": "H",
+      "title": "House Office of Legislative Counsel Modernization Act",
+      "type": "HR",
+      "updateDate": "2025-04-07T13:02:09Z",
+      "updateDateIncludingText": "2025-04-07T13:02:09Z",
+      "url": "https://api.congress.gov/v3/bill/118/hr/9487?format=json",
+      "actions": {
+        "count": 25,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9487/actions?format=json"
+      },
+      "cboCostEstimates": [
+        {
+          "description": "As passed by the House of Representatives on December 16, 2024\n",
+          "pubDate": "2024-12-18T22:02:44Z",
+          "title": "H.R. 9487, House Office of Legislative Counsel Modernization Act\t",
+          "url": "https://www.cbo.gov/publication/61144"
+        }
+      ],
+      "committeeReports": [
+        {
+          "citation": "H. Rept. 118-678",
+          "url": "https://api.congress.gov/v3/committee-report/118/HRPT/678?format=json"
+        }
+      ],
+      "committees": {
+        "count": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9487/committees?format=json"
+      },
+      "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 170, Number 138 (Friday, September 6, 2024)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. STEIL:\nH.R. 9487.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle I, Section 8\nThis bill will revise certain authorities of the House\nOffice of Legislative Counsel.\n[Page H5033]\n</pre>",
+      "cosponsors": {
+        "count": 1,
+        "countIncludingWithdrawnCosponsors": 1,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9487/cosponsors?format=json"
+      },
+      "introducedDate": "2024-09-06",
+      "laws": [
+        {
+          "number": "118-263",
+          "type": "Public Law"
+        }
+      ],
+      "policyArea": {
+        "name": "Congress"
+      },
+      "sponsors": [
+        {
+          "bioguideId": "S001213",
+          "district": 1,
+          "firstName": "Bryan",
+          "fullName": "Rep. Steil, Bryan [R-WI-1]",
+          "isByRequest": "N",
+          "lastName": "Steil",
+          "party": "R",
+          "state": "WI",
+          "url": "https://api.congress.gov/v3/member/S001213?format=json"
+        }
+      ],
+      "subjects": {
+        "legislativeSubjects": [
+          {
+            "name": "Congressional officers and employees",
+            "updateDate": "2024-12-05T21:16:03Z"
+          },
+          {
+            "name": "House of Representatives",
+            "updateDate": "2024-12-05T21:15:56Z"
+          },
+          {
+            "name": "Lawyers and legal services",
+            "updateDate": "2024-12-05T21:16:09Z"
+          }
+        ],
+        "policyArea": {
+          "name": "Congress",
+          "updateDate": "2024-10-10T12:27:45Z"
+        }
+      },
+      "summaries": {
+        "count": 3,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9487/summaries?format=json"
+      },
+      "textVersions": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9487/text?format=json"
+      },
+      "titles": {
+        "count": 6,
+        "url": "https://api.congress.gov/v3/bill/118/hr/9487/titles?format=json"
+      },
+      "summary": "<p><strong>House Office of Legislative Counsel Modernization Act </strong></p><p>This bill authorizes the designation of more than one attorney in the Office of the Legislative Counsel of the House of Representatives as Deputy Legislative Counsel.&nbsp;(Current law authorizes only one deputy.)</p><p>A Deputy Legislative Counsel must perform the functions of the Legislative Counsel during the Legislative Counsel's disability or absence (including a vacancy).</p>"
     }
   ]
 }

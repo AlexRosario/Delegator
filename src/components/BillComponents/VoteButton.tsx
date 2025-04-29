@@ -4,25 +4,32 @@ import { Bill, Vote } from '../../types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import { useDisplayBills } from '../../providers/BillProvider';
-import { useAuthInfo } from '../../providers/AuthProvider';
 
 export const VoteButton = ({ bill }: { bill: Bill }) => {
-  const { user } = useAuthInfo();
-  const userId = user.id;
-  const { voteLog, setVoteLog, setVotedOnThisBill } = useDisplayBills();
-  const billNumber = bill.type + bill.number;
-  const userHasBillVote = voteLog.some(
-    (vote) => vote.userId === userId && vote.billId === billNumber
-  );
+  const user = JSON.parse(localStorage.getItem('user') || '{}');
+  const userId = String(user.id);
+  const {
+    voteLog,
+    setVoteLog,
+    setVotedOnThisBill,
+    newBills,
+    setNewBills,
+    setVotedBills
+  } = useDisplayBills();
+  const billId = bill.type + bill.number;
+  const userHasBillVote =
+    Array.isArray(voteLog) &&
+    voteLog.some((vote) => vote.userId === userId && vote.billId === billId);
   const recordedVoteOnBill = userHasBillVote
     ? voteLog.find(
-        (vote: Vote) => vote.userId === userId && vote.billId === billNumber
+        (vote: Vote) => vote.userId === userId && vote.billId === billId
       )
     : undefined;
 
   const userVoteDate = recordedVoteOnBill
     ? new Date(recordedVoteOnBill.date)
     : null;
+
   const latestActionDateOnBill = new Date(bill.latestAction.actionDate);
 
   const [newActionsSinceVoted, setNewActionsSinceVoted] = useState<
@@ -41,8 +48,9 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
     try {
       if (Array.isArray(voteLog)) {
         if (!userHasBillVote) {
-          await Requests.addVote(userId, billNumber, vote, date);
-          setVoteLog([...voteLog, { userId, billId: billNumber, vote, date }]);
+          await Requests.addVote(billId, vote, date);
+          setVoteLog([...voteLog, { userId, billId: billId, vote, date }]);
+
           setVotedOnThisBill(true);
         }
       } else {
@@ -56,8 +64,6 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
   const handleVote = (vote: 'Yes' | 'No') => {
     if (!userHasBillVote) {
       recordMembersVotes(vote);
-
-      Requests.addVotedBill(bill);
 
       setVotedOnThisBill(false);
     }
