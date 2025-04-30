@@ -4,12 +4,12 @@ import { Requests } from '../api';
 import toast from 'react-hot-toast';
 import { useAuthInfo } from '../providers/AuthProvider';
 import { ErrorMessage } from '../components/errorMessages';
-import { isEmailValid, isZipcodeValid } from '../utils/validations';
+import { isZipcodeValid } from '../utils/validations';
 import { useNavigate } from 'react-router-dom';
 import * as _ from 'lodash-es';
-import { faker, id_ID } from '@faker-js/faker';
-import { User } from '../types';
-
+import { faker } from '@faker-js/faker';
+import { useDisplayBills } from '../providers/BillProvider';
+import { FrontEndRegistrant } from '../types';
 export function RegisterInput({
   labelText,
   inputProps
@@ -27,46 +27,59 @@ export function RegisterInput({
 }
 
 export const Register = () => {
-  const { user, setUser } = useAuthInfo();
-  const { username, email, password, address } = user;
+  const { setUser } = useAuthInfo();
+  const { setVoteLog } = useDisplayBills();
+
+  const [frontEndRegistrant, setFrontEndRegistrant] = useState({
+    username: '',
+    email: '',
+    password: '',
+    address: {
+      street: '',
+      city: '',
+      state: '',
+      zipcode: ''
+    }
+  });
+  const { username, email, password, address } = frontEndRegistrant;
   const { street, city, state, zipcode } = address;
   const [confirm, setConfirm] = useState('');
-  const [userNameExists, setUserNameExists] = useState(false);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [takenName, setTakenName] = useState('');
-
-  const existsErrorMessage = `Username ${takenName} already exists`;
-  const emailErrorMessage = 'Email is Invalid';
+  const [errorMessage, setErrorMessage] = useState<string>('');
   const zipcodeErrorMessage = 'Zip code is Invalid.';
   const navigate = useNavigate();
 
   const findReps = async (addressString: string) => {
-    return await Requests.getCongressMembersFromFive(addressString).then(
-      (reps) => reps
-    );
+    return await Requests.getCongressMembersFromFive(
+      String(Object.values(address))
+    ).then((reps) => reps);
   };
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsFormSubmitted(true);
-    const reps = await findReps(String(Object.values(address)));
-    if (!reps) {
-      return 'not a valid address';
-    }
+
     return Requests.register(username, email, password, address)
-      .then(() => {
+      .then((message) => {
+        if (typeof message === 'string') {
+          setErrorMessage(message);
+          throw Error;
+        }
+        console.log('register m', message);
         setIsFormSubmitted(false);
-        setTakenName('');
-        console.log(reps);
+
         toast.success('Registration successful');
         Requests.loginUser({ username: username, password: password })
-          .then((data) => {
+          .then(async (data) => {
             localStorage.clear();
             localStorage.setItem('user', JSON.stringify(data.userInfo));
             localStorage.setItem('token', JSON.stringify(data.token));
+            await setUser(data.userInfo);
+            const userLog = await Requests.getVoteLog(data.token);
+            setVoteLog(userLog);
           })
           .catch((e) => console.error('login error:', e.message));
 
-        navigate('/App', { state: { address } });
+        navigate('/App', { state: { address, username } });
       })
       .catch((error) => {
         console.error('Fetch error:', error.message);
@@ -83,8 +96,7 @@ export const Register = () => {
         city: capitalize(faker.location.city()),
         state: faker.location.state(),
         zipcode: faker.location.zipCode()
-      },
-      vote_log: {}
+      }
     };
   };
 
@@ -99,8 +111,8 @@ export const Register = () => {
           className="btn"
           onClick={(e) => {
             e.preventDefault();
-            const generatedUser = generateUser() as User;
-            setUser(generatedUser);
+            const generatedUser = generateUser();
+            setFrontEndRegistrant(generatedUser as FrontEndRegistrant);
             setConfirm(generatedUser.password);
           }}
         >
@@ -110,33 +122,47 @@ export const Register = () => {
           labelText="Username"
           inputProps={{
             placeholder: 'Boogey',
-            onChange: (e) => setUser({ ...user, username: e.target.value }),
+            onChange: (e) =>
+              setFrontEndRegistrant({
+                ...frontEndRegistrant,
+                username: e.target.value
+              }),
             value: username
           }}
         />
-        {isFormSubmitted &&
-          (takenName === username ? (
-            <ErrorMessage message={existsErrorMessage} show={userNameExists} />
-          ) : null)}
+        {isFormSubmitted && (
+          <ErrorMessage
+            message={errorMessage}
+            show={errorMessage.includes(username)}
+          />
+        )}
         <RegisterInput
           labelText="Email"
           inputProps={{
             placeholder: 'HarrietT@email.com',
-            onChange: (e) => setUser({ ...user, email: e.target.value }),
+            onChange: (e) =>
+              setFrontEndRegistrant({
+                ...frontEndRegistrant,
+                email: e.target.value
+              }),
             value: email
           }}
         />
         {isFormSubmitted && (
           <ErrorMessage
-            message={emailErrorMessage}
-            show={!isEmailValid(email)}
+            message={errorMessage}
+            show={errorMessage.includes('email')}
           />
         )}
         <RegisterInput
           labelText="Password"
           inputProps={{
             placeholder: 'Password',
-            onChange: (e) => setUser({ ...user, password: e.target.value }),
+            onChange: (e) =>
+              setFrontEndRegistrant({
+                ...frontEndRegistrant,
+                password: e.target.value
+              }),
             value: password
           }}
         />
@@ -164,9 +190,12 @@ export const Register = () => {
           inputProps={{
             placeholder: '123 Main St.',
             onChange: (e) =>
-              setUser({
-                ...user,
-                address: { ...user.address, street: e.target.value }
+              setFrontEndRegistrant({
+                ...frontEndRegistrant,
+                address: {
+                  ...frontEndRegistrant.address,
+                  street: e.target.value
+                }
               }),
             value: street
           }}
@@ -177,10 +206,10 @@ export const Register = () => {
           inputProps={{
             placeholder: 'New York',
             onChange: (e) =>
-              setUser({
-                ...user,
+              setFrontEndRegistrant({
+                ...frontEndRegistrant,
                 address: {
-                  ...user.address,
+                  ...frontEndRegistrant.address,
                   city: e.target.value
                 }
               }),
@@ -192,9 +221,12 @@ export const Register = () => {
           inputProps={{
             placeholder: 'NY',
             onChange: (e) =>
-              setUser({
-                ...user,
-                address: { ...user.address, state: e.target.value }
+              setFrontEndRegistrant({
+                ...frontEndRegistrant,
+                address: {
+                  ...frontEndRegistrant.address,
+                  state: e.target.value
+                }
               }),
             value: state
           }}
@@ -204,9 +236,12 @@ export const Register = () => {
           inputProps={{
             placeholder: '12345',
             onChange: (e) =>
-              setUser({
-                ...user,
-                address: { ...user.address, zipcode: e.target.value }
+              setFrontEndRegistrant({
+                ...frontEndRegistrant,
+                address: {
+                  ...frontEndRegistrant.address,
+                  zipcode: e.target.value
+                }
               }),
             value: zipcode
           }}

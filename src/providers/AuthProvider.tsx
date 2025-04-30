@@ -8,20 +8,14 @@ export type AuthContextType = {
 
 const AuthContext = createContext<AuthContextType>({} as AuthContextType);
 
+export const defaultUser: User = {
+  id: '',
+  username: '',
+  email: '',
+  zipcode: ''
+};
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-  const [user, setUser] = useState<User>({
-    id: '',
-    username: '',
-    email: '',
-    password: '',
-    address: {
-      street: '',
-      city: '',
-      state: '',
-      zipcode: ''
-    },
-    vote_log: {}
-  });
+  const [user, setUser] = useState<User>(defaultUser);
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>

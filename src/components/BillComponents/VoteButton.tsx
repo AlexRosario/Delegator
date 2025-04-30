@@ -8,14 +8,7 @@ import { useDisplayBills } from '../../providers/BillProvider';
 export const VoteButton = ({ bill }: { bill: Bill }) => {
   const user = JSON.parse(localStorage.getItem('user') || '{}');
   const userId = String(user.id);
-  const {
-    voteLog,
-    setVoteLog,
-    setVotedOnThisBill,
-    newBills,
-    setNewBills,
-    setVotedBills
-  } = useDisplayBills();
+  const { voteLog, setVoteLog, setVotedOnThisBill } = useDisplayBills();
   const billId = bill.type + bill.number;
   const userHasBillVote =
     Array.isArray(voteLog) &&

@@ -21,14 +21,18 @@ authController.post(
 
     const existing = await prisma.user.findUnique({ where: { email } });
     if (existing) {
-      return res.status(409).json({ message: 'User already exists' });
+      return res
+        .status(409)
+        .json({ message: 'Account with that email already exists in record' });
     }
 
     const existingUsername = await prisma.user.findUnique({
       where: { username }
     });
     if (existingUsername) {
-      return res.status(409).json({ message: 'Username already exists' });
+      return res.status(409).json({
+        message: `Username ${username} already exists. Pick another username`
+      });
     }
 
     const newUser = await prisma.user.create({

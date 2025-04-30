@@ -49,18 +49,20 @@ export const Requests = {
         }
       })
     })
-      .then((response) => {
+      .then(async (response) => {
         if (!response.ok) {
+          const errorBody = await response.json();
+          console.log('err', errorBody, response.status);
           throw new Error(
-            `HTTP Error: ${response.status} ${response.statusText}`
+            errorBody.message || `HTTP Error: ${response.status}`
           );
         }
 
         return response.json();
       })
       .catch((error) => {
-        toast.error('Not a valid zipcode');
-        error.message = 'Not a valid zipcode';
+        toast.error(error.message);
+        return error.message;
       });
   },
   async loginUser(credentials: { username: string; password: string }) {
@@ -124,16 +126,17 @@ export const Requests = {
       console.error('Error posting vote:', error);
     }
   },
-  getVoteLog: async () => {
+  getVoteLog: async (token: string) => {
     try {
+      console.log('JWT being sent:', token);
       const response = await fetch(`http://localhost:3000/votes`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${jwt?.replace(/^"|"$/g, '')}`
+          Authorization: `Bearer ${token?.replace(/^"|"$/g, '')}`
         }
       });
-
+      console.log('response:', response);
       if (response.ok) {
         return await response.json();
       } else {
@@ -290,40 +293,21 @@ export const Requests = {
 
     return response.json();
   },
-  getCongressMembers: async (address: string) => {
-    const apiKey = 'AIzaSyCGKhpbY2SwNMXylL4IkV4TKDr8AwBJKuo';
-    const url = `https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&address=${encodeURIComponent(
-      address
-    )}`;
-    console.log('getCongressMembers');
+  getCongressMember: async (bioID: string) => {
+    const url = `/congressGov/v3/member/${bioID}`;
     try {
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: congressGovHeader
+      });
       if (!response.ok) {
         throw new Error(`Failed to fetch: ${response.statusText}`);
       }
       return await response.json();
     } catch (error) {
       console.error(error);
-      // Handle the error appropriately
     }
   },
-  getCongressMembersBioIds: async (offset: number) => {
-    const apiKey = 'wbWdJxHyM4R2Vo9dCkI5jqdApMidOokgNWmHb8e3';
-    const url = `https://api.congress.gov/v3/member?offset=${offset}&api_key=${apiKey}
-		`;
-
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch: ${response.statusText}`);
-      }
-      return await response.json();
-    } catch (error) {
-      console.error(error);
-      // Handle the error appropriately
-    }
-  },
-
   getCongressMembersDB: (reps: string[]) => {
     const url = `http://localhost:3000/representatives`; // Assuming user has an 'id' property
     return fetch(url, {

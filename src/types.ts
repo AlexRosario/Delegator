@@ -63,14 +63,7 @@ export type User = {
   id: string;
   username: string;
   email: string;
-  password: string;
-  address: {
-    street: string;
-    city: string;
-    state: string;
-    zipcode: string;
-  };
-  vote_log: object;
+  zipcode: string;
 };
 
 export interface Vote {
@@ -80,29 +73,86 @@ export interface Vote {
   date: Date;
 }
 
-export interface CongressMember {
-  bioguideId: string;
-  name: string;
-  party: string;
-  partyName: string;
-  state: string;
-  phones: string[];
-  urls: string[];
-  photoUrl: string;
+export type AddressInformation = {
+  city: string;
   district: string;
+  officeAddress: string;
+  phoneNumber: string;
+  zipCode: number;
+};
+
+export type Depiction = {
+  attribution: string;
+  imageUrl: string;
+};
+
+export type LegislationInfo = {
+  count: number;
   url: string;
-  address: string[];
-  terms: {
-    item: string[];
-  };
-  updateDate: string;
-  channels: string[];
-  depiction: string[];
-  votes_with_party_pct?: number;
-  office_title: string;
-  office: string;
-  title: { name: string };
-}
+};
+
+export type PartyHistory = {
+  party: string;
+  startDate?: string;
+  endDate?: string;
+};
+
+export type Term = {
+  congress: string;
+  startDate: string;
+  endDate: string;
+  state: string;
+  district?: string;
+};
+
+export type FieldOffice = {
+  phone: string;
+  city: string;
+};
+
+export type CongressMember = {
+  addressInformation: AddressInformation;
+  area: 'US House' | 'US Senate';
+  bioguideId: string;
+  birthYear: string;
+  cosponsoredLegislation: LegislationInfo;
+  currentMember: boolean;
+  depiction: Depiction;
+  directOrderName: string;
+  district: string;
+  field_offices: FieldOffice[];
+  firstName: string;
+  honorificName: string;
+  id: string;
+  invertedOrderName: string;
+  lastName: string;
+  name: string;
+  officialWebsiteUrl: string;
+  party: string;
+  partyHistory: PartyHistory[];
+  phone: string;
+  photoURL: string;
+  reason: string;
+  sponsoredLegislation: LegislationInfo;
+  state: string;
+  terms: Term[];
+  updateDate: string; // ISO date string
+  url: string;
+};
+
+export type Representative5Calls = {
+  id: string;
+  name: string;
+  phone: string;
+  url: string;
+  photoURL: string;
+  party: string;
+  state: string;
+  district?: string; // optional, since senators don't have it
+  reason: string;
+  area: 'US House' | 'US Senate';
+  field_offices: FieldOffice[];
+};
 
 export interface RelevantVote {
   chamber: string;

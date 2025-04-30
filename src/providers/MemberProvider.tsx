@@ -6,7 +6,7 @@ import {
   useRef,
   useState
 } from 'react';
-import { CongressMember } from '../types';
+import { CongressMember, Representative5Calls } from '../types';
 import { Requests } from '../api';
 import { useLocation } from 'react-router-dom';
 
@@ -17,12 +17,6 @@ type MemberContextType = {
   setChamber: (chamber: string) => void;
   representatives: CongressMember[];
 };
-type GoogleDataType = {
-  name: string;
-  offices: { officialIndices: number[]; name: string }[];
-  officials: CongressMember[];
-};
-type CongressDataType = CongressMember[];
 
 export const MemberContext = createContext<MemberContextType>(
   {} as MemberContextType
@@ -37,95 +31,49 @@ export const MemberProvider = ({ children }: { children: ReactNode }) => {
   const [chamber, setChamber] = useState('house');
   const location = useLocation();
 
+  const findReps = async (addressString: string) => {
+    return await Requests.getCongressMembersFromFive(addressString).then(
+      (reps) => reps
+    );
+  };
   const getRepInfoFromMultipleAPIs = async (address: {
     street: string;
     city: string;
     state: string;
     zipcode: string;
   }) => {
-    const { street, city, state, zipcode } = address;
-
     try {
-      const congressDataGoogle: GoogleDataType =
-        await Requests.getCongressMembers(
-          `${street} ${city} ${state} ${zipcode}`
-        );
-
-      const fetchCongressMembers = async (offset: number) => {
-        const response = await Requests.getCongressMembersBioIds(offset);
-        return response.members;
+      const reps = await findReps(String(Object.values(address)));
+      const fetchCongressMember = async (bioID: string) => {
+        return await Requests.getCongressMember(bioID);
       };
-
-      const offsets = Array.from(
-        { length: Math.ceil(555 / 20) },
-        (_, i) => i * 20
-      );
 
       const congressDataResults = await Promise.all(
-        offsets.map(fetchCongressMembers)
+        reps.representatives.map(async (member: Representative5Calls) => {
+          return await fetchCongressMember(member.id);
+        })
       );
 
-      const congressDataCongressGov: CongressDataType =
-        congressDataResults.flat();
-
-      return {
-        congressDataGoogle,
-        congressDataCongressGov
-      };
+      return congressDataResults.map((obj) => {
+        const rep = reps.representatives.find(
+          (r: Representative5Calls) => r.id == obj.member.bioguideId
+        );
+        return { ...obj.member, ...rep };
+      });
     } catch (error) {
       console.error('Error fetching member bios:', error);
       throw error;
     }
   };
 
-  const congressGovMemberDetails = (
-    member: CongressMember,
-    membersCongressGov: CongressDataType
-  ) => {
-    const memberName = member.name;
-
-    const congressObject = membersCongressGov.find((member) => {
-      const [lastName, firstname] = member.name.split(', ');
-      if (memberName == `${firstname} ${lastName}`) {
-        return member;
-      }
-    });
-
-    return {
-      ...congressObject,
-      ...member
-    };
-  };
-
   const setStateVariables = (reps: CongressMember[]) => {
     setHouseReps(
-      reps.filter((member: CongressMember) =>
-        member.urls[0].includes('.house.gov')
-      )
+      reps.filter((member: CongressMember) => member.area == 'US House')
     );
     setSenators(
-      reps.filter((member: CongressMember) =>
-        member.urls[0].includes('.senate.gov')
-      )
+      reps.filter((member: CongressMember) => member.area == 'US Senate')
     );
   };
-
-  /*const addNewRepresentativesToUserDB = async (reps: CongressMember[]) => {
-    try {
-      const existingRepresentatives = await Requests.checkExistingReps();
-      const existingIds = new Set(
-        existingRepresentatives.map((rep: CongressMember) => rep.name)
-      );
-      console.log('ei:', existingIds);
-      for (const rep of reps) {
-        if (!existingIds.has(rep.name)) {
-          const postedRep = await Requests.postNewReps(rep);
-        }
-      }
-    } catch (error) {
-      console.error('Error adding new representatives to DB:', error);
-    }
-  };*/
 
   useEffect(() => {
     const address = location.state?.address;
@@ -134,29 +82,8 @@ export const MemberProvider = ({ children }: { children: ReactNode }) => {
       getRepInfoFromMultipleAPIs(address)
         .then((data) => {
           console.log('Data received:', data);
-
-          const filteredRepresentatives: CongressMember[] = [];
-
-          data?.congressDataGoogle.officials.forEach((member, i) => {
-            const office_title = data.congressDataGoogle.offices?.find(
-              (office) => office.officialIndices.includes(i)
-            )?.name;
-
-            const mergedMember = {
-              ...congressGovMemberDetails(member, data.congressDataCongressGov),
-              ...{ office_title: office_title }
-            };
-
-            filteredRepresentatives.push({
-              ...(mergedMember as CongressMember)
-            });
-          });
-
-          representatives.current = filteredRepresentatives;
-
-          setStateVariables(filteredRepresentatives);
-
-          //  addNewRepresentativesToUserDB(filteredRepresentatives);
+          representatives.current = data;
+          setStateVariables(data);
         })
         .catch((error) => {
           console.error('Fetch error:', error.message);

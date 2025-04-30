@@ -1,26 +1,7 @@
-interface CongressMember {
-  short_title: string;
-  id: string;
-  office_title: string;
-  office: string;
-  bioguideId: string;
-  title: { name: string };
-  photoUrl: string;
-  name: string;
-  party: string;
-  state: string;
-  district: string;
-  phones: string[];
-  urls: string[];
-}
+import { CongressMember } from '../../types';
 
 export const RepCard = ({ member }: { member: CongressMember }) => {
-  const title =
-    typeof member.title === 'string'
-      ? member.title
-      : member.office_title
-        ? member.office_title
-        : 'missing title';
+  const title = member.area == 'US House' ? 'Representative' : 'Senator';
 
   /*const totalVotes = Object.values(user.vote_log).reduce(
 		(
@@ -55,7 +36,7 @@ export const RepCard = ({ member }: { member: CongressMember }) => {
           <h3 className="font-face-Barlow">{member.name.toUpperCase()}</h3>
           <h5>{title}</h5>
         </div>
-        {title.includes('Senator') || title === 'Representative' ? (
+        {title == 'Senator' || title === 'Representative' ? (
           <div className="rep-score">
             <div>Score: </div>
           </div>
@@ -63,7 +44,11 @@ export const RepCard = ({ member }: { member: CongressMember }) => {
       </div>
 
       <div className="rep-card-right">
-        <img src={`${member?.photoUrl}`} alt="" className="rep-photo" />
+        <img
+          src={`${member?.depiction.imageUrl}`}
+          alt=""
+          className="rep-photo"
+        />
         <div className="rep-info">
           {(member.bioguideId || member.id) && (
             <div>Bioguide-ID: {member.bioguideId || member.id} </div>
@@ -72,28 +57,21 @@ export const RepCard = ({ member }: { member: CongressMember }) => {
             <span className="rep-district">
               {member.state} District {member.district}
             </span>
-          ) : member.short_title === 'Sen.' ? (
+          ) : title === 'Senator' ? (
             <span>{member.state} Senator</span>
           ) : null}
 
           <div>{member.party}</div>
-          <div>Phone: {member.phones}</div>
+          <div>Phone: {member.phone}</div>
           <div>
             <span>
-              Links:{' '}
-              {member.urls.map((url, index) => {
-                return (
-                  <span key={index} className="rep-links">
-                    <a
-                      href={`${member.urls[index]}}`}
-                      className="rep-links-link"
-                    >
-                      {url}
-                    </a>
-                    <br />
-                  </span>
-                );
-              })}
+              <span className="rep-links">
+                Link:
+                <a href={`${member.url}}`} className="rep-links-link">
+                  {member.url}
+                </a>
+                <br />
+              </span>
             </span>
           </div>
         </div>

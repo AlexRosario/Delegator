@@ -2,23 +2,25 @@ import { faAngleLeft, faHamburger } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChair, faLandmarkDome } from '@fortawesome/free-solid-svg-icons';
 import { useScreenInfo } from '../providers/ScreenProvider';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useAuthInfo } from '../providers/AuthProvider';
+import { useCallback, useEffect, useState, useRef } from 'react';
+import { Link, useHref, useLocation } from 'react-router-dom';
+import { defaultUser } from '../providers/AuthProvider';
 
 export const Header = () => {
-  const userString = localStorage.getItem('user');
-  let user = userString ? JSON.parse(userString) : null;
+  const { screenSelect, setScreenSelect } = useScreenInfo();
+  const { user, setUser } = useAuthInfo();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const logOut = () => {
+    setUser(defaultUser);
     localStorage.clear();
     window.location.href = '/';
   };
-  const [menuOpen, setMenuOpen] = useState(false);
-  const { screenSelect, setScreenSelect } = useScreenInfo();
 
   return (
     <>
-      {' '}
+      {'E Pluribus Unum'}
       <div className="top-nav">
         <img
           src="src/assets/main-logo.png"
@@ -27,39 +29,39 @@ export const Header = () => {
         />
 
         <section className="top-nav-user">
-          {user && !menuOpen && (
-            <FontAwesomeIcon
-              icon={faHamburger}
-              className="menu-burger"
-              onClick={() => {
-                console.log(userString);
+          {user.username ? (
+            !menuOpen ? (
+              <FontAwesomeIcon
+                icon={faHamburger}
+                className="menu-burger"
+                onClick={() => {
+                  setMenuOpen(!menuOpen);
+                }}
+              />
+            ) : (
+              <div className="settings-header">
+                <div>
+                  <FontAwesomeIcon
+                    icon={faAngleLeft}
+                    onClick={() => {
+                      setMenuOpen(!menuOpen);
+                    }}
+                  />
+                </div>
 
-                setMenuOpen(!menuOpen);
-              }}
-            />
-          )}
-          {user && menuOpen && (
-            <div className="settings-header">
-              <div>
-                <FontAwesomeIcon
-                  icon={faAngleLeft}
-                  onClick={() => {
-                    setMenuOpen(!menuOpen);
-                  }}
-                />
+                <div className="profile">
+                  <b>Settings</b>
+                  <h4>{user?.username}</h4>
+                  <h5>Zipcode: {user?.zipcode}</h5>
+                  <h6 onClick={logOut} className="log-out">
+                    Log Out
+                  </h6>
+                </div>
               </div>
-
-              <div className="profile">
-                <b>Settings</b>
-                <h4>{user?.username}</h4>
-                <h5>Zipcode: {user?.zipcode}</h5>
-                <h6 onClick={logOut} className="log-out">
-                  Log Out
-                </h6>
-              </div>
-            </div>
+            )
+          ) : (
+            <Link to="/Home">Sign in</Link>
           )}
-          {!user && <Link to="/Home">Sign in</Link>}
         </section>
       </div>
       <div className="bottom-nav">

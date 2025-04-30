@@ -93,15 +93,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   );
   let firstRender: boolean = allBills.length == 0 ? true : false;
 
-  const fetchVoteLog = async () => {
-    try {
-      const data = await Requests.getVoteLog();
-      return data;
-    } catch (error) {
-      console.error('Error fetching vote log:', error);
-    }
-  };
-
   const fetchUserBills = async (voteLog: Vote[]) => {
     try {
       const billPromises = voteLog.map(async (vote) => {
@@ -166,13 +157,6 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
       setOffset((prevOffset) => prevOffset + 20);
     }
   }, [congress, offset]);
-
-  useEffect(() => {
-    if (user.username)
-      fetchVoteLog().then((votes) => {
-        setVoteLog(votes);
-      });
-  }, [user]);
 
   useEffect(() => {
     setNewBills(

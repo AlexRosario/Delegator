@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
 import { Requests } from '../api';
 import toast from 'react-hot-toast';
-import { User } from '../types';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuthInfo } from '../providers/AuthProvider';
-import { encryptPassword } from '../utils/auth-utils';
+import { useDisplayBills } from '../providers/BillProvider';
+import { Vote } from '@prisma/client';
 
 export const SignIn = () => {
   const [name, setName] = useState('');
   const [pWord, setPWord] = useState('');
   const { setUser } = useAuthInfo();
+  const { setVoteLog } = useDisplayBills();
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -27,9 +29,9 @@ export const SignIn = () => {
     }
   }, [location.state]);
 
-  const handleSignIn = () => {
-    Requests.loginUser({ username: name, password: pWord })
-      .then((data) => {
+  const handleSignIn = async () => {
+    await Requests.loginUser({ username: name, password: pWord })
+      .then(async (data) => {
         if (!data) {
           throw new Error('User not found or incorrect password');
         }
@@ -39,8 +41,9 @@ export const SignIn = () => {
         localStorage.setItem('user', JSON.stringify(data.userInfo));
         localStorage.setItem('token', data.token);
 
-        setUser(data.userInfo);
-
+        await setUser(data.userInfo);
+        const userLog = await Requests.getVoteLog(data.token);
+        setVoteLog(userLog);
         navigate('/App', {
           state: {
             ...data

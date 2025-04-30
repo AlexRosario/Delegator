@@ -79,10 +79,10 @@ voteController.post(
         }
       });
 
-      console.log('✅ Vote recorded:', newVote);
+      console.log('Vote recorded:', newVote);
       res.status(201).json(newVote);
     } catch (error) {
-      console.error('❌ Error posting vote:', error);
+      console.error('Error posting vote:', error);
       res.status(500).json({ message: 'Internal server error' });
     }
   }
