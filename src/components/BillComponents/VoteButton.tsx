@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
 import { Requests } from '../../api';
-import { Bill, Vote } from '../../types';
+import { Bill, Vote, RecordedVote } from '../../types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import { useDisplayBills } from '../../providers/BillProvider';
+import { User } from '@prisma/client';
+import { useAuthInfo } from '../../providers/AuthProvider';
 
 export const VoteButton = ({ bill }: { bill: Bill }) => {
-  const user = JSON.parse(localStorage.getItem('user') || '{}');
-  const userId = String(user.id);
+  const { user } = useAuthInfo();
+  const { id } = user;
   const { voteLog, setVoteLog, setVotedOnThisBill } = useDisplayBills();
   const billId = bill.type + bill.number;
   const userHasBillVote =
     Array.isArray(voteLog) &&
-    voteLog.some((vote) => vote.userId === userId && vote.billId === billId);
+    voteLog.some((vote) => vote.userId === id && vote.billId === billId);
   const recordedVoteOnBill = userHasBillVote
-    ? voteLog.find(
-        (vote: Vote) => vote.userId === userId && vote.billId === billId
-      )
+    ? voteLog.find((vote: Vote) => vote.userId === id && vote.billId === billId)
     : undefined;
 
   const userVoteDate = recordedVoteOnBill
@@ -42,7 +42,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
       if (Array.isArray(voteLog)) {
         if (!userHasBillVote) {
           await Requests.addVote(billId, vote, date);
-          setVoteLog([...voteLog, { userId, billId: billId, vote, date }]);
+          setVoteLog([...voteLog, { userId: id, billId: billId, vote, date }]);
 
           setVotedOnThisBill(true);
         }
@@ -54,8 +54,30 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
     }
   };
 
-  const handleVote = (vote: 'Yes' | 'No') => {
+  const handleVote = async (vote: 'Yes' | 'No') => {
     if (!userHasBillVote) {
+      const rollCallActions = bill.actions.filter(
+        (action) => action.recordedVotes?.length > 0
+      );
+      if (rollCallActions.length > 0) {
+        console.log('Roll call found:', rollCallActions, bill);
+        const houseAction =
+          (await rollCallActions.find((action) =>
+            /house/i.test(action.sourceSystem.name)
+          )) || null;
+        const senateAction =
+          (await rollCallActions.find((action) =>
+            /senate/i.test(action.sourceSystem.name)
+          )) || null;
+        if (houseAction) {
+          console.log('house:', houseAction.recordedVotes[0].url);
+        }
+        if (senateAction) {
+          console.log('senate', senateAction.recordedVotes[0].url);
+        }
+      } else {
+        console.log('No roll call vote recorded.');
+      }
       recordMembersVotes(vote);
 
       setVotedOnThisBill(false);

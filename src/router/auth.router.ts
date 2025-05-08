@@ -49,7 +49,6 @@ authController.post(
     if (!newUser) {
       return res.status(500).json({ message: 'User creation failed' });
     }
-    console.log('User created:', newUser);
     return res.status(201).json({ message: 'User created successfully' });
   }
 );
@@ -64,12 +63,10 @@ authController.post(
   '/auth/login',
   validateRequest(loginSchema),
   async (req, res) => {
-    console.log('Login request received');
     const { username, password } = req.body;
     const user = await prisma.user.findUnique({
       where: { username }
     });
-    console.log('User found:', user);
     if (!user) {
       return res.status(404).json({ message: 'User not found ' });
     }
@@ -80,11 +77,17 @@ authController.post(
 
     const userInfo = createUnsecuredInfo(user);
     const token = generateAccessToken(user);
-    console.log('Access token generated:', token);
-    console.log('User info:', userInfo);
+    const address = {
+      street: user.street,
+      city: user.city,
+      state: user.state,
+      zipcode: user.zipcode
+    };
+
     return res.status(200).json({
       token,
-      userInfo
+      userInfo,
+      address
     });
   }
 );

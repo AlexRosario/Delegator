@@ -110,7 +110,7 @@ export const BillCollection = () => {
                   }}
                 />
                 <a
-                  href="https://www.congress.gov/advanced-search/legislative-subject-terms?congresses%5B%5D=118"
+                  href="https://www.congress.gov/advanced-search/legislative-subject-terms?congresses%5B%5D=119"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

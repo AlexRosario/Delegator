@@ -44,8 +44,11 @@ export const Register = () => {
   const { username, email, password, address } = frontEndRegistrant;
   const { street, city, state, zipcode } = address;
   const [confirm, setConfirm] = useState('');
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>('');
+  const [isAddressValid, setIsAddressValid] = useState<boolean>(true);
+  const [lockButton, setLockButton] = useState<boolean>(false);
+  const addressErrorMessage = 'This address does not exist.';
   const zipcodeErrorMessage = 'Zip code is Invalid.';
   const navigate = useNavigate();
 
@@ -57,33 +60,57 @@ export const Register = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsFormSubmitted(true);
+    setIsAddressValid(true);
+    setErrorMessage('');
 
-    return Requests.register(username, email, password, address)
-      .then((message) => {
-        if (typeof message === 'string') {
-          setErrorMessage(message);
-          throw Error;
+    const addressString = `${address.street}, ${address.city}, ${address.state} ${address.zipcode}`;
+    const isValid = await Requests.isValidAddress(addressString);
+
+    if (!isValid) {
+      setIsAddressValid(false);
+      toast.error('Invalid address. Please try again.');
+      setIsFormSubmitted(false);
+      return;
+    }
+
+    try {
+      const message = await Requests.register(
+        username,
+        email,
+        password,
+        address
+      );
+
+      if (typeof message === 'string') {
+        setErrorMessage(message);
+        if (!message.includes('400')) {
+          toast.error(message);
+        } else {
+          toast.error('Password must be at least 8 characters long');
         }
-        console.log('register m', message);
         setIsFormSubmitted(false);
 
-        toast.success('Registration successful');
-        Requests.loginUser({ username: username, password: password })
-          .then(async (data) => {
-            localStorage.clear();
-            localStorage.setItem('user', JSON.stringify(data.userInfo));
-            localStorage.setItem('token', JSON.stringify(data.token));
-            await setUser(data.userInfo);
-            const userLog = await Requests.getVoteLog(data.token);
-            setVoteLog(userLog);
-          })
-          .catch((e) => console.error('login error:', e.message));
+        return;
+      }
 
-        navigate('/App', { state: { address, username } });
-      })
-      .catch((error) => {
-        console.error('Fetch error:', error.message);
-      });
+      toast.success('Registration successful');
+
+      const data = await Requests.loginUser({ username, password });
+      localStorage.clear();
+      localStorage.setItem('user', JSON.stringify(data.userInfo));
+      localStorage.setItem('token', JSON.stringify(data.token));
+
+      await setUser(data.userInfo);
+
+      const userLog = await Requests.getVoteLog(data.token);
+      localStorage.setItem('userLog', JSON.stringify(userLog));
+      console.log('da', data.address);
+
+      navigate('/', { state: data.address });
+    } catch (error) {
+      console.error('Fetch error:', error);
+      setIsFormSubmitted(false);
+    }
   };
   const generateUser = () => {
     const capitalize = _.capitalize;
@@ -130,12 +157,12 @@ export const Register = () => {
             value: username
           }}
         />
-        {isFormSubmitted && (
-          <ErrorMessage
-            message={errorMessage}
-            show={errorMessage.includes(username)}
-          />
-        )}
+
+        <ErrorMessage
+          message={errorMessage}
+          show={errorMessage.includes(username)}
+        />
+
         <RegisterInput
           labelText="Email"
           inputProps={{
@@ -148,12 +175,12 @@ export const Register = () => {
             value: email
           }}
         />
-        {isFormSubmitted && (
-          <ErrorMessage
-            message={errorMessage}
-            show={errorMessage.includes('email')}
-          />
-        )}
+
+        <ErrorMessage
+          message={errorMessage}
+          show={errorMessage.includes('email')}
+        />
+
         <RegisterInput
           labelText="Password"
           inputProps={{
@@ -171,17 +198,21 @@ export const Register = () => {
           inputProps={{
             placeholder: 'Confirm Password',
             onChange: (e) => {
+              if (e.target.value !== password) {
+                setLockButton(true);
+              }
               setConfirm(e.target.value);
+              setLockButton(false);
             },
             value: confirm
           }}
         />
-        {isFormSubmitted && (
-          <ErrorMessage
-            message={'Passwords do not match'}
-            show={!!password && password !== confirm}
-          />
-        )}
+
+        <ErrorMessage
+          message={'Passwords do not match'}
+          show={!!password && password !== confirm}
+        />
+
         <div className="address-prompt">
           Give us your address and we'll find your representatives for you.
         </div>
@@ -246,13 +277,12 @@ export const Register = () => {
             value: zipcode
           }}
         />
-        {isFormSubmitted && (
-          <ErrorMessage
-            message={zipcodeErrorMessage}
-            show={!isZipcodeValid(zipcode)}
-          />
-        )}
-        <button type="submit">Submit</button>
+
+        <ErrorMessage message={addressErrorMessage} show={!isAddressValid} />
+
+        <button type="submit" disabled={isFormSubmitted || lockButton}>
+          Submit
+        </button>
       </form>
     </div>
   );

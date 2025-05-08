@@ -1,4 +1,10 @@
-import { useContext, ReactNode, createContext, useState } from 'react';
+import {
+  useContext,
+  ReactNode,
+  createContext,
+  useState,
+  useEffect
+} from 'react';
 import { User } from '../types';
 
 export type AuthContextType = {
@@ -14,8 +20,20 @@ export const defaultUser: User = {
   email: '',
   zipcode: ''
 };
+
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User>(defaultUser);
+
+  useEffect(() => {
+    const userString = localStorage.getItem('user');
+    if (userString) {
+      try {
+        setUser(JSON.parse(userString));
+      } catch (e) {
+        console.error('Invalid user JSON in localStorage', e);
+      }
+    }
+  }, []);
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>
@@ -23,6 +41,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     </AuthContext.Provider>
   );
 };
+
 export const useAuthInfo = () => {
   return useContext(AuthContext);
 };

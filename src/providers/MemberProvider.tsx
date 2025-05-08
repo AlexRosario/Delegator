@@ -22,10 +22,14 @@ export const MemberContext = createContext<MemberContextType>(
   {} as MemberContextType
 );
 
-export const MemberProvider = ({ children }: { children: ReactNode }) => {
+export const MemberProvider = ({
+  children,
+  address
+}: {
+  children: ReactNode;
+  address: any;
+}) => {
   const representatives = useRef<CongressMember[]>([] as CongressMember[]);
-  const userString = localStorage.getItem('user');
-  const user = userString ? JSON.parse(userString) : {};
   const [senators, setSenators] = useState<CongressMember[]>([]);
   const [houseReps, setHouseReps] = useState<CongressMember[]>([]);
   const [chamber, setChamber] = useState('house');
@@ -76,12 +80,11 @@ export const MemberProvider = ({ children }: { children: ReactNode }) => {
   };
 
   useEffect(() => {
-    const address = location.state?.address;
+    console.log('address', address);
 
     if (address)
       getRepInfoFromMultipleAPIs(address)
         .then((data) => {
-          console.log('Data received:', data);
           representatives.current = data;
           setStateVariables(data);
         })
@@ -91,7 +94,7 @@ export const MemberProvider = ({ children }: { children: ReactNode }) => {
             console.error('Response text:', error.response.statusText);
           }
         });
-  }, [location.state]);
+  }, []);
 
   return (
     <MemberContext.Provider

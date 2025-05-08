@@ -11,11 +11,12 @@ import { useLocation } from 'react-router-dom';
 function App() {
   const { screenSelect } = useScreenInfo();
   const location = useLocation();
+  const address = location.state;
   return (
     <div className="main">
       <Header />
       <BillProvider>
-        <MemberProvider>
+        <MemberProvider address={address}>
           {screenSelect === 'bills' ? <BillSection /> : <RepSection />}
         </MemberProvider>
       </BillProvider>

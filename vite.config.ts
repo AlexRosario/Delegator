@@ -48,6 +48,15 @@ export default defineConfig({
             }
           });
         }
+      },
+      '/positionStack': {
+        target: 'http://api.positionstack.com/v1',
+        changeOrigin: true,
+        rewrite: (path) => {
+          const key = process.env.POSITIONSTACK_API_KEY;
+          const rewritten = path.replace(/^\/positionStack/, '');
+          return `${rewritten}${rewritten.includes('?') ? '&' : '?'}access_key=${key}`;
+        }
       }
     }
   }

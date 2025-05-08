@@ -4,7 +4,6 @@ import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuthInfo } from '../providers/AuthProvider';
 import { useDisplayBills } from '../providers/BillProvider';
-import { Vote } from '@prisma/client';
 
 export const SignIn = () => {
   const [name, setName] = useState('');
@@ -35,19 +34,16 @@ export const SignIn = () => {
         if (!data) {
           throw new Error('User not found or incorrect password');
         }
-        console.log('signin', data);
         localStorage.clear();
-
         localStorage.setItem('user', JSON.stringify(data.userInfo));
         localStorage.setItem('token', data.token);
 
         await setUser(data.userInfo);
         const userLog = await Requests.getVoteLog(data.token);
-        setVoteLog(userLog);
-        navigate('/App', {
-          state: {
-            ...data
-          }
+        localStorage.setItem('userLog', JSON.stringify(userLog));
+        console.log('da', data.address);
+        navigate('/', {
+          state: data.address
         });
       })
       .catch((err) => {

@@ -16,7 +16,7 @@ export const RepSection = () => {
 
   return (
     <section className="rep-container">
-      <h2>118th Congress</h2>
+      <h2>119th Congress</h2>
 
       <div className="rep-section">
         <div className="repChamber" key={'repChamber'}>
@@ -48,7 +48,6 @@ export const RepSection = () => {
               key={'congress'}
               className={`selector ${chamber === 'congress' ? 'active' : ''}`}
               onClick={() => {
-                console.log('members:', members);
                 setChamber('congress');
               }}
             >

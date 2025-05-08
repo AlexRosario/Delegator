@@ -1,6 +1,18 @@
-interface Actions {
-  count: number;
+export interface RecordedVote {
+  chamber: string;
+  congress: number;
+  date: string;
+  rollNumber: number;
+  sessionNumber: number;
   url: string;
+}
+interface Actions {
+  actionCode: string;
+  actionDate: string;
+  sourceSystem: { code: number; name: string };
+  text: string;
+  type: string;
+  recordedVotes: RecordedVote[];
 }
 
 interface Committees {
@@ -38,7 +50,7 @@ interface Titles {
 
 export interface Bill {
   subjects: any;
-  actions: Actions;
+  actions: Actions[];
   committees: Committees;
   congress: number;
   cosponsors: Cosponsors;
@@ -59,6 +71,17 @@ export interface Bill {
     name: string;
   };
 }
+export type FrontEndRegistrant = {
+  username: string;
+  email: string;
+  password: string;
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    zipcode: string;
+  };
+};
 export type User = {
   id: string;
   username: string;

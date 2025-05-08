@@ -16,8 +16,10 @@ export const BillCard = ({
 }) => {
   const { congress } = useDisplayBills();
   const [billLinks, setBillLinks] = useState<{ [key: string]: string }>({});
+  const [noLink, setNoLink] = useState<boolean>(false);
   const userString = localStorage.getItem('user');
   const user = userString ? JSON.parse(userString) : null;
+
   const getMoreInfo = async (
     congress: string,
     billType: string,
@@ -33,12 +35,14 @@ export const BillCard = ({
 
       if (data.textVersions.length > 0) {
         const url = data.textVersions[0].formats[0].url;
+        console.log(data, url);
         setBillLinks((prevLinks) => ({
           ...prevLinks,
           [billType + billNumber]: url
         }));
       } else {
         console.error('No text versions available');
+        setNoLink(true);
       }
     } catch (error) {
       console.error('Error fetching bill summary:', error);
@@ -60,7 +64,7 @@ export const BillCard = ({
             getMoreInfo(congress, bill.type, bill.number);
           }}
         >
-          Read Full Text
+          {!noLink ? 'Read Full Text' : 'No Expanded Text'}
         </b>
       ) : (
         <a

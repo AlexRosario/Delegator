@@ -10,7 +10,6 @@ import {
 import { Requests } from '../api';
 import { Bill, Vote } from '../types';
 import DOMPurify from 'dompurify';
-import { useAuthInfo } from './AuthProvider';
 import { searchForBill } from '../api';
 
 type TBillProvider = {
@@ -44,7 +43,7 @@ export const BillContext = createContext<TBillProvider>({
   setBillSubject: () => {},
   offset: 0,
   setOffset: () => {},
-  congress: '118',
+  congress: '119',
   filterPassedBills: false,
   setFilterPassedBills: () => {},
   filteredBills: [],
@@ -64,8 +63,9 @@ export const BillContext = createContext<TBillProvider>({
 });
 
 export const BillProvider = ({ children }: { children: ReactNode }) => {
-  const { user } = useAuthInfo();
-  const [voteLog, setVoteLog] = useState<Vote[]>([]);
+  const localLogString = localStorage.getItem('userLog');
+  const localLog = localLogString ? JSON.parse(localLogString) : [];
+  const [voteLog, setVoteLog] = useState<Vote[]>(localLog);
   const [votedOnThisBill, setVotedOnThisBill] = useState(false);
   const [allBills, setAllBills] = useState<Bill[]>([]);
   const [newBills, setNewBills] = useState<Bill[]>([]);
@@ -76,16 +76,12 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [billSubject, setBillSubject] = useState<string>('');
   const [offset, setOffset] = useState(0);
   const [filterPassedBills, setFilterPassedBills] = useState(false);
-  const [congress] = useState('118');
+  const [congress] = useState('119');
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
   const hasFetchedRef = useRef(false);
   const billsToDisplay =
-    votedBills.length > 0
-      ? activeBillTab === 'discover-bills'
-        ? newBills
-        : votedBills
-      : allBills;
+    activeBillTab === 'discover-bills' ? newBills : votedBills;
   const filteredBills = billsToDisplay.filter((bill) =>
     filterPassedBills
       ? !bill.latestAction.text.includes('Became Public Law No:')
@@ -103,7 +99,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
       });
 
       const bills = await Promise.all(billPromises);
-      return bills.filter((bill) => bill !== null); // filter out failed ones
+      return bills?.filter((bill) => bill !== null);
     } catch (error) {
       console.error('Error fetching bill record:', error);
     }
@@ -133,7 +129,12 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
           bill.number,
           'subjects'
         );
-
+        const actionsData = await Requests.getBillDetail(
+          congress,
+          bill.type.toLowerCase(),
+          bill.number,
+          'actions'
+        );
         return {
           ...bill,
           ...fullBillData.bill,
@@ -144,7 +145,8 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
                     .text
                 )
               : 'No Summary Available',
-          subjects: subjectsData.subjects
+          subjects: subjectsData.subjects,
+          actions: actionsData.actions
         };
       });
 
@@ -167,27 +169,33 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
           )
       )
     );
-    if (voteLog) {
-      fetchUserBills(
-        firstRender ? voteLog : [voteLog[voteLog.length - 1]]
-      ).then(async (bills) => {
+    if (firstRender || votedOnThisBill) {
+      const log = firstRender ? voteLog : [voteLog[voteLog.length - 1]];
+      fetchUserBills(log).then((bills) => {
         if (bills) {
-          const resolvedBills = await Promise.all(bills);
-          setVotedBills((prevbills) => [...prevbills, ...resolvedBills]);
+          setVotedBills((prevBills) => {
+            const existingIds = new Set(
+              prevBills.map((bill) => bill.type + bill.number)
+            );
+            const filteredNewBills = bills.filter(
+              (bill) => !existingIds.has(bill.type + bill.number)
+            );
+            return [...prevBills, ...filteredNewBills];
+          });
+          localStorage.setItem('userLog', JSON.stringify(voteLog));
         }
       });
     }
-    console.log('vbeels:', votedBills, 'nbeels', newBills);
-
     prevIndexRef.current = currentIndex;
-  }, [allBills, votedOnThisBill]);
+  }, [allBills, voteLog]);
 
   useEffect(() => {
     const isScrollingForward = currentIndex > prevIndexRef.current;
     const isNearEnd = filteredBills.length - currentIndex <= 20;
-
     if (
-      ((isScrollingForward && isNearEnd) || firstRender) &&
+      ((isScrollingForward && isNearEnd) ||
+        firstRender ||
+        newBills.length <= 15) &&
       !hasFetchedRef.current
     ) {
       hasFetchedRef.current = true;

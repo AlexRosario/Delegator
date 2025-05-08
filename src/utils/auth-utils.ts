@@ -10,7 +10,7 @@ const prisma = new PrismaClient();
 
 export const createUnsecuredInfo = (user: User) => {
   return {
-    userId: user.id,
+    id: user.id,
     username: user.username,
     zipcode: user.zipcode
   };
@@ -21,7 +21,9 @@ export const generateAccessToken = (user: {
   username: string;
   zipcode: string;
 }) => {
-  return jwt.sign(user, process.env.JWT_SECRET as string /*not passwordhash */);
+  return jwt.sign(user, process.env.JWT_SECRET as string, {
+    expiresIn: '1d'
+  });
 };
 
 export const getDataFromToken = (token?: string) => {
@@ -48,7 +50,6 @@ export const authenticate = async (
   const token = req.headers.authorization?.split(' ')[1] || '';
   const data = getDataFromToken(token) as JwtPayload;
 
-  console.log('Token data:', data);
   if (!data) {
     return res.status(401).json({ message: 'Invalid Token' });
   }

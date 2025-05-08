@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChair, faLandmarkDome } from '@fortawesome/free-solid-svg-icons';
 import { useScreenInfo } from '../providers/ScreenProvider';
 import { useAuthInfo } from '../providers/AuthProvider';
-import { useCallback, useEffect, useState, useRef } from 'react';
-import { Link, useHref, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { defaultUser } from '../providers/AuthProvider';
 
 export const Header = () => {

@@ -1,6 +1,6 @@
-import toast from 'react-hot-toast';
-import { Bill, User, Vote, CongressMember } from './types';
+import { Bill, CongressMember } from './types';
 import DOMPurify from 'dompurify';
+import { XMLParser } from 'fast-xml-parser';
 
 export const googleCivicHeader = new Headers();
 googleCivicHeader.append('Content-Type', 'application/json');
@@ -14,12 +14,6 @@ export const congressGovHeader = new Headers({
   'X-API-Key': import.meta.env.VITE_API_KEY
 });
 
-const fiveCallsHeader = new Headers({
-  ...myHeaders,
-  'X-5Calls-Token': import.meta.env.VITE_FIVECALLS_API_KEY
-});
-
-const jwt = localStorage.getItem('token');
 export const Requests = {
   register: (
     username: string,
@@ -52,7 +46,6 @@ export const Requests = {
       .then(async (response) => {
         if (!response.ok) {
           const errorBody = await response.json();
-          console.log('err', errorBody, response.status);
           throw new Error(
             errorBody.message || `HTTP Error: ${response.status}`
           );
@@ -61,12 +54,27 @@ export const Requests = {
         return response.json();
       })
       .catch((error) => {
-        toast.error(error.message);
         return error.message;
       });
   },
+  isValidAddress: async (address: string): Promise<boolean> => {
+    const query = encodeURIComponent(address);
+
+    try {
+      const res = await fetch(`/positionStack/forward?query=${query}`);
+      const data = await res.json();
+
+      return (
+        Array.isArray(data.data) &&
+        data.data.length > 0 &&
+        data.data[0].confidence > 0.8
+      );
+    } catch (error) {
+      console.error('Error validating address:', error);
+      return false;
+    }
+  },
   async loginUser(credentials: { username: string; password: string }) {
-    console.log('api call', credentials);
     try {
       const response = await fetch('http://localhost:3000/auth/login', {
         method: 'POST',
@@ -102,11 +110,7 @@ export const Requests = {
       .catch((error) => console.error('Fetch error:', error));
   },
   addVote: async (billId: string, vote: string, date: Date) => {
-    console.log('Sending vote:', {
-      billId,
-      vote,
-      date: date.toISOString()
-    });
+    const jwt = localStorage.getItem('token');
 
     try {
       await fetch(`http://localhost:3000/votes`, {
@@ -121,14 +125,12 @@ export const Requests = {
           date: date.toISOString()
         })
       });
-      console.log('Vote posted successfully');
     } catch (error) {
       console.error('Error posting vote:', error);
     }
   },
   getVoteLog: async (token: string) => {
     try {
-      console.log('JWT being sent:', token);
       const response = await fetch(`http://localhost:3000/votes`, {
         method: 'GET',
         headers: {
@@ -136,7 +138,6 @@ export const Requests = {
           Authorization: `Bearer ${token?.replace(/^"|"$/g, '')}`
         }
       });
-      console.log('response:', response);
       if (response.ok) {
         return await response.json();
       } else {
@@ -152,7 +153,9 @@ export const Requests = {
       throw error;
     }
   },
-  addVotedBill: async (bill: Bill) => {
+  //External api calls
+
+  addSenateRollCall: async (bill: Bill) => {
     const url = 'http://localhost:3000/bills';
 
     try {
@@ -171,22 +174,6 @@ export const Requests = {
       console.error('Fetch error:', error);
     }
   },
-  getBillsRecord: () => {
-    const url = 'http://localhost:3000/bills';
-    return fetch(url, {
-      method: 'GET',
-      headers: myHeaders
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        return response.json();
-      })
-      .catch((error) => console.error('Fetch error:', error));
-  },
-  //External api calls
   getBills: async (congress: string, billType: string, offset: number) => {
     const url = `/congressGov/v3/bill${congress ? `/${congress}` : ''}${billType ? `/${billType}` : ''}${offset !== 0 ? `?offset=${offset}` : ''}`;
     try {
@@ -283,7 +270,6 @@ export const Requests = {
     return response.json();
   },
   getCongressMembersFromFive: async (address: string) => {
-    console.log('address:', address);
     const response = await fetch(
       `/fiveCalls/representatives?location=${address}`,
       {
@@ -332,20 +318,20 @@ export const searchForBill = async (
 ) => {
   try {
     const fullBillDataPromise = Requests.getFullBill(
-      '118',
+      '119',
       billType,
       billNumber,
       signal
     );
     const summariesDataPromise = Requests.getBillDetail(
-      '118',
+      '119',
       billType,
       billNumber,
       'summaries',
       signal
     );
     const subjectsDataPromise = Requests.getBillDetail(
-      '118',
+      '119',
       billType,
       billNumber,
       'subjects',
