@@ -8,14 +8,45 @@ datasource db {
 }
 
 model User {
-  id           Int    @id @default(autoincrement())
-  username     String @unique
-  email        String @unique
-  passwordHash String @unique
+  id           Int      @id @default(autoincrement())
+  username     String   @unique
+  email        String   @unique
+  passwordHash String
   street       String
   city         String
   state        String
-  zipcode      String 
+  zipcode      String
+
+  // A user can be associated with many members
+  members      Member[] @relation("UserMembers")
+  votes        Vote[] @relation("UserVotes")
+}
+
+model Member {
+  id              String   @id // bioguideId, e.g., "G000599"
+  name            String
+  area            String   // e.g., "US House"
+  party           String
+  phone           String
+  photoURL        String
+  reason          String
+  state           String
+  url             String
+
+  fieldOffices    FieldOffice[]
+
+  // A member can be associated with many users
+
+  users                User[] @relation("UserMembers")
+  memberVotes          MemberVote[] @relation("MemberVotes")
+}
+
+
+model FieldOffice {
+  id          Int    @id @default(autoincrement())
+  // Add actual field office details here
+  memberId    String
+  member      Member @relation(fields: [memberId], references: [id])
 }
 
 model Vote {
@@ -24,4 +55,16 @@ model Vote {
   billId String
   vote   String
   date   DateTime
+
+  users User[] @relation("UserVotes")
+}
+
+model MemberVote{
+  id     Int      @id @default(autoincrement())
+  bioguideId String
+  billId String
+  vote   String
+  date   DateTime
+
+  member Member[] @relation("MemberVotes")
 }

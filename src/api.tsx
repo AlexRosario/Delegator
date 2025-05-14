@@ -1,5 +1,6 @@
 import { Bill, CongressMember } from './types';
 import DOMPurify from 'dompurify';
+import { parseSenateVoteXML } from './utils/parser-utils';
 import { XMLParser } from 'fast-xml-parser';
 
 export const googleCivicHeader = new Headers();
@@ -129,6 +130,29 @@ export const Requests = {
       console.error('Error posting vote:', error);
     }
   },
+  addMemberVote: async (
+    bioguideId: string,
+    billId: string,
+    vote: string,
+    date: Date
+  ) => {
+    try {
+      await fetch(`http://localhost:3000/member_votes`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          bioguideId: bioguideId,
+          billId: billId,
+          vote: vote,
+          date: date.toISOString()
+        })
+      });
+    } catch (error) {
+      console.error('Error posting vote:', error);
+    }
+  },
   getVoteLog: async (token: string) => {
     try {
       const response = await fetch(`http://localhost:3000/votes`, {
@@ -138,6 +162,7 @@ export const Requests = {
           Authorization: `Bearer ${token?.replace(/^"|"$/g, '')}`
         }
       });
+      console.log(response);
       if (response.ok) {
         return await response.json();
       } else {
@@ -309,6 +334,55 @@ export const Requests = {
         );
       })
       .catch((error) => console.error('Fetch error:', error));
+  },
+  getHouseRollCall: async (rollId: number, year: string) => {
+    try {
+      const res = await fetch(`/api/house-roll-call/${rollId}/${year}`);
+      const xmlText = await res.text();
+
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(xmlText, 'application/xml');
+      const metaData = Array.from(
+        xmlDoc.querySelectorAll('totals-by-party')
+      ).map((node) => ({
+        party: node.querySelector('party'),
+        yeas: node.querySelector('yea-total'),
+        nays: node.querySelector('nay-total'),
+        present: node.querySelector('present-total'),
+        no_vote: node.querySelector('not-voting-total')
+      }));
+      const votes = Array.from(xmlDoc.querySelectorAll('recorded-vote')).map(
+        (node) => ({
+          id: node.getAttribute('name-id'),
+          name: node.querySelector('legislator')?.textContent,
+          vote: node.querySelector('vote')?.textContent,
+          party: node.getAttribute('party')
+        })
+      );
+
+      return [metaData, votes];
+    } catch (err) {
+      console.error('Failed to fetch or parse XML:', err);
+    }
+  },
+  getSenateRollCall: async (
+    rollId: number,
+    congress: number,
+    sessionNum: number
+  ) => {
+    try {
+      const res = await fetch(
+        `/api/senate-roll-call/${rollId}/${congress}/${sessionNum}`
+      );
+      const xmlText = await res.text();
+      const { metadata, votes } = parseSenateVoteXML(xmlText);
+
+      console.log('Metadata:', metadata);
+      console.log('Votes:', votes);
+      return [metadata, votes];
+    } catch (err) {
+      console.error('Failed to fetch or parse XML:', err);
+    }
   }
 };
 export const searchForBill = async (

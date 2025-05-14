@@ -13,6 +13,12 @@ const voteSchema = z.object({
   vote: z.enum(['Yes', 'No']),
   date: z.preprocess((val) => new Date(val as string), z.instanceof(Date))
 });
+const memberVoteSchema = z.object({
+  bioguideId: z.string(),
+  billId: z.string(),
+  vote: z.enum(['Yes', 'No']),
+  date: z.preprocess((val) => new Date(val as string), z.instanceof(Date))
+});
 declare global {
   namespace Express {
     interface Request {
@@ -77,6 +83,29 @@ voteController.post(
         }
       });
 
+      res.status(201).json(newVote);
+    } catch (error) {
+      console.error('Error posting vote:', error);
+      res.status(500).json({ message: 'Internal server error' });
+    }
+  }
+);
+voteController.post(
+  '/member_votes',
+  validateRequest({ body: memberVoteSchema }),
+  async (req, res) => {
+    const { bioguideId, billId, vote, date } = req.body;
+
+    try {
+      const newVote = await prisma.memberVote.create({
+        data: {
+          bioguideId: bioguideId,
+          billId,
+          vote,
+          date: date as Date
+        }
+      });
+      console.log('New member vote:', newVote);
       res.status(201).json(newVote);
     } catch (error) {
       console.error('Error posting vote:', error);

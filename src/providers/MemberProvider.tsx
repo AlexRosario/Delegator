@@ -8,7 +8,6 @@ import {
 } from 'react';
 import { CongressMember, Representative5Calls } from '../types';
 import { Requests } from '../api';
-import { useLocation } from 'react-router-dom';
 
 type MemberContextType = {
   senators: CongressMember[];
@@ -33,7 +32,6 @@ export const MemberProvider = ({
   const [senators, setSenators] = useState<CongressMember[]>([]);
   const [houseReps, setHouseReps] = useState<CongressMember[]>([]);
   const [chamber, setChamber] = useState('house');
-  const location = useLocation();
 
   const findReps = async (addressString: string) => {
     return await Requests.getCongressMembersFromFive(addressString).then(
@@ -51,7 +49,7 @@ export const MemberProvider = ({
       const fetchCongressMember = async (bioID: string) => {
         return await Requests.getCongressMember(bioID);
       };
-
+      console.log('reps', reps);
       const congressDataResults = await Promise.all(
         reps.representatives.map(async (member: Representative5Calls) => {
           return await fetchCongressMember(member.id);
@@ -70,18 +68,20 @@ export const MemberProvider = ({
     }
   };
 
-  const setStateVariables = (reps: CongressMember[]) => {
-    setHouseReps(
-      reps.filter((member: CongressMember) => member.area == 'US House')
+  const setStateVariables = async (reps: CongressMember[]) => {
+    const house = await reps.filter(
+      (member: CongressMember) => member.area == 'US House'
     );
-    setSenators(
-      reps.filter((member: CongressMember) => member.area == 'US Senate')
+    const senate = await reps.filter(
+      (member: CongressMember) => member.area == 'US Senate'
     );
+    setHouseReps(house);
+    setSenators(senate);
+    localStorage.setItem('houseReps', JSON.stringify(house));
+    localStorage.setItem('senators', JSON.stringify(senate));
   };
 
   useEffect(() => {
-    console.log('address', address);
-
     if (address)
       getRepInfoFromMultipleAPIs(address)
         .then((data) => {

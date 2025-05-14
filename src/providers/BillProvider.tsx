@@ -18,7 +18,7 @@ type TBillProvider = {
   setBillSubject: (subject: string) => void;
   offset: number;
   setOffset: (offset: number | ((prevOffset: number) => number)) => void;
-  congress: string;
+  congress: number;
   filterPassedBills: boolean;
   setFilterPassedBills: (filterPassed: boolean) => void;
   filteredBills: Bill[];
@@ -43,7 +43,7 @@ export const BillContext = createContext<TBillProvider>({
   setBillSubject: () => {},
   offset: 0,
   setOffset: () => {},
-  congress: '119',
+  congress: 119,
   filterPassedBills: false,
   setFilterPassedBills: () => {},
   filteredBills: [],
@@ -76,7 +76,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   const [billSubject, setBillSubject] = useState<string>('');
   const [offset, setOffset] = useState(0);
   const [filterPassedBills, setFilterPassedBills] = useState(false);
-  const [congress] = useState('119');
+  const [congress] = useState(119);
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
   const hasFetchedRef = useRef(false);
@@ -107,30 +107,32 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchBills = useCallback(async () => {
     let fetchedBills: Bill[] = [];
+    const congressStr = String(congress);
     try {
-      const data = await Requests.getBills(congress, '', offset);
+      let data;
+      data = await Requests.getBills(congressStr, '', offset);
       fetchedBills = [...fetchedBills, ...(data?.bills ?? [])];
 
       const billPromises = fetchedBills.map(async (bill) => {
         const fullBillData = await Requests.getFullBill(
-          congress,
+          congressStr,
           bill.type.toLowerCase(),
           bill.number
         );
         const summariesData = await Requests.getBillDetail(
-          congress,
+          congressStr,
           bill.type.toLowerCase(),
           bill.number,
           'summaries'
         );
         const subjectsData = await Requests.getBillDetail(
-          congress,
+          congressStr,
           bill.type.toLowerCase(),
           bill.number,
           'subjects'
         );
         const actionsData = await Requests.getBillDetail(
-          congress,
+          congressStr,
           bill.type.toLowerCase(),
           bill.number,
           'actions'
@@ -195,15 +197,16 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     if (
       ((isScrollingForward && isNearEnd) ||
         firstRender ||
-        newBills.length <= 15) &&
+        newBills.length <= 15 ||
+        billsToDisplay.length == 0) &&
       !hasFetchedRef.current
     ) {
       hasFetchedRef.current = true;
 
       fetchBills()
-        .then((bills) => {
+        .then(async (bills) => {
           if (bills && bills.length > 0) {
-            setAllBills((prevBills) => [...prevBills, ...bills]);
+            await setAllBills((prevBills) => [...prevBills, ...bills]);
           }
         })
         .finally(() => {
@@ -212,9 +215,15 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         .catch((error) => {
           console.error('Failed to fetch bills:', error);
         });
+
+      prevIndexRef.current = currentIndex;
     }
-    prevIndexRef.current = currentIndex;
-  }, [currentIndex, votedOnThisBill]);
+  }, [
+    currentIndex,
+    votedOnThisBill,
+    newBills.length <= 5,
+    allBills.length == 0
+  ]);
 
   return (
     <BillContext.Provider
