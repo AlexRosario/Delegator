@@ -1,7 +1,29 @@
 import { CongressMember } from '../../types';
+import React, { useEffect, useState } from 'react';
 
+import { Requests } from '../../api';
 export const RepCard = ({ member }: { member: CongressMember }) => {
   const title = member.area == 'US House' ? 'Representative' : 'Senator';
+  const bioguideId = member.bioguideId;
+  const [memberVotes, setMemberVotes] = useState<[] | null>(null);
+
+  const fetchMemberVoteLog = async (memberId: string) => {
+    return;
+  };
+
+  useEffect(() => {
+    const getVotes = async () => {
+      try {
+        const votes = await Requests.getMemberVoteLog(bioguideId);
+        console.log(votes);
+        setMemberVotes(votes);
+      } catch (err) {
+        console.error('Failed to fetch member votes:', err);
+      }
+    };
+
+    getVotes();
+  }, [bioguideId]);
 
   /*const totalVotes = Object.values(user.vote_log).reduce(
 		(
@@ -38,7 +60,7 @@ export const RepCard = ({ member }: { member: CongressMember }) => {
         </div>
         {title == 'Senator' || title === 'Representative' ? (
           <div className="rep-score">
-            <div>Score: </div>
+            <div>Score: {memberVotes?.length}</div>
           </div>
         ) : null}
       </div>

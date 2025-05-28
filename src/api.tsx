@@ -1,7 +1,7 @@
-import { Bill, CongressMember } from './types';
+import { Bill, CongressMember, Representative5Calls } from './types';
 import DOMPurify from 'dompurify';
 import { parseSenateVoteXML } from './utils/parser-utils';
-import { XMLParser } from 'fast-xml-parser';
+import { update } from 'lodash-es';
 
 export const googleCivicHeader = new Headers();
 googleCivicHeader.append('Content-Type', 'application/json');
@@ -14,7 +14,8 @@ export const congressGovHeader = new Headers({
   ...myHeaders,
   'X-API-Key': import.meta.env.VITE_API_KEY
 });
-
+//Internal calls
+//auth.router
 export const Requests = {
   register: (
     username: string,
@@ -25,7 +26,8 @@ export const Requests = {
       city: string;
       state: string;
       zipcode: string;
-    }
+    },
+    memberIds: string
   ) => {
     const url = 'http://localhost:3000/auth/register';
 
@@ -41,7 +43,8 @@ export const Requests = {
           city: address.city,
           state: address.state,
           zipcode: address.zipcode
-        }
+        },
+        memberIds: memberIds
       })
     })
       .then(async (response) => {
@@ -57,23 +60,6 @@ export const Requests = {
       .catch((error) => {
         return error.message;
       });
-  },
-  isValidAddress: async (address: string): Promise<boolean> => {
-    const query = encodeURIComponent(address);
-
-    try {
-      const res = await fetch(`/positionStack/forward?query=${query}`);
-      const data = await res.json();
-
-      return (
-        Array.isArray(data.data) &&
-        data.data.length > 0 &&
-        data.data[0].confidence > 0.8
-      );
-    } catch (error) {
-      console.error('Error validating address:', error);
-      return false;
-    }
   },
   async loginUser(credentials: { username: string; password: string }) {
     try {
@@ -95,62 +81,31 @@ export const Requests = {
       throw new Error('dang');
     }
   },
-  getAllUsers: () => {
-    const url = 'http://localhost:3000/users';
-    return fetch(url, {
-      method: 'GET',
-      headers: myHeaders
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        return response.json();
-      })
-      .catch((error) => console.error('Fetch error:', error));
-  },
-  addVote: async (billId: string, vote: string, date: Date) => {
-    const jwt = localStorage.getItem('token');
-
+  addNewMember: async (member: Representative5Calls) => {
     try {
-      await fetch(`http://localhost:3000/votes`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${jwt?.replace(/^"|"$/g, '')}`
-        },
-        body: JSON.stringify({
-          billId: billId,
-          vote: vote,
-          date: date.toISOString()
-        })
-      });
-    } catch (error) {
-      console.error('Error posting vote:', error);
-    }
-  },
-  addMemberVote: async (
-    bioguideId: string,
-    billId: string,
-    vote: string,
-    date: Date
-  ) => {
-    try {
-      await fetch(`http://localhost:3000/member_votes`, {
+      const members = await fetch(`http://localhost:3000/members`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          bioguideId: bioguideId,
-          billId: billId,
-          vote: vote,
-          date: date.toISOString()
-        })
+        body: JSON.stringify(member)
       });
+      return members;
     } catch (error) {
-      console.error('Error posting vote:', error);
+      console.error('Error posting member:', error);
+    }
+  },
+  getMembers: async (userId: number) => {
+    try {
+      const res = await fetch(
+        `http://localhost:3000/members/by-user/${userId}`
+      );
+      if (!res.ok) throw new Error('Failed to fetch members');
+      const data = await res.json();
+      return data;
+    } catch (err) {
+      console.error('Error fetching members:', err);
+      return null;
     }
   },
   getVoteLog: async (token: string) => {
@@ -178,25 +133,79 @@ export const Requests = {
       throw error;
     }
   },
-  //External api calls
-
-  addSenateRollCall: async (bill: Bill) => {
-    const url = 'http://localhost:3000/bills';
+  addVote: async (billId: string, vote: string, date: Date) => {
+    const jwt = localStorage.getItem('token');
 
     try {
-      const addBillResponse = await fetch(url, {
+      await fetch(`http://localhost:3000/votes`, {
         method: 'POST',
-        headers: myHeaders,
-        body: JSON.stringify(bill)
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${jwt?.replace(/^"|"$/g, '')}`
+        },
+        body: JSON.stringify({
+          billId: billId,
+          vote: vote,
+          date: date.toISOString()
+        })
       });
-
-      if (!addBillResponse.ok) {
-        throw new Error(`HTTP error! status: ${addBillResponse.status}`);
-      }
-
-      return await addBillResponse.json();
     } catch (error) {
-      console.error('Fetch error:', error);
+      console.error('Error posting vote:', error);
+    }
+  },
+  getMemberVoteLog: async (bioguideId: string) => {
+    try {
+      const data = await fetch(
+        `http://localhost:3000/member_votes/${bioguideId}`
+      );
+      if (!data.ok) throw new Error('Failed to fetch member vote record');
+      const memberVotes = await data.json();
+      return memberVotes;
+    } catch (err) {
+      console.error('Error fetching member votes:', err);
+      return null;
+    }
+  },
+  addMemberVote: async (
+    bioguideId: string,
+    billId: string,
+    vote: string,
+    date: Date
+  ) => {
+    try {
+      await fetch(`http://localhost:3000/member_votes`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          bioguideId: bioguideId,
+          billId: billId,
+          vote: vote,
+          date: date.toISOString()
+        })
+      });
+    } catch (error) {
+      console.error('Error posting vote:', error);
+    }
+  },
+
+  //External api calls
+  isValidAddress: async (address: string): Promise<boolean> => {
+    const query = encodeURIComponent(address);
+
+    try {
+      const res = await fetch(`/positionStack/forward?query=${query}`);
+      const data = await res.json();
+
+      return (
+        Array.isArray(data.data) &&
+        data.data.length > 0 &&
+        data.data[0].confidence > 0.8
+      );
+    } catch (error) {
+      console.error('Error validating address:', error);
+      return false;
     }
   },
   getBills: async (congress: string, billType: string, offset: number) => {

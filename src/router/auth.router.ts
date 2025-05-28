@@ -17,7 +17,7 @@ authController.post(
   '/auth/register',
   validateRequest(registerSchema),
   async (req, res) => {
-    const { email, username, password, address } = req.body;
+    const { email, username, password, address, memberIds } = req.body;
 
     const existing = await prisma.user.findUnique({ where: { email } });
     if (existing) {
@@ -43,13 +43,20 @@ authController.post(
         street: address.street,
         city: address.city,
         state: address.state,
-        zipcode: address.zipcode
+        zipcode: address.zipcode,
+        members: {
+          connect: memberIds.map((id) => ({ id }))
+        }
       }
     });
     if (!newUser) {
       return res.status(500).json({ message: 'User creation failed' });
     }
-    return res.status(201).json({ message: 'User created successfully' });
+
+    console.log('New user created:', newUser);
+    return res
+      .status(201)
+      .json({ message: 'User created successfully', userId: newUser.id });
   }
 );
 
@@ -77,17 +84,10 @@ authController.post(
 
     const userInfo = createUnsecuredInfo(user);
     const token = generateAccessToken(user);
-    const address = {
-      street: user.street,
-      city: user.city,
-      state: user.state,
-      zipcode: user.zipcode
-    };
 
     return res.status(200).json({
       token,
-      userInfo,
-      address
+      userInfo
     });
   }
 );

@@ -1,24 +1,13 @@
 import { NextFunction, Request, Response, Router } from 'express';
 import { PrismaClient } from '@prisma/client';
 import { validateRequest } from 'zod-express-middleware';
-import { z } from 'zod';
+import { voteSchema, memberVoteSchema } from '../zod.js';
 import { getDataFromToken } from '../utils/auth-utils.js';
 import { JwtPayload } from 'jsonwebtoken';
 
 const prisma = new PrismaClient();
 const voteController = Router();
 
-const voteSchema = z.object({
-  billId: z.string(),
-  vote: z.enum(['Yes', 'No']),
-  date: z.preprocess((val) => new Date(val as string), z.instanceof(Date))
-});
-const memberVoteSchema = z.object({
-  bioguideId: z.string(),
-  billId: z.string(),
-  vote: z.enum(['Yes', 'No']),
-  date: z.preprocess((val) => new Date(val as string), z.instanceof(Date))
-});
 declare global {
   namespace Express {
     interface Request {
@@ -33,7 +22,6 @@ const authenticate = async (
 ) => {
   const token = req.headers.authorization?.split(' ')[1] || '';
   const data = getDataFromToken(token) as JwtPayload;
-  console.log('Token:', token);
   if (!data) {
     return res.status(401).json({ message: 'Invalid Token' });
   }
@@ -72,7 +60,6 @@ voteController.post(
     if (!userId) {
       return res.status(401).json({ message: 'User not authenticated' });
     }
-
     try {
       const newVote = await prisma.vote.create({
         data: {
@@ -95,7 +82,7 @@ voteController.post(
   validateRequest({ body: memberVoteSchema }),
   async (req, res) => {
     const { bioguideId, billId, vote, date } = req.body;
-
+    console.log('Bioguide ID:', bioguideId, prisma.memberVote);
     try {
       const newVote = await prisma.memberVote.create({
         data: {
@@ -114,4 +101,21 @@ voteController.post(
   }
 );
 
+voteController.get('/member_votes/:bioguideId', async (req, res) => {
+  const { bioguideId } = req.params;
+  try {
+    const memberVotes = await prisma.memberVote.findMany({
+      where: { bioguideId }
+    });
+    if (memberVotes.length === 0) {
+      return res
+        .status(404)
+        .json({ message: 'No votes found for this member' });
+    }
+    res.status(200).json(memberVotes);
+  } catch (error) {
+    console.error('Error fetching member votes:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 export { voteController };

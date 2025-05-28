@@ -8,8 +8,7 @@ import { isZipcodeValid } from '../utils/validations';
 import { useNavigate } from 'react-router-dom';
 import * as _ from 'lodash-es';
 import { faker } from '@faker-js/faker';
-import { useDisplayBills } from '../providers/BillProvider';
-import { FrontEndRegistrant } from '../types';
+import { FrontEndRegistrant, Representative5Calls } from '../types';
 export function RegisterInput({
   labelText,
   inputProps
@@ -28,7 +27,6 @@ export function RegisterInput({
 
 export const Register = () => {
   const { setUser } = useAuthInfo();
-  const { setVoteLog } = useDisplayBills();
 
   const [frontEndRegistrant, setFrontEndRegistrant] = useState({
     username: '',
@@ -53,10 +51,11 @@ export const Register = () => {
   const navigate = useNavigate();
 
   const findReps = async (addressString: string) => {
-    return await Requests.getCongressMembersFromFive(
-      String(Object.values(address))
-    ).then((reps) => reps);
+    return await Requests.getCongressMembersFromFive(addressString).then(
+      (reps) => reps
+    );
   };
+
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsFormSubmitted(true);
@@ -64,11 +63,19 @@ export const Register = () => {
     setErrorMessage('');
 
     const addressString = `${address.street}, ${address.city}, ${address.state} ${address.zipcode}`;
-    const isValid = await Requests.isValidAddress(addressString);
+    //const isValid = await Requests.isValidAddress(addressString);
+    const members = await findReps(addressString);
 
-    if (!isValid) {
+    await Promise.all(
+      members.representatives.map((member: Representative5Calls) =>
+        Requests.addNewMember(member)
+      )
+    );
+    console.log('mem', members); //address validator api reached free monthly limit. FiveCalls api doesnt validate address, but prioritizes a criteria
+    if (members.error) {
       setIsAddressValid(false);
       toast.error('Invalid address. Please try again.');
+      console.log('uhoh');
       setIsFormSubmitted(false);
       return;
     }
@@ -78,7 +85,8 @@ export const Register = () => {
         username,
         email,
         password,
-        address
+        address,
+        members.representatives.map((m: Representative5Calls) => m.id)
       );
 
       if (typeof message === 'string') {
@@ -104,9 +112,8 @@ export const Register = () => {
 
       const userLog = await Requests.getVoteLog(data.token);
       localStorage.setItem('userLog', JSON.stringify(userLog));
-      console.log('da', data.address);
 
-      navigate('/', { state: data.address });
+      navigate('/', { state: address });
     } catch (error) {
       console.error('Fetch error:', error);
       setIsFormSubmitted(false);
@@ -130,7 +137,7 @@ export const Register = () => {
   return (
     <div className="register">
       <Link to="/">
-        <button type="submit">Home</button>
+        <button type="button">Home</button>
       </Link>
 
       <form className="register-field" onSubmit={handleRegister}>
@@ -210,7 +217,7 @@ export const Register = () => {
 
         <ErrorMessage
           message={'Passwords do not match'}
-          show={!!password && password !== confirm}
+          show={password !== confirm}
         />
 
         <div className="address-prompt">

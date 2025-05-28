@@ -41,7 +41,6 @@ export const SignIn = () => {
         await setUser(data.userInfo);
         const userLog = await Requests.getVoteLog(data.token);
         localStorage.setItem('userLog', JSON.stringify(userLog));
-        console.log('da', data.address);
         navigate('/', {
           state: data.address
         });

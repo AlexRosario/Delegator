@@ -8,6 +8,7 @@ import {
 } from 'react';
 import { CongressMember, Representative5Calls } from '../types';
 import { Requests } from '../api';
+import { useAuthInfo } from './AuthProvider';
 
 type MemberContextType = {
   senators: CongressMember[];
@@ -32,32 +33,22 @@ export const MemberProvider = ({
   const [senators, setSenators] = useState<CongressMember[]>([]);
   const [houseReps, setHouseReps] = useState<CongressMember[]>([]);
   const [chamber, setChamber] = useState('house');
+  const { user } = useAuthInfo();
+  const userId = user.id;
 
-  const findReps = async (addressString: string) => {
-    return await Requests.getCongressMembersFromFive(addressString).then(
-      (reps) => reps
-    );
-  };
-  const getRepInfoFromMultipleAPIs = async (address: {
-    street: string;
-    city: string;
-    state: string;
-    zipcode: string;
-  }) => {
+  const getRepInfoFromMultipleAPIs = async () => {
     try {
-      const reps = await findReps(String(Object.values(address)));
+      const reps = await Requests.getMembers(userId); //await findReps(String(Object.values(address)));
       const fetchCongressMember = async (bioID: string) => {
         return await Requests.getCongressMember(bioID);
       };
-      console.log('reps', reps);
       const congressDataResults = await Promise.all(
-        reps.representatives.map(async (member: Representative5Calls) => {
+        reps.map(async (member: Representative5Calls) => {
           return await fetchCongressMember(member.id);
         })
       );
-
       return congressDataResults.map((obj) => {
-        const rep = reps.representatives.find(
+        const rep = reps.find(
           (r: Representative5Calls) => r.id == obj.member.bioguideId
         );
         return { ...obj.member, ...rep };
@@ -82,18 +73,17 @@ export const MemberProvider = ({
   };
 
   useEffect(() => {
-    if (address)
-      getRepInfoFromMultipleAPIs(address)
-        .then((data) => {
-          representatives.current = data;
-          setStateVariables(data);
-        })
-        .catch((error) => {
-          console.error('Fetch error:', error.message);
-          if (error.response) {
-            console.error('Response text:', error.response.statusText);
-          }
-        });
+    getRepInfoFromMultipleAPIs()
+      .then((data) => {
+        representatives.current = data;
+        setStateVariables(data);
+      })
+      .catch((error) => {
+        console.error('Fetch error:', error.message);
+        if (error.response) {
+          console.error('Response text:', error.response.statusText);
+        }
+      });
   }, []);
 
   return (

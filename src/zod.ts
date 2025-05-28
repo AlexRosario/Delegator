@@ -20,7 +20,21 @@ export const registerSchema = {
             message: 'Invalid US zipcode format'
           })
         })
-        .required()
+        .required(),
+      memberIds: z.array(z.string())
     })
     .required()
 };
+
+export const voteSchema = z.object({
+  billId: z.string(),
+  vote: z.enum(['Yes', 'No']),
+  date: z.preprocess((val) => new Date(val as string), z.instanceof(Date))
+});
+
+export const memberVoteSchema = z.object({
+  bioguideId: z.string(),
+  billId: z.string(),
+  vote: z.enum(['Yea', 'Nay', 'Present']),
+  date: z.preprocess((val) => new Date(val as string), z.instanceof(Date))
+});

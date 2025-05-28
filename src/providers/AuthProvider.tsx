@@ -15,7 +15,7 @@ export type AuthContextType = {
 const AuthContext = createContext<AuthContextType>({} as AuthContextType);
 
 export const defaultUser: User = {
-  id: '',
+  id: 0,
   username: '',
   email: '',
   zipcode: ''
