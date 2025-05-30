@@ -1,55 +1,47 @@
-import { CongressMember } from '../../types';
-import React, { useEffect, useState } from 'react';
-
+import { CongressMember, MemberVote } from '../../types';
+import { useEffect, useState } from 'react';
+import { useDisplayBills } from '../../providers/BillProvider';
 import { Requests } from '../../api';
 export const RepCard = ({ member }: { member: CongressMember }) => {
   const title = member.area == 'US House' ? 'Representative' : 'Senator';
   const bioguideId = member.bioguideId;
-  const [memberVotes, setMemberVotes] = useState<[] | null>(null);
-
-  const fetchMemberVoteLog = async (memberId: string) => {
-    return;
-  };
+  const [memberVotes, setMemberVotes] = useState<number>(0);
+  const { voteLog } = useDisplayBills();
 
   useEffect(() => {
     const getVotes = async () => {
       try {
-        const votes = await Requests.getMemberVoteLog(bioguideId);
-        console.log(votes);
-        setMemberVotes(votes);
+        const memberVotes = await Requests.getMemberVoteLog(bioguideId);
+        const votesWithRollCalls = voteLog.filter((vote) =>
+          memberVotes.some((v: MemberVote) => v.billId == vote.billId)
+        );
+        const sameRollCallVotes = votesWithRollCalls.filter((userVote) => {
+          const memberVote = memberVotes.find(
+            (memVote: MemberVote) => userVote.billId == memVote.billId
+          );
+          console.log(memberVote, userVote);
+          return (
+            (userVote?.vote == 'Yes' && memberVote.vote == 'Yea') ||
+            (userVote?.vote == 'No' && memberVote.vote == 'Nay')
+          );
+        });
+        const score = sameRollCallVotes.length / votesWithRollCalls.length;
+        console.log(
+          'mmm',
+          memberVotes,
+          sameRollCallVotes,
+          votesWithRollCalls,
+          score
+        );
+
+        setMemberVotes(score);
       } catch (err) {
         console.error('Failed to fetch member votes:', err);
       }
     };
 
     getVotes();
-  }, [bioguideId]);
-
-  /*const totalVotes = Object.values(user.vote_log).reduce(
-		(
-			total: { count: number; sameKnownVotes: number; withPartyVotes: number },
-			vote
-		) => {
-			const repVote = (vote as VoteLogEntry).RepVotes[member.name];
-			const userVote = (vote as VoteLogEntry).RepVotes[user.username];
-
-			if (repVote === 'Yes' || repVote === 'No' || repVote === 'Not Voting') {
-				total.count++;
-				repVote === userVote
-					? (total.sameKnownVotes += 1)
-					: (total.sameKnownVotes += 0);
-			} else {
-				total.withPartyVotes += 1;
-			}
-			return total;
-		},
-		{ count: 0, sameKnownVotes: 0, withPartyVotes: 0 }
-	);
-
-	const score =
-		totalVotes.count > 0
-			? ((totalVotes.sameKnownVotes / totalVotes.count) * 100).toFixed(2) + '%'
-			: 'No clear votes recorded';*/
+  }, [bioguideId, voteLog.length]);
 
   return (
     <div className="rep-card">
@@ -60,7 +52,12 @@ export const RepCard = ({ member }: { member: CongressMember }) => {
         </div>
         {title == 'Senator' || title === 'Representative' ? (
           <div className="rep-score">
-            <div>Score: {memberVotes?.length}</div>
+            <div>
+              Score:{' '}
+              {voteLog.length > 0
+                ? (memberVotes * 100).toFixed(2) + '%'
+                : 'No votes from you to compare yet.'}
+            </div>
           </div>
         ) : null}
       </div>

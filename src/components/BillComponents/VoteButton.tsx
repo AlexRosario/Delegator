@@ -61,7 +61,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
     }
   }, [userVoteDate, latestActionDateOnBill]);
 
-  const recordMembersVotes = async (
+  const recordVotes = async (
     vote: 'Yes' | 'No',
     repVotes: { bioguideId: string; vote: string }[]
   ) => {
@@ -197,7 +197,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
       } else {
         console.log('No roll call vote recorded.');
       }
-      await recordMembersVotes(vote, allRepVotes);
+      await recordVotes(vote, allRepVotes);
     }
   };
 

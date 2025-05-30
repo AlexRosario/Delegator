@@ -35,6 +35,6 @@ export const voteSchema = z.object({
 export const memberVoteSchema = z.object({
   bioguideId: z.string(),
   billId: z.string(),
-  vote: z.enum(['Yea', 'Nay', 'Present']),
+  vote: z.enum(['Yea', 'Nay', 'Present', 'Not Voting']),
   date: z.preprocess((val) => new Date(val as string), z.instanceof(Date))
 });

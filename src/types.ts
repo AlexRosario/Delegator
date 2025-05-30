@@ -90,7 +90,7 @@ export type User = {
 };
 
 export interface Vote {
-  userId: string;
+  userId: number;
   billId: string;
   vote: 'Yes' | 'No';
   date: Date;
@@ -190,14 +190,10 @@ export interface RelevantVote {
   roll_Call: string;
 }
 export type MemberVote = {
-  cook_pvi: string | null;
-  district: string;
-  dw_nominate: number | null;
-  member_id: string;
-  name: string;
-  party: 'D' | 'R' | 'I';
-  state: string;
-  vote_position: 'Yes' | 'No' | 'Present' | 'Not Voting';
+  bioguideId: string;
+  billId: string;
+  vote: 'Yea' | 'Nay' | 'Present' | 'Not Voting';
+  date: string; // ISO date string
 };
 type PartyVotes = {
   yes: number;

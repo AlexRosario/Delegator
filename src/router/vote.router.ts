@@ -79,10 +79,25 @@ voteController.post(
 );
 voteController.post(
   '/member_votes',
+  (req: Request, _res, next) => {
+    console.log('🪵 Raw request body:', req.body);
+    next();
+  },
   validateRequest({ body: memberVoteSchema }),
   async (req, res) => {
     const { bioguideId, billId, vote, date } = req.body;
     console.log('Bioguide ID:', bioguideId, prisma.memberVote);
+    const existingVote = await prisma.memberVote.findFirst({
+      where: {
+        bioguideId,
+        billId
+      }
+    });
+    if (existingVote) {
+      return res
+        .status(400)
+        .json({ message: 'Vote for this bill by this member already exists' });
+    }
     try {
       const newVote = await prisma.memberVote.create({
         data: {

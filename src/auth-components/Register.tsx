@@ -65,6 +65,7 @@ export const Register = () => {
     const addressString = `${address.street}, ${address.city}, ${address.state} ${address.zipcode}`;
     //const isValid = await Requests.isValidAddress(addressString);
     const members = await findReps(addressString);
+    console.log('register', members);
 
     await Promise.all(
       members.representatives.map((member: Representative5Calls) =>

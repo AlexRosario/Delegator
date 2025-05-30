@@ -212,8 +212,7 @@ export const Requests = {
     const url = `/congressGov/v3/bill${congress ? `/${congress}` : ''}${billType ? `/${billType}` : ''}${offset !== 0 ? `?offset=${offset}` : ''}`;
     try {
       const response = await fetch(url, {
-        method: 'GET',
-        headers: congressGovHeader
+        method: 'GET'
       });
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -236,7 +235,6 @@ export const Requests = {
     try {
       const response = await fetch(url, {
         method: 'GET',
-        headers: congressGovHeader,
         signal
       });
       if (!response.ok) {
@@ -261,7 +259,6 @@ export const Requests = {
     try {
       const response = await fetch(url, {
         method: 'GET',
-        headers: congressGovHeader,
         signal
       });
 
@@ -305,7 +302,7 @@ export const Requests = {
   },
   getCongressMembersFromFive: async (address: string) => {
     const response = await fetch(
-      `/fiveCalls/representatives?location=${address}`,
+      `/5Calls/representatives?location=${address}`,
       {
         method: 'GET'
       }
@@ -317,8 +314,7 @@ export const Requests = {
     const url = `/congressGov/v3/member/${bioID}`;
     try {
       const response = await fetch(url, {
-        method: 'GET',
-        headers: congressGovHeader
+        method: 'GET'
       });
       if (!response.ok) {
         throw new Error(`Failed to fetch: ${response.statusText}`);

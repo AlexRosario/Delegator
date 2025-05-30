@@ -23,8 +23,7 @@ export const MemberContext = createContext<MemberContextType>(
 );
 
 export const MemberProvider = ({
-  children,
-  address
+  children
 }: {
   children: ReactNode;
   address: any;
@@ -38,7 +37,7 @@ export const MemberProvider = ({
 
   const getRepInfoFromMultipleAPIs = async () => {
     try {
-      const reps = await Requests.getMembers(userId); //await findReps(String(Object.values(address)));
+      const reps = await Requests.getMembers(userId);
       const fetchCongressMember = async (bioID: string) => {
         return await Requests.getCongressMember(bioID);
       };
@@ -73,6 +72,7 @@ export const MemberProvider = ({
   };
 
   useEffect(() => {
+    if (!userId) return;
     getRepInfoFromMultipleAPIs()
       .then((data) => {
         representatives.current = data;
@@ -84,7 +84,7 @@ export const MemberProvider = ({
           console.error('Response text:', error.response.statusText);
         }
       });
-  }, []);
+  }, [userId]);
 
   return (
     <MemberContext.Provider
