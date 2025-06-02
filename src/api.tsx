@@ -117,7 +117,6 @@ export const Requests = {
           Authorization: `Bearer ${token?.replace(/^"|"$/g, '')}`
         }
       });
-      console.log(response);
       if (response.ok) {
         return await response.json();
       } else {
@@ -382,8 +381,6 @@ export const Requests = {
       const xmlText = await res.text();
       const { metadata, votes } = parseSenateVoteXML(xmlText);
 
-      console.log('Metadata:', metadata);
-      console.log('Votes:', votes);
       return [metadata, votes];
     } catch (err) {
       console.error('Failed to fetch or parse XML:', err);

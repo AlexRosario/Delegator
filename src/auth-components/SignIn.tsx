@@ -18,13 +18,6 @@ export const SignIn = () => {
     if (location.state) {
       setName(location.state.username || '');
       setPWord(location.state.password || '');
-      if (location.state.username && location.state.password) {
-        console.log(
-          'Location state',
-          location.state.username,
-          location.state.password
-        );
-      }
     }
   }, [location.state]);
 

@@ -95,7 +95,6 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
   };
 
   const handleVote = async (vote: 'Yes' | 'No') => {
-    console.log(houseReps, senators);
     let allRepVotes: { bioguideId: string; vote: string }[] = [];
     if (!userHasBillVote) {
       const rollCallActions = bill.actions.filter(
@@ -103,7 +102,6 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
       );
 
       if (rollCallActions.length > 0) {
-        console.log('Roll call found:', rollCallActions, bill);
         try {
           const houseAction =
             (await rollCallActions.find((action) =>
@@ -116,7 +114,6 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
             )) || null;
 
           if (houseAction) {
-            console.log('house', houseAction.recordedVotes[0].url);
             const year = String(new Date()).split(' ')[3];
             const rollNum = houseAction.recordedVotes[0].rollNumber;
             const result = (await Requests.getHouseRollCall(rollNum, year)) ?? [
@@ -124,7 +121,6 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
               []
             ];
             const [metaData, votes] = result as [Meta[], HouseVote[]];
-            console.log('h', metaData, votes);
             houseReps.forEach((rep) => {
               const match = votes.find(
                 (voteSearch: HouseVote) =>
@@ -143,17 +139,10 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
                   vote: match.vote ?? ''
                 });
               }
-              console.log(
-                'Matched vote for rep',
-                rep.bioguideId,
-                match,
-                allRepVotes
-              );
             });
           }
 
           if (senateAction) {
-            console.log('senate', senateAction.recordedVotes[0].url);
             const sessionNum = senateAction.recordedVotes[0].sessionNumber;
             const rollNum = senateAction.recordedVotes[0].rollNumber;
             const senateRoll = await Requests.getSenateRollCall(
@@ -167,8 +156,8 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
                 if (Array.isArray(votes)) {
                   const match = votes.find(
                     (voteSearch: SenateVote) =>
-                      `${rep.firstName} ${rep.lastName}` ===
-                      `${voteSearch.firstName} ${voteSearch.lastName}`
+                      rep.firstName === voteSearch.firstName &&
+                      rep.lastName.includes(voteSearch.lastName)
                   );
                   if (match) {
                     allRepVotes.push({
@@ -176,26 +165,13 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
                       vote: match.voteCast
                     });
                   }
-                  console.log(
-                    'Matched vote for rep',
-                    rep.bioguideId,
-                    match,
-                    allRepVotes
-                  );
-                } else {
-                  console.error('Votes data is not an array:', votes);
                 }
               });
-              console.log('senateRoll', senateRoll);
-            } else {
-              console.error('Invalid senateRoll data:', senateRoll);
             }
           }
         } catch (error) {
           console.error('Error fetching roll call data:', error);
         }
-      } else {
-        console.log('No roll call vote recorded.');
       }
       await recordVotes(vote, allRepVotes);
     }

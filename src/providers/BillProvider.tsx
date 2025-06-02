@@ -105,14 +105,13 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
-  const fetchBills = useCallback(async () => {
+  const fetchBills = async () => {
     let fetchedBills: Bill[] = [];
     const congressStr = String(congress);
     try {
       let data;
       data = await Requests.getBills(congressStr, '', offset);
       fetchedBills = [...fetchedBills, ...(data?.bills ?? [])];
-
       const billPromises = fetchedBills.map(async (bill) => {
         const fullBillData = await Requests.getFullBill(
           congressStr,
@@ -160,7 +159,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     } finally {
       setOffset((prevOffset) => prevOffset + 20);
     }
-  }, [congress, offset]);
+  };
 
   useEffect(() => {
     setNewBills(
@@ -221,7 +220,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   }, [
     currentIndex,
     votedOnThisBill,
-    newBills.length <= 5,
+    newBills.length <= 15,
     allBills.length == 0
   ]);
 

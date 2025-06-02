@@ -62,8 +62,11 @@ app.get(
 
 app.get('/congressGov/*', async (req, res) => {
   const apiKey = process.env.API_KEY;
-  const targetUrl = `https://api.congress.gov/${req.params[0]}`;
-  console.log('Target URL:', targetUrl);
+  const offset = req.query.offset;
+
+  const targetUrl = `https://api.congress.gov/${req.params[0]}${
+    offset ? `?offset=${offset}` : ''
+  }`;
 
   if (!apiKey) throw new Error('Missing Congress.gov API key');
   try {
@@ -99,7 +102,6 @@ app.get('/5Calls/*', async (req, res) => {
   const apiKey = process.env.FIVECALLS_API_KEY;
 
   const url = `https://api.5calls.org/v1/${req.params[0]}?${req.url.split('?')[1] || ''}`;
-  console.log('5Calls API URL:', url);
   if (!apiKey) throw new Error('Missing 5Calls API key');
 
   try {

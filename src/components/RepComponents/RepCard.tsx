@@ -19,20 +19,12 @@ export const RepCard = ({ member }: { member: CongressMember }) => {
           const memberVote = memberVotes.find(
             (memVote: MemberVote) => userVote.billId == memVote.billId
           );
-          console.log(memberVote, userVote);
           return (
             (userVote?.vote == 'Yes' && memberVote.vote == 'Yea') ||
             (userVote?.vote == 'No' && memberVote.vote == 'Nay')
           );
         });
         const score = sameRollCallVotes.length / votesWithRollCalls.length;
-        console.log(
-          'mmm',
-          memberVotes,
-          sameRollCallVotes,
-          votesWithRollCalls,
-          score
-        );
 
         setMemberVotes(score);
       } catch (err) {
@@ -48,7 +40,7 @@ export const RepCard = ({ member }: { member: CongressMember }) => {
       <div className="rep-card-left">
         <div className="name-title">
           <h3 className="font-face-Barlow">{member.name.toUpperCase()}</h3>
-          <h5>{title}</h5>
+          <h5>{`${title} from ${member.state}`}</h5>
         </div>
         {title == 'Senator' || title === 'Representative' ? (
           <div className="rep-score">

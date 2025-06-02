@@ -35,7 +35,6 @@ export const BillCard = ({
 
       if (data.textVersions.length > 0) {
         const url = data.textVersions[0].formats[0].url;
-        console.log(data, url);
         setBillLinks((prevLinks) => ({
           ...prevLinks,
           [billType + billNumber]: url
@@ -61,7 +60,7 @@ export const BillCard = ({
       {!billLinks[bill.type + bill.number] ? (
         <b
           onClick={() => {
-            getMoreInfo(congress, bill.type, bill.number);
+            getMoreInfo(congress.toString(), bill.type, bill.number.toString());
           }}
         >
           {!noLink ? 'Read Full Text' : 'No Expanded Text'}

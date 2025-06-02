@@ -40,7 +40,6 @@ voteController.get('/votes', authenticate, async (req, res) => {
     const votes = await prisma.vote.findMany({
       where: { userId: req.user?.id }
     });
-    console.log('Votes:', votes);
 
     return res.status(200).json(votes);
   } catch (error) {
@@ -79,14 +78,9 @@ voteController.post(
 );
 voteController.post(
   '/member_votes',
-  (req: Request, _res, next) => {
-    console.log('🪵 Raw request body:', req.body);
-    next();
-  },
   validateRequest({ body: memberVoteSchema }),
   async (req, res) => {
     const { bioguideId, billId, vote, date } = req.body;
-    console.log('Bioguide ID:', bioguideId, prisma.memberVote);
     const existingVote = await prisma.memberVote.findFirst({
       where: {
         bioguideId,
@@ -107,7 +101,6 @@ voteController.post(
           date: date as Date
         }
       });
-      console.log('New member vote:', newVote);
       res.status(201).json(newVote);
     } catch (error) {
       console.error('Error posting vote:', error);
@@ -122,11 +115,7 @@ voteController.get('/member_votes/:bioguideId', async (req, res) => {
     const memberVotes = await prisma.memberVote.findMany({
       where: { bioguideId }
     });
-    if (memberVotes.length === 0) {
-      return res
-        .status(404)
-        .json({ message: 'No votes found for this member' });
-    }
+
     res.status(200).json(memberVotes);
   } catch (error) {
     console.error('Error fetching member votes:', error);

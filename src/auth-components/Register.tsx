@@ -47,7 +47,6 @@ export const Register = () => {
   const [isAddressValid, setIsAddressValid] = useState<boolean>(true);
   const [lockButton, setLockButton] = useState<boolean>(false);
   const addressErrorMessage = 'This address does not exist.';
-  const zipcodeErrorMessage = 'Zip code is Invalid.';
   const navigate = useNavigate();
 
   const findReps = async (addressString: string) => {
@@ -63,23 +62,20 @@ export const Register = () => {
     setErrorMessage('');
 
     const addressString = `${address.street}, ${address.city}, ${address.state} ${address.zipcode}`;
-    //const isValid = await Requests.isValidAddress(addressString);
+    const isValid = await Requests.isValidAddress(addressString);
     const members = await findReps(addressString);
-    console.log('register', members);
-
+    //address validator api reached free monthly limit. FiveCalls api doesnt validate address, but prioritizes a criteria
+    if (members.error || !isValid) {
+      setIsAddressValid(false);
+      toast.error('Invalid address. Please try again.');
+      setIsFormSubmitted(false);
+      return;
+    }
     await Promise.all(
       members.representatives.map((member: Representative5Calls) =>
         Requests.addNewMember(member)
       )
     );
-    console.log('mem', members); //address validator api reached free monthly limit. FiveCalls api doesnt validate address, but prioritizes a criteria
-    if (members.error) {
-      setIsAddressValid(false);
-      toast.error('Invalid address. Please try again.');
-      console.log('uhoh');
-      setIsFormSubmitted(false);
-      return;
-    }
 
     try {
       const message = await Requests.register(
@@ -110,9 +106,6 @@ export const Register = () => {
       localStorage.setItem('token', JSON.stringify(data.token));
 
       await setUser(data.userInfo);
-
-      const userLog = await Requests.getVoteLog(data.token);
-      localStorage.setItem('userLog', JSON.stringify(userLog));
 
       navigate('/', { state: address });
     } catch (error) {
