@@ -4,8 +4,7 @@ import {
   createContext,
   useState,
   useEffect,
-  useRef,
-  useCallback
+  useRef
 } from 'react';
 import { Requests } from '../api';
 import { Bill, Vote } from '../types';
@@ -205,7 +204,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
       fetchBills()
         .then(async (bills) => {
           if (bills && bills.length > 0) {
-            await setAllBills((prevBills) => [...prevBills, ...bills]);
+            setAllBills((prevBills) => [...prevBills, ...bills]);
           }
         })
         .finally(() => {

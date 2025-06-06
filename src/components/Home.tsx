@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { SignIn } from '../auth-components/SignIn';
+import { SignIn } from '../Auth-components/SignIn';
 
 export const Home = () => {
   return (

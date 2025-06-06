@@ -3,14 +3,11 @@ import { Requests } from '../api';
 import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuthInfo } from '../providers/AuthProvider';
-import { useDisplayBills } from '../providers/BillProvider';
 
 export const SignIn = () => {
   const [name, setName] = useState('');
   const [pWord, setPWord] = useState('');
   const { setUser } = useAuthInfo();
-  const { setVoteLog } = useDisplayBills();
-
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -31,7 +28,7 @@ export const SignIn = () => {
         localStorage.setItem('user', JSON.stringify(data.userInfo));
         localStorage.setItem('token', data.token);
 
-        await setUser(data.userInfo);
+        setUser(data.userInfo);
         const userLog = await Requests.getVoteLog(data.token);
         localStorage.setItem('userLog', JSON.stringify(userLog));
         navigate('/', {

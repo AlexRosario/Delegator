@@ -1,7 +1,6 @@
-import { Bill, CongressMember, Representative5Calls } from './types';
+import { CongressMember, Representative5Calls } from './types';
 import DOMPurify from 'dompurify';
 import { parseSenateVoteXML } from './utils/parser-utils';
-import { update } from 'lodash-es';
 
 export const googleCivicHeader = new Headers();
 googleCivicHeader.append('Content-Type', 'application/json');
@@ -14,8 +13,7 @@ export const congressGovHeader = new Headers({
   ...myHeaders,
   'X-API-Key': import.meta.env.VITE_API_KEY
 });
-//Internal calls
-//auth.router
+
 export const Requests = {
   register: (
     username: string,
@@ -349,21 +347,23 @@ export const Requests = {
       const metaData = Array.from(
         xmlDoc.querySelectorAll('totals-by-party')
       ).map((node) => ({
-        party: node.querySelector('party'),
-        yeas: node.querySelector('yea-total'),
-        nays: node.querySelector('nay-total'),
-        present: node.querySelector('present-total'),
-        no_vote: node.querySelector('not-voting-total')
+        party: node.querySelector('party')?.textContent ?? null,
+        yeas: node.querySelector('yea-total')?.textContent ?? null,
+        nays: node.querySelector('nay-total')?.textContent ?? null,
+        present: node.querySelector('present-total')?.textContent ?? null,
+        no_vote: node.querySelector('not-voting-total')?.textContent ?? null
       }));
       const votes = Array.from(xmlDoc.querySelectorAll('recorded-vote')).map(
-        (node) => ({
-          id: node.getAttribute('name-id'),
-          name: node.querySelector('legislator')?.textContent,
-          vote: node.querySelector('vote')?.textContent,
-          party: node.getAttribute('party')
-        })
+        (node) => {
+          const legislator = node.querySelector('legislator');
+          return {
+            id: legislator?.getAttribute('name-id'),
+            name: legislator?.textContent,
+            vote: node.querySelector('vote')?.textContent,
+            party: legislator?.getAttribute('party')
+          };
+        }
       );
-
       return [metaData, votes];
     } catch (err) {
       console.error('Failed to fetch or parse XML:', err);

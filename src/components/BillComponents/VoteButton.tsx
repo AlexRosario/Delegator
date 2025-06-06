@@ -96,6 +96,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
 
   const handleVote = async (vote: 'Yes' | 'No') => {
     let allRepVotes: { bioguideId: string; vote: string }[] = [];
+
     if (!userHasBillVote) {
       const rollCallActions = bill.actions.filter(
         (action) => action.recordedVotes?.length > 0
@@ -104,15 +105,14 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
       if (rollCallActions.length > 0) {
         try {
           const houseAction =
-            (await rollCallActions.find((action) =>
+            rollCallActions.find((action) =>
               /house/i.test(action.sourceSystem.name)
-            )) || null;
+            ) || null;
 
           const senateAction =
-            (await rollCallActions.find((action) =>
+            rollCallActions.find((action) =>
               /senate/i.test(action.sourceSystem.name)
-            )) || null;
-
+            ) || null;
           if (houseAction) {
             const year = String(new Date()).split(' ')[3];
             const rollNum = houseAction.recordedVotes[0].rollNumber;
@@ -120,19 +120,13 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
               [],
               []
             ];
-            const [metaData, votes] = result as [Meta[], HouseVote[]];
+            const [_metaData, votes] = result as [Meta[], HouseVote[]];
             houseReps.forEach((rep) => {
               const match = votes.find(
                 (voteSearch: HouseVote) =>
                   `${rep.lastName} (${rep.state})` === voteSearch.name ||
                   rep.lastName === voteSearch.name
               );
-              /*match structure 
-              id: null
-              name : "Goldman (NY)"
-              party: null
-              vote : "No"
-              */
               if (match) {
                 allRepVotes.push({
                   bioguideId: rep.bioguideId,
@@ -151,7 +145,8 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
               sessionNum
             );
             if (senateRoll && Array.isArray(senateRoll)) {
-              const [metaData, votes] = senateRoll;
+              const [_metaData, votes] = senateRoll;
+
               senators.forEach((rep) => {
                 if (Array.isArray(votes)) {
                   const match = votes.find(
