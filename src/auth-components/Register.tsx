@@ -101,7 +101,6 @@ export const Register = () => {
       toast.success('Registration successful');
 
       const data = await Requests.loginUser({ username, password });
-      localStorage.clear();
       localStorage.setItem('user', JSON.stringify(data.userInfo));
       localStorage.setItem('token', JSON.stringify(data.token));
 

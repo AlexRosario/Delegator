@@ -5,7 +5,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './providers/AuthProvider';
 import { ScreenProvider } from './providers/ScreenProvider';
 import { Home } from './components/Home';
-import { Register } from './Auth-components/Register';
+import { Register } from './auth-components/Register';
 import App from './App';
 import { Toaster } from 'react-hot-toast';
 

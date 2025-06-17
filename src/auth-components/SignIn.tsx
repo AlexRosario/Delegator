@@ -8,6 +8,7 @@ export const SignIn = () => {
   const [name, setName] = useState('');
   const [pWord, setPWord] = useState('');
   const { setUser } = useAuthInfo();
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -24,7 +25,7 @@ export const SignIn = () => {
         if (!data) {
           throw new Error('User not found or incorrect password');
         }
-        localStorage.clear();
+
         localStorage.setItem('user', JSON.stringify(data.userInfo));
         localStorage.setItem('token', data.token);
 

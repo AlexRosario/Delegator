@@ -3,6 +3,10 @@ import { BillCarousel } from './BillCarousel';
 import BillCard from './BillCard';
 import { searchForBill } from '../../api';
 import { Bill } from '../../types';
+import { useDisplayBills } from '../../providers/BillProvider';
+import { BillStatus } from './BillStatus';
+
+type BillFilter = 'All Bills' | 'Passed' | 'Bills with Votes';
 
 export const BillDiscover = () => {
   const [searchType, setSearchType] = useState('hopper');
@@ -22,7 +26,15 @@ export const BillDiscover = () => {
   const isNumeric = (billNumber: string) => {
     return /^\d+$/.test(billNumber) && billNumber.length > 0;
   };
-
+  const {
+    billsToDisplay,
+    setBillFilter,
+    billFilter,
+    setCurrentIndex,
+    activeBillTab,
+    passedBills,
+    billsWithRollCalls
+  } = useDisplayBills();
   const renderDiscoverBills = () => {
     const billNumberNotBlank = billNumber !== '';
 
@@ -71,56 +83,97 @@ export const BillDiscover = () => {
   }, [billNumber, billType]);
 
   return (
-    <>
-      <div className="search-subject">
+    <div className="bill-discover">
+      <div className="search-options">
         <div className="selectors">
-          <div
-            className={`selector ${searchType === 'hopper' ? 'active' : ''}`}
-            onClick={() => {
-              setSearchType('hopper');
-            }}
-          >
-            Hopper
+          <div className="selector-container">
+            <div
+              className={`selector ${searchType === 'hopper' ? 'active' : ''}`}
+              onClick={() => {
+                setSearchType('hopper');
+              }}
+            >
+              Hopper
+            </div>
           </div>
-          <div
-            className={`selector ${searchType === 'bill-number' ? 'active' : ''}`}
-            onClick={() => {
-              setSearchType('bill-number');
-            }}
-          >
-            Search by Bill Number
+          <div className="selector-container">
+            <div
+              className={`selector dark-high-contrast ${searchType === 'bill-number' ? 'active' : ''} t`}
+              onClick={() => {
+                setSearchType('bill-number');
+              }}
+            >
+              Search by Bill Number
+            </div>
           </div>
-        </div>
-        {searchType === 'bill-number' && (
-          <div className="bill-number">
-            <div id="bill-num">
+          {searchType === 'bill-number' && (
+            <div className="bill-number">
+              <div className="bill-type-selector">
+                <select
+                  name=""
+                  id=""
+                  onChange={(e) => setBillType(e.target.value)}
+                >
+                  {billTypeArray.map((billType) => (
+                    <option key={billType} value={billType}>
+                      {billType}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="bill-type-selector">
+                <input
+                  type="text"
+                  placeholder="Search for bills by number"
+                  onChange={(e) => {
+                    if (e.target.value === '') {
+                      setSearchedBill(null);
+                    }
+                    return setBillNumber(e.target.value);
+                  }}
+                />
+              </div>
+            </div>
+          )}{' '}
+          {searchType == 'hopper' && (
+            <>
               <select
                 name=""
                 id=""
-                onChange={(e) => setBillType(e.target.value)}
-              >
-                {billTypeArray.map((billType) => (
-                  <option key={billType} value={billType}>
-                    {billType}
-                  </option>
-                ))}
-              </select>
-              <input
-                type="text"
-                placeholder="Search for bills by number"
                 onChange={(e) => {
-                  if (e.target.value === '') {
-                    setSearchedBill(null);
-                  }
-                  return setBillNumber(e.target.value);
+                  setCurrentIndex(0);
+                  setBillFilter(e.target.value as BillFilter);
                 }}
-              />
-            </div>
-          </div>
-        )}
+              >
+                <option value="default">Filter Bills</option>
+                {billsToDisplay.length > 0 && (
+                  <option value="All Bills">All Bills</option>
+                )}
+                {billsWithRollCalls.length > 0 && (
+                  <option value="Bills with Votes">Bills with RollCalls</option>
+                )}
+                {passedBills.length > 0 && (
+                  <option value="Passed">Passed Bills</option>
+                )}
+              </select>
+              {passedBills.length == 0 && (
+                <div
+                  style={
+                    window.innerWidth < 1000 ? { display: 'none' } : undefined
+                  }
+                >
+                  <b>Congressional Bills made into law in this collection</b>
+                  <b>: {passedBills.length}</b>
+                </div>
+              )}
+            </>
+          )}
+        </div>
       </div>
+      <BillStatus />
+
       {renderDiscoverBills()}
-    </>
+    </div>
   );
 };
 export default BillDiscover;

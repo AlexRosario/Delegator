@@ -1,8 +1,10 @@
 #root {
+  min-width: 100vw;
   max-width: 1280px;
-  margin: 0 auto;
+  margin: none;
   text-align: center;
 }
+
 .home {
   margin-top: 10%;
   display: flex;
@@ -166,7 +168,8 @@
   align-items: center;
   padding: 0 50px;
   max-width: 100%;
-  background-color: rgb(249, 247, 246);
+
+  background-color: rgb(243, 248, 242);
 }
 
 .top-nav img.gator-logo {
@@ -174,7 +177,7 @@
 }
 
 .menu-burger {
-  color: #f8a838;
+  color: black;
   font-size: xx-large;
 }
 
@@ -218,24 +221,27 @@
 .profile .log-out:hover {
   cursor: pointer;
 }
-.main-nav .bottom-nav {
+.bottom-nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 10vh;
-  background-color: rgb(249, 247, 246);
+  height: 8vh;
+  background-color: rgb(34, 84, 1);
   color: var(--darkerblue);
   width: 50%;
   padding: 0 25% 0 25%;
 }
-
+.bottom-nav .screenSelect {
+  font-size: 1.5em;
+}
 .bill-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   padding: 20px 0;
+  margin: 0 auto;
   border-top: 1px;
 }
 
@@ -243,23 +249,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
   width: 100%;
-  background-color: whitesmoke;
+  margin: 0x 100px;
+  padding: 30px;
+  background-color: rgb(243, 248, 242);
+}
+.bill-collection-container {
+  padding: 20px;
 }
 .bill-list {
   display: flex;
   gap: 30px;
+  margin: 20px;
 }
 .bill-list-button.selected {
   background-color: var(--red);
 }
-
-.search-subject {
+.bill-discover {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  max-width: 100%;
+  min-width: 100%;
+}
+.search-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
   margin: 20px 0;
   width: 100%;
 }
@@ -267,21 +284,29 @@
 .selectors {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  width: fit-content;
-  padding: 0;
+  width: 100%;
+  gap: 10%;
+  align-items: space-between;
 }
-
+.selector-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
 .selector {
   user-select: none;
   border: 1px solid black;
+  font-size: 0.9rem;
   border-radius: 400px;
   max-height: 45px;
-  padding: 4px 10px;
+  width: 80%;
+  padding: 6px 6px;
   margin-left: 10px;
   cursor: pointer;
-  color: rgb(15, 15, 16);
-  background-color: rgb(241, 241, 241, 0.5);
+  color: rgba(10, 12, 50, 0.8);
+  background-color: rgb(191, 205, 209);
   z-index: 10;
 }
 
@@ -289,7 +314,39 @@
   background-color: rgba(10, 12, 50, 0.8);
   color: white;
 }
+.bill-number {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+}
+.bill-type-selector {
+  width: 90%;
+  padding: 5px;
+}
+.bill-filter {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  gap: 100px;
+  justify-content: space-around;
+  align-items: center;
+  max-height: 100px;
+}
+.bill-filter button {
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
 
+.bill-filter button.active {
+  background-color: rgba(10, 12, 50, 0.8);
+}
 .subject-fields {
   display: flex;
   justify-content: space-around;
@@ -321,25 +378,6 @@
 
 .legislative-term #leg-term a {
   font-size: 6px;
-}
-
-.bills-status {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px auto;
-}
-
-.congressional-efficacy {
-  width: 75%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.congressional-efficacy button {
-  margin: 0;
 }
 
 .carousel-container {
@@ -376,7 +414,7 @@
   flex-direction: column;
   justify-content: space-around;
   color: white;
-  background-color: var(--red);
+  background-color: rgb(34, 84, 1);
   text-align: center;
   padding: 5%;
   min-width: 18%;
@@ -473,50 +511,49 @@
   border-radius: 10px;
   margin: 10px;
 }
-
-.animate-text {
-  background-image: linear-gradient(
-    225deg,
-    #231557 0%,
-    #44107a 29%,
-    #ff1361 67%,
-    #fff800 100%
-  );
-  background-size: 500% 100%;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 5s linear infinite;
-  display: inline-block;
-}
-@keyframes textclip {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
+.rep-section {
+  padding: 20px;
 }
 .reps {
-  margin-top: 30px;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .rep-card {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin-bottom: 20px;
+  max-height: 260px;
+  width: 50%;
+  max-width: 750px;
   background-color: white;
   border: solid #231557 5px;
-}
-.rep-card-left {
-}
-.rep-card-right {
   overflow: hidden;
 }
-.rep-card-right .rep-photo {
-  height: 100%;
-  max-height: 200px;
+.rep-card-left {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rep-card-right {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+.rep-card-right img.rep-photo {
+  width: 100px;
+  max-height: 50%;
 }
 @media (max-width: 1000px) {
   .home h1 {
@@ -534,6 +571,13 @@
   }
   .register-field .input-wrap input {
     font-size: 0.85rem;
+  }
+  .selector {
+    font-size: 0.8rem;
+    height: 100%;
+    padding: 5px;
+    align-content: center;
+    font-weight: 700;
   }
 }
 
@@ -574,7 +618,8 @@
   }
 
   .bill-section {
-    font-size: 0.6rem;
+    margin-top: 20px;
+    font-size: 0.7rem;
   }
 
   .bills-status {
@@ -588,12 +633,11 @@
   .search-subject {
     flex-direction: column;
   }
-  .bill-number {
-    margin: 20px 0;
-  }
+
   .bill-number select,
   input {
     font-size: 0.6rem;
+    padding: 0 5px;
   }
   .bill-card .next,
   .prev {
@@ -609,6 +653,26 @@
   .bill-collection-container select,
   input {
     font-size: 0.6rem;
+  }
+  .selector {
+    font-size: 0.7rem;
+    font-weight: 900;
+  }
+  .rep-card {
+    width: 75%;
+    height: 20vh;
+    font-size: 0.7rem;
+  }
+  .rep-card-right {
+    font-size: 0.6rem;
+  }
+  .rep-card-left {
+    font-size: 0.6rem;
+    gap: 50px;
+  }
+  .rep-card-right img.rep-photo {
+    max-height: 100px;
+    max-width: 75px;
   }
 }
 @media (max-width: 2400px) {

@@ -18,7 +18,7 @@
   --darkblue: #3f7882;
   --offblack: rgb(45, 46, 44);
   --offwhite: rgb(249, 247, 246);
-  --bg: rgb(232, 232, 232);
+  --bg: rgb(4, 49, 0);
 
   --size-10: 0.625rem;
   --size-14: 0.875rem;
@@ -45,7 +45,11 @@ a:hover {
 
 body {
   margin: 0;
-  width: 100vw;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* horizontally centers children */
+  align-items: center; /* vertically centers (if height is set) */
+  min-width: 100%;
   color: var(--darkblue);
 }
 

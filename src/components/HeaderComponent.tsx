@@ -20,7 +20,6 @@ export const Header = () => {
 
   return (
     <>
-      {'E Pluribus Unum'}
       <div className="top-nav">
         <img
           src="src/assets/main-logo.png"

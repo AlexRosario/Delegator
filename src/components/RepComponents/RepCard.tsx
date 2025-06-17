@@ -77,7 +77,6 @@ export const RepCard = ({ member }: { member: CongressMember }) => {
           <div>
             <span>
               <span className="rep-links">
-                Link:
                 <a href={`${member.url}}`} className="rep-links-link">
                   {member.url}
                 </a>

@@ -3,10 +3,12 @@ import { useDisplayBills } from '../../providers/BillProvider';
 import BillCard from './BillCard';
 import { allPolicies } from '../../constants/policy-terms';
 import { Bill } from '../../types';
+import { BillStatus } from './BillStatus';
 
 export const BillCollection = () => {
-  const { billsToDisplay, billSubject, setBillSubject } = useDisplayBills();
-  const [searchType, setSearchType] = useState('all');
+  const { billsToDisplay, billSubject, setBillSubject, passedBills } =
+    useDisplayBills();
+  const [filterType, setFilterType] = useState('all');
 
   const policyBills = allPolicies.reduce<Record<string, Bill[]>>(
     (acc, policy) => {
@@ -21,9 +23,9 @@ export const BillCollection = () => {
   const createSelector = (category: string, label: string) => {
     return (
       <div
-        className={`selector ${searchType === category ? 'active' : ''}`}
+        className={`selector ${filterType === category ? 'active' : ''}`}
         onClick={() => {
-          setSearchType(category);
+          setFilterType(category);
           setBillSubject('');
         }}
       >
@@ -79,10 +81,11 @@ export const BillCollection = () => {
           {createSelector('all', 'All')}
           {createSelector('policy', ' Filter by Policy')}
           {createSelector('legislative-term', 'Filter by Legislative Term')}
+          {createSelector('letter-collection', 'Let them know')}
         </div>
 
         <div className="subject-fields">
-          {searchType === 'policy' && (
+          {filterType === 'policy' && (
             <select
               value={billSubject || 'default'}
               onChange={(e) => {
@@ -99,7 +102,7 @@ export const BillCollection = () => {
               ))}
             </select>
           )}
-          {searchType === 'legislative-term' && (
+          {filterType === 'legislative-term' && (
             <div className="legislative-term">
               <div id="leg-term">
                 <input
@@ -119,7 +122,7 @@ export const BillCollection = () => {
               </div>
             </div>
           )}
-          {searchType === 'bill-number' && (
+          {filterType === 'bill-number' && (
             <div className="bill-number">
               <div id="bill-num">
                 <input
@@ -134,9 +137,10 @@ export const BillCollection = () => {
           )}
         </div>
       </div>
+      <BillStatus />
 
       <div className="bill-collection">
-        {searchType === 'all' ? (
+        {filterType === 'all' ? (
           <>
             {allPolicies.map((policy) => {
               return formPolicyRow(policy);
@@ -145,7 +149,7 @@ export const BillCollection = () => {
             <b>Other Bills:</b>
             {formOtherRow()}
           </>
-        ) : (searchType === 'policy' || searchType === 'legislative-term') &&
+        ) : (filterType === 'policy' || filterType === 'legislative-term') &&
           billsToDisplay.length > 0 ? (
           <div className="policy-row">
             {billsToDisplay
@@ -169,6 +173,18 @@ export const BillCollection = () => {
                 />
               ))}
           </div>
+        ) : filterType === 'letter-collection' ? (
+          billsToDisplay
+            .filter(
+              (bill) => !passedBills.some((passedBill) => passedBill == bill)
+            )
+            .map((bill, index) => (
+              <BillCard
+                bill={bill}
+                key={index}
+                className="bill-collection-card"
+              />
+            ))
         ) : (
           <h1>No Bills</h1>
         )}

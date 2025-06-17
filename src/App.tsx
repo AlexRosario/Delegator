@@ -20,6 +20,7 @@ function App() {
           {screenSelect === 'bills' ? <BillSection /> : <RepSection />}
         </MemberProvider>
       </BillProvider>
+      {'E Pluribus Unum'}
     </div>
   );
 }

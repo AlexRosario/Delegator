@@ -18,9 +18,12 @@ type TBillProvider = {
   offset: number;
   setOffset: (offset: number | ((prevOffset: number) => number)) => void;
   congress: number;
-  filterPassedBills: boolean;
-  setFilterPassedBills: (filterPassed: boolean) => void;
+  billFilter: 'Passed' | 'Bills with Votes' | 'All Bills';
+  setBillFilter: (
+    filterPassed: 'Passed' | 'Bills with Votes' | 'All Bills'
+  ) => void;
   filteredBills: Bill[];
+  passedBills: Bill[];
   setActiveBillTab: (tab: 'discover-bills' | 'voted-bills') => void;
   activeBillTab: 'discover-bills' | 'voted-bills';
   allBills: Bill[];
@@ -34,6 +37,7 @@ type TBillProvider = {
   setVotedBills: React.Dispatch<React.SetStateAction<Bill[]>>;
   currentIndex: number;
   setCurrentIndex: (index: number) => void;
+  billsWithRollCalls: Bill[];
 };
 
 export const BillContext = createContext<TBillProvider>({
@@ -43,9 +47,10 @@ export const BillContext = createContext<TBillProvider>({
   offset: 0,
   setOffset: () => {},
   congress: 119,
-  filterPassedBills: false,
-  setFilterPassedBills: () => {},
+  billFilter: 'All Bills',
+  setBillFilter: () => {},
   filteredBills: [],
+  passedBills: [],
   setActiveBillTab: () => {},
   activeBillTab: 'discover-bills',
   allBills: [],
@@ -58,7 +63,8 @@ export const BillContext = createContext<TBillProvider>({
   setNewBills: () => {},
   setVotedBills: () => {},
   currentIndex: 0,
-  setCurrentIndex: () => {}
+  setCurrentIndex: () => {},
+  billsWithRollCalls: []
 });
 
 export const BillProvider = ({ children }: { children: ReactNode }) => {
@@ -74,18 +80,37 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
   >('discover-bills');
   const [billSubject, setBillSubject] = useState<string>('');
   const [offset, setOffset] = useState(0);
-  const [filterPassedBills, setFilterPassedBills] = useState(false);
+  const [billFilter, setBillFilter] = useState<
+    'Passed' | 'Bills with Votes' | 'All Bills'
+  >('All Bills');
   const [congress] = useState(119);
   const [currentIndex, setCurrentIndex] = useState(0);
   const prevIndexRef = useRef(currentIndex);
   const hasFetchedRef = useRef(false);
   const billsToDisplay =
     activeBillTab === 'discover-bills' ? newBills : votedBills;
-  const filteredBills = billsToDisplay.filter((bill) =>
-    filterPassedBills
-      ? !bill.latestAction.text.includes('Became Public Law No:')
-      : bill
-  );
+
+  const passedBills =
+    billsToDisplay.filter((bill) =>
+      bill.latestAction.text.includes('Became Public Law No:')
+    ) || [];
+  const billsWithRollCalls =
+    billsToDisplay.filter(
+      (bill: Bill) =>
+        Array.isArray(bill.actions) &&
+        bill.actions.some(
+          (action) =>
+            Array.isArray(action.recordedVotes) &&
+            action.recordedVotes.length > 0
+        )
+    ) || [];
+  const filteredBills =
+    billFilter == 'Passed'
+      ? passedBills
+      : billFilter == 'Bills with Votes'
+        ? billsWithRollCalls
+        : billsToDisplay;
+
   let firstRender: boolean = allBills.length == 0 ? true : false;
 
   const fetchUserBills = async (voteLog: Vote[]) => {
@@ -186,6 +211,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         }
       });
     }
+    console.log('bills:', allBills);
     prevIndexRef.current = currentIndex;
   }, [allBills, voteLog]);
 
@@ -213,7 +239,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         .catch((error) => {
           console.error('Failed to fetch bills:', error);
         });
-
+      console.log('Bills', allBills, 'billsWithRollCalls', billsWithRollCalls);
       prevIndexRef.current = currentIndex;
     }
   }, [
@@ -232,9 +258,10 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         offset,
         setOffset,
         congress,
-        filterPassedBills,
-        setFilterPassedBills,
+        billFilter,
+        setBillFilter,
         filteredBills,
+        passedBills,
         setActiveBillTab,
         activeBillTab,
         allBills,
@@ -247,7 +274,8 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
         setNewBills,
         setVotedBills,
         setCurrentIndex,
-        currentIndex
+        currentIndex,
+        billsWithRollCalls
       }}
     >
       {children}

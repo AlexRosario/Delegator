@@ -6,7 +6,7 @@ export interface RecordedVote {
   sessionNumber: number;
   url: string;
 }
-interface Actions {
+export interface Actions {
   actionCode: string;
   actionDate: string;
   sourceSystem: { code: number; name: string };

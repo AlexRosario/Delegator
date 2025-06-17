@@ -96,7 +96,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
 
   const handleVote = async (vote: 'Yes' | 'No') => {
     let allRepVotes: { bioguideId: string; vote: string }[] = [];
-
+    console.log('bill:', bill);
     if (!userHasBillVote) {
       const rollCallActions = bill.actions.filter(
         (action) => action.recordedVotes?.length > 0
@@ -113,6 +113,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
             rollCallActions.find((action) =>
               /senate/i.test(action.sourceSystem.name)
             ) || null;
+          console.log('rollActions', rollCallActions);
           if (houseAction) {
             const year = String(new Date()).split(' ')[3];
             const rollNum = houseAction.recordedVotes[0].rollNumber;
@@ -120,7 +121,8 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
               [],
               []
             ];
-            const [_metaData, votes] = result as [Meta[], HouseVote[]];
+            const [metaData, votes] = result as [Meta[], HouseVote[]];
+            console.log('metaDataHouse', metaData);
             houseReps.forEach((rep) => {
               const match = votes.find(
                 (voteSearch: HouseVote) =>
@@ -135,6 +137,12 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
               }
             });
           }
+          console.log(
+            'houseAction',
+            houseAction,
+            'senateActions',
+            senateAction
+          );
 
           if (senateAction) {
             const sessionNum = senateAction.recordedVotes[0].sessionNumber;
@@ -145,8 +153,43 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
               sessionNum
             );
             if (senateRoll && Array.isArray(senateRoll)) {
-              const [_metaData, votes] = senateRoll;
-
+              const [metaData, votes] = senateRoll;
+              console.log('Sen meta:', metaData, 'votes:', votes);
+              const senateCountsByParty = Array.isArray(votes)
+                ? votes.reduce(
+                    (
+                      acc: Record<
+                        string,
+                        {
+                          yeas: number;
+                          nays: number;
+                          present: number;
+                          no_vote: number;
+                        }
+                      >,
+                      vote
+                    ) => {
+                      const party =
+                        vote.party == 'D'
+                          ? 'Democratic'
+                          : vote.party == 'R'
+                            ? 'Republican'
+                            : 'Independent';
+                      if (vote.voteCast === 'Yea') acc[party].yeas++;
+                      else if (vote.voteCast === 'Nay') acc[party].nays++;
+                      else if (vote.voteCast === 'Present')
+                        acc[party].present++;
+                      else acc[party].no_vote++;
+                      return acc;
+                    },
+                    {
+                      Republican: { yeas: 0, nays: 0, present: 0, no_vote: 0 },
+                      Democratic: { yeas: 0, nays: 0, present: 0, no_vote: 0 },
+                      Independent: { yeas: 0, nays: 0, present: 0, no_vote: 0 }
+                    }
+                  )
+                : {};
+              console.log('senateCountsByParty', senateCountsByParty);
               senators.forEach((rep) => {
                 if (Array.isArray(votes)) {
                   const match = votes.find(

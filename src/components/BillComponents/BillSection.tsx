@@ -32,7 +32,6 @@ export const BillSection = () => {
       </div>
 
       <div className="bill-container">
-        <BillStatus />
         {activeBillTab === 'discover-bills' ? (
           <BillDiscover />
         ) : (

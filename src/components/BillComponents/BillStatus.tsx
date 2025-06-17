@@ -4,11 +4,9 @@ export const BillStatus = () => {
   const {
     billsToDisplay,
     billSubject,
-    filterPassedBills,
-    setFilterPassedBills,
-    setCurrentIndex,
     currentIndex,
-    activeBillTab
+    activeBillTab,
+    filteredBills
   } = useDisplayBills();
 
   const noDiscoverBillsToDisplay =
@@ -23,11 +21,7 @@ export const BillStatus = () => {
     activeBillTab === 'discover-bills' && billsToDisplay.length !== 0;
   const votedBillsIsPopulated =
     activeBillTab === 'voted-bills' && billsToDisplay.length !== 0;
-  const filteredBills = billsToDisplay.filter((bill) =>
-    filterPassedBills
-      ? !bill.latestAction.text.includes('Became Public Law No:')
-      : bill
-  );
+
   return (
     <>
       <div className="bills-status">
@@ -45,32 +39,6 @@ export const BillStatus = () => {
           <h2>{`${billSubject ? billSubject : 'All'} Bills`} </h2>
         )}
       </div>
-
-      {activeBillTab === 'discover-bills' && (
-        <div className="congressional-efficacy">
-          <button
-            disabled={billsToDisplay.length < 20}
-            onClick={() => {
-              setCurrentIndex(0);
-              setFilterPassedBills(!filterPassedBills);
-            }}
-          >
-            {filterPassedBills ? 'Show All Bills' : 'Filter Passed Bills'}
-          </button>
-          <div>
-            <em>
-              <b>
-                Congressional Bills made into law in this collection:
-                {
-                  billsToDisplay.filter((bill) =>
-                    bill.latestAction.text.includes('Became Public Law No:')
-                  ).length
-                }
-              </b>
-            </em>
-          </div>
-        </div>
-      )}
     </>
   );
 };
