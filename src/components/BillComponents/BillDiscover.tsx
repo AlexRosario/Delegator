@@ -5,6 +5,8 @@ import { searchForBill } from '../../api';
 import { Bill } from '../../types';
 import { useDisplayBills } from '../../providers/BillProvider';
 import { BillStatus } from './BillStatus';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 type BillFilter = 'All Bills' | 'Passed' | 'Bills with Votes';
 
@@ -29,9 +31,7 @@ export const BillDiscover = () => {
   const {
     billsToDisplay,
     setBillFilter,
-    billFilter,
     setCurrentIndex,
-    activeBillTab,
     passedBills,
     billsWithRollCalls
   } = useDisplayBills();
@@ -103,7 +103,7 @@ export const BillDiscover = () => {
                 setSearchType('bill-number');
               }}
             >
-              Search by Bill Number
+              By Bill Number
             </div>
           </div>
           {searchType === 'bill-number' && (
@@ -137,25 +137,28 @@ export const BillDiscover = () => {
           )}{' '}
           {searchType == 'hopper' && (
             <>
-              <select
-                name=""
-                id=""
-                onChange={(e) => {
-                  setCurrentIndex(0);
-                  setBillFilter(e.target.value as BillFilter);
-                }}
-              >
-                <option value="default">Filter Bills</option>
-                {billsToDisplay.length > 0 && (
-                  <option value="All Bills">All Bills</option>
-                )}
-                {billsWithRollCalls.length > 0 && (
-                  <option value="Bills with Votes">Bills with RollCalls</option>
-                )}
-                {passedBills.length > 0 && (
-                  <option value="Passed">Passed Bills</option>
-                )}
-              </select>
+              <div className="select-wrapper">
+                <select
+                  onChange={(e) => {
+                    setCurrentIndex(0);
+                    setBillFilter(e.target.value as BillFilter);
+                  }}
+                >
+                  <option value="default">Filter Bills</option>
+                  {billsToDisplay.length > 0 && (
+                    <option value="All Bills">All Bills</option>
+                  )}
+                  {billsWithRollCalls.length > 0 && (
+                    <option value="Bills with Votes">
+                      Bills with RollCalls
+                    </option>
+                  )}
+                  {passedBills.length > 0 && (
+                    <option value="Passed">Passed Bills</option>
+                  )}
+                </select>
+                <FontAwesomeIcon icon={faCaretDown} className="caret-select" />
+              </div>
               {passedBills.length == 0 && (
                 <div
                   style={

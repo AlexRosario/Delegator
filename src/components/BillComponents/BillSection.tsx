@@ -1,4 +1,3 @@
-import { BillStatus } from './BillStatus';
 import { useDisplayBills } from '../../providers/BillProvider';
 import { BillCollection } from './BillCollection';
 import BillDiscover from './BillDiscover';

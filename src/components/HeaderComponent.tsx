@@ -6,11 +6,22 @@ import { useAuthInfo } from '../providers/AuthProvider';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { defaultUser } from '../providers/AuthProvider';
+import { useEffect } from 'react';
 
 export const Header = () => {
   const { screenSelect, setScreenSelect } = useScreenInfo();
   const { user, setUser } = useAuthInfo();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const logOut = () => {
     setUser(defaultUser);
@@ -20,14 +31,16 @@ export const Header = () => {
 
   return (
     <>
-      <div className="top-nav">
-        <img
-          src="src/assets/main-logo.png"
-          alt="Delegator Logo"
-          className="gator-logo"
-        />
+      <div className={`header-container ${scrolled ? 'scrolled' : ''}`}>
+        <div className="logo-wrapper">
+          <img
+            src="src/assets/main-logo.png"
+            alt="Delegator Logo"
+            className="gator-logo"
+          />
+        </div>
 
-        <section className="top-nav-user">
+        <div className="header-user">
           {user.username ? (
             !menuOpen ? (
               <FontAwesomeIcon
@@ -61,7 +74,7 @@ export const Header = () => {
           ) : (
             <Link to="/Home">Sign in</Link>
           )}
-        </section>
+        </div>
       </div>
       <div className="bottom-nav">
         <FontAwesomeIcon

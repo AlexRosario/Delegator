@@ -91,8 +91,8 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
     activeBillTab === 'discover-bills' ? newBills : votedBills;
 
   const passedBills =
-    billsToDisplay.filter((bill) =>
-      bill.latestAction.text.includes('Became Public Law No:')
+    billsToDisplay.filter(
+      (bill) => bill.latestAction.text.includes('Became Public Law No:') //this filter covers all bill types, including those not needing presidential signatures
     ) || [];
   const billsWithRollCalls =
     billsToDisplay.filter(
@@ -205,6 +205,7 @@ export const BillProvider = ({ children }: { children: ReactNode }) => {
             const filteredNewBills = bills.filter(
               (bill) => !existingIds.has(bill.type + bill.number)
             );
+            console.log('fnb', filteredNewBills);
             return [...prevBills, ...filteredNewBills];
           });
           localStorage.setItem('userLog', JSON.stringify(voteLog));

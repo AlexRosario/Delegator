@@ -176,7 +176,8 @@ export const BillCollection = () => {
         ) : filterType === 'letter-collection' ? (
           billsToDisplay
             .filter(
-              (bill) => !passedBills.some((passedBill) => passedBill == bill)
+              (bill) =>
+                !bill.latestAction.text.includes('Became Public Law No:') //this filter covers all bill types, including those not needing presidential signatures
             )
             .map((bill, index) => (
               <BillCard

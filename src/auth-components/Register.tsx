@@ -4,7 +4,6 @@ import { Requests } from '../api';
 import toast from 'react-hot-toast';
 import { useAuthInfo } from '../providers/AuthProvider';
 import { ErrorMessage } from '../components/errorMessages';
-import { isZipcodeValid } from '../utils/validations';
 import { useNavigate } from 'react-router-dom';
 import * as _ from 'lodash-es';
 import { faker } from '@faker-js/faker';

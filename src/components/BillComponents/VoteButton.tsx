@@ -35,7 +35,7 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
   const { user } = useAuthInfo();
   const { houseReps, senators } = useDisplayMember();
   const { id } = user;
-  const { voteLog, congress, setVoteLog, setVotedOnThisBill } =
+  const { voteLog, congress, setVoteLog, setVotedOnThisBill, activeBillTab } =
     useDisplayBills();
   const billId = bill.type + bill.number;
   const userHasBillVote =
@@ -217,19 +217,21 @@ export const VoteButton = ({ bill }: { bill: Bill }) => {
 
   return (
     <>
-      <div className="vote-buttons">
-        <button onClick={() => handleVote('Yes')}>
-          <FontAwesomeIcon icon={faThumbsUp} />
-        </button>
-        <button onClick={() => handleVote('No')}>
-          <FontAwesomeIcon icon={faThumbsDown} />
-        </button>
-      </div>
+      {activeBillTab === 'discover-bills' && (
+        <div className="vote-buttons">
+          <button onClick={() => handleVote('Yes')}>
+            <FontAwesomeIcon icon={faThumbsUp} />
+          </button>
+          <button onClick={() => handleVote('No')}>
+            <FontAwesomeIcon icon={faThumbsDown} />
+          </button>
+        </div>
+      )}
       <div>
         {recordedVoteOnBill
           ? newActionsSinceVoted
-            ? `Voted ${recordedVoteOnBill?.vote}. New actions since your last vote. Would you like to change vote?`
-            : `Voted ${recordedVoteOnBill?.vote}`
+            ? `You Voted ${recordedVoteOnBill?.vote}. New actions since your last vote. Would you like to change vote?`
+            : `You Voted ${recordedVoteOnBill?.vote}`
           : 'Needs Vote'}
       </div>
     </>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDisplayBills } from '../../providers/BillProvider';
 import { Bill } from '../../types';
 import VoteButton from './VoteButton';
+import { ComButton } from './ComButton';
 import { Requests } from '../../api';
 import { Link } from 'react-router-dom';
 
@@ -14,12 +15,13 @@ export const BillCard = ({
   className: string;
   onClick?: () => void | number;
 }) => {
-  const { congress } = useDisplayBills();
-  const [billLinks, setBillLinks] = useState<{ [key: string]: string }>({});
-  const [noLink, setNoLink] = useState<boolean>(false);
+  const { congress, activeBillTab } = useDisplayBills();
+  const [textLink, setTextLink] = useState<string>('');
+  const [searchedForLink, setSearchedForLink] = useState<boolean>(false);
   const userString = localStorage.getItem('user');
   const user = userString ? JSON.parse(userString) : null;
-
+  const [translatedText, setTranslatedText] = useState<string | null>(null);
+  const [text, setText] = useState<string>('');
   const getMoreInfo = async (
     congress: string,
     billType: string,
@@ -32,19 +34,34 @@ export const BillCard = ({
         billNumber,
         'text'
       );
+      console.log('data', data);
 
       if (data.textVersions.length > 0) {
-        const url = data.textVersions[0].formats[0].url;
-        setBillLinks((prevLinks) => ({
-          ...prevLinks,
-          [billType + billNumber]: url
-        }));
+        setTextLink(data.textVersions[0].formats[0].url);
       } else {
         console.error('No text versions available');
-        setNoLink(true);
       }
+      setSearchedForLink(true);
     } catch (error) {
       console.error('Error fetching bill summary:', error);
+    }
+  };
+
+  const handleTranslate = async () => {
+    const billText = await Requests.getBillText(textLink);
+    setText(billText.text);
+    console.log('text', billText);
+    try {
+      const res = await fetch('/api/translate-bill', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: billText })
+      });
+
+      const data = await res.json();
+      console.log(data.summary);
+    } catch (error) {
+      console.error('Error translating bill:', error);
     }
   };
 
@@ -56,31 +73,48 @@ export const BillCard = ({
 
       {bill.summary === 'No Summary Available' ? <b>{bill.title}</b> : ''}
 
+      {translatedText && (
+        <div className="translated-text">
+          <h4>Plain English Summary</h4>
+          <p>{translatedText}</p>
+        </div>
+      )}
       <div dangerouslySetInnerHTML={{ __html: bill.summary }} />
-      {!billLinks[bill.type + bill.number] ? (
+      {!textLink ? (
         <b
-          onClick={() => {
-            getMoreInfo(congress.toString(), bill.type, bill.number.toString());
+          onClick={async () => {
+            await getMoreInfo(
+              congress.toString(),
+              bill.type,
+              bill.number.toString()
+            );
           }}
         >
-          {!noLink ? 'Read Full Text' : 'No Expanded Text'}
+          {searchedForLink ? 'No Expanded Text' : 'Read Full Text'}
         </b>
       ) : (
-        <a
-          href={billLinks[bill.type + bill.number]}
-          target="_blank"
-          rel="noreferrer"
-          className="bill-url"
-        >
-          {billLinks[bill.type + bill.number]}
-        </a>
+        <>
+          <a
+            href={textLink}
+            target="_blank"
+            rel="noreferrer"
+            className="bill-url"
+          >
+            {textLink}
+          </a>
+          <button onClick={handleTranslate}>Translate This Bill</button>
+        </>
       )}
-      <div className="bill-member_positions">
+      <div className="bill-member-positions">
         <b>{bill.latestAction.actionDate}</b>
         <div>{bill.latestAction.text}</div>
       </div>
       {user ? (
-        <VoteButton bill={bill} />
+        activeBillTab === 'discover-bills' ? (
+          <VoteButton bill={bill} />
+        ) : (
+          <ComButton bill={bill} />
+        )
       ) : (
         <Link to="/Home" className="sign-in-link">
           Sign in to Vote

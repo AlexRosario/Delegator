@@ -270,6 +270,26 @@ export const Requests = {
       throw error;
     }
   },
+  getBillText: async (url: string) => {
+    try {
+      const response = await fetch('/api/extract-bill-text', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          url: url
+        })
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Fetch error:', error);
+      throw error;
+    }
+  },
   checkExistingReps: async (userId: String) => {
     const response = await fetch(
       `http://localhost:3000/users/${userId}/representatives`
@@ -413,12 +433,20 @@ export const searchForBill = async (
       'subjects',
       signal
     );
+    const actionsDataPromise = await Requests.getBillDetail(
+      '119',
+      billType,
+      billNumber,
+      'actions'
+    );
 
-    const [fullBillData, summariesData, subjectsData] = await Promise.all([
-      fullBillDataPromise,
-      summariesDataPromise,
-      subjectsDataPromise
-    ]);
+    const [fullBillData, summariesData, subjectsData, actionsData] =
+      await Promise.all([
+        fullBillDataPromise,
+        summariesDataPromise,
+        subjectsDataPromise,
+        actionsDataPromise
+      ]);
 
     return {
       ...fullBillData.bill,
@@ -428,7 +456,8 @@ export const searchForBill = async (
               summariesData.summaries[summariesData.summaries.length - 1].text
             )
           : 'No Summary Available',
-      subjects: subjectsData.subjects
+      subjects: subjectsData.subjects,
+      actions: actionsData.actions
     };
   } catch (error) {
     console.error('Failed to fetch bills:', error);

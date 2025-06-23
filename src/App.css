@@ -1,6 +1,5 @@
 #root {
   min-width: 100vw;
-  max-width: 1280px;
   margin: none;
   text-align: center;
 }
@@ -12,7 +11,6 @@
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
-
   padding: 0 20px;
   height: 55vh;
   min-height: 400px;
@@ -161,18 +159,36 @@
   color: red;
 }
 
-.top-nav {
+.header-container {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  max-width: 100%;
-
+  max-width: 100vw;
+  min-width: fit-content;
+  z-index: 100;
   background-color: rgb(243, 248, 242);
+  transition: all 2s ease;
 }
 
-.top-nav img.gator-logo {
+.header-container.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+}
+
+.header-container.scrolled > * {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  text-align: center;
+  background-color: rgb(243, 248, 242);
+}
+.header-container.scrolled .logo-wrapper {
+  white-space: none;
+}
+.header-container img.gator-logo {
   height: 150px;
 }
 
@@ -181,13 +197,10 @@
   font-size: xx-large;
 }
 
-.top-nav-user {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+.header-user {
+  text-align: center;
   color: black;
   width: 8%;
-  gap: 30px;
 }
 
 .settings-header {
@@ -220,6 +233,34 @@
 
 .profile .log-out:hover {
   cursor: pointer;
+}
+.main-dock {
+  display: flex;
+
+  justify-content: space-between;
+  min-width: 100vw;
+}
+aside.side-bar {
+  position: fixed;
+  left: 0;
+  width: 15%;
+  color: black;
+  font-size: 24px;
+  height: 100%;
+  gap: 30px;
+  border-right: 2px solid black;
+  z-index: 100;
+  background-color: rgb(243, 248, 242);
+}
+.side-bar-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  align-items: center;
+}
+.bill-rep-section {
+  width: 85%;
+  padding: none;
 }
 .bottom-nav {
   display: flex;
@@ -324,6 +365,31 @@
 .bill-type-selector {
   width: 90%;
   padding: 5px;
+}
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 200px; /* adjust as needed */
+}
+
+.select-wrapper select {
+  appearance: none;
+  width: 100%;
+  padding: 8px 32px 8px 12px; /* extra right padding for icon */
+  border-radius: 15px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 16px;
+}
+
+.caret-select {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-60%);
+  pointer-events: none; /* so clicks go to select */
+  color: #666;
 }
 .bill-filter {
   display: flex;
@@ -510,6 +576,8 @@
   box-shadow: 0 22px 34px rgba(22, 28, 45, 0.18);
   border-radius: 10px;
   margin: 10px;
+}
+.rep-container {
 }
 .rep-section {
   padding: 20px;

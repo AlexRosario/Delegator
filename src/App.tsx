@@ -7,7 +7,7 @@ import { BillProvider } from './providers/BillProvider';
 import { MemberProvider } from './providers/MemberProvider';
 import { useScreenInfo } from './providers/ScreenProvider';
 import { useLocation } from 'react-router-dom';
-
+import { SideBar } from './components/SideBar';
 function App() {
   const { screenSelect } = useScreenInfo();
   const location = useLocation();
@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="main">
       <Header />
+
       <BillProvider>
         <MemberProvider address={address}>
           {screenSelect === 'bills' ? <BillSection /> : <RepSection />}
